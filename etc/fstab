@@ -1,0 +1,2 @@
+192.168.0.12:/rpi /boot nfs defaults 0 2
+192.168.0.12:/rpi / nfs defaults,noatime 0 1

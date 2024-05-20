@@ -1,0 +1,5 @@
+ede2d42c58d1a3f6c34f2cfee9caf1df  usr/share/doc/cloud-initramfs-copymods/changelog.gz
+d83c42e522a362610b374c35ca056cf8  usr/share/doc/cloud-initramfs-copymods/copyright
+ef114f2b649514d4f31c01f49e435f73  usr/share/initramfs-tools/hooks/copymods
+edb7f7c72533225bcc9ab73a19327702  usr/share/initramfs-tools/scripts/init-bottom/copymods
+d73c9af4a0d0ad7c880a609d7f4ee512  usr/share/lintian/overrides/cloud-initramfs-copymods

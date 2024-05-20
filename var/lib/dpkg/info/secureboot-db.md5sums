@@ -1,0 +1,5 @@
+daffd1542a1ae65267e983a8a7f6e406  usr/lib/systemd/system/secureboot-db.service
+196f055e896d081af97e396e01ae5214  usr/share/doc/secureboot-db/README.Debian
+7ea84e06c3144299a2aff14585475af8  usr/share/doc/secureboot-db/changelog.gz
+5e9d648e42f661aa4e4ed929ad624146  usr/share/doc/secureboot-db/copyright
+42831f2dc7dfa1fa01b90cdc081d1367  usr/share/secureboot/updates/dbx/dbxupdate_arm64.bin

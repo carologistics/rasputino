@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 10.2.0" />
+<title>TRACE-CMD-SET(1)</title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overridden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="manpage">
+<div id="header">
+<h1>
+TRACE-CMD-SET(1) Manual Page
+</h1>
+<h2>NAME</h2>
+<div class="sectionbody">
+<p>trace-cmd-set -
+   set a configuration parameter of the Ftrace Linux internal tracer
+</p>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_synopsis">SYNOPSIS</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>trace-cmd set</strong> [<em>OPTIONS</em>] [<em>command</em>]</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description">DESCRIPTION</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The trace-cmd(1) set command will set a configuration parameter of the Ftrace
+Linux kernel tracer. The specified <strong>command</strong> will be run after the ftrace state
+is set. The configured ftrace state can be restored to default
+using the trace-cmd-reset(1) command.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options">OPTIONS</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<strong>-p</strong> <em>tracer</em>
+</dt>
+<dd>
+<p>
+    Specify a tracer. Tracers usually do more than just trace an event.
+    Common tracers are: <strong>function</strong>, <strong>function_graph</strong>, <strong>preemptirqsoff</strong>,
+    <strong>irqsoff</strong>, <strong>preemptoff</strong> and <strong>wakeup</strong>. A tracer must be supported by the
+    running kernel. To see a list of available tracers, see trace-cmd-list(1).
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-e</strong> <em>event</em>
+</dt>
+<dd>
+<p>
+    Specify an event to trace. Various static trace points have been added to
+    the Linux kernel. They are grouped by subsystem where you can enable all
+    events of a given subsystem or specify specific events to be enabled. The
+    <em>event</em> is of the format "subsystem:event-name". You can also just specify
+    the subsystem without the <em>:event-name</em> or the event-name without the
+    "subsystem:". Using "-e sched_switch" will enable the "sched_switch" event
+    where as, "-e sched" will enable all events under the "sched" subsystem.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>The 'event' can also contain glob expressions. That is, "*stat*" will
+select all events (or subsystems) that have the characters "stat" in their
+names.</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>The keyword 'all' can be used to enable all events.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-T</strong>
+</dt>
+<dd>
+<p>
+    Enable a stacktrace on each event. For example:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>          &lt;idle&gt;-0     [003] 58549.289091: sched_switch:         kworker/0:1:0 [120] R ==&gt; trace-cmd:2603 [120]
+          &lt;idle&gt;-0     [003] 58549.289092: kernel_stack:         &lt;stack trace&gt;
+=&gt; schedule (ffffffff814b260e)
+=&gt; cpu_idle (ffffffff8100a38c)
+=&gt; start_secondary (ffffffff814ab828)</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>--func-stack</strong>
+</dt>
+<dd>
+<p>
+    Enable a stack trace on all functions. Note this is only applicable
+    for the "function" plugin tracer, and will only take effect if the
+    -l option is used and succeeds in limiting functions. If the function
+    tracer is not filtered, and the stack trace is enabled, you can live
+    lock the machine.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-f</strong> <em>filter</em>
+</dt>
+<dd>
+<p>
+    Specify a filter for the previous event. This must come after a <strong>-e</strong>. This
+    will filter what events get recorded based on the content of the event.
+    Filtering is passed to the kernel directly so what filtering is allowed
+    may depend on what version of the kernel you have. Basically, it will
+    let you use C notation to check if an event should be processed or not.
+</p>
+</dd>
+</dl></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>    ==, &gt;=, &lt;=, &gt;, &lt;, &amp;, |, &amp;&amp; <span style="font-weight: bold"><span style="color: #000080">and</span></span> <span style="color: #990000">||</span></tt></pre></div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>The above are usually safe to use to compare fields.</code></pre>
+</div></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<strong>-R</strong> <em>trigger</em>
+</dt>
+<dd>
+<p>
+    Specify a trigger for the previous event. This must come after a <strong>-e</strong>.
+    This will add a given trigger to the given event. To only enable the trigger
+    and not the event itself, then place the event after the <strong>-v</strong> option.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>See Documentation/trace/events.txt in the Linux kernel source for more
+information on triggers.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-v</strong>
+</dt>
+<dd>
+<p>
+    This will negate options specified after it on the command line. It affects:
+</p>
+</dd>
+</dl></div>
+<div class="verseblock">
+<pre class="content">     <strong>-e</strong>: Causes all specified events to not be traced. This is useful for
+           selecting a subsystem to be traced but to leave out various events.
+           For example: "-e sched -v -e "*stat*"" will enable all events in
+           the sched subsystem except those that have "stat" in their names.
+     <strong>-B</strong>: Deletes the specified ftrace instance. There must be no
+           configuration options related to this instance in the command line.
+           For example: "-v -B bar -B foo" will delete instance bar and create
+           a new instance foo.
+    Note: the <strong>-v</strong> option was taken from the way grep(1) inverts the following
+    matches.</pre>
+<div class="attribution">
+</div></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<strong>-P</strong> <em>pid</em>
+</dt>
+<dd>
+<p>
+    This will filter only the specified process IDs. Using <strong>-P</strong> will let you
+    trace only events that are caused by the process.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-c</strong>
+</dt>
+<dd>
+<p>
+     Used <strong>-P</strong> to trace the process' children too (if kernel supports it).
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--user</strong>
+</dt>
+<dd>
+<p>
+     Execute the specified <strong>command</strong> as given user.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-C</strong> <em>clock</em>
+</dt>
+<dd>
+<p>
+     Set the trace clock to "clock".
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Use trace-cmd(1) list -C to see what clocks are available.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-l</strong> <em>function-name</em>
+</dt>
+<dd>
+<p>
+    This will limit the <em>function</em> and <em>function_graph</em> tracers to only trace
+    the given function name. More than one <strong>-l</strong> may be specified on the
+    command line to trace more than one function. The limited use of glob
+    expressions are also allowed. These are <em>match*</em> to only filter functions
+    that start with <em>match</em>. <em>*match</em> to only filter functions that end with
+    <em>match</em>. <em>*match\*</em> to only filter on functions that contain <em>match</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-g</strong> <em>function-name</em>
+</dt>
+<dd>
+<p>
+    This option is for the function_graph plugin. It will graph the given
+    function. That is, it will only trace the function and all functions that
+    it calls. You can have more than one <strong>-g</strong> on the command line.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-n</strong> <em>function-name</em>
+</dt>
+<dd>
+<p>
+    This has the opposite effect of <strong>-l</strong>. The function given with the <strong>-n</strong>
+    option will not be traced. This takes precedence, that is, if you include
+    the same function for both <strong>-n</strong> and <strong>-l</strong>, it will not be traced.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-d</strong>
+</dt>
+<dd>
+<p>
+    Some tracer plugins enable the function tracer by default. Like the
+    latency tracers. This option prevents the function tracer from being
+    enabled at start up.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-D</strong>
+</dt>
+<dd>
+<p>
+    The option <strong>-d</strong> will try to use the function-trace option to disable the
+    function tracer (if available), otherwise it defaults to the proc file:
+    /proc/sys/kernel/ftrace_enabled, but will not touch it if the function-trace
+    option is available.  The <strong>-D</strong> option will disable both the ftrace_enabled
+    proc file as well as the function-trace option if it exists.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Note, this disable function tracing for all users, which includes users
+outside of ftrace tracers (stack_tracer, perf, etc).</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-O</strong> <em>option</em>
+</dt>
+<dd>
+<p>
+    Ftrace has various options that can be enabled or disabled. This allows
+    you to set them. Appending the text <em>no</em> to an option disables it.
+    For example: "-O nograph-time" will disable the "graph-time" Ftrace
+    option.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-b</strong> <em>size</em>
+</dt>
+<dd>
+<p>
+    This sets the ring buffer size to <em>size</em> kilobytes. Because the Ftrace
+    ring buffer is per CPU, this size is the size of each per CPU ring buffer
+    inside the kernel. Using "-b 10000" on a machine with 4 CPUs will make
+    Ftrace have a total buffer size of 40 Megs.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-B</strong> <em>buffer-name</em>
+</dt>
+<dd>
+<p>
+    If the kernel supports multiple buffers, this will add a buffer with
+    the given name. If the buffer name already exists, that buffer is just
+    reset.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>After a buffer name is stated, all events added after that will be
+associated with that buffer. If no buffer is specified, or an event
+is specified before a buffer name, it will be associated with the
+main (toplevel) buffer.</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>trace-cmd set -e sched -B block -e block -B time -e timer sleep 1</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>The above is will enable all sched events in the main buffer. It will
+then create a 'block' buffer instance and enable all block events within
+that buffer. A 'time' buffer instance is created and all timer events
+will be enabled for that event.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-m</strong> <em>size</em>
+</dt>
+<dd>
+<p>
+    The max size in kilobytes that a per cpu buffer should be. Note, due
+    to rounding to page size, the number may not be totally correct.
+    Also, this is performed by switching between two buffers that are half
+    the given size thus the output may not be of the given size even if
+    much more was written.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Use this to prevent running out of diskspace for long runs.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-M</strong> <em>cpumask</em>
+</dt>
+<dd>
+<p>
+    Set the cpumask for to trace. It only affects the last buffer instance
+    given. If supplied before any buffer instance, then it affects the
+    main buffer. The value supplied must be a hex number.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>trace-cmd set -p function -M c -B events13 -e all -M 5</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>If the -M is left out, then the mask stays the same. To enable all
+CPUs, pass in a value of '-1'.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-i</strong>
+</dt>
+<dd>
+<p>
+    By default, if an event is listed that trace-cmd does not find, it
+    will exit with an error. This option will just ignore events that are
+    listed on the command line but are not found on the system.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-q</strong> | <strong>--quiet</strong>
+</dt>
+<dd>
+<p>
+    Suppresses normal output, except for errors.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--max-graph-depth</strong> <em>depth</em>
+</dt>
+<dd>
+<p>
+    Set the maximum depth the function_graph tracer will trace into a function.
+    A value of one will only show where userspace enters the kernel but not any
+    functions called in the kernel. The default is zero, which means no limit.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--cmdlines-size</strong> <em>size</em>
+</dt>
+<dd>
+<p>
+    Set the number of entries the kernel tracing file "saved_cmdlines" can
+    contain. This file is a circular buffer which stores the mapping between
+    cmdlines and PIDs. If full, it leads to unresolved cmdlines ("&lt;&#8230;&gt;") within
+    the trace. The kernel default value is 128.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--module</strong> <em>module</em>
+</dt>
+<dd>
+<p>
+    Filter a module&#8217;s name in function tracing. It is equivalent to adding
+    <em>:mod:module</em> after all other functions being filtered. If no other function
+    filter is listed, then all modules functions will be filtered in the filter.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>'--module snd'  is equivalent to  '-l :mod:snd'</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>'--module snd -l "*jack*"' is equivalent to '-l "*jack*:mod:snd"'</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>'--module snd -n "*"' is equivalent to '-n :mod:snd'</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>--stderr</strong>
+</dt>
+<dd>
+<p>
+    Have output go to stderr instead of stdout, but the output of the command
+    executed will not be changed. This is useful if you want to monitor the
+    output of the command being executed, but not see the output from trace-cmd.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--fork</strong>
+</dt>
+<dd>
+<p>
+    If a command is listed, then trace-cmd will wait for that command to finish,
+    unless the <strong>--fork</strong> option is specified. Then it will fork the command and
+    return immediately.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--verbose</strong>[=<em>level</em>]
+</dt>
+<dd>
+<p>
+     Set the log level. Supported log levels are "none", "critical", "error", "warning",
+     "info", "debug", "all" or their identifiers "0", "1", "2", "3", "4", "5", "6". Setting the log
+     level to specific value enables all logs from that and all previous levels.
+     The level will default to "info" if one is not specified.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Example: enable all critical, error and warning logs</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>trace-cmd set --verbose=warning</code></pre>
+</div></div>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples">EXAMPLES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Enable all events for tracing:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd set -e all</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Set the function tracer:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd set -p function</span></span></tt></pre></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_see_also">SEE ALSO</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>trace-cmd(1), trace-cmd-report(1), trace-cmd-start(1), trace-cmd-stop(1),
+trace-cmd-extract(1), trace-cmd-reset(1), trace-cmd-split(1),
+trace-cmd-list(1), trace-cmd-listen(1), trace-cmd-profile(1)</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_author">AUTHOR</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Written by Tzvetomir Stoyanov (VMware) &lt;<a href="mailto:tz.stoyanov@gmail.com">tz.stoyanov@gmail.com</a>&gt;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources">RESOURCES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><a href="https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/">https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copying">COPYING</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under
+the terms of the GNU Public License (GPL).</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated
+ 2023-06-07 20:21:00 UTC
+</div>
+</div>
+</body>
+</html>

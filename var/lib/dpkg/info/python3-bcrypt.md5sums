@@ -1,0 +1,13 @@
+9d09e8a3b982333d699d120e77cf0e0c  usr/lib/python3/dist-packages/bcrypt-3.2.2.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/bcrypt-3.2.2.egg-info/dependency_links.txt
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/bcrypt-3.2.2.egg-info/not-zip-safe
+b0b277de5e45873a9ac81bd6e1ac27f7  usr/lib/python3/dist-packages/bcrypt-3.2.2.egg-info/requires.txt
+269bb91d5fbb735c9dddab0bf5b60eda  usr/lib/python3/dist-packages/bcrypt-3.2.2.egg-info/top_level.txt
+84132cf88eef5db1e295b94c7e09d1cc  usr/lib/python3/dist-packages/bcrypt/__about__.py
+6d6e8d4d71cd3e34d3c1f94265fed55a  usr/lib/python3/dist-packages/bcrypt/__init__.py
+83e32e3f74aeead4c28935dfca78a243  usr/lib/python3/dist-packages/bcrypt/_bcrypt.abi3.so
+a17eaa11ad1f751b21a2d998ca13993e  usr/lib/python3/dist-packages/bcrypt/_bcrypt.pyi
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/python3/dist-packages/bcrypt/py.typed
+d82156be0df608b5425dc00a571ead4c  usr/share/doc/python3-bcrypt/README.rst.gz
+d7ea4255f708f028fb6b61985e9e6645  usr/share/doc/python3-bcrypt/changelog.Debian.gz
+4f763a05ed042afca37067af373890e8  usr/share/doc/python3-bcrypt/copyright

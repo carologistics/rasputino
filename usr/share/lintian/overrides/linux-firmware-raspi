@@ -1,0 +1,42 @@
+# The Pi bootloader runs on the VC4, not the ARM, hence it has a foreign
+# architecture
+linux-firmware-raspi binary: binary-from-other-architecture [usr/lib/linux-firmware-raspi/*.elf]
+
+# It's a bootloader, so unsurprisingly it's statically linked
+linux-firmware-raspi binary: statically-linked-binary [usr/lib/linux-firmware-raspi/*.elf]
+
+# Because it's statically linked it contains libraries
+linux-firmware-raspi binary: embedded-library libpng [usr/lib/linux-firmware-raspi/start*.elf]
+
+# For the same reason as LP: #1922257, we pre-emptively divert the
+# brcmfmac43436s-sdio.clm_blob filename (it doesn't currently exist, but if it
+# ever does it will break the sdio.bin)
+#linux-firmware-raspi binary: diversion-for-unknown-file lib/firmware/brcm/brcmfmac43436s-sdio.clm_blob preinst:66
+
+# It's not documentation, it's configuration
+linux-firmware-raspi binary: package-contains-documentation-outside-usr-share-doc [lib/firmware/brcm/brcmfmac*-sdio.txt]
+
+# It's a closed source blob, nothing we can do about the poor speling :)
+linux-firmware-raspi binary: spelling-error-in-binary Recyling Recycling [usr/lib/linux-firmware-raspi/*.elf]
+linux-firmware-raspi binary: spelling-error-in-binary calulated calculated [usr/lib/linux-firmware-raspi/*.elf]
+linux-firmware-raspi binary: spelling-error-in-binary postion position [usr/lib/linux-firmware-raspi/*.elf]
+linux-firmware-raspi binary: spelling-error-in-binary recieved received [usr/lib/linux-firmware-raspi/*.elf]
+linux-firmware-raspi binary: spelling-error-in-binary rountine routine [usr/lib/linux-firmware-raspi/*.elf]
+linux-firmware-raspi binary: spelling-error-in-binary trucate truncate [usr/lib/linux-firmware-raspi/*.elf]
+
+# Likewise, it's a blob; we don't want to mess with apparently unused sections
+linux-firmware-raspi binary: binary-has-unneeded-section .comment [usr/lib/linux-firmware-raspi/*.elf]
+
+# Overrides for the dreadful (but unavoidable) hack in the preinst script for
+# removing diversions from linux-firmware-raspi2. The read-in-maintainer-script
+# tags are false-positives (they're in a redirected block), but the
+# uses-dpkg-database-directly tag is correct (*sob*)
+linux-firmware-raspi binary: read-in-maintainer-script [postinst:17]
+linux-firmware-raspi binary: read-in-maintainer-script [postinst:18]
+linux-firmware-raspi binary: read-in-maintainer-script [postrm:17]
+linux-firmware-raspi binary: read-in-maintainer-script [postrm:18]
+linux-firmware-raspi binary: read-in-maintainer-script [preinst:17]
+linux-firmware-raspi binary: read-in-maintainer-script [preinst:18]
+linux-firmware-raspi binary: uses-dpkg-database-directly [postinst]
+linux-firmware-raspi binary: uses-dpkg-database-directly [postrm]
+linux-firmware-raspi binary: uses-dpkg-database-directly [preinst]

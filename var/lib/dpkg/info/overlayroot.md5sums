@@ -1,0 +1,7 @@
+78db8ba50efd0e523fe4b06083b67dcd  usr/sbin/overlayroot-chroot
+88af37e487bfa2ffc00614a470a14f20  usr/share/doc/overlayroot/changelog.gz
+d83c42e522a362610b374c35ca056cf8  usr/share/doc/overlayroot/copyright
+94661160a717bcc5639fef40546a7e14  usr/share/initramfs-tools/conf-hooks.d/overlayroot
+12bf4d0df324ca19959ac1b99fad7c53  usr/share/initramfs-tools/hooks/overlayroot
+1ed8aabdf65f9f565fbb26a193a25826  usr/share/initramfs-tools/scripts/init-bottom/overlayroot
+e80e667ae504860007cd71006f05e999  usr/share/man/man8/overlayroot-chroot.8.gz

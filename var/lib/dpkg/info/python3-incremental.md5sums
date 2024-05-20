@@ -1,0 +1,14 @@
+c72246579c4437c07cebb86fbcbc6d90  usr/lib/python3/dist-packages/incremental-22.10.0.dist-info/INSTALLER
+f7c7f4e3ae3f3fbec11e80a4449d86c1  usr/lib/python3/dist-packages/incremental-22.10.0.dist-info/METADATA
+2313aa2f22b437eec79847eb5836f034  usr/lib/python3/dist-packages/incremental-22.10.0.dist-info/WHEEL
+c21d1530c7821c79da65a394c6a36609  usr/lib/python3/dist-packages/incremental-22.10.0.dist-info/entry_points.txt
+8128f05a3df6080cf24069d33e22353d  usr/lib/python3/dist-packages/incremental-22.10.0.dist-info/top_level.txt
+d2bef2940082e3afe4d52f1efcfc4815  usr/lib/python3/dist-packages/incremental/__init__.py
+4b7c49e9d7327ed39f477458e4781c8f  usr/lib/python3/dist-packages/incremental/_version.py
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/python3/dist-packages/incremental/py.typed
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/python3/dist-packages/incremental/tests/__init__.py
+fda9e1cc24126906cfdc4787a5d81808  usr/lib/python3/dist-packages/incremental/tests/test_update.py
+5d0ec588a070ffd45f72ecba6e0f8c39  usr/lib/python3/dist-packages/incremental/tests/test_version.py
+2038b7151c7b0bbf44849f5bb1fade35  usr/lib/python3/dist-packages/incremental/update.py
+0621342c9ff64c830d069c98dacf2c2a  usr/share/doc/python3-incremental/changelog.Debian.gz
+a4945feef32824aa9e2f2ed8ef4fc752  usr/share/doc/python3-incremental/copyright

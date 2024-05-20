@@ -1,0 +1,6 @@
+b41e85be6381080e4ffc5d9e24cec279  usr/lib/aarch64-linux-gnu/libxmlsec1.so.1.2.39
+83c1f9b891effbe3edd0fcc2112fa3d8  usr/share/doc/libxmlsec1t64/README.Debian
+a8f4904543c9bbad732f66d639bb7b8b  usr/share/doc/libxmlsec1t64/README.md
+43138070b983765c308a4086f14bc220  usr/share/doc/libxmlsec1t64/changelog.Debian.gz
+c4a8c979a02ea52c581475dd6015e7e0  usr/share/doc/libxmlsec1t64/copyright
+dbb065349d47c2f2522d7a38112fc6f9  usr/share/lintian/overrides/libxmlsec1t64

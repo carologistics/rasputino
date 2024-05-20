@@ -1,0 +1,5 @@
+3c1f10a6831dc24f4921e2a512b92110  usr/lib/systemd/network/10-raspi-eth0.link
+6f338313ed9b8154b2de8e1ded9f69e5  usr/lib/udev/rules.d/60-gpio.rules
+e01bd3387a8803b6839e6ec6bdfcaf8c  usr/share/doc/ubuntu-raspi-settings/changelog.gz
+79316815b3589b4ad1fe25cd47924c4a  usr/share/doc/ubuntu-raspi-settings/copyright
+ab139c9810df8413e0d0c112a362d4be  usr/share/lintian/overrides/ubuntu-raspi-settings

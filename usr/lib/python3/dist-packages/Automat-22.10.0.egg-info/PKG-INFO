@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: Automat
+Version: 22.10.0
+Summary: Self-service finite-state machines for the programmer on the go.
+Home-page: https://github.com/glyph/Automat
+Author: Glyph
+Author-email: glyph@twistedmatrix.com
+License: MIT
+Keywords: fsm finite state machine automata
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: visualize
+License-File: LICENSE

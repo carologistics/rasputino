@@ -1,0 +1,6 @@
+3940b866dec65f8a01fe135976a40ebe  lib/systemd/lxd-agent-setup
+365cdc13b321fe25102731bbcb334932  lib/systemd/system/lxd-agent.service
+091f8af6434ba59ce9cbd13b41764c85  lib/udev/rules.d/99-lxd-agent.rules
+832c0233914a4df087fad08006f8d068  usr/share/doc/lxd-agent-loader/changelog.gz
+242efea0dce09d30d778ef1bc2b1468b  usr/share/doc/lxd-agent-loader/copyright
+58e5476f9a519ece800d95a5b42ef7a0  usr/share/lintian/overrides/lxd-agent-loader

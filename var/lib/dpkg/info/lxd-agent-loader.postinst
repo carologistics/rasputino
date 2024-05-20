@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+
+    # Version 0.6 switched to udev activation and removed the ConditionVirtualization=
+    # causing upgraded systems to keep trying to start the lxd-agent.service even if udev
+    # didn't ask for it. Fix it by removing the bogus units left behind:
+    if dpkg --compare-versions "$2" lt '0.7'; then
+        reload=0
+
+        # Cleanup former units.
+        for f in /lib/systemd/system/lxd-agent-9p.service \
+            /lib/systemd/system/lxd-agent-virtiofs.service \
+            /etc/systemd/system/multi-user.target.wants/lxd-agent-9p.service \
+            /etc/systemd/system/multi-user.target.wants/lxd-agent-virtiofs.service \
+            /etc/systemd/system/multi-user.target.wants/lxd-agent.service; do
+            [ -e "${f}" ] || continue
+            rm -f "${f}"
+            reload=1
+        done
+
+        # Reload systemd if former units were cleaned up.
+        if [ "${reload}" != 0 ]; then
+            systemctl --system daemon-reload >/dev/null || true
+        fi
+    fi
+fi
+
+# Automatically added by dh_installsystemd/13.14.1ubuntu5
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		deb-systemd-invoke $_dh_action 'lxd-agent.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+
+exit 0

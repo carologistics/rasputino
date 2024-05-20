@@ -1,0 +1,21 @@
+#!/bin/sh
+# vim:ts=2:et
+# Debian sa1 helper which is run from cron.d job, not to needlessly
+# fill logs (see Bug#499461).
+
+set -e
+
+# Skip in favour of systemd timer
+[ ! -d /run/systemd/system ] || exit 0
+
+# Our configuration file
+DEFAULT=/etc/default/sysstat
+# Default setting, overridden in the above file
+ENABLED=false
+
+# Read defaults file
+[ ! -r "$DEFAULT" ] || . "$DEFAULT"
+
+[ "$ENABLED" = "true" ] || exit 0
+
+exec /usr/lib/sysstat/sa1 "$@"

@@ -1,0 +1,15 @@
+/.
+/etc
+/etc/update-motd.d
+/etc/update-motd.d/90-pemmican
+/usr
+/usr/bin
+/usr/bin/pemmican-cli
+/usr/share
+/usr/share/doc
+/usr/share/doc/pemmican-server
+/usr/share/doc/pemmican-server/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/pemmican-cli.1.gz
+/usr/share/doc/pemmican-server/changelog.Debian.gz

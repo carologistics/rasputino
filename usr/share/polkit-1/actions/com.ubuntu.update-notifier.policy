@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+
+  <action id="com.ubuntu.update-notifier.pkexec.cddistupgrader">
+    <message>Authentication is needed to upgrade</message>
+    <message xml:lang="af">Outentisering is benodig te opgrader</message>
+    <message xml:lang="am">ለማሻሻል ማረጋገጫ ያስፈልጋል</message>
+    <message xml:lang="ast">Necesítase autenticación p'anovar</message>
+    <message xml:lang="bg">Необходимо е удостоверяване за да се надгради</message>
+    <message xml:lang="bn">আপগ্রেডের জন্য পরিচয় সানাক্তকরণ করা দরকার</message>
+    <message xml:lang="bs">Potrebna je autentifikacija za nadogradnju</message>
+    <message xml:lang="ca">Cal autenticació per actualitzar</message>
+    <message xml:lang="ckb">ڕێپێدان داواکراوە بۆ بەزرکردنەوە</message>
+    <message xml:lang="cs">Pro aktualizaci je vyžadováno ověření</message>
+    <message xml:lang="cy">Mae ange dilysu er mwyn diweddaru</message>
+    <message xml:lang="da">Der kræves sikkerhedsgodkendelse for at opgradere</message>
+    <message xml:lang="de">Legitimierung wird zum Aktualisieren benötigt</message>
+    <message xml:lang="el">Απαιτείται έλεγχος αυθεντικότητας χρήστη για να πραγματοποιηθεί η αναβάθμιση</message>
+    <message xml:lang="en_AU">Authentication is needed to upgrade</message>
+    <message xml:lang="en_CA">Authentication is needed to upgrade</message>
+    <message xml:lang="en_GB">Authentication is needed to upgrade</message>
+    <message xml:lang="es">Se necesita autenticación para actualizar</message>
+    <message xml:lang="eu">Bertsio-berritzeko autentifikatu beharra dago</message>
+    <message xml:lang="fa">برای ارتقا نیاز به تایید هویت است</message>
+    <message xml:lang="fi">Päivittäminen vaatii tunnistautumisen</message>
+    <message xml:lang="fr">Une authentification est nécessaire pour la mise à niveau</message>
+    <message xml:lang="fr_CA">Une authentification est nécessaire pour la mise à niveau</message>
+    <message xml:lang="gl">É preciso autenticarse para realizar unha anovación</message>
+    <message xml:lang="he">נדרש אימות כדי לשדרג</message>
+    <message xml:lang="hr">Potrebna je ovjera za nadogradnju</message>
+    <message xml:lang="hu">Hitelesítés szükséges a frissítéshez</message>
+    <message xml:lang="ia">Le authentication es necesse pro promover</message>
+    <message xml:lang="id">Perlu otentikasi untuk meningkatkan</message>
+    <message xml:lang="it">È necessario autenticarsi per eseguire l'avanzamento</message>
+    <message xml:lang="ja">アップグレードには認証が必要です</message>
+    <message xml:lang="kab">Yettwasra usesteb akken ad tleqqemeḍ</message>
+    <message xml:lang="ko">업그레이드하려면 인증이 필요합니다.</message>
+    <message xml:lang="ku">Ji bo bilindkirinê piştrastkirina nasnameyê pêwist e</message>
+    <message xml:lang="lt">Norint naujinti, reikia patvirtinti tapatybę</message>
+    <message xml:lang="lv">Jāautentificējas, lai uzlabotu</message>
+    <message xml:lang="mn">Зэрэг дээшлүүлэхийн тулд нэвтрэх шаардлагатай</message>
+    <message xml:lang="mnw">ဂွံသၠုၚ်ပ္တိုန်တၟိတၟိဂှ် ဒးကေတ်အခေါၚ်</message>
+    <message xml:lang="ms">Pengesahihan diperlukan untuk penataran</message>
+    <message xml:lang="my">အဆင့်မြှင့်တင်ရန်အတွက် စစ်မှန်ကြောင်းအထောက်အထား လိုအပ်သည်။</message>
+    <message xml:lang="nb">Du må autentisere deg for å oppgradere</message>
+    <message xml:lang="nl">Authenticatie is noodzakelijk voor de opwaardering</message>
+    <message xml:lang="nn">Du må autentisera deg for å oppgradera</message>
+    <message xml:lang="no">Du må autentisere deg for å oppgradere</message>
+    <message xml:lang="oc">Una autentificacion es necessària per la mesa al nivèl</message>
+    <message xml:lang="pl">Wykonanie aktualizacji wymaga uwierzytelnienia</message>
+    <message xml:lang="pt">É necessária autenticação para atualizar</message>
+    <message xml:lang="ru">Для обновления необходима аутентификация</message>
+    <message xml:lang="sl">Za nadgradnjo je potrebno overjanje.</message>
+    <message xml:lang="sq">Nevojitet identifikimi për të përditësuar</message>
+    <message xml:lang="sr">Потребна је лозинка ради надоградње</message>
+    <message xml:lang="sv">Autentisering krävs för att uppgradera</message>
+    <message xml:lang="szl">Potrzebno je autoryzacyjo, żeby zaktualizować</message>
+    <message xml:lang="th">คุณต้องยืนยันตัวบุคคลเพื่อทำการอัปเกรด</message>
+    <message xml:lang="tr">Yükseltmek için kimlik kimlik doğrulaması gerekmektedir</message>
+    <message xml:lang="tt">Аутентификация өчен яңарту кирәк</message>
+    <message xml:lang="ug">يۈكسەلدۈرۈش ئۈچۈن كىملىك دەلىللەش زۆرۈر</message>
+    <message xml:lang="uk">Для оновлення необхідне підтвердження.</message>
+    <message xml:lang="zh_CN">需要进行身份验证才能升级</message>
+    <message xml:lang="zh_HK">需要進行身份驗證才能升級</message>
+    <message xml:lang="zh_TW">需先通過身份核對才能升級</message>
+    <icon_name>update-notifier</icon_name>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/update-notifier/cddistupgrader</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+
+  <action id="com.ubuntu.update-notifier.pkexec.package-system-locked">
+    <message>Authentication is needed to query package system lock status</message>
+    <message xml:lang="af">Outentisering word vereis om die pakket stelsel sluitstatus te navraag</message>
+    <message xml:lang="am">የ ስርአት ጥቅል ሁኔታ መክፈቻ ለ መጠየቅ ማረጋገጫ ያስፈልጋል</message>
+    <message xml:lang="ast">Necesístase autenticación pa consultar l'estáu de torga del sistema de paquetes</message>
+    <message xml:lang="bg">Необходимо е удостоверяване за да се провери дали уредбата за пакети е заключена</message>
+    <message xml:lang="bn">প্যাকেজ সিস্টেমের লক অবস্থা জানার জন্য পরিচয় সানাক্তকরণ দরকার</message>
+    <message xml:lang="bs">Potrebna je autentifikacija za provjeru stanja zaključavanja paketa sustava</message>
+    <message xml:lang="ca">Cal autenticació per preguntar per l'estat del bloqueig del sistema de paquets</message>
+    <message xml:lang="ckb">ڕێگەپێدان پێویستە بۆ دۆخی قفڵی سیستەمی پاکێجی دیاریکراو</message>
+    <message xml:lang="cs">Pro dotaz na stav zámku balíčkovacího systému je vyžadováno ověření</message>
+    <message xml:lang="cy">Mae angen dilysu er mwyn ymofyn statws clo'r system pecynnau</message>
+    <message xml:lang="da">Sikkerhedsgodkendelse er påkrævet for at adspørge pakkesystemets låsestatus</message>
+    <message xml:lang="de">Legitimierung zum Abrufen von Paketen benötigt</message>
+    <message xml:lang="el">Απαιτείται έλεγχος αυθεντικότητας χρήστη για να ελεγχθεί η κατάσταση κλειδώματος του συστήματος πακέτων</message>
+    <message xml:lang="en_AU">Authentication is needed to query package system lock status</message>
+    <message xml:lang="en_CA">Authentication is needed to query package system lock status</message>
+    <message xml:lang="en_GB">Authentication is needed to query package system lock status</message>
+    <message xml:lang="es">Es necesaria auteticación para consultar el estado del bloqueo del sistema de paquetes</message>
+    <message xml:lang="eu">Autentifikazioa beharrezkoa da pakete-sistemaren blokeo egoerari buruz galdetzeko</message>
+    <message xml:lang="fa">برای پرس‌وجوی قفل سامانه نیاز به تایید هویت است</message>
+    <message xml:lang="fi">Tunnistautuminen vaaditaan pakettijärjestelmän lukituksen tilan tarkistamiseksi</message>
+    <message xml:lang="fr">Une authentification est nécessaire pour demander le statut de verrouillage des paquets du système</message>
+    <message xml:lang="fr_CA">Une authentification est nécessaire pour demander le statut de verrouillage des paquets du système</message>
+    <message xml:lang="gl">É precisa a autenticación para consultar o estado do bloqueo do sistema de paquetes</message>
+    <message xml:lang="he">נדרש אימות כדי לתשאל את מצב נעילת מערכת תשאול החבילות</message>
+    <message xml:lang="hr">Potrebna je ovjera za provjeru stanja zaključavanja paketa sustava</message>
+    <message xml:lang="hu">Hitelesítés szükséges a csomagkezelő rendszer zárolási állapotának lekéréséhez</message>
+    <message xml:lang="ia">Le authentication es necesse pro querer le stato de bloco del systema de pacchetto</message>
+    <message xml:lang="id">Perlu otentikasi untuk mengkueri status kunci sistem paket</message>
+    <message xml:lang="it">È necessario autenticarsi per interrogare il sistema di pacchetti sullo stato del blocco</message>
+    <message xml:lang="ja">パッケージシステムのロック状態を問い合わせるには認証が必要です</message>
+    <message xml:lang="kab">Asesteb yettusra i usesten n waddaden n usekkar n unagraw n yikemmusen</message>
+    <message xml:lang="ko">패키지 시스템 잠금 상태를 쿼리하려면 인증이 필요합니다.</message>
+    <message xml:lang="ku">Ji bo lêpirsîna rewşa kilîtbûnê ya pergala pakêtê piştrastkirina nasnameyê pêwist e</message>
+    <message xml:lang="lt">Norint užklausti paketų sistemos užrakto būseną, reikia patvirtinti tapatybę</message>
+    <message xml:lang="lv">Vajag autentificēties, lai vaicātu pakotņu sistēmas bloķēšanas statusu</message>
+    <message xml:lang="mnw">ဂွံကေတ်ကဠ စက်ကၟာတ်လဝ်တံဂှ် ဒးကေတ်အခေါၚ်</message>
+    <message xml:lang="ms">Pengesahihan diperlukan untuk menanya status kunci sistem pakej</message>
+    <message xml:lang="my">ပက်ကေ့ဂျ်စနစ်သော့ခတ်အခြေအနေကို မေးမြန်းရန်အတွက် စစ်မှန်ကြောင်းအထောက်အထား လိုအပ်သည်။</message>
+    <message xml:lang="nb">Du må autentisere deg for å kontrollere pakkelås-status</message>
+    <message xml:lang="nl">Authenticatie is noodzakelijk om de vergrendelingsstatus van het pakketsysteem te onderzoeken</message>
+    <message xml:lang="no">Du må autentisere deg for å kontrollere pakkelås-status</message>
+    <message xml:lang="oc">Una autentificacion es necessària per demandar l'estatut de verrolhatge dels paquets del sistèma</message>
+    <message xml:lang="pl">Aby sprawdzić stan blokady menedżera pakietów, wymagane jest uwierzytelnienie</message>
+    <message xml:lang="pt">A autenticação é necessária para consultar o status do bloqueio do sistema do pacote</message>
+    <message xml:lang="ru">Для запроса состояния блокировки системы пакетов требуется аутентификация</message>
+    <message xml:lang="sl">Za preverjanje stanja zaklepanja sistema paketov je potrebno overjanje.</message>
+    <message xml:lang="sq">Nevojitet identifikimi për të kontrolluar statusin e zhbllokimit të sistemit të paketave</message>
+    <message xml:lang="sr">Потребна је лозинка ради упита стању системског кључа</message>
+    <message xml:lang="sv">Autentisering krävs för att läsa paketens systemlåsningsstatus</message>
+    <message xml:lang="szl">Potrzebno je autoryzacyjo, coby wybadać stan blokady systymu paketōw.</message>
+    <message xml:lang="th">คุณต้องยืนยันตัวบุคคลเพื่อสอบถามสถานะการล็อกระบบแพกเกจ</message>
+    <message xml:lang="tr">Paket sisteminin kilit durumunu sorgulamak için kimlik doğrulaması gerekmektedir</message>
+    <message xml:lang="ug">بوغچا سىستېمىسىنىڭ قۇلۇپ ھالىتىنى تەكشۈرۈش ئۈچۈن كىملىك دەلىللەش زۆرۈر</message>
+    <message xml:lang="uk">Для запиту статусу блокування системи пакета необхідне підтвердження</message>
+    <message xml:lang="zh_CN">需要进行身份验证才能查询软件包系统锁定状态</message>
+    <message xml:lang="zh_HK">需要進行身份驗證才能查詢軟件包系統鎖定狀態</message>
+    <message xml:lang="zh_TW">需要通過身份核對才能查詢軟體包的系統鎖狀態</message>
+    <icon_name>update-notifier</icon_name>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/update-notifier/package-system-locked</annotate>
+  </action>
+</policyconfig>

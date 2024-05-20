@@ -1,0 +1,5 @@
+# Start the lxd-agent.service when QEMU serial devices (symlinks in virtio-ports) appear.
+SYMLINK=="virtio-ports/com.canonical.lxd", TAG+="systemd", ENV{SYSTEMD_WANTS}+="lxd-agent.service"
+
+# Legacy serial device name for backward compatibility.
+SYMLINK=="virtio-ports/org.linuxcontainers.lxd", TAG+="systemd", ENV{SYSTEMD_WANTS}+="lxd-agent.service"

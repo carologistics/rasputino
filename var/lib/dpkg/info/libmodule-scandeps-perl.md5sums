@@ -1,0 +1,7 @@
+85d178f0691819136cb03678033510b3  usr/bin/scandeps
+4306df92ae59cd97bad6f7a4752c99ab  usr/share/doc/libmodule-scandeps-perl/changelog.Debian.gz
+169b00ddc5796106dc48130a74a2c1e8  usr/share/doc/libmodule-scandeps-perl/copyright
+787fa155355fb437bb6d4a14395311c5  usr/share/man/man1/scandeps.1p.gz
+b64af0dc24526c54bc5919cb39601c5a  usr/share/man/man3/Module::ScanDeps.3pm.gz
+cf779716c2b02e1d2dc84f682a944047  usr/share/perl5/Module/ScanDeps.pm
+6ec8e73e96771137dd8e75b6abf9b3db  usr/share/perl5/Module/ScanDeps/Cache.pm

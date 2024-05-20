@@ -1,0 +1,1 @@
+selinux=0 dwc_otg.lpm_enable=0 console=tty1 rootwait rw nfsroot=192.168.0.12:/rpi,v3 ip=dhcp root=/dev/nfs elevator=deadline systemd.log_level=info systemd.log_target=console systemd.debug-shell=1

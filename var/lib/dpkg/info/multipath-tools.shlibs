@@ -1,0 +1,8 @@
+libmpathcmd 0 multipath-tools (>= 0.9.4)
+libmpathpersist 0 multipath-tools (>= 0.9.4)
+libmpathutil 0 multipath-tools (>= 0.9.4)
+libmultipath 0 multipath-tools (>= 0.9.4)
+udeb: libmpathcmd 0 multipath-udeb (>= 0.9.4)
+udeb: libmpathpersist 0 multipath-udeb (>= 0.9.4)
+udeb: libmpathutil 0 multipath-udeb (>= 0.9.4)
+udeb: libmultipath 0 multipath-udeb (>= 0.9.4)

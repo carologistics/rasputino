@@ -1,0 +1,18 @@
+# Systemd unit for lxd-agent. It ensures the lxd-agent is copied from the shared filesystem before
+# it is started. The service is triggered dynamically via udev rules when certain virtio-ports are
+# detected, rather than being enabled at boot.
+[Unit]
+Description=LXD - agent
+Documentation=https://documentation.ubuntu.com/lxd/en/latest/
+Before=multi-user.target cloud-init.target cloud-init.service cloud-init-local.service
+DefaultDependencies=no
+
+[Service]
+Type=notify
+WorkingDirectory=-/run/lxd_agent
+ExecStartPre=/lib/systemd/lxd-agent-setup
+ExecStart=/run/lxd_agent/lxd-agent
+Restart=on-failure
+RestartSec=5s
+StartLimitInterval=60
+StartLimitBurst=10

@@ -1,0 +1,5 @@
+2cae94f5d0a972210b2513dd294decd5  usr/lib/aarch64-linux-gnu/libarchive.so.13.7.2
+80944f4b432a7bd3721d97710fc06f13  usr/share/doc/libarchive13t64/NEWS.gz
+a60fac3fab1556d0a34cb5c3ad539463  usr/share/doc/libarchive13t64/changelog.Debian.gz
+fb2672ef9141b9d58ddcdb01a234dffd  usr/share/doc/libarchive13t64/copyright
+600c7bf9dd2ec32c293719e3ad466121  usr/share/lintian/overrides/libarchive13t64

@@ -1,0 +1,7 @@
+f49ad09da0bfcb130dc9d6283d0a712b  usr/bin/hwe-support-status
+14d59025209c003da43edadf5ed3acf1  usr/bin/ubuntu-security-status
+651d76f5b6ea2f277cad694e0d3f1498  usr/share/apport/package-hooks/source_update-manager.py
+d452acfcbbca9f831a00db7deb82bbab  usr/share/doc/update-manager-core/AUTHORS
+eeb66b3043a73a4d67240fdce9cdc7c2  usr/share/doc/update-manager-core/README
+e5522a184d5e57ab4cbe77b55313f3eb  usr/share/doc/update-manager-core/TODO
+1b05a771859717036284a853e632e2e2  usr/share/doc/update-manager-core/copyright

@@ -1,0 +1,5 @@
+# root device could be and array, so keep on in single-user mode
+init.d-script-possible-missing-stop etc/init.d/mdadm-waitidle 1
+
+# mdadm forks mdmon as required, not sure it should start separately
+systemd-service-file-missing-install-key lib/systemd/system/mdmonitor.service

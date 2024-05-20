@@ -1,0 +1,10 @@
+63884b771ee418b30cda6f54c779c571  usr/bin/install-info
+2c8e94963aae90e34c9819dbd8a956d0  usr/sbin/update-info-dir
+a14dd80cd20943c61f53cf69fe11a363  usr/share/doc/install-info/AUTHORS
+29f643a3a945d4c2d70e975291cef7d9  usr/share/doc/install-info/NEWS.gz
+8f84852429e918790c727bdc0708ac6f  usr/share/doc/install-info/README.gz
+6a201c70151b5cc064b50454468f63a9  usr/share/doc/install-info/TODO.gz
+8d78eca5f3e5ab1800e6df7c3c323500  usr/share/doc/install-info/changelog.Debian.gz
+1bda6cb05a5426328fe0b24ebe9cd32b  usr/share/doc/install-info/copyright
+59012140af04a1324161281ff15ff7b8  usr/share/man/man1/install-info.1.gz
+a90ea98e5649255580fe09e89ae95238  usr/share/man/man8/update-info-dir.8.gz

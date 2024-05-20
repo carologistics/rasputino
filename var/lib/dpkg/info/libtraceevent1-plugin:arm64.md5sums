@@ -1,0 +1,14 @@
+509f2dbec5d9789e06fa934ae9f18e5b  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_cfg80211.so
+eef6e1cdae05f7f64998bcc162fa1fe7  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_function.so
+57c259213546064371773a6914bcc556  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_futex.so
+ae39ae199142ea3397cf3d37059467af  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_hrtimer.so
+f08b8c7aa9a338aa19d2ac6b7a1074d2  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_jbd2.so
+d51ccac0f0078428f88f8b049f70a511  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_kmem.so
+4e69a5475397477a2db0c43d3f5c271a  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_kvm.so
+f195b233b87f95d2172290abdb37a825  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_mac80211.so
+d07c975703e4f0daebdf0cbe0693fbe8  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_sched_switch.so
+dcb849fb45f197ae1efd8b519170bf63  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_scsi.so
+bab228fb7f1321f205a81b1bb841297a  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_tlb.so
+a1c89e2c92085e9334b465d49b659f74  usr/lib/aarch64-linux-gnu/traceevent/plugins/plugin_xen.so
+45eb6bea270748c004a9da01dad4a32c  usr/share/doc/libtraceevent1-plugin/copyright
+3ba8cddb88afb55901c0e5d80d4902df  usr/share/lintian/overrides/libtraceevent1-plugin

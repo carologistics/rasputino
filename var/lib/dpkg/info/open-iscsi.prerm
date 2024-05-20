@@ -1,0 +1,50 @@
+#!/bin/sh
+# prerm script for open-iscsi
+
+. /usr/share/debconf/confmodule
+set -e
+
+case "$1" in
+    remove)
+        if ls -d /sys/class/iscsi_session/session* >/dev/null 2>&1 ; then
+            # There are still active iSCSI sessions. Ask the user
+            # if they know what they are doing.
+            db_reset open-iscsi/remove_even_with_active_sessions || true
+            db_input critical open-iscsi/remove_even_with_active_sessions || true
+            db_go
+            db_get open-iscsi/remove_even_with_active_sessions
+            if [ "$RET" = "false" ] ; then
+                echo "Aborting prerm due to user request." >&2
+                exit 1
+            fi
+        fi
+
+        sync
+        # If there are still active and mounted iSCSI sessions,
+        # open-iscsi stop may fail. But we did warn the user...
+        invoke-rc.d open-iscsi stop || true
+        invoke-rc.d iscsid stop || exit $?
+    ;;
+
+    upgrade|deconfigure|failed-upgrade)
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# Automatically added by dh_installsystemd/13.14.1ubuntu5
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'open-iscsi.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.14.1ubuntu5
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'iscsid.socket' >/dev/null || true
+fi
+# End automatically added section
+
+
+exit 0

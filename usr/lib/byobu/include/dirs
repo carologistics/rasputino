@@ -1,0 +1,69 @@
+#!/bin/sh
+#
+#    dirs: some dirs needed by all library status scripts
+#
+#    Copyright (C) 2011-2014 Dustin Kirkland
+#
+#    Authors: Dustin Kirkland <kirkland@byobu.org>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, version 3 of the License.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+PKG="byobu"
+
+# Some users build and install byobu themselves, rather than from a distro
+[ -r "$HOME/.byoburc" ] && . "$HOME/.byoburc"
+[ -n "$BYOBU_PREFIX" ] || BYOBU_PREFIX="/usr"
+
+# Create and export the user configuration directory
+# BYOBU_CONFIG_DIR if set, ~/.byobu if it exists, otherwise XDG_CONFIG_HOME/byobu
+if [ -z "$BYOBU_CONFIG_DIR" ]; then
+	if [ -d "$HOME/.$PKG" ]; then
+		export BYOBU_CONFIG_DIR="$HOME/.$PKG"
+	else
+		_xdg="${XDG_CONFIG_HOME:-"$HOME"/.config}"
+		# Spec says XDG_CONFIG_HOME must not be world-readable
+		[ -d "$_xdg" ] || mkdir -p -m 700 "$_xdg"
+		export BYOBU_CONFIG_DIR="$_xdg/$PKG"
+		unset _xdg
+	fi
+fi
+[ -d "$BYOBU_CONFIG_DIR/bin" ] || mkdir -p "$BYOBU_CONFIG_DIR/bin"
+
+# Grab the global, then local socket directory
+[ -r "/etc/$PKG/socketdir" ] && . "/etc/$PKG/socketdir"
+[ -r "$BYOBU_CONFIG_DIR/socketdir" ] && . "$BYOBU_CONFIG_DIR/socketdir"
+
+# Create and export the runtime cache directory
+if [ -w /dev/shm ]; then
+	# Use shm for performance, if possible
+	for i in /dev/shm/$PKG-$USER-*; do
+		if [ -d "$i" ] && [ -O "$i" ]; then
+			export BYOBU_RUN_DIR="$i"
+			break
+		fi
+	done
+	# Still empty, make a new one
+	if [ ! -d "$BYOBU_RUN_DIR" ] || [ ! -O "$BYOBU_RUN_DIR" ]; then
+		export BYOBU_RUN_DIR=$(mktemp -d /dev/shm/$PKG-$USER-XXXXXXXX)
+	fi
+fi
+if [ ! -d "$BYOBU_RUN_DIR" ] || [ ! -O "$BYOBU_RUN_DIR" ] || [ ! -w "$BYOBU_RUN_DIR" ]; then
+	# For distros that don't have a /dev/shm, use local disk
+	if [ -d "$XDG_CACHE_HOME" ]; then
+		# Use XDG, as some users insist on such nonsense :-)
+		export BYOBU_RUN_DIR="$XDG_CACHE_HOME/$PKG"
+	else
+		# But if not, we'll use a cache directory
+		export BYOBU_RUN_DIR="$HOME/.cache/$PKG"
+	fi
+fi

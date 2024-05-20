@@ -1,0 +1,17 @@
+/.
+/sbin
+/sbin/lxc
+/sbin/lxd
+/usr
+/usr/lib
+/usr/lib/systemd
+/usr/lib/systemd/system
+/usr/lib/systemd/system/lxd-installer.socket
+/usr/lib/systemd/system/lxd-installer@.service
+/usr/share
+/usr/share/doc
+/usr/share/doc/lxd-installer
+/usr/share/doc/lxd-installer/changelog.gz
+/usr/share/doc/lxd-installer/copyright
+/usr/share/lxd-installer
+/usr/share/lxd-installer/lxd-installer-service

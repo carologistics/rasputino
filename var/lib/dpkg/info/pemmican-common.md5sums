@@ -1,0 +1,17 @@
+d0a47011f5fd0a13c404197aee31c686  usr/lib/python3/dist-packages/pemmican-1.0.3.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/pemmican-1.0.3.egg-info/dependency_links.txt
+05beadee496f28faa676c000ae6b3102  usr/lib/python3/dist-packages/pemmican-1.0.3.egg-info/entry_points.txt
+d0a6d2d7caeceedbd640528ebe45d9c3  usr/lib/python3/dist-packages/pemmican-1.0.3.egg-info/requires.txt
+49ff827d02d727a22fe40c35c4898bd1  usr/lib/python3/dist-packages/pemmican-1.0.3.egg-info/top_level.txt
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/python3/dist-packages/pemmican/__init__.py
+b40e0b357321590e62b0165361a05f43  usr/lib/python3/dist-packages/pemmican/cli.py
+1fc37cdbbfb5e0129d622252986fd248  usr/lib/python3/dist-packages/pemmican/const.py
+30ecd29cd64325d260fb36e7e1ad3298  usr/lib/python3/dist-packages/pemmican/gui.py
+ac0d2aed38e4b6aed2af510e182dafc6  usr/lib/python3/dist-packages/pemmican/lang.py
+e126724ba085342387d6af4367162eb7  usr/lib/python3/dist-packages/pemmican/notify.py
+d975fba67285542df4badab195c128fe  usr/lib/python3/dist-packages/pemmican/power.py
+54c8ac3ec67b3e1c2f628ab14a54e363  usr/share/doc/pemmican-common/LICENSE.txt.gz
+949881c10a9d1e26ed363b4f2b0e8790  usr/share/doc/pemmican-common/README.rst
+236b0ec1359b819cb7cf2c6444652bec  usr/share/doc/pemmican-common/changelog.Debian.gz
+14bbf105ebd3faca962207e9ec35c2ef  usr/share/doc/pemmican-common/copyright
+72d21fc158821c3655128e5d52a23b4f  usr/share/locale/en_GB/LC_MESSAGES/pemmican.mo

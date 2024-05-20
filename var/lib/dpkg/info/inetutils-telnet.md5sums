@@ -1,0 +1,8 @@
+7f0c3d7b1e9ef0b1f3b426c2a17a48d6  usr/bin/inetutils-telnet
+240d0e72aa9bcfe731a19787bf394cd1  usr/share/doc/inetutils-telnet/AUTHORS
+90728780dff9d4f7b3dafd4de3dc38fe  usr/share/doc/inetutils-telnet/NEWS.gz
+2e1be8ffa4e2b80e514a014a0d2d3070  usr/share/doc/inetutils-telnet/THANKS
+d95e5409c373c65d4f15f3f6491ce45b  usr/share/doc/inetutils-telnet/changelog.Debian.gz
+8a0eeb5b1f1c74324ed4657e8ee058b2  usr/share/doc/inetutils-telnet/copyright
+204c9e3563e65099bd0d99ff744a300d  usr/share/lintian/overrides/inetutils-telnet
+43cff142f4b39fa2672762ee3a73a3de  usr/share/man/man1/inetutils-telnet.1.gz

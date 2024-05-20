@@ -1,0 +1,3 @@
+# These are simple shell-script hooks called by dtoverlay
+libraspberrypi-bin binary: binary-without-manpage [usr/bin/dtoverlay-pre]
+libraspberrypi-bin binary: binary-without-manpage [usr/bin/dtoverlay-post]

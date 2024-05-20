@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# we do not include ". gettext.sh" here because:
+# a) it breaks if its not available
+# b) the string we have here does not need it (because it has no vars)
+eval_gettext() {
+    if [ -x /usr/bin/gettext ]; then
+        echo $(gettext "$1")
+    else
+        echo "$1"
+    fi
+}
+export TEXTDOMAIN=update-notifier
+export TEXTDOMAINDIR=/usr/share/locale
+
+case "$DPKG_MAINTSCRIPT_PACKAGE::$DPKG_MAINTSCRIPT_NAME" in
+    linux-image-extra*::postrm)
+        exit 0;;
+esac
+
+if [ "$0" = "/etc/kernel/postinst.d/update-notifier" ]; then
+    DPKG_MAINTSCRIPT_PACKAGE=linux-base
+fi
+
+KERNEL_UPGRADED=0
+# Prefer showing the canonical-livepatch reboot message if one is required
+if [ -f "/snap/bin/canonical-livepatch" ]; then
+    # k-u-r returns 1 if livepatch isn't enabled or if a reboot isn't required
+    kur_rc=$(/snap/bin/canonical-livepatch kernel-upgrade-required 2> /dev/null)
+    if [ $? -eq 0 ]; then
+        exit 0;
+    elif [ $? -eq 1 ]; then
+        # status returns 1 if livepatch isn't enabled
+        status_rc=$(/snap/bin/canonical-livepatch status 2> /dev/null)
+        if [ $? -eq 0 ]; then
+            KERNEL_UPGRADED=1
+        fi
+    fi
+fi
+
+# while a reboot isn't required for the new kernel it might be for another package
+if [ $KERNEL_UPGRADED -eq 1 ]; then
+    if [ "$(echo $DPKG_MAINTSCRIPT_PACKAGE | cut -c1-5)" = "linux" ]; then
+        exit 0;
+    fi
+fi
+
+# Wake the applet up
+echo "*** $(eval_gettext "System restart required") ***" > /var/run/reboot-required
+echo "$DPKG_MAINTSCRIPT_PACKAGE" >> /var/run/reboot-required.pkgs

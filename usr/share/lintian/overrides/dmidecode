@@ -1,0 +1,6 @@
+#
+# LC_ALL=C.UTF-8 MANROFFSEQ='' MANWIDTH=80 man --warnings -E UTF-8 -l -Tutf8 -Z dmidecode.8 >/dev/null
+#
+# has no error
+#
+groff-message an.tmac:<standard input>:251: warning: tbl preprocessor failed, or it or soelim was not run; table(s) likely not rendered (TE macro called with TW register undefined) [usr/share/man/man8/dmidecode.8.gz:1]

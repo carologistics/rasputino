@@ -1,0 +1,58 @@
+# Soft dependencies extracted from modules themselves.
+softdep cifs gcm
+softdep cifs ccm
+softdep cifs aead2
+softdep cifs sha512
+softdep cifs sha256
+softdep cifs cmac
+softdep cifs aes
+softdep cifs nls
+softdep cifs md5
+softdep cifs hmac
+softdep cifs ecb
+softdep ksmbd pre: crc32
+softdep ksmbd pre: gcm
+softdep ksmbd pre: ccm
+softdep ksmbd pre: aead2
+softdep ksmbd pre: sha512
+softdep ksmbd pre: sha256
+softdep ksmbd pre: cmac
+softdep ksmbd pre: aes
+softdep ksmbd pre: nls
+softdep ksmbd pre: md5
+softdep ksmbd pre: hmac
+softdep ksmbd pre: ecb
+softdep btrfs pre: blake2b-256
+softdep btrfs pre: sha256
+softdep btrfs pre: xxhash64
+softdep btrfs pre: crc32c
+softdep f2fs pre: crc32
+softdep bcachefs pre: xxhash
+softdep bcachefs pre: poly1305
+softdep bcachefs pre: chacha20
+softdep bcachefs pre: sha256
+softdep bcachefs pre: crc64
+softdep bcachefs pre: crc32c
+softdep lrw pre: ecb
+softdep xts pre: ecb
+softdep libcrc32c pre: crc32c
+softdep irq_madera pre: madera
+softdep arizona_i2c pre: arizona_ldo1
+softdep arizona_spi pre: arizona_ldo1
+softdep wm8994 pre: wm8994_regulator
+softdep csiostor pre: cxgb4
+softdep vc4 pre: snd-soc-hdmi-codec
+softdep spi_pxa2xx_platform pre: dw_dmac
+softdep ohci_pci pre: ehci_pci
+softdep uhci_hcd pre: ehci_pci
+softdep max31760 pre: regmap_i2c
+softdep ufshcd_core pre: governor_simpleondemand
+softdep qat_4xxx pre: crypto-intel_qat
+softdep qat_420xx pre: crypto-intel_qat
+softdep vfio post: vfio_iommu_type1 vfio_iommu_spapr_tce
+softdep snd_soc_dacberry400 pre: snd-soc-tlv320aic3x
+softdep act_mpls post: mpls_gso
+softdep xt_LOG pre: nf_log_syslog
+softdep xt_NFLOG pre: nfnetlink_log
+softdep xt_TRACE pre: nf_log_syslog
+softdep mpls_iptunnel post: mpls_gso

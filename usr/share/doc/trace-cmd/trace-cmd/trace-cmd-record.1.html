@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 10.2.0" />
+<title>TRACE-CMD-RECORD(1)</title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overridden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="manpage">
+<div id="header">
+<h1>
+TRACE-CMD-RECORD(1) Manual Page
+</h1>
+<h2>NAME</h2>
+<div class="sectionbody">
+<p>trace-cmd-record -
+   record a trace from the Ftrace Linux internal tracer
+</p>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_synopsis">SYNOPSIS</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>trace-cmd record</strong> [<em>OPTIONS</em>] [<em>command</em>]</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description">DESCRIPTION</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The trace-cmd(1) record command will set up the Ftrace Linux kernel tracer to
+record the specified plugins or events that happen while the <em>command</em>
+executes. If no command is given, then it will record until the user hits
+Ctrl-C.</p></div>
+<div class="paragraph"><p>The record command of trace-cmd will set up the Ftrace tracer to start tracing
+the various events or plugins that are given on the command line. It will then
+create a number of tracing processes (one per CPU) that will start recording
+from the kernel ring buffer straight into temporary files. When the command is
+complete (or Ctrl-C is hit) all the files will be combined into a trace.dat
+file that can later be read (see trace-cmd-report(1)).</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options">OPTIONS</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<strong>-p</strong> <em>tracer</em>
+</dt>
+<dd>
+<p>
+    Specify a tracer. Tracers usually do more than just trace an event.
+    Common tracers are: <strong>function</strong>, <strong>function_graph</strong>, <strong>preemptirqsoff</strong>,
+    <strong>irqsoff</strong>, <strong>preemptoff</strong> and <strong>wakeup</strong>. A tracer must be supported by the
+    running kernel. To see a list of available tracers, see trace-cmd-list(1).
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-e</strong> <em>event</em>
+</dt>
+<dd>
+<p>
+    Specify an event to trace. Various static trace points have been added to
+    the Linux kernel. They are grouped by subsystem where you can enable all
+    events of a given subsystem or specify specific events to be enabled. The
+    <em>event</em> is of the format "subsystem:event-name". You can also just specify
+    the subsystem without the <em>:event-name</em> or the event-name without the
+    "subsystem:". Using "-e sched_switch" will enable the "sched_switch" event
+    where as, "-e sched" will enable all events under the "sched" subsystem.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>The 'event' can also contain glob expressions. That is, "*stat*" will
+select all events (or subsystems) that have the characters "stat" in their
+names.</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>The keyword 'all' can be used to enable all events.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-a</strong>
+</dt>
+<dd>
+<p>
+    Every event that is being recorded has its output format file saved
+    in the output file to be able to display it later. But if other
+    events are enabled in the trace without trace-cmd&#8217;s knowledge, the
+    formats of those events will not be recorded and trace-cmd report will
+    not be able to display them. If this is the case, then specify the
+    <strong>-a</strong> option and the format for all events in the system will be saved.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-T</strong>
+</dt>
+<dd>
+<p>
+    Enable a stacktrace on each event. For example:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>          &lt;idle&gt;-0     [003] 58549.289091: sched_switch:         kworker/0:1:0 [120] R ==&gt; trace-cmd:2603 [120]
+          &lt;idle&gt;-0     [003] 58549.289092: kernel_stack:         &lt;stack trace&gt;
+=&gt; schedule (ffffffff814b260e)
+=&gt; cpu_idle (ffffffff8100a38c)
+=&gt; start_secondary (ffffffff814ab828)</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>--func-stack</strong>
+</dt>
+<dd>
+<p>
+    Enable a stack trace on all functions. Note this is only applicable
+    for the "function" plugin tracer, and will only take effect if the
+    -l option is used and succeeds in limiting functions. If the function
+    tracer is not filtered, and the stack trace is enabled, you can live
+    lock the machine.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-f</strong> <em>filter</em>
+</dt>
+<dd>
+<p>
+    Specify a filter for the previous event. This must come after a <strong>-e</strong>. This
+    will filter what events get recorded based on the content of the event.
+    Filtering is passed to the kernel directly so what filtering is allowed
+    may depend on what version of the kernel you have. Basically, it will
+    let you use C notation to check if an event should be processed or not.
+</p>
+</dd>
+</dl></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>    ==, &gt;=, &lt;=, &gt;, &lt;, &amp;, |, &amp;&amp; <span style="font-weight: bold"><span style="color: #000080">and</span></span> <span style="color: #990000">||</span></tt></pre></div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>The above are usually safe to use to compare fields.</code></pre>
+</div></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<strong>--no-filter</strong>
+</dt>
+<dd>
+<p>
+    Do not filter out the trace-cmd threads. By default, the threads are
+    filtered out to not be traced by events. This option will have the trace-cmd
+    threads also be traced.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-R</strong> <em>trigger</em>
+</dt>
+<dd>
+<p>
+    Specify a trigger for the previous event. This must come after a <strong>-e</strong>.
+    This will add a given trigger to the given event. To only enable the trigger
+    and not the event itself, then place the event after the <strong>-v</strong> option.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>See Documentation/trace/events.txt in the Linux kernel source for more
+information on triggers.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-v</strong>
+</dt>
+<dd>
+<p>
+    This will cause all events specified after it on the command line to not
+    be traced. This is useful for selecting a subsystem to be traced but to
+    leave out various events. For Example: "-e sched -v -e "*stat\*"" will
+    enable all events in the sched subsystem except those that have "stat" in
+    their names.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Note: the *-v* option was taken from the way grep(1) inverts the following
+matches.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-F</strong>
+</dt>
+<dd>
+<p>
+    This will filter only the executable that is given on the command line. If
+    no command is given, then it will filter itself (pretty pointless).
+    Using <strong>-F</strong> will let you trace only events that are caused by the given
+    command.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-P</strong> <em>pid</em>
+</dt>
+<dd>
+<p>
+     Similar to <strong>-F</strong> but lets you specify a process ID to trace.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-c</strong>
+</dt>
+<dd>
+<p>
+     Used with either <strong>-F</strong> (or <strong>-P</strong> if kernel supports it) to trace the process'
+     children too.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--user</strong>
+</dt>
+<dd>
+<p>
+     Execute the specified <strong>command</strong> as given user.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-C</strong> <em>clock</em>
+</dt>
+<dd>
+<p>
+     Set the trace clock to "clock".
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Use trace-cmd(1) list -C to see what clocks are available.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-o</strong> <em>output-file</em>
+</dt>
+<dd>
+<p>
+    By default, trace-cmd report will create a <em>trace.dat</em> file. You can
+    specify a different file to write to with the <strong>-o</strong> option.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-l</strong> <em>function-name</em>
+</dt>
+<dd>
+<p>
+    This will limit the <em>function</em> and <em>function_graph</em> tracers to only trace
+    the given function name. More than one <strong>-l</strong> may be specified on the
+    command line to trace more than one function. This supports both full
+    regex(3) parsing, or basic glob parsing. If the filter has only alphanumeric,
+    <em>_</em>, <em>*</em>, <em>?</em> and <em>.</em> characters, then it will be parsed as a basic glob.
+    to force it to be a regex, prefix the filter with <em>^</em> or append it with <em>$</em>
+    and it will then be parsed as a regex.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-g</strong> <em>function-name</em>
+</dt>
+<dd>
+<p>
+    This option is for the function_graph plugin. It will graph the given
+    function. That is, it will only trace the function and all functions that
+    it calls. You can have more than one <strong>-g</strong> on the command line.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-n</strong> <em>function-name</em>
+</dt>
+<dd>
+<p>
+    This has the opposite effect of <strong>-l</strong>. The function given with the <strong>-n</strong>
+    option will not be traced. This takes precedence, that is, if you include
+    the same function for both <strong>-n</strong> and <strong>-l</strong>, it will not be traced.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-d</strong>
+</dt>
+<dd>
+<p>
+    Some tracer plugins enable the function tracer by default. Like the
+    latency tracers. This option prevents the function tracer from being
+    enabled at start up.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-D</strong>
+</dt>
+<dd>
+<p>
+    The option <strong>-d</strong> will try to use the function-trace option to disable the
+    function tracer (if available), otherwise it defaults to the proc file:
+    /proc/sys/kernel/ftrace_enabled, but will not touch it if the function-trace
+    option is available.  The <strong>-D</strong> option will disable both the ftrace_enabled
+    proc file as well as the function-trace option if it exists.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Note, this disable function tracing for all users, which includes users
+outside of ftrace tracers (stack_tracer, perf, etc).</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-O</strong> <em>option</em>
+</dt>
+<dd>
+<p>
+    Ftrace has various options that can be enabled or disabled. This allows
+    you to set them. Appending the text <em>no</em> to an option disables it.
+    For example: "-O nograph-time" will disable the "graph-time" Ftrace
+    option.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-s</strong> <em>interval</em>
+</dt>
+<dd>
+<p>
+    The processes that trace-cmd creates to record from the ring buffer need
+    to wake up to do the recording. Setting the <em>interval</em> to zero will cause
+    the processes to wakeup every time new data is written into the buffer.
+    But since Ftrace is recording kernel activity, the act of this processes
+    going back to sleep may cause new events into the ring buffer which will
+    wake the process back up. This will needlessly add extra data into the
+    ring buffer.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>The 'interval' metric is microseconds. The default is set to 1000 (1 ms).
+This is the time each recording process will sleep before waking up to
+record any new data that was written to the ring buffer.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-r</strong> <em>priority</em>
+</dt>
+<dd>
+<p>
+    The priority to run the capture threads at. In a busy system the trace
+    capturing threads may be staved and events can be lost. This increases
+    the priority of those threads to the real time (FIFO) priority.
+    But use this option with care, it can also change the behaviour of
+    the system being traced.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-b</strong> <em>size</em>
+</dt>
+<dd>
+<p>
+    This sets the ring buffer size to <em>size</em> kilobytes. Because the Ftrace
+    ring buffer is per CPU, this size is the size of each per CPU ring buffer
+    inside the kernel. Using "-b 10000" on a machine with 4 CPUs will make
+    Ftrace have a total buffer size of 40 Megs.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-B</strong> <em>buffer-name</em>
+</dt>
+<dd>
+<p>
+    If the kernel supports multiple buffers, this will add a buffer with
+    the given name. If the buffer name already exists, that buffer is just
+    reset and will not be deleted at the end of record execution. If the
+    buffer is created, it will be removed at the end of execution (unless
+    the <strong>-k</strong> is set, or <em>start</em> command was used).
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>After a buffer name is stated, all events added after that will be
+associated with that buffer. If no buffer is specified, or an event
+is specified before a buffer name, it will be associated with the
+main (toplevel) buffer.</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>trace-cmd record -e sched -B block -e block -B time -e timer sleep 1</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>The above is will enable all sched events in the main buffer. It will
+then create a 'block' buffer instance and enable all block events within
+that buffer. A 'time' buffer instance is created and all timer events
+will be enabled for that event.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-m</strong> <em>size</em>
+</dt>
+<dd>
+<p>
+    The max size in kilobytes that a per cpu buffer should be. Note, due
+    to rounding to page size, the number may not be totally correct.
+    Also, this is performed by switching between two buffers that are half
+    the given size thus the output may not be of the given size even if
+    much more was written.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Use this to prevent running out of diskspace for long runs.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-M</strong> <em>cpumask</em>
+</dt>
+<dd>
+<p>
+    Set the cpumask for to trace. It only affects the last buffer instance
+    given. If supplied before any buffer instance, then it affects the
+    main buffer. The value supplied must be a hex number.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>trace-cmd record -p function -M c -B events13 -e all -M 5</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>If the -M is left out, then the mask stays the same. To enable all
+CPUs, pass in a value of '-1'.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-k</strong>
+</dt>
+<dd>
+<p>
+    By default, when trace-cmd is finished tracing, it will reset the buffers
+    and disable all the tracing that it enabled. This option keeps trace-cmd
+    from disabling the tracer and reseting the buffer. This option is useful for
+    debugging trace-cmd.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Note: usually trace-cmd will set the "tracing_on" file back to what it
+was before it was called. This option will leave that file set to zero.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-i</strong>
+</dt>
+<dd>
+<p>
+    By default, if an event is listed that trace-cmd does not find, it
+    will exit with an error. This option will just ignore events that are
+    listed on the command line but are not found on the system.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-N</strong> <em>host:port</em>
+</dt>
+<dd>
+<p>
+    If another machine is running "trace-cmd listen", this option is used to
+    have the data sent to that machine with UDP packets. Instead of writing
+    to an output file, the data is sent off to a remote box. This is ideal for
+    embedded machines with little storage, or having a single machine that
+    will keep all the data in a single repository.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Note: This option is not supported with latency tracer plugins:
+  wakeup, wakeup_rt, irqsoff, preemptoff and preemptirqsoff</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-V</strong> <em>cid:port</em>
+</dt>
+<dd>
+<p>
+    If recording on a guest VM and the host is running <strong>trace-cmd listen</strong> with
+    the <strong>-V</strong> option as well, or if this is recording on the host, and a guest
+    in running <strong>trace-cmd listen</strong> with the <strong>-V</strong> option, then connect to the
+    listener (the same as connecting with the <strong>-N</strong> option via the network).
+    This has the same limitations as the <strong>-N</strong> option above with respect to
+    latency tracer plugins.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-t</strong>
+</dt>
+<dd>
+<p>
+    This option is used with <strong>-N</strong>, when there&#8217;s a need to send the live data
+    with TCP packets instead of UDP. Although TCP is not nearly as fast as
+    sending the UDP packets, but it may be needed if the network is not that
+    reliable, the amount of data is not that intensive, and a guarantee is
+    needed that all traced information is transfered successfully.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-q</strong> | <strong>--quiet</strong>
+</dt>
+<dd>
+<p>
+    For use with recording an application. Suppresses normal output
+    (except for errors) to allow only the application&#8217;s output to be displayed.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--date</strong>
+</dt>
+<dd>
+<p>
+    With the <strong>--date</strong> option, "trace-cmd" will write timestamps into the
+    trace buffer after it has finished recording. It will then map the
+    timestamp to gettimeofday which will allow wall time output from the
+    timestamps reading the created <em>trace.dat</em> file.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--max-graph-depth</strong> <em>depth</em>
+</dt>
+<dd>
+<p>
+    Set the maximum depth the function_graph tracer will trace into a function.
+    A value of one will only show where userspace enters the kernel but not any
+    functions called in the kernel. The default is zero, which means no limit.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--cmdlines-size</strong> <em>size</em>
+</dt>
+<dd>
+<p>
+    Set the number of entries the kernel tracing file "saved_cmdlines" can
+    contain. This file is a circular buffer which stores the mapping between
+    cmdlines and PIDs. If full, it leads to unresolved cmdlines ("&lt;&#8230;&gt;") within
+    the trace. The kernel default value is 128.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--module</strong> <em>module</em>
+</dt>
+<dd>
+<p>
+    Filter a module&#8217;s name in function tracing. It is equivalent to adding
+    <em>:mod:module</em> after all other functions being filtered. If no other function
+    filter is listed, then all modules functions will be filtered in the filter.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>'--module snd'  is equivalent to  '-l :mod:snd'</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>'--module snd -l "*jack*"' is equivalent to '-l "*jack*:mod:snd"'</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>'--module snd -n "*"' is equivalent to '-n :mod:snd'</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>--proc-map</strong>
+</dt>
+<dd>
+<p>
+     Save the traced process address map into the trace.dat file. The traced
+     processes can be specified using the option <strong>-P</strong>, or as a given <em>command</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--profile</strong>
+</dt>
+<dd>
+<p>
+    With the <strong>--profile</strong> option, "trace-cmd" will enable tracing that can
+    be used with trace-cmd-report(1) --profile option. If a tracer <strong>-p</strong> is
+    not set, and function graph depth is supported by the kernel, then
+    the function_graph tracer will be enabled with a depth of one (only
+    show where userspace enters into the kernel). It will also enable
+    various tracepoints with stack tracing such that the report can show
+    where tasks have been blocked for the longest time.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>See trace-cmd-profile(1) for more details and examples.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-G</strong>
+</dt>
+<dd>
+<p>
+    Set interrupt (soft and hard) events as global (associated to CPU
+    instead of tasks). Only works for --profile.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-H</strong> <em>event-hooks</em>
+</dt>
+<dd>
+<p>
+    Add custom event matching to connect any two events together. When not
+    used with <strong>--profile</strong>, it will save the parameter and this will be
+    used by trace-cmd report --profile, too. That is:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>trace-cmd record -H hrtimer_expire_entry,hrtimer/hrtimer_expire_exit,hrtimer,sp
+trace-cmd report --profile</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>Will profile hrtimer_expire_entry and hrtimer_expire_ext times.</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>See trace-cmd-profile(1) for format.</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>-S</strong>
+</dt>
+<dd>
+<p>
+(for --profile only)
+    Only enable the tracer or events speficied on the command line.
+    With this option, the function_graph tracer is not enabled, nor are
+    any events (like sched_switch), unless they are specifically specified
+    on the command line (i.e. -p function -e sched_switch -e sched_wakeup)
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--temp</strong> <em>directory</em>
+</dt>
+<dd>
+<p>
+    When <strong>trace-cmd</strong> is recording the trace, it records the per CPU data into
+    a separate file for each CPU. At the end of the trace, these files are
+    concatenated onto the final trace.dat file. If the final file is on a network
+    file system, it may not be appropriate to copy these temp files into the
+    same location. <strong>--temp</strong> can be used to tell <strong>trace-cmd</strong> where those temp
+    files should be created.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--ts-offset offset</strong>
+</dt>
+<dd>
+<p>
+    Add an offset for the timestamp in the trace.dat file. This will add a
+    offset option into the trace.dat file such that a trace-cmd report will
+    offset all the timestamps of the events by the given offset. The offset
+    is in raw units. That is, if the event timestamps are in nanoseconds
+    the offset will also be in nanoseconds even if the displayed units are
+    in microseconds.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--tsync-interval</strong>
+</dt>
+<dd>
+<p>
+    Set the loop interval, in ms, for timestamps synchronization with guests:
+        If a negative number is specified, timestamps synchronization is disabled
+        If 0 is specified, no loop is performed - timestamps offset is calculated only twice,"
+        at the beginning and at the end of the trace.
+        Timestamps synchronization with guests works only if there is support for VSOCK.\n"
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--tsc2nsec</strong>
+</dt>
+<dd>
+<p>
+    Convert the current clock to nanoseconds, using tsc multiplier and shift from the Linux
+        kernel&#8217;s perf interface. This option does not change the trace clock, just assumes that
+        the tsc multiplier and shift are applicable for the selected clock. You may use the
+        "-C tsc2nsec" clock, if not sure what clock to select.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--stderr</strong>
+</dt>
+<dd>
+<p>
+    Have output go to stderr instead of stdout, but the output of the command
+    executed will not be changed. This is useful if you want to monitor the
+    output of the command being executed, but not see the output from trace-cmd.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--poll</strong>
+</dt>
+<dd>
+<p>
+    Waiting for data to be available on the trace ring-buffers may trigger
+    IPIs. This might generate unacceptable trace noise when tracing low latency
+    or real time systems. The poll option forces trace-cmd to use O_NONBLOCK.
+    Traces are extracted by busy waiting, which will hog the CPUs, so only use
+    when really needed.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--name</strong>
+</dt>
+<dd>
+<p>
+    Give a specific name for the current agent being processed. Used after <strong>-A</strong> to
+    give the guest being traced a name. Useful when using the vsocket ID instead of
+    a name of the guest.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--verbose</strong>[=<em>level</em>]
+</dt>
+<dd>
+<p>
+     Set the log level. Supported log levels are "none", "critical", "error", "warning",
+     "info", "debug", "all" or their identifiers "0", "1", "2", "3", "4", "5", "6". Setting the log
+     level to specific value enables all logs from that and all previous levels.
+     The level will default to "info" if one is not specified.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>Example: enable all critical, error and warning logs</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>trace-cmd record --verbose=warning</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>--file-version</strong>
+</dt>
+<dd>
+<p>
+    Desired version of the output file. Supported versions are 6 or 7.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--compression</strong>
+</dt>
+<dd>
+<p>
+    Compression of the trace output file, one of these strings can be passed:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>'any'  - auto select the best available compression algorithm</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>'none' - do not compress the trace file</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>'name' - the name of the desired compression algorithms. Available algorithms can be listed with
+trace-cmd list -c</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+<strong>--proxy</strong> <em>vsocket</em>
+</dt>
+<dd>
+<p>
+    Use a vsocket proxy to reach the agent. Acts the same as <strong>-A</strong> (for an
+    agent) but will send the proxy connection to the agent. It is expected to
+    run on a privileged guest that the host is aware of (as denoted by the
+    <em>cid</em> in the <strong>-P</strong> option for the agent).
+</p>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples">EXAMPLES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The basic way to trace all events:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd record -e all ls &gt; /dev/null</span></span>
+ <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd report</span></span>
+       trace-cmd-<span style="color: #993399">13541</span> <span style="color: #990000">[</span><span style="color: #993399">003</span><span style="color: #990000">]</span> <span style="color: #993399">106260.693809</span><span style="color: #990000">:</span> filemap_fault<span style="color: #990000">:</span> <span style="color: #009900">address</span><span style="color: #990000">=</span><span style="color: #993399">0x128122</span> <span style="color: #009900">offset</span><span style="color: #990000">=</span><span style="color: #993399">0xce</span>
+       trace-cmd-<span style="color: #993399">13543</span> <span style="color: #990000">[</span><span style="color: #993399">001</span><span style="color: #990000">]</span> <span style="color: #993399">106260.693809</span><span style="color: #990000">:</span> kmalloc<span style="color: #990000">:</span> <span style="color: #009900">call_site</span><span style="color: #990000">=</span>81128dd4 <span style="color: #009900">ptr</span><span style="color: #990000">=</span><span style="color: #993399">0xffff88003dd83800</span> <span style="color: #009900">bytes_req</span><span style="color: #990000">=</span><span style="color: #993399">768</span> <span style="color: #009900">bytes_alloc</span><span style="color: #990000">=</span><span style="color: #993399">1024</span> <span style="color: #009900">gfp_flags</span><span style="color: #990000">=</span>GFP_KERNEL<span style="color: #990000">|</span>GFP_ZERO
+              ls-<span style="color: #993399">13545</span> <span style="color: #990000">[</span><span style="color: #993399">002</span><span style="color: #990000">]</span> <span style="color: #993399">106260.693809</span><span style="color: #990000">:</span> kfree<span style="color: #990000">:</span> <span style="color: #009900">call_site</span><span style="color: #990000">=</span>810a7abb <span style="color: #009900">ptr</span><span style="color: #990000">=</span><span style="color: #993399">0x0</span>
+              ls-<span style="color: #993399">13545</span> <span style="color: #990000">[</span><span style="color: #993399">002</span><span style="color: #990000">]</span> <span style="color: #993399">106260.693818</span><span style="color: #990000">:</span> sys_exit_write<span style="color: #990000">:</span>       <span style="color: #993399">0x1</span></tt></pre></div></div>
+<div class="paragraph"><p>To use the function tracer with sched switch tracing:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd record -p function -e sched_switch ls &gt; /dev/null</span></span>
+ <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd report</span></span>
+              ls-<span style="color: #993399">13587</span> <span style="color: #990000">[</span><span style="color: #993399">002</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860310</span><span style="color: #990000">:</span> function<span style="color: #990000">:</span> hrtick_start_fair <span style="color: #990000">&lt;</span>-- pick_next_task_fair
+              ls-<span style="color: #993399">13587</span> <span style="color: #990000">[</span><span style="color: #993399">002</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860313</span><span style="color: #990000">:</span> sched_switch<span style="color: #990000">:</span> <span style="color: #009900">prev_comm</span><span style="color: #990000">=</span>trace-cmd <span style="color: #009900">prev_pid</span><span style="color: #990000">=</span><span style="color: #993399">13587</span> <span style="color: #009900">prev_prio</span><span style="color: #990000">=</span><span style="color: #993399">120</span> <span style="color: #009900">prev_state</span><span style="color: #990000">=</span>R <span style="color: #990000">==&gt;</span> <span style="color: #009900">next_comm</span><span style="color: #990000">=</span>trace-cmd <span style="color: #009900">next_pid</span><span style="color: #990000">=</span><span style="color: #993399">13583</span> <span style="color: #009900">next_prio</span><span style="color: #990000">=</span><span style="color: #993399">120</span>
+       trace-cmd-<span style="color: #993399">13585</span> <span style="color: #990000">[</span><span style="color: #993399">001</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860314</span><span style="color: #990000">:</span> function<span style="color: #990000">:</span> native_set_pte_at <span style="color: #990000">&lt;</span>-- __do_fault
+       trace-cmd-<span style="color: #993399">13586</span> <span style="color: #990000">[</span><span style="color: #993399">003</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860314</span><span style="color: #990000">:</span> function<span style="color: #990000">:</span>             up_read <span style="color: #990000">&lt;</span>-- do_page_fault
+              ls-<span style="color: #993399">13587</span> <span style="color: #990000">[</span><span style="color: #993399">002</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860317</span><span style="color: #990000">:</span> function<span style="color: #990000">:</span>             __phys_addr <span style="color: #990000">&lt;</span>-- schedule
+       trace-cmd-<span style="color: #993399">13585</span> <span style="color: #990000">[</span><span style="color: #993399">001</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860318</span><span style="color: #990000">:</span> function<span style="color: #990000">:</span> _raw_spin_unlock <span style="color: #990000">&lt;</span>-- __do_fault
+              ls-<span style="color: #993399">13587</span> <span style="color: #990000">[</span><span style="color: #993399">002</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860320</span><span style="color: #990000">:</span> function<span style="color: #990000">:</span> native_load_sp0 <span style="color: #990000">&lt;</span>-- __switch_to
+       trace-cmd-<span style="color: #993399">13586</span> <span style="color: #990000">[</span><span style="color: #993399">003</span><span style="color: #990000">]</span> <span style="color: #993399">106467.860322</span><span style="color: #990000">:</span> function<span style="color: #990000">:</span> down_read_trylock <span style="color: #990000">&lt;</span>-- do_page_fault</tt></pre></div></div>
+<div class="paragraph"><p>Here is a nice way to find what interrupts have the highest latency:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd record -p function_graph -e irq_handler_entry  -l do_IRQ sleep 10</span></span>
+ <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd report</span></span>
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157412.933969</span><span style="color: #990000">:</span> funcgraph_entry<span style="color: #990000">:</span>                  <span style="color: #990000">|</span>  <span style="font-weight: bold"><span style="color: #000000">do_IRQ()</span></span> {
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157412.933974</span><span style="color: #990000">:</span> irq_handler_entry<span style="color: #990000">:</span>    <span style="color: #009900">irq</span><span style="color: #990000">=</span><span style="color: #993399">48</span> <span style="color: #009900">name</span><span style="color: #990000">=</span>eth0
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157412.934004</span><span style="color: #990000">:</span> funcgraph_exit<span style="color: #990000">:</span>       <span style="color: #990000">+</span> <span style="color: #993399">36.358</span> us <span style="color: #990000">|</span>  }
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157413.895004</span><span style="color: #990000">:</span> funcgraph_entry<span style="color: #990000">:</span>                  <span style="color: #990000">|</span>  <span style="font-weight: bold"><span style="color: #000000">do_IRQ()</span></span> {
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157413.895011</span><span style="color: #990000">:</span> irq_handler_entry<span style="color: #990000">:</span>    <span style="color: #009900">irq</span><span style="color: #990000">=</span><span style="color: #993399">48</span> <span style="color: #009900">name</span><span style="color: #990000">=</span>eth0
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157413.895026</span><span style="color: #990000">:</span> funcgraph_exit<span style="color: #990000">:</span>                        <span style="color: #990000">+</span> <span style="color: #993399">24.014</span> us <span style="color: #990000">|</span>  }
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157415.891762</span><span style="color: #990000">:</span> funcgraph_entry<span style="color: #990000">:</span>                  <span style="color: #990000">|</span>  <span style="font-weight: bold"><span style="color: #000000">do_IRQ()</span></span> {
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157415.891769</span><span style="color: #990000">:</span> irq_handler_entry<span style="color: #990000">:</span>    <span style="color: #009900">irq</span><span style="color: #990000">=</span><span style="color: #993399">48</span> <span style="color: #009900">name</span><span style="color: #990000">=</span>eth0
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157415.891784</span><span style="color: #990000">:</span> funcgraph_exit<span style="color: #990000">:</span>       <span style="color: #990000">+</span> <span style="color: #993399">22.928</span> us <span style="color: #990000">|</span>  }
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157415.934869</span><span style="color: #990000">:</span> funcgraph_entry<span style="color: #990000">:</span>                  <span style="color: #990000">|</span>  <span style="font-weight: bold"><span style="color: #000000">do_IRQ()</span></span> {
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157415.934874</span><span style="color: #990000">:</span> irq_handler_entry<span style="color: #990000">:</span>    <span style="color: #009900">irq</span><span style="color: #990000">=</span><span style="color: #993399">48</span> <span style="color: #009900">name</span><span style="color: #990000">=</span>eth0
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157415.934906</span><span style="color: #990000">:</span> funcgraph_exit<span style="color: #990000">:</span>       <span style="color: #990000">+</span> <span style="color: #993399">37.512</span> us <span style="color: #990000">|</span>  }
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157417.888373</span><span style="color: #990000">:</span> funcgraph_entry<span style="color: #990000">:</span>                  <span style="color: #990000">|</span>  <span style="font-weight: bold"><span style="color: #000000">do_IRQ()</span></span> {
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157417.888381</span><span style="color: #990000">:</span> irq_handler_entry<span style="color: #990000">:</span>    <span style="color: #009900">irq</span><span style="color: #990000">=</span><span style="color: #993399">48</span> <span style="color: #009900">name</span><span style="color: #990000">=</span>eth0
+          <span style="color: #990000">&lt;</span>idle<span style="color: #990000">&gt;</span>-<span style="color: #993399">0</span>     <span style="color: #990000">[</span><span style="color: #993399">000</span><span style="color: #990000">]</span> <span style="color: #993399">157417.888398</span><span style="color: #990000">:</span> funcgraph_exit<span style="color: #990000">:</span>       <span style="color: #990000">+</span> <span style="color: #993399">25.943</span> us <span style="color: #990000">|</span>  }</tt></pre></div></div>
+<div class="paragraph"><p>An example of the profile:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd record --profile sleep 1</span></span>
+ <span style="font-style: italic"><span style="color: #9A1900"># trace-cmd report --profile --comm sleep</span></span>
+task<span style="color: #990000">:</span> sleep-<span style="color: #993399">21611</span>
+  Event<span style="color: #990000">:</span> sched_switch<span style="color: #990000">:</span>R <span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">)</span> Total<span style="color: #990000">:</span> <span style="color: #993399">99442</span> Avg<span style="color: #990000">:</span> <span style="color: #993399">99442</span> Max<span style="color: #990000">:</span> <span style="color: #993399">99442</span> Min<span style="color: #990000">:</span><span style="color: #993399">99442</span>
+     <span style="color: #990000">&lt;</span>stack<span style="color: #990000">&gt;</span> <span style="color: #993399">1</span> total<span style="color: #990000">:</span><span style="color: #993399">99442</span> min<span style="color: #990000">:</span><span style="color: #993399">99442</span> max<span style="color: #990000">:</span><span style="color: #993399">99442</span> <span style="color: #009900">avg</span><span style="color: #990000">=</span><span style="color: #993399">99442</span>
+       <span style="color: #990000">=&gt;</span> ftrace_raw_event_sched_switch <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8105f812</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> __schedule <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150810a</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> preempt_schedule <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150842e</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> ___preempt_schedule <span style="color: #990000">(</span><span style="color: #993399">0xffffffff81273354</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> cpu_stop_queue_work <span style="color: #990000">(</span><span style="color: #993399">0xffffffff810b03c5</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> stop_one_cpu <span style="color: #990000">(</span><span style="color: #993399">0xffffffff810b063b</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> sched_exec <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8106136d</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> do_execve_common<span style="color: #990000">.</span>isra<span style="color: #990000">.</span><span style="color: #993399">27</span> <span style="color: #990000">(</span><span style="color: #993399">0xffffffff81148c89</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> do_execve <span style="color: #990000">(</span><span style="color: #993399">0xffffffff811490b0</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> SyS_execve <span style="color: #990000">(</span><span style="color: #993399">0xffffffff811492c4</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> return_to_handler <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150e3c8</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> stub_execve <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150c699</span><span style="color: #990000">)</span>
+  Event<span style="color: #990000">:</span> sched_switch<span style="color: #990000">:</span>S <span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">)</span> Total<span style="color: #990000">:</span> <span style="color: #993399">1000506680</span> Avg<span style="color: #990000">:</span> <span style="color: #993399">1000506680</span> Max<span style="color: #990000">:</span> <span style="color: #993399">1000506680</span> Min<span style="color: #990000">:</span><span style="color: #993399">1000506680</span>
+     <span style="color: #990000">&lt;</span>stack<span style="color: #990000">&gt;</span> <span style="color: #993399">1</span> total<span style="color: #990000">:</span><span style="color: #993399">1000506680</span> min<span style="color: #990000">:</span><span style="color: #993399">1000506680</span> max<span style="color: #990000">:</span><span style="color: #993399">1000506680</span> <span style="color: #009900">avg</span><span style="color: #990000">=</span><span style="color: #993399">1000506680</span>
+       <span style="color: #990000">=&gt;</span> ftrace_raw_event_sched_switch <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8105f812</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> __schedule <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150810a</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> schedule <span style="color: #990000">(</span><span style="color: #993399">0xffffffff815084b8</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> do_nanosleep <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150b22c</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> hrtimer_nanosleep <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8108d647</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> SyS_nanosleep <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8108d72c</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> return_to_handler <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150e3c8</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> tracesys_phase2 <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8150c304</span><span style="color: #990000">)</span>
+  Event<span style="color: #990000">:</span> sched_wakeup<span style="color: #990000">:</span><span style="color: #993399">21611</span> <span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">)</span> Total<span style="color: #990000">:</span> <span style="color: #993399">30326</span> Avg<span style="color: #990000">:</span> <span style="color: #993399">30326</span> Max<span style="color: #990000">:</span> <span style="color: #993399">30326</span> Min<span style="color: #990000">:</span><span style="color: #993399">30326</span>
+     <span style="color: #990000">&lt;</span>stack<span style="color: #990000">&gt;</span> <span style="color: #993399">1</span> total<span style="color: #990000">:</span><span style="color: #993399">30326</span> min<span style="color: #990000">:</span><span style="color: #993399">30326</span> max<span style="color: #990000">:</span><span style="color: #993399">30326</span> <span style="color: #009900">avg</span><span style="color: #990000">=</span><span style="color: #993399">30326</span>
+       <span style="color: #990000">=&gt;</span> ftrace_raw_event_sched_wakeup_template <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8105f653</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> ttwu_do_wakeup <span style="color: #990000">(</span><span style="color: #993399">0xffffffff810606eb</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> ttwu_do_activate<span style="color: #990000">.</span>constprop<span style="color: #990000">.</span><span style="color: #993399">124</span> <span style="color: #990000">(</span><span style="color: #993399">0xffffffff810607c8</span><span style="color: #990000">)</span>
+       <span style="color: #990000">=&gt;</span> try_to_wake_up <span style="color: #990000">(</span><span style="color: #993399">0xffffffff8106340a</span><span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_see_also">SEE ALSO</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>trace-cmd(1), trace-cmd-report(1), trace-cmd-start(1), trace-cmd-stop(1),
+trace-cmd-extract(1), trace-cmd-reset(1), trace-cmd-split(1),
+trace-cmd-list(1), trace-cmd-listen(1), trace-cmd-profile(1)</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_author">AUTHOR</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Written by Steven Rostedt, &lt;<a href="mailto:rostedt@goodmis.org">rostedt@goodmis.org</a>&gt;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources">RESOURCES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><a href="https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/">https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copying">COPYING</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under
+the terms of the GNU Public License (GPL).</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated
+ 2023-06-07 20:21:00 UTC
+</div>
+</div>
+</body>
+</html>

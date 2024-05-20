@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<component type="console-application">
+  <id>org.freedesktop.fwupd</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LGPL-2.0+</project_license>
+  <name>fwupd</name>
+  <summary>Update device firmware on Linux</summary>
+  <description>
+    <p>
+      This project aims to make updating firmware on Linux automatic, safe and
+      reliable.
+      You can either use a GUI software manager like GNOME Software to view and
+      apply updates, the command-line tool or the D-Bus interface directly.
+    </p>
+    <p>
+      The fwupd process is a system daemon to allow session software to update
+      device firmware on your local machine.
+      It is designed for desktops, but this project is also usable on phones,
+      tablets and on headless servers.
+    </p>
+  </description>
+  <url type="bugtracker">https://github.com/fwupd/fwupd/issues</url>
+  <url type="homepage">https://fwupd.org/</url>
+  <url type="translate">https://www.transifex.com/freedesktop/fwupd/</url>
+  <url type="vcs-browser">https://github.com/fwupd/fwupd</url>
+  <update_contact>richard_at_hughsie.com</update_contact>
+  <developer_name>The fwupd authors</developer_name>
+  <developer id="fwupd.org">
+    <name translatable="no">The fwupd authors</name>
+  </developer>
+  <translation type="gettext">fwupd</translation>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-info">moderate</content_attribute>
+  </content_rating>
+  <provides>
+    <binary>fwupdmgr</binary>
+    <binary>fwupdtool</binary>
+  </provides>
+  <releases>
+    <release version="1.9.16" date="2024-04-05">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Prefer zstd over xz for metadata</li>
+          <li>Relicense a few remaining plugin files to LGPL-2.1+</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Correctly record UEFI success if adding ESRT nodes</li>
+          <li>Defer the DP Aux MST scanning on hotplug to workaround a kernel bug</li>
+          <li>Do not do the post-update version check if the device needs-reboot</li>
+          <li>Fix a fastboot warning when loading device</li>
+          <li>Fix a possible warning in fwupdmgr when excluding releases</li>
+          <li>Fix a qsi-dock warning when writing chunks</li>
+          <li>Ignore attribute-changed to work around a regression in macOS</li>
+          <li>Ignore ZFS zvols when finding the default ESP</li>
+          <li>Mark Pluton TPMs as part of the main CPU</li>
+          <li>Put the fwupd-efi verbose debugging in the journal</li>
+          <li>Recognize zfsbootmenu in ESP detection heuristic</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>Acer T34 and U33 docks</li>
+          <li>Qualcomm Series 5 Gen 1 and Gen 2 and Series 3 Gen 1 and Gen 2 devices</li>
+          <li>Several Puya SPI chips</li>
+          <li>VIA VL822 C0</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.9.15" date="2024-03-11">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Allow loading in parameters for the test device from fwupd.conf</li>
+          <li>Ensure LVFS remotes are changed from .gz to .xz</li>
+          <li>Store the install duration in the history database</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Drop OverrideESPMountPoint references in uefi-capsule</li>
+          <li>Fix a potential double-free when writing AVer firmware</li>
+          <li>Only request the BOS descriptor when bcdUSB &gt; 0x0200</li>
+          <li>Use the root device order when sorting device children</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.9.14" date="2024-02-26">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Allow plugins to opt-into a default device GType</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Correctly detect ARM32 and RISC-V UEFI binaries</li>
+          <li>Correctly migrate the database schema from very old fwupd versions</li>
+          <li>Fix critical warnings when using FWUPD_DBUS_SOCKET= on macOS</li>
+          <li>Fix DS-20 descriptors by opening the GUsbDevice earlier</li>
+          <li>Fix updating the fingerprint reader on the Framework 13 and 16 laptop</li>
+          <li>Fix warning when probing devices using the metadata allowlist</li>
+          <li>Only recover the version format for specific devices</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>Poly Studio V52</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.9.13" date="2024-02-08">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Add a timer inhibit if the daemon took a long time to startup</li>
+          <li>Add a concept of 'Test Mode' rather than enabling specific plugins</li>
+          <li>Do not idle-quit the daemon if there is a connected D-Bus client</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Allow plugins to opt-out of the child-device first depsolve</li>
+          <li>Allow setting multiple flags in LVFS::DeviceFlags</li>
+          <li>Do not migrate config comments for removed keys</li>
+          <li>Do not request the Advantech BMC to reboot</li>
+          <li>Do not warn the user about ESP when using MBR</li>
+          <li>Fix a critical warning when adding a PixArt wireless device</li>
+          <li>Fix migration of legacy config files</li>
+          <li>Only save config values to the mutable config file</li>
+          <li>Parse DS-20 descriptors earlier in device setup</li>
+          <li>Store the version format in the history database to fix offline reports</li>
+          <li>Use the correct GUID for matching realtek-mst and parade-lspcon</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>GoodWay Acer Dock</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.9.12" date="2024-01-23">
+      <description>
+        <p>
+          This release adds the following features:
+        </p>
+        <ul>
+          <li>Add remote modification support to fwupdtool</li>
+          <li>Add support for more modify-config options</li>
+          <li>Generate HTML pages for all man pages</li>
+        </ul>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Assume the legacy LVFS::UpdateRequestId tag is non-generic</li>
+          <li>Avoid crashing the daemon if not using udisks</li>
+          <li>Correctly mark the CPU as supported</li>
+          <li>Correctly match invalid EFI partitions</li>
+          <li>Do not change the device status until the action has completed</li>
+          <li>Do not require systemd for fwupdtool modify-config</li>
+          <li>Enable access to the home interface for snap</li>
+          <li>Fix an assertion when enabling lvfs-testing for the first time</li>
+          <li>Fix a possible crash in fwupdtool build-cabinet</li>
+          <li>Handle systems with more than one ccp device</li>
+          <li>Only check AMD CPUs for SHSTK, not IBT</li>
+          <li>Only write the mutable fwupd.conf with the current values</li>
+          <li>Re-evaluate supported every time pci-psp attributes are refreshed</li>
+          <li>Show "CET OS support" on AMD systems too</li>
+        </ul>
+        <p>This release adds support for the following hardware:</p>
+        <ul>
+          <li>AVer CAM340plus</li>
+          <li>AVer VB342 Pro</li>
+          <li>More Algoltek devices</li>
+        </ul>
+      </description>
+    </release>
+    </releases>
+</component>

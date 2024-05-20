@@ -1,0 +1,12 @@
+#!/bin/sh
+SNAP_BIN="/snap/bin/$(basename "$0")"
+if [ ! -f "${SNAP_BIN}" ]; then
+    echo "Installing LXD snap, please be patient."
+    python3 -c 'import socket; s=socket.socket(socket.AF_UNIX); s.connect("/run/lxd-installer.socket"); s.send(b"x"); s.recv(1)'
+
+    for _ in $(seq 90); do
+      [ -x "${SNAP_BIN}" ] && break
+      sleep 1
+    done
+fi
+exec "$SNAP_BIN" "$@"

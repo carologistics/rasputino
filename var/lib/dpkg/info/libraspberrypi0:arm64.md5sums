@@ -1,0 +1,10 @@
+1ce39e7b9422fe5a411f5b645ecffeaf  lib/udev/rules.d/10-local-rpi.rules
+2a98ae19a932c009d9d8582b81734250  usr/lib/aarch64-linux-gnu/libbcm_host.so
+8f02a6ae9f35ff9671905dadffb3f8e8  usr/lib/aarch64-linux-gnu/libdebug_sym.so
+90f824b1f6f15fe3f2fc3a6f95633123  usr/lib/aarch64-linux-gnu/libdtovl.so
+307dbf2098186cd63bf826af7b649844  usr/lib/aarch64-linux-gnu/libvchiq_arm.so
+58074202238afba8aad66aaff8435ec8  usr/lib/aarch64-linux-gnu/libvcos.so
+0448d6488ef8cc380632b1569ee6d196  usr/share/doc/libraspberrypi0/LICENCE
+d8c68b06a60bcc0c4d2dad21cce18a32  usr/share/doc/libraspberrypi0/changelog.Debian.gz
+64320acf8d40dd464dc7ec9d7f4a84ef  usr/share/doc/libraspberrypi0/copyright
+cdc47d953dd46f30a76a81d4c6173ed6  usr/share/lintian/overrides/libraspberrypi0

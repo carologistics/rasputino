@@ -1,0 +1,5 @@
+#We need to use dpkg-maintscript-helper manually because of sof-tplg version number being embedded
+firmware-sof-signed: maintainer-script-should-not-use-dpkg-maintscript-helper "dpkg-maintscript-helper" [postinst:3]
+firmware-sof-signed: maintainer-script-should-not-use-dpkg-maintscript-helper "dpkg-maintscript-helper" [postrm:3]
+firmware-sof-signed: maintainer-script-should-not-use-dpkg-maintscript-helper "dpkg-maintscript-helper" [preinst:3]
+

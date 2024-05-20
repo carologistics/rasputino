@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmodule-find-perl
+/usr/share/doc/libmodule-find-perl/changelog.Debian.gz
+/usr/share/doc/libmodule-find-perl/copyright
+/usr/share/doc/libmodule-find-perl/examples
+/usr/share/doc/libmodule-find-perl/examples/example.pl
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Module::Find.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Module
+/usr/share/perl5/Module/Find.pm

@@ -1,0 +1,111 @@
+/dts-v1/;
+
+/ {
+        description = "U-Boot fitImage for Mediatek AIoT i1200 board";
+        #address-cells = <1>;
+
+        images {
+                kernel-1 {
+                        description = "Linux kernel";
+                        data = /incbin/("@@LINUX_IMAGE_FILE@@");
+                        type = "kernel";
+                        arch = "arm64";
+                        os = "linux";
+                        compression = "gzip";
+                        load = <0x40200000>;
+                        entry = <0x40200000>;
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                ramdisk-1 {
+                        description = "Ubuntu ramdisk";
+                        data = /incbin/("@@INITRD_FILE@@");
+                        type = "ramdisk";
+                        arch = "arm64";
+                        os = "linux";
+                        compression = "none";
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                fdt-mt8195-demo.dtb {
+                        description = "i1200 flattened device tree blob";
+                        data = /incbin/("/lib/firmware/@@KERNEL_VERSION@@/device-tree/mediatek/mt8195-demo.dtb");
+                        type = "flat_dt";
+                        arch = "arm64";
+                        compression = "none";
+                        load = <0x44000000>;
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                fdt-panel-boe-ne135fbm.dtbo {
+                        description = "panel-boe-ne135fbm tree blob";
+                        data = /incbin/("/lib/firmware/@@KERNEL_VERSION@@/device-tree/mediatek/panel-boe-ne135fbm.dtbo");
+                        type = "flat_dt";
+                        arch = "arm64";
+                        compression = "none";
+                        load = <0x44c00000>;
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                fdt-display-dp.dtbo {
+                        description = "display-dp tree blob";
+                        data = /incbin/("/lib/firmware/@@KERNEL_VERSION@@/device-tree/mediatek/display-dp.dtbo");
+                        type = "flat_dt";
+                        arch = "arm64";
+                        compression = "none";
+                        load = <0x44c00000>;
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                fdt-vcodec-vcu-mt8395.dtbo {
+                        description = "vcodec-vcu-mt8395 tree blob";
+                        data = /incbin/("/lib/firmware/@@KERNEL_VERSION@@/device-tree/mediatek/vcodec-vcu-mt8395.dtbo");
+                        type = "flat_dt";
+                        arch = "arm64";
+                        compression = "none";
+                        load = <0x44c00000>;
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+        };
+
+        configurations {
+                default = "conf-mt8195-demo.dtb";
+                conf-mt8195-demo.dtb {
+                        description = "Linux kernel, mt8195-demo FDT blob";
+                        kernel = "kernel-1";
+                        ramdisk = "ramdisk-1";
+                        fdt = "fdt-mt8195-demo.dtb";
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                conf-panel-boe-ne135fbm.dtbo {
+                        description = "panel-boe-ne135fbm FDT blob";
+                        fdt = "fdt-panel-boe-ne135fbm.dtbo";
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                conf-display-dp.dtbo {
+                        description = "display-dp FDT blob";
+                        fdt = "fdt-display-dp.dtbo";
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+                conf-vcodec-vcu-mt8395.dtbo {
+                        description = "vcodec-vcu-mt8395 FDT blob";
+                        fdt = "fdt-vcodec-vcu-mt8395.dtbo";
+                        hash-1 {
+                                algo = "sha256";
+                        };
+                };
+        };
+};

@@ -1,0 +1,103 @@
+#!/bin/sh
+
+set -e
+
+# See d/linux-firmware-raspi.common
+# Given $package (which defaults to the current package name), outputs (on
+# stdout) the list of all filenames diverted by that package. Yes, it's
+# terribly hacky to go parsing ../dpkg/diversions manually. Unfortunately, the
+# output from dpkg-divert --list is localizable and thus cannot be parsed
+# safely, so this is the only option. The output is implicitly sorted for use
+# with comm
+package_diversions() {
+    local package="${1:-$DPKG_MAINTSCRIPT_PACKAGE}"
+    local target diverted_to diverted_by to_remove
+
+    while read target; do
+        read diverted_to
+        read diverted_by
+        if [ "$diverted_by" = "$package" ]; then
+            echo "$target"
+        fi
+    done < /var/lib/dpkg/diversions | sort
+}
+
+# Reads a list of diversions on stdin, filters out blank lines and comments
+# and sorts the output to stdout
+parse_diversions() {
+    grep -v "^[[:space:]]*\(#\|$\)" | sort
+}
+
+# Given $existing (a file containing a sorted list of absolute filenames) that
+# are current diverted by $old_package, and $wanted (another file containing a
+# sorted list of absolute filenames) of diversions desired by $new_package
+# (which defaults to the current package name), migrate all diversions that
+# exist in both lists. Note that no renaming is done; this simply transfers
+# "ownership" of the diversion
+migrate_diversions() {
+    local existing="$1"
+    local wanted="$2"
+    local old_package="$3"
+    local new_package="${4:-$DPKG_MAINTSCRIPT_PACKAGE}"
+
+    comm -12 "$existing" "$wanted" | while read filename; do
+        [ -n "$filename" ] || continue
+        dpkg-divert --package "$old_package" --remove --no-rename "$filename"
+        dpkg-divert --package "$new_package" --add --no-rename "$filename"
+    done
+}
+
+# Given $existing (a file containing a sorted list of absolute filenames), add
+# diversions for all files in $wanted (another file containing a sorted list of
+# absolute filenames) that don't appear in $existing, for $package (which
+# defaults to the current package name). Note that renaming *is* performed by
+# this routine
+add_missing_diversions() {
+    local existing="$1"
+    local wanted="$2"
+    local package="${3:-$DPKG_MAINTSCRIPT_PACKAGE}"
+
+    comm -13 "$existing" "$wanted" | while read filename; do
+        [ -n "$filename" ] || continue
+        dpkg-divert --package "$package" --add --rename "$filename"
+    done
+}
+
+# Given $existing (a file containing a sorted list of absolute filenames),
+# remove diversions for all files that do not occur in $wanted (another file
+# containing a sorted list of absolute filenames), for $package (which defaults
+# to the current package name). Note that renaming *is* performed by this
+# routine (target filenames must *not* exist)
+remove_unwanted_diversions() {
+    local existing="$1"
+    local wanted="$2"
+    local package="${3:-$DPKG_MAINTSCRIPT_PACKAGE}"
+
+    comm -23 "$existing" "$wanted" | while read filename; do
+        [ -n "$filename" ] || continue
+        dpkg-divert --package "$package" --remove --rename "$filename"
+    done
+}
+
+
+tmp=$(mktemp -t -d "linux-firmware-raspi.diversions.XXXXXX") || exit 1
+trap 'rm -rf "$tmp"' EXIT INT TERM
+
+case "$1" in
+    remove|abort-install|disappear)
+        package_diversions > "$tmp"/existing
+        remove_unwanted_diversions "$tmp"/existing /dev/null
+        ;;
+    upgrade|abort-upgrade)
+        # This is the old postrm in the upgrade and abort-upgrade case, so we
+        # don't know what to remove
+        ;;
+    failed-upgrade)
+        # Shouldn't be able to occur because the upgrade and abort-upgrade
+        # phases already return success here. If it does though, there's
+        # nothing we can reliably do here so we just pass onto the current
+        # postinst configure and hope it goes smoothly
+        ;;
+esac
+
+

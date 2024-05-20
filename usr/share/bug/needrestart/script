@@ -1,0 +1,19 @@
+#!/bin/sh
+
+PATH="/sbin:$PATH"
+
+exec >&3
+
+if [ -x /usr/sbin/needrestart ] ; then
+	printf "needrestart output:\n"
+	/usr/sbin/needrestart  -v -r l
+fi
+
+printf "\n"
+
+if [ -x /usr/sbin/checkrestart ] ; then
+	printf "checkrestart output:\n"
+	/usr/sbin/checkrestart -v
+fi
+
+printf "\n"

@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+dpkg-maintscript-helper symlink_to_dir /lib/firmware/intel/sof-tplg $(readlink /lib/firmware/intel/sof-tplg || echo sof-tplg-v2.1.1) 2.2.2-1\~ firmware-sof-signed -- "$@"
+

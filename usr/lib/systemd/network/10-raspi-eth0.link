@@ -1,0 +1,6 @@
+[Match]
+Driver=bcmgenet smsc95xx lan78xx macb
+OriginalName=en* eth0
+
+[Link]
+Name=eth0

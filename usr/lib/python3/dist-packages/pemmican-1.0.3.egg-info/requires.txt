@@ -1,0 +1,13 @@
+
+[doc]
+sphinx
+sphinx-rtd-theme
+
+[gui]
+dbus-python
+pygobject
+pyudev
+
+[test]
+pytest
+pytest-cov

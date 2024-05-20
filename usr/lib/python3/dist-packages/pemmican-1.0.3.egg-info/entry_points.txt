@@ -1,0 +1,4 @@
+[console_scripts]
+pemmican-cli = pemmican.cli:main
+pemmican-mon = pemmican.gui:monitor_main
+pemmican-reset = pemmican.gui:reset_main

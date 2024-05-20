@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ufw
+Version: 0.36.2
+Summary: front-end for Linux firewalling
+Home-page: https://launchpad.net/ufw
+Author: Jamie Strandboge
+Author-email: jamie@canonical.com
+License: GPL-3
+License-File: COPYING
+License-File: AUTHORS
+
+front-end for Linux firewalling

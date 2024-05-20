@@ -1,0 +1,2 @@
+# This isn't an application and we don't need appstream metadata
+ubuntu-raspi-settings: appstream-metadata-missing-modalias-provide usr/lib/udev/rules.d/60-gpio.rules
