@@ -1,0 +1,16 @@
+# idmapd.conf
+
+[General]
+Domain = {{ domain }}
+
+[Mapping]
+Nobody-User = nobody
+Nobody-Group = nogroup
+
+[Static]
+{% for client, local in user_mappings.items() -%}
+{{ client }}@{{ domain }} = {{ local }}
+{% endfor %}
+{% for client, local in group_mappings.items() -%}
+{{ client }}@{{ domain }} = {{ local }}
+{% endfor %}

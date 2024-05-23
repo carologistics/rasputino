@@ -1,7 +1,12 @@
 ^\.$
 ^\./\.git*
+^\./\.gitignore
+^\./\.mypy_cache*
 ^\./users.py
 ^\./get_permissions.sh
 ^\./apply_permissions.sh
-\^./permissions.txt
-\^./README
+^\./permissions.txt
+^\./\.permignore
+^\./nfs.py
+^\./idmapd.conf.j2
+^\./README
