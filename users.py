@@ -136,4 +136,10 @@ for group in groups_to_create:
         add_user_to_group(group["groupname"], member)
 
 print("Users and groups created successfully.")
-print("Plese consider to add your root account to the new rpi-root group and your user account to the rpi-robotino group.")
+print("Plese consider to add your user to all the groups for git tracking reasons.")
+prompt_result = ask_promt("Do you want to add your current user to the groups")
+if not prompt_result:
+    exit(0)
+
+for group in groups:
+    add_user_to_group(group["groupname"], os.getlogin())

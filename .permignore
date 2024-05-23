@@ -1,0 +1,7 @@
+^\.$
+^\./\.git*
+^\./users.py
+^\./get_permissions.sh
+^\./apply_permissions.sh
+\^./permissions.txt
+\^./README
