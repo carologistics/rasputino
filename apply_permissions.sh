@@ -11,3 +11,5 @@ while IFS=' ' read -r perm user group filepath; do
   chmod -f $perm $filepath
 
 done < <(awk '{printf "%s %s %s ", $1, $2, $3; for(i=4; i<=NF; i++) printf "%s ", $i; print ""}' permissions.txt)
+
+chown -R $UID:$GID .git
