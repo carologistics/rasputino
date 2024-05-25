@@ -18,7 +18,7 @@ voice:*::
 cdrom:*::
 floppy:*::
 tape:*::
-sudo:*::
+sudo:*::robotino
 audio:*::
 dip:*::
 www-data:*::

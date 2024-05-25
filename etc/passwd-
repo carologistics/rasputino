@@ -29,3 +29,4 @@ pollinate:x:106:1::/var/cache/pollinate:/bin/false
 fwupd-refresh:x:990:990:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
 landscape:x:107:109::/var/lib/landscape:/usr/sbin/nologin
 polkitd:x:989:989:User for polkitd:/:/usr/sbin/nologin
+robotino:x:1000:1000::/home/robotino:/bin/sh
