@@ -45,7 +45,7 @@ groups = parse_group_file("etc/group")
 user_mappings = {k: v for d in users for k, v in d.items()}
 group_mappings = {k: v for d in groups for k, v in d.items()}
 config_data = {
-    "domain": "raspberry",
+    "domain": "raspberry.com",
     "user_mappings": user_mappings,
     "group_mappings": group_mappings,
 }
@@ -60,7 +60,7 @@ user_server = {k: "rpi-" + v for k, v in user_mappings.items()}
 group_server = {k: "rpi-" + v for k, v in group_mappings.items()}
 
 config_server = {
-    "domain": "raspberry",
+    "domain": "raspberry.com",
     "user_mappings": user_server,
     "group_mappings": group_server,
 }
