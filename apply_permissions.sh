@@ -1,15 +1,8 @@
 #!/bin/bash
 
-# Read each line from the permissions file
-while IFS=' ' read -r perm user group filepath; do
-  # Adjust UID and GID
+sudo chown -R $(id -u):$(id -g) .git
+username=$(whoami)
+sudo setfacl -d -m "u:$username:rwx" -R .
+sudo setfacl -m "u:$username:rwx" -R .
 
-  # Change the ownership of the file
-  chown -h $user:$group "$filepath"
-
-  # Change the permissions of the file
-  chmod -f $perm $filepath
-
-done < <(awk '{printf "%s %s %s ", $1, $2, $3; for(i=4; i<=NF; i++) printf "%s ", $i; print ""}' permissions.txt)
-
-chown -R $UID:$GID .git
+sudo parallel --colsep '☠️' chmod -f {1} '{4}' ';' chown -f -h {2}:{3} '{4}' :::: permissions.txt
