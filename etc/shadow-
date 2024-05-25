@@ -28,3 +28,4 @@ sshd:!:19836::::::
 pollinate:!:19836::::::
 fwupd-refresh:!*:19836::::::
 landscape:!:19836::::::
+polkitd:!*:19836::::::
