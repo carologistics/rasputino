@@ -1,6 +1,8 @@
 ^\.$
 ^\./\.git*
 ^\./var/log/*
+^\./var/cache/*
+^\./var/crash/*
 ^\./\.gitignore
 ^\./\.mypy_cache*
 ^\./users.py
@@ -14,3 +16,11 @@
 ^*\.pyc
 .*__pycache__.*
 .*var/lib/snapd/cache/.*
+^\./var/\.updated
+^\./etc/\.updated
+.*\.ssh.*
+.*\.viminfo.*
+.*\.lesshst.*
+.*\.bash_history.*
+\./home/robotino/.cache.*
+\./home/robotino/.sudo_as_admin_successful

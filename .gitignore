@@ -1,5 +1,15 @@
 .mypy_cache/
 *__pycache__*
 *.pyc
-var/log
 var/lib/snapd/cache/
+var/.updated
+etc/.updated
+var/cache/
+var/crash/
+var/log/
+*.ssh
+*.viminfo
+*.lesshst
+*.bash_history
+home/robotino/.cache/
+home/robotino/.sudo_as_admin_successful

@@ -27,3 +27,6 @@ su - robotino
 chmod 4755 /usr/bin/sudo
 su - robotino
 exit
+ls
+journalctl 
+reboot

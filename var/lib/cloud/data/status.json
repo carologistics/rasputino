@@ -1,0 +1,38 @@
+{
+ "v1": {
+  "datasource": "DataSourceNone",
+  "init": {
+   "errors": [],
+   "finished": 1716829652.5215027,
+   "recoverable_errors": {
+    "WARNING": [
+     "Device '/dev/192.168.0.12:/rpi' did not exist. cannot resize: dev=192.168.0.12:/rpi mnt_point=/ path=/"
+    ]
+   },
+   "start": 1716829651.874232
+  },
+  "init-local": {
+   "errors": [],
+   "finished": 1716829650.6450768,
+   "recoverable_errors": {},
+   "start": 1716829649.6980312
+  },
+  "modules-config": {
+   "errors": [],
+   "finished": 1716829654.3857956,
+   "recoverable_errors": {},
+   "start": 1716829654.250638
+  },
+  "modules-final": {
+   "errors": [],
+   "finished": 1716829664.832555,
+   "recoverable_errors": {
+    "WARNING": [
+     "Used fallback datasource"
+    ]
+   },
+   "start": 1716829664.6338456
+  },
+  "stage": null
+ }
+}
