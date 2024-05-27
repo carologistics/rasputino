@@ -220,6 +220,18 @@ Name: glibc/upgrade
 Template: glibc/upgrade
 Owners: libc6, libc6:arm64
 
+Name: grub-pc/install_devices
+Template: grub-pc/install_devices
+Value: 
+Owners: grub-pc
+Flags: seen
+
+Name: grub-pc/install_devices_empty
+Template: grub-pc/install_devices_empty
+Value: true
+Owners: grub-pc
+Flags: seen
+
 Name: iproute2/setcaps
 Template: iproute2/setcaps
 Value: false

@@ -1,5 +1,6 @@
 ^\.$
 ^\./\.git*
+^\./var/log/*
 ^\./\.gitignore
 ^\./\.mypy_cache*
 ^\./users.py
@@ -10,3 +11,6 @@
 ^\./nfs.py
 ^\./idmapd.conf.j2
 ^\./README
+^*\.pyc
+.*__pycache__.*
+.*var/lib/snapd/cache/.*

@@ -1,1 +1,10 @@
-awk '{ $2=$2+2000; $3=$3+2000; print }' OFS=" " permissions.txt > output.txt
+# Cannot access due to Permissions
+never run anything with sudo just run the `./apply-permissions.sh'
+
+# Commit
+Run `./get-permissions.sh` to update the `permissions.txt`
+Run `git diff --binary` to get a patch that supports binary files
+
+# checkout
+Run `./apply-permissions.sh` after checkout to set the right permissions
+
