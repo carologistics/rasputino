@@ -1,15 +1,16 @@
-#include <string>
-#include <sys/stat.h>
-#include <sys/types.h>
+#include <acl/libacl.h>
+#include <cerrno>
+#include <cstdlib>
+#include <cstring>
+#include <filesystem>
+#include <grp.h>
 #include <iostream>
 #include <pwd.h>
-#include <grp.h>
-#include <unistd.h>
-#include <cstdlib>
-#include <cerrno>
-#include <cstring>
-#include <acl/libacl.h>
+#include <string>
 #include <sys/acl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 inline bool match_perms(const mode_t target, acl_entry_t entry) {
     bool diff = false;
@@ -139,56 +140,29 @@ bool set_permset_for_uid(const std::string path, const int sudo_uid, const mode_
     acl_free(acl);
     return true;
 }
-
 int main() {
+  std::string path;
   struct stat buf;
-  std::string line;
-  uid_t uid;
-  gid_t gid;
-  mode_t mode;
-  size_t pos1, pos2, pos3, start;
-
   int sudo_uid = std::stoi(getenv("SUDO_UID"));
-
-  while(std::cin) {
-      getline(std::cin, line);
-      if(line.empty()) {
-          break;
-      }
-
-      pos1 = line.find(' ');
-      mode = static_cast<mode_t>(std::stoul(line.substr(0, pos1),
-                                            nullptr, 8));
-
-      start = pos1 + 1;
-      pos2 = line.find(' ', start);
-      uid = stoi(line.substr(start, pos2 - start));
-
-      // Find the position of the third space starting from the character after pos2
-      start = pos2 + 1;
-      pos3 = line.find(' ', start);
-      gid = std::stoi(line.substr(start, pos3 - start));
-
-      // Extract everything after the third space
-      std::string file = line.substr(pos3 + 1);
-      if(lchown(file.c_str(), uid, gid) == -1) {
-          std::cerr << "Error changing owner/group on " << file << std::endl;
-      }
-      if(lstat(file.c_str(), &buf) == -1) {
-          std::cerr << "Error getting file status on " << file << ": "
+  for (std::filesystem::recursive_directory_iterator
+          i("."), end;
+       i != end; ++i) {
+    path = i->path().string().substr(2);
+    if(lstat(path.c_str(), &buf) == -1) {
+        std::cerr << "Error getting path status on " << path << ": "
                     << strerror(errno) << std::endl;
-      } else {
+    } else {
         if(S_ISLNK(buf.st_mode)) {
-          continue;
+            continue;
         }
-      }
-      if(chmod(file.c_str(), mode) == -1) {
-          std::cerr << "Error changing file permissions on "
-                    << file << ": " << strerror(errno) << std::endl;
-      }
-      if(!set_permset_for_uid(file, sudo_uid, mode)) {
-          std::cerr << "Error setting ACL for user " << sudo_uid
-                    << " on " << file << std::endl;
-      }
+    }
+    mode_t mode = S_IRGRP;
+    if(S_ISDIR(buf.st_mode)){
+        mode |= S_IXGRP;
+    }
+    if(!set_permset_for_uid(path, sudo_uid, mode)) {
+        std::cerr << "Error setting ACL for user " << sudo_uid
+                << " on " << path << std::endl;
+    }
   }
 }

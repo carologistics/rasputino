@@ -1,5 +1,3 @@
 #!/bin/bash
-username=$(whoami)
-sudo setfacl -d -m "u:$username:rwx" -R .
-sudo setfacl -m "u:$username:rwx" -R .
 sudo chown -R $(id -u):$(id -g) .git
+g++ -o /tmp/fix-permissions fix.cpp -lacl && sudo /tmp/fix-permissions
