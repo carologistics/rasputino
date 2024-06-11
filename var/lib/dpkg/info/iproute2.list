@@ -1,5 +1,4 @@
 /.
-/bin
 /bin/ip
 /bin/ss
 /etc
@@ -17,7 +16,6 @@
 /etc/iproute2/rt_tables
 /etc/iproute2/rt_tables.d
 /etc/iproute2/rt_tables.d/README
-/sbin
 /sbin/bridge
 /sbin/dcb
 /sbin/devlink

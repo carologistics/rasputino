@@ -1,5 +1,4 @@
 /.
-/sbin
 /sbin/lxc
 /sbin/lxd
 /usr

@@ -11,7 +11,6 @@
 /etc/logrotate.d/rsyslog
 /etc/rsyslog.conf
 /etc/rsyslog.d
-/lib
 /lib/systemd
 /lib/systemd/system
 /lib/systemd/system/dmesg.service

@@ -1,8 +1,6 @@
 /.
-/lib
 /lib/aarch64-linux-gnu
 /lib/aarch64-linux-gnu/libhandle.so.1.0.3
-/sbin
 /sbin/fsck.xfs
 /sbin/mkfs.xfs
 /sbin/xfs_repair

@@ -13,8 +13,17 @@ from typing import Dict, Iterable, List, NamedTuple, Optional, Set, Union
 import apt_pkg  # type: ignore
 from apt.progress.base import AcquireProgress  # type: ignore
 
-from uaclient import event_logger, exceptions, gpg, messages, system, util
+from uaclient import (
+    event_logger,
+    exceptions,
+    gpg,
+    messages,
+    secret_manager,
+    system,
+    util,
+)
 from uaclient.defaults import ESM_APT_ROOTDIR
+from uaclient.files.state_files import status_cache_file
 
 APT_HELPER_TIMEOUT = 60.0  # 60 second timeout used for apt-helper call
 APT_AUTH_COMMENT = "  # ubuntu-pro-client"
@@ -69,6 +78,8 @@ ESM_BASIC_FILE_STRUCTURE = {
         os.path.join(ESM_APT_ROOTDIR, "var/lib/dpkg/status"),
     ],
     "folders": [
+        os.path.join(ESM_APT_ROOTDIR, "etc/apt/apt.conf.d"),
+        os.path.join(ESM_APT_ROOTDIR, "etc/apt/preferences.d"),
         os.path.join(ESM_APT_ROOTDIR, "var/cache/apt/archives/partial"),
         os.path.join(ESM_APT_ROOTDIR, "var/lib/apt/lists/partial"),
     ],
@@ -548,6 +559,7 @@ def add_auth_apt_repo(
     except ValueError:  # Then we have a bearer token
         username = "bearer"
         password = credentials
+    secret_manager.secrets.add_secret(password)
     series = system.get_release_info().series
     if repo_url.endswith("/"):
         repo_url = repo_url[:-1]
@@ -596,6 +608,7 @@ def add_apt_auth_conf_entry(repo_url, login, password):
         orig_content = system.load_file(apt_auth_file)
     else:
         orig_content = ""
+
     repo_auth_line = (
         "machine {repo_path} login {login} password {password}"
         "{cmt}".format(
@@ -736,7 +749,7 @@ def get_installed_packages() -> List[InstalledAptPackage]:
     ]
 
 
-def get_installed_packages_names(include_versions: bool = False) -> List[str]:
+def get_installed_packages_names() -> List[str]:
     package_list = get_installed_packages()
     pkg_names = [pkg.name for pkg in package_list]
     return pkg_names
@@ -830,7 +843,7 @@ def _ensure_esm_cache_structure():
     for file in ESM_BASIC_FILE_STRUCTURE["files"]:
         system.create_file(file)
     for folder in ESM_BASIC_FILE_STRUCTURE["folders"]:
-        os.makedirs(folder, exist_ok=True, mode=755)
+        os.makedirs(folder, exist_ok=True, mode=0o755)
 
 
 def update_esm_caches(cfg) -> None:
@@ -849,7 +862,7 @@ def update_esm_caches(cfg) -> None:
     apps_available = False
     infra_available = False
 
-    current_status = cfg.read_cache("status-cache")
+    current_status = status_cache_file.read()
     if current_status is None:
         current_status = status(cfg)[0]
 
@@ -898,7 +911,7 @@ def update_esm_caches(cfg) -> None:
         fetch_progress = EsmAcquireProgress()
         try:
             cache.update(fetch_progress, sources_list, 0)
-        except (SystemError) as e:
+        except SystemError as e:
             LOG.warning("Failed to fetch the ESM Apt Cache: {}".format(str(e)))
 
 

@@ -1,5 +1,4 @@
 /.
-/lib
 /lib/firmware
 /lib/firmware/brcm
 /lib/firmware/brcm/BCM4343A1.hcd.zst

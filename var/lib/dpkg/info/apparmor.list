@@ -257,12 +257,10 @@
 /etc/apparmor.d/wpcom
 /etc/init.d
 /etc/init.d/apparmor
-/lib
 /lib/apparmor
 /lib/apparmor/apparmor.systemd
 /lib/apparmor/profile-load
 /lib/apparmor/rc.apparmor.functions
-/sbin
 /sbin/apparmor_parser
 /usr
 /usr/bin

@@ -1,5 +1,4 @@
 /.
-/lib
 /lib/aarch64-linux-gnu
 /lib/aarch64-linux-gnu/libcryptsetup.so.12.10.0
 /usr

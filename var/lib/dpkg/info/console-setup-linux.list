@@ -34,7 +34,6 @@
 /etc/init.d
 /etc/init.d/console-setup.sh
 /etc/init.d/keyboard-setup.sh
-/lib
 /lib/console-setup
 /lib/console-setup/console-setup.sh
 /lib/console-setup/keyboard-setup.sh

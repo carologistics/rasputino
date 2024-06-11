@@ -1,5 +1,4 @@
 /.
-/lib
 /lib/udev
 /lib/udev/rules.d
 /lib/udev/rules.d/10-local-rpi.rules

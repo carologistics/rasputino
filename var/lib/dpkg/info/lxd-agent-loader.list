@@ -1,5 +1,4 @@
 /.
-/lib
 /lib/systemd
 /lib/systemd/lxd-agent-setup
 /lib/systemd/system

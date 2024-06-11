@@ -64,6 +64,17 @@ if [ "$1" = "purge" ]; then
 fi
 # End automatically added section
 # Automatically added by dh_apparmor/4.0.0-beta3-0ubuntu3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/ubuntu_pro_esm_cache" ] ; then
+    rm -f "/etc/apparmor.d/disable/ubuntu_pro_esm_cache" || true
+    rm -f "/etc/apparmor.d/force-complain/ubuntu_pro_esm_cache" || true
+    rm -f "/etc/apparmor.d/local/ubuntu_pro_esm_cache" || true
+    rm -f /var/cache/apparmor/*/"ubuntu_pro_esm_cache" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/4.0.0-beta3-0ubuntu3
 if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/ubuntu_pro_apt_news" ] ; then
     rm -f "/etc/apparmor.d/disable/ubuntu_pro_apt_news" || true
     rm -f "/etc/apparmor.d/force-complain/ubuntu_pro_apt_news" || true

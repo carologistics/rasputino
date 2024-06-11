@@ -1,5 +1,4 @@
 /.
-/bin
 /bin/btrfs
 /bin/btrfs-convert
 /bin/btrfs-find-root
@@ -7,7 +6,6 @@
 /bin/btrfs-map-logical
 /bin/btrfs-select-super
 /bin/btrfstune
-/sbin
 /sbin/fsck.btrfs
 /sbin/mkfs.btrfs
 /usr

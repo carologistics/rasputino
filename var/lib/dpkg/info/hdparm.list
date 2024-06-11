@@ -1,7 +1,6 @@
 /.
 /etc
 /etc/hdparm.conf
-/lib
 /lib/hdparm
 /lib/hdparm/hdparm-functions
 /lib/systemd
@@ -9,7 +8,6 @@
 /lib/systemd/system-sleep/hdparm
 /lib/udev
 /lib/udev/hdparm
-/sbin
 /sbin/hdparm
 /usr
 /usr/lib

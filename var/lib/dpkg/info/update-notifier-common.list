@@ -14,7 +14,6 @@
 /etc/update-motd.d/98-fsck-at-reboot
 /etc/update-motd.d/98-reboot-required
 /etc/update-notifier
-/lib
 /lib/systemd
 /lib/systemd/system
 /lib/systemd/system/update-notifier-download.service
@@ -455,7 +454,6 @@
 /usr/share/update-notifier/upgrader-patches/update-manager-downloader-fix2.diff
 /var
 /var/lib
-/var/lib/update-notifier
 /var/lib/update-notifier/package-data-downloads
 /var/lib/update-notifier/package-data-downloads/partial
 /var/lib/update-notifier/user.d

@@ -1,5 +1,5 @@
 118dcd8667f430f446c67607e1ae1f13  usr/bin/vimtutor
-e4ee8f80358bb712ff6fd1fb1b39f1fe  usr/share/doc/vim-runtime/changelog.Debian.gz
+c0a9dd31bc866dbae8fe13601a903db7  usr/share/doc/vim-runtime/changelog.Debian.gz
 9d690a3e093a42dcba01107e194cc427  usr/share/doc/vim-runtime/copyright
 3e73a903a0a2799d4a0c1d3a2e5380c5  usr/share/lintian/overrides/vim-runtime
 31379cf2875ce6ab6263c70b80c89929  usr/share/man/da/man1/vimtutor.1.gz
@@ -1753,7 +1753,7 @@ b8cabc544a3f14ce50d0b79cdcfb8d2f  usr/share/vim/vim91/syntax/sgmllnx.vim
 8cf8e0000de61458dae5bad94a4acf92  usr/share/vim/vim91/syntax/shared/context-data-interfaces.vim
 cfa408d40adc8261ecc87b57fb8d9e54  usr/share/vim/vim91/syntax/shared/context-data-metafun.vim
 5c6172e061c07671cce463592fdb05c8  usr/share/vim/vim91/syntax/shared/context-data-tex.vim
-3869b7dd03363d5d59877e5d712858d3  usr/share/vim/vim91/syntax/shared/debversions.vim
+63a540e0423d4baeefe80b82c962e512  usr/share/vim/vim91/syntax/shared/debversions.vim
 8fa4ffe68d54883291e5f8ba72d8734e  usr/share/vim/vim91/syntax/shared/hgcommitDiff.vim
 bdae358bb2433c302e44ab82d98c805c  usr/share/vim/vim91/syntax/shared/typescriptcommon.vim
 32cb6b1a371a04e227e582d6999a9145  usr/share/vim/vim91/syntax/sicad.vim

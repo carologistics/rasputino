@@ -1,6 +1,7 @@
 import enum
 import re
 from collections import defaultdict
+from datetime import datetime, timezone
 from typing import Any, Dict, List, NamedTuple, Optional, Tuple
 
 from uaclient import apt, exceptions, messages
@@ -21,9 +22,11 @@ from uaclient.api.u.pro.security.fix._common import (
     query_installed_source_pkg_versions,
 )
 from uaclient.api.u.pro.status.enabled_services.v1 import _enabled_services
-from uaclient.api.u.pro.status.is_attached.v1 import _is_attached
+from uaclient.api.u.pro.status.is_attached.v1 import (
+    ContractExpiryStatus,
+    _is_attached,
+)
 from uaclient.config import UAConfig
-from uaclient.contract import ContractExpiryStatus, get_contract_expiry_status
 from uaclient.data_types import (
     DataObject,
     Field,
@@ -71,6 +74,7 @@ class FixPlanAttachReason(enum.Enum):
 class FixWarningType(enum.Enum):
     PACKAGE_CANNOT_BE_INSTALLED = "package-cannot-be-installed"
     SECURITY_ISSUE_NOT_FIXED = "security-issue-not-fixed"
+    FAIL_UPDATING_ESM_CACHE = "fail-updating-esm-cache"
 
 
 class FixPlanStep(DataObject):
@@ -311,6 +315,32 @@ class FixPlanWarningPackageCannotBeInstalled(FixPlanWarning):
         self.data = data
 
 
+class FailUpdatingESMCacheData(DataObject):
+    fields = [
+        Field("title", StringDataValue),
+        Field("code", StringDataValue),
+    ]
+
+    def __init__(self, *, title: str, code: str):
+        self.title = title
+        self.code = code
+
+
+class FixPlanWarningFailUpdatingESMCache(FixPlanWarning):
+    fields = [
+        Field("warning_type", StringDataValue),
+        Field("order", IntDataValue),
+        Field("data", FailUpdatingESMCacheData),
+    ]
+
+    def __init__(self, *, order: int, data: FailUpdatingESMCacheData):
+        super().__init__(
+            warning_type=FixWarningType.FAIL_UPDATING_ESM_CACHE.value,
+            order=order,
+        )
+        self.data = data
+
+
 class FixPlanError(DataObject):
     fields = [
         Field("msg", StringDataValue),
@@ -456,10 +486,15 @@ class FixPlan:
                 order=self.order,
                 data=SecurityIssueNotFixedData.from_dict(data),
             )
-        else:
+        elif warning_type == FixWarningType.PACKAGE_CANNOT_BE_INSTALLED:
             fix_warning = FixPlanWarningPackageCannotBeInstalled(
                 order=self.order,
                 data=PackageCannotBeInstalledData.from_dict(data),
+            )
+        else:
+            fix_warning = FixPlanWarningFailUpdatingESMCache(
+                order=self.order,
+                data=FailUpdatingESMCacheData.from_dict(data),
             )
 
         self.fix_warnings.append(fix_warning)
@@ -564,15 +599,12 @@ def _get_usn_data(
 
 def _get_upgradable_pkgs(
     binary_pkgs: List[BinaryPackageFix],
-    pocket: str,
+    check_esm_cache: bool,
 ) -> Tuple[List[str], List[UnfixedPackage]]:
     upgrade_pkgs = []
     unfixed_pkgs = []
 
     for binary_pkg in sorted(binary_pkgs):
-        check_esm_cache = (
-            pocket != messages.SECURITY_UBUNTU_STANDARD_UPDATES_POCKET
-        )
         candidate_version = apt.get_pkg_candidate_version(
             binary_pkg.binary_pkg, check_esm_cache=check_esm_cache
         )
@@ -715,9 +747,9 @@ def _fix_plan_usn(issue_id: str, cfg: UAConfig) -> FixPlanUSNResult:
     )
     additional_data = {
         "associated_cves": [] if not usn.cves_ids else usn.cves_ids,
-        "associated_launchpad_bugs": []
-        if not usn.references
-        else usn.references,
+        "associated_launchpad_bugs": (
+            [] if not usn.references else usn.references
+        ),
     }
 
     target_usn_plan = _generate_fix_plan(
@@ -740,9 +772,9 @@ def _fix_plan_usn(issue_id: str, cfg: UAConfig) -> FixPlanUSNResult:
         )
         additional_data = {
             "associated_cves": [] if not usn.cves_ids else usn.cves_ids,
-            "associated_launchpad_bugs": []
-            if not usn.references
-            else usn.references,
+            "associated_launchpad_bugs": (
+                [] if not usn.references else usn.references
+            ),
         }
 
         related_usns_plan.append(
@@ -799,6 +831,28 @@ def get_pocket_short_name(pocket: str):
         return pocket
 
 
+def _should_update_esm_cache(
+    check_esm_cache: bool,
+    esm_cache_updated: bool,
+    cfg: UAConfig,
+) -> bool:
+    if (
+        check_esm_cache
+        and not esm_cache_updated
+        and not _is_attached(cfg).is_attached
+    ):
+        last_apt_update = apt.get_apt_cache_datetime()
+        if last_apt_update is None:
+            return True
+
+        now = datetime.now(timezone.utc)
+        time_since_update = now - last_apt_update
+        if time_since_update.days > 2:
+            return True
+
+    return False
+
+
 def _generate_fix_plan(
     *,
     issue_id: str,
@@ -811,6 +865,7 @@ def _generate_fix_plan(
 ) -> FixPlanResult:
     count = len(affected_pkg_status)
     src_pocket_pkgs = defaultdict(list)
+    esm_cache_updated = False
 
     fix_plan = get_fix_plan(
         title=issue_id,
@@ -878,7 +933,30 @@ def _generate_fix_plan(
                 )
             continue
 
-        upgrade_pkgs, unfixed_pkgs = _get_upgradable_pkgs(binary_pkgs, pocket)
+        check_esm_cache = (
+            pocket != messages.SECURITY_UBUNTU_STANDARD_UPDATES_POCKET
+        )
+
+        if _should_update_esm_cache(check_esm_cache, esm_cache_updated, cfg):
+            try:
+                apt.update_esm_caches(cfg)
+                esm_cache_updated = True
+            except Exception as e:
+                error_msg = messages.E_UPDATING_ESM_CACHE.format(
+                    error=getattr(e, "msg", str(e))
+                )
+
+                fix_plan.register_warning(
+                    warning_type=FixWarningType.FAIL_UPDATING_ESM_CACHE,
+                    data={
+                        "title": error_msg.msg,
+                        "code": error_msg.name,
+                    },
+                )
+
+        upgrade_pkgs, unfixed_pkgs = _get_upgradable_pkgs(
+            binary_pkgs, check_esm_cache
+        )
 
         if unfixed_pkgs:
             for unfixed_pkg in unfixed_pkgs:
@@ -909,8 +987,8 @@ def _generate_fix_plan(
                     },
                 )
             else:
-                contract_expiry_status, _ = get_contract_expiry_status(cfg)
-                if contract_expiry_status != ContractExpiryStatus.ACTIVE:
+                contract_expiry_status = _is_attached(cfg).contract_status
+                if contract_expiry_status != ContractExpiryStatus.ACTIVE.value:
                     fix_plan.register_step(
                         operation=FixStepType.ATTACH,
                         data={

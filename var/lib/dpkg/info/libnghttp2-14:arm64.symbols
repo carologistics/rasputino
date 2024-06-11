@@ -34,6 +34,7 @@ libnghttp2.so.14 libnghttp2-14 #MINVER#
  nghttp2_option_del@Base 1.3.0
  nghttp2_option_new@Base 1.3.0
  nghttp2_option_set_builtin_recv_extension_type@Base 1.10.0
+ nghttp2_option_set_max_continuations@Base 1.59.0-1ubuntu0.1
  nghttp2_option_set_max_deflate_dynamic_table_size@Base 1.15.0
  nghttp2_option_set_max_outbound_ack@Base 1.39.2
  nghttp2_option_set_max_reserved_remote_streams@Base 1.3.0

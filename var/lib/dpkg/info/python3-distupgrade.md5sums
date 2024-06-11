@@ -1,7 +1,7 @@
 350c7c68e4c9c698f6df75614584c425  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeApport.py
 53af1f11a68155c39a20593e029a9a80  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeCache.py
 ac8eff6359f1f6ca252a676067a1c527  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeConfigParser.py
-34d758b9d1708f3375c631f12d895d64  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeController.py
+93a3b01582bac811f1f08979bd395565  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeController.py
 a4b25dd95a59550eb3f7403cc2f6b561  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeFetcher.py
 7f9e40a6e24ddc070b64634ae5bc0156  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeFetcherCore.py
 5010600e3d218e93e1dbae31ef976640  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeFetcherKDE.py
@@ -9,8 +9,8 @@ a4b25dd95a59550eb3f7403cc2f6b561  usr/lib/python3/dist-packages/DistUpgrade/Dist
 576f3850286380985ae9af8f02309397  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeGettext.py
 efa755effe863ff4b26a6029b715b4f0  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeMain.py
 7174b6c26176e3857a13c877043a7010  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradePatcher.py
-a4beb4aa40816d3ac28b5630a95c38b5  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeQuirks.py
-4348605056ddf2efefaf99fb21ed017d  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeVersion.py
+c109d71b94a5777691974c25cd2a449f  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeQuirks.py
+58f12a155261d012ab666aa77382d940  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeVersion.py
 e4f21d9b90d5961e6209160c8b83262a  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeView.py
 2e7bbaedb5d701b03f4181cafd9991e7  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeViewGtk3.py
 a7b351569b4955b61b92e9ed435f4816  usr/lib/python3/dist-packages/DistUpgrade/DistUpgradeViewKDE.py
@@ -31,5 +31,5 @@ e797beb7bfc8ca0f4d3fbbe7d646271b  usr/lib/python3/dist-packages/DistUpgrade/dist
 7fd9a7b7f8e0b53dd6b06a64b7bdbe7a  usr/lib/python3/dist-packages/DistUpgrade/telemetry.py
 99c7365ca6074dbd561ec27c680520d3  usr/lib/python3/dist-packages/DistUpgrade/utils.py
 8274785740715a084f8a066f3671eaaf  usr/lib/python3/dist-packages/DistUpgrade/xorg_fix_proprietary.py
-9c9a951d117195e49ae6d52c5bdd011f  usr/share/doc/python3-distupgrade/changelog.gz
+e482510236fc90806285b5433c1efdfe  usr/share/doc/python3-distupgrade/changelog.gz
 b38c68d82f3fa513cdf9a1dfb9548ea1  usr/share/doc/python3-distupgrade/copyright

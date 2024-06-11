@@ -42,6 +42,7 @@ from uaclient.api.u.pro.security.fix._common.plan.v1 import (  # noqa: F401
     FixPlanStep,
     FixPlanUSNResult,
     FixPlanWarning,
+    FixPlanWarningFailUpdatingESMCache,
     FixPlanWarningPackageCannotBeInstalled,
     FixPlanWarningSecurityIssueNotFixed,
     NoOpAlreadyFixedData,
@@ -52,7 +53,10 @@ from uaclient.api.u.pro.security.fix.cve.plan.v1 import CVEFixPlanOptions
 from uaclient.api.u.pro.security.fix.cve.plan.v1 import _plan as cve_plan
 from uaclient.api.u.pro.security.fix.usn.plan.v1 import USNFixPlanOptions
 from uaclient.api.u.pro.security.fix.usn.plan.v1 import _plan as usn_plan
-from uaclient.api.u.pro.status.is_attached.v1 import _is_attached
+from uaclient.api.u.pro.status.is_attached.v1 import (
+    ContractExpiryStatus,
+    _is_attached,
+)
 from uaclient.cli.constants import NAME, USAGE_TMPL
 from uaclient.clouds.identity import (
     CLOUD_TYPE_TO_TITLE,
@@ -60,7 +64,6 @@ from uaclient.clouds.identity import (
     get_cloud_type,
 )
 from uaclient.config import UAConfig
-from uaclient.contract import ContractExpiryStatus, get_contract_expiry_status
 from uaclient.defaults import PRINT_WRAP_WIDTH
 from uaclient.entitlements import entitlement_factory
 from uaclient.entitlements.entitlement_status import (
@@ -124,9 +127,9 @@ class FixContext:
                     status=status,
                     pkg_index=self.pkg_index,
                     num_pkgs=len(self.affected_pkgs),
-                    pocket_source=get_pocket_description(pocket)
-                    if pocket
-                    else None,
+                    pocket_source=(
+                        get_pocket_description(pocket) if pocket else None
+                    ),
                 )
             )
 
@@ -137,7 +140,7 @@ class FixContext:
             )
 
 
-def set_fix_parser(subparsers):
+def add_parser(subparsers):
     parser_fix = subparsers.add_parser("fix", help=messages.CLI_ROOT_FIX)
     parser_fix.set_defaults(action=action_fix)
     fix_parser(parser_fix)
@@ -449,8 +452,11 @@ def _check_subscription_is_expired(cfg: UAConfig, dry_run: bool) -> bool:
 
     :returns: True if subscription is expired and not renewed.
     """
-    contract_expiry_status = get_contract_expiry_status(cfg)
-    if contract_expiry_status[0] == ContractExpiryStatus.EXPIRED:
+    contract_expiry_status = _is_attached(cfg).contract_status
+    if (
+        contract_expiry_status
+        and contract_expiry_status == ContractExpiryStatus.EXPIRED.value
+    ):
         if dry_run:
             print(messages.SECURITY_DRY_RUN_UA_EXPIRED_SUBSCRIPTION)
             return False
@@ -647,6 +653,15 @@ def _execute_security_issue_not_fixed_step(
         unfixed_reason=status_message(step.data.status),
     )
     fix_context.fix_status = FixStatus.SYSTEM_STILL_VULNERABLE
+
+
+def _execute_fail_updating_esm_cache_step(
+    fix_context: FixContext, step: FixPlanWarningFailUpdatingESMCache
+):
+    if util.we_are_currently_root():
+        print(messages.CLI_FIX_FAIL_UPDATING_ESM_CACHE)
+    else:
+        print("\n" + messages.CLI_FIX_FAIL_UPDATING_ESM_CACHE_NON_ROOT + "\n")
 
 
 def _execute_apt_upgrade_step(
@@ -846,6 +861,8 @@ def execute_fix_plan(
             _execute_package_cannot_be_installed_step(fix_context, step)
         if isinstance(step, FixPlanWarningSecurityIssueNotFixed):
             _execute_security_issue_not_fixed_step(fix_context, step)
+        if isinstance(step, FixPlanWarningFailUpdatingESMCache):
+            _execute_fail_updating_esm_cache_step(fix_context, step)
         if isinstance(step, FixPlanAptUpgradeStep):
             _execute_apt_upgrade_step(fix_context, step)
 

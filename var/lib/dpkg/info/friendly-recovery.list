@@ -1,5 +1,4 @@
 /.
-/lib
 /lib/recovery-mode
 /lib/recovery-mode/l10n.sh
 /lib/recovery-mode/options

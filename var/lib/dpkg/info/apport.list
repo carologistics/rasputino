@@ -10,15 +10,6 @@
 /etc/default/apport
 /etc/logrotate.d
 /etc/logrotate.d/apport
-/lib
-/lib/systemd
-/lib/systemd/system
-/lib/systemd/system/apport-autoreport.path
-/lib/systemd/system/apport-autoreport.service
-/lib/systemd/system/apport-autoreport.timer
-/lib/udev
-/lib/udev/rules.d
-/lib/udev/rules.d/50-apport.rules
 /usr
 /usr/bin
 /usr/bin/apport-bug
@@ -31,6 +22,9 @@
 /usr/lib/pm-utils/sleep.d/000record-status
 /usr/lib/systemd
 /usr/lib/systemd/system
+/usr/lib/systemd/system/apport-autoreport.path
+/usr/lib/systemd/system/apport-autoreport.service
+/usr/lib/systemd/system/apport-autoreport.timer
 /usr/lib/systemd/system/apport-coredump-hook@.service
 /usr/lib/systemd/system/apport-forward.socket
 /usr/lib/systemd/system/apport-forward@.service
@@ -38,6 +32,9 @@
 /usr/lib/systemd/system/systemd-coredump@.service.d/apport-coredump-hook.conf
 /usr/lib/tmpfiles.d
 /usr/lib/tmpfiles.d/apport.conf
+/usr/lib/udev
+/usr/lib/udev/rules.d
+/usr/lib/udev/rules.d/50-apport.rules
 /usr/share
 /usr/share/apport
 /usr/share/apport/apport

@@ -4,7 +4,6 @@
 /etc/default/pollinate
 /etc/pollinate
 /etc/pollinate/entropy.ubuntu.com.pem
-/lib
 /lib/systemd
 /lib/systemd/system
 /lib/systemd/system/pollinate.service

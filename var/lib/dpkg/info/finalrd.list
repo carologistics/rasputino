@@ -1,5 +1,4 @@
 /.
-/lib
 /lib/systemd
 /lib/systemd/system
 /lib/systemd/system/finalrd.service

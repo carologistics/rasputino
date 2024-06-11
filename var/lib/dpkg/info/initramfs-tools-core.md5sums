@@ -17,7 +17,7 @@ c7428ea7db15ef5622f04558298d16c8  usr/share/initramfs-tools/hooks/fsck
 3b333f1a10311dc9a9a1d0f95b84bf2b  usr/share/initramfs-tools/hooks/thermal
 3f47a963f9f7fd27f38b3980305c527a  usr/share/initramfs-tools/init
 af5f7a95e92c6bb80699cbd83e720c4b  usr/share/initramfs-tools/modules
-363acb831542e88b9e2751f8f8f3376e  usr/share/initramfs-tools/scripts/functions
+9769275c6cfe7f72039de4b7178ea693  usr/share/initramfs-tools/scripts/functions
 86a21717b2cbedc0ffd71d8ddf42106e  usr/share/initramfs-tools/scripts/init-top/all_generic_ide
 b2d639b3183e0df4fe5038a47e452b5b  usr/share/initramfs-tools/scripts/init-top/blacklist
 872b7ef0c5b57ac85a3b8e0c93fa5aec  usr/share/initramfs-tools/scripts/init-top/framebuffer

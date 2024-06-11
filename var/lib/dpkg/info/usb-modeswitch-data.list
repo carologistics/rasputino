@@ -1,7 +1,6 @@
 /.
 /etc
 /etc/usb_modeswitch.d
-/lib
 /lib/udev
 /lib/udev/rules.d
 /lib/udev/rules.d/40-usb_modeswitch.rules

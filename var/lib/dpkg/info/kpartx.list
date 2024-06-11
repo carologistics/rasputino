@@ -1,8 +1,6 @@
 /.
-/lib
 /lib/udev
 /lib/udev/kpartx_id
-/sbin
 /sbin/kpartx
 /usr
 /usr/lib

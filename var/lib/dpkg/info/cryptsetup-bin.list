@@ -1,5 +1,4 @@
 /.
-/sbin
 /sbin/cryptsetup
 /sbin/integritysetup
 /sbin/veritysetup

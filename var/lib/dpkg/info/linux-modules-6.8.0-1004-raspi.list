@@ -2,7 +2,6 @@
 /boot
 /boot/System.map-6.8.0-1004-raspi
 /boot/config-6.8.0-1004-raspi
-/lib
 /lib/firmware
 /lib/firmware/6.8.0-1004-raspi
 /lib/firmware/6.8.0-1004-raspi/device-tree
@@ -7092,8 +7091,6 @@
 /lib/modules/6.8.0-1004-raspi/modules.order
 /usr
 /usr/lib
-/usr/lib/linux
-/usr/lib/linux/triggers
 /usr/share
 /usr/share/doc
 /usr/share/doc/linux-modules-6.8.0-1004-raspi

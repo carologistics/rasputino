@@ -1,5 +1,4 @@
 /.
-/lib
 /lib/udev
 /lib/udev/hwdb.d
 /lib/udev/hwdb.d/90-hwe-ubuntu.hwdb

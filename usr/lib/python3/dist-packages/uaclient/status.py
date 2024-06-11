@@ -10,6 +10,7 @@ from uaclient import (
     event_logger,
     exceptions,
     livepatch,
+    lock,
     messages,
     util,
     version,
@@ -25,7 +26,7 @@ from uaclient.entitlements.entitlement_status import (
     UserFacingConfigStatus,
     UserFacingStatus,
 )
-from uaclient.files import notices, state_files
+from uaclient.files import notices, state_files, user_config_file
 from uaclient.files.notices import Notice
 from uaclient.messages import TxtColor
 
@@ -134,9 +135,11 @@ DEFAULT_STATUS = {
 def _get_blocked_by_services(ent):
     return [
         {
-            "name": service.entitlement.name
-            if not service.entitlement.is_variant
-            else service.entitlement.variant_name,
+            "name": (
+                service.entitlement.name
+                if not service.entitlement.is_variant
+                else service.entitlement.variant_name
+            ),
             "reason_code": service.named_msg.name,
             "reason": service.named_msg.msg,
         }
@@ -207,6 +210,8 @@ def _attached_status(cfg: UAConfig) -> Dict[str, Any]:
     """Return configuration of attached status as a dictionary."""
     notices.remove(Notice.AUTO_ATTACH_RETRY_FULL_NOTICE)
     notices.remove(Notice.AUTO_ATTACH_RETRY_TOTAL_FAILURE)
+    if _is_attached(cfg).is_attached_and_contract_valid:
+        notices.remove(Notice.CONTRACT_EXPIRED)
 
     response = copy.deepcopy(DEFAULT_STATUS)
     machineTokenInfo = cfg.machine_token["machineTokenInfo"]
@@ -372,7 +377,7 @@ def _get_config_status(cfg) -> Dict[str, Any]:
     userStatus = UserFacingConfigStatus
     status_val = userStatus.INACTIVE.value
     status_desc = messages.NO_ACTIVE_OPERATIONS
-    (lock_pid, lock_holder) = cfg.check_lock_info()
+    (lock_pid, lock_holder) = lock.check_lock_info()
     notices_list = notices.list() or []
     if lock_pid > 0:
         status_val = userStatus.ACTIVE.value
@@ -394,9 +399,9 @@ def _get_config_status(cfg) -> Dict[str, Any]:
         "features": cfg.features,
     }
     # LP: #2004280 maintain backwards compatibility
-    ua_config = {}
+    ua_config = user_config_file.user_config.public_config.to_dict()
     for key in UA_CONFIGURABLE_KEYS:
-        if hasattr(cfg, key):
+        if hasattr(cfg, key) and ua_config[key] is None:
             ua_config[key] = getattr(cfg, key)
     ret["config"]["ua_config"] = ua_config
 
@@ -420,7 +425,7 @@ def status(cfg: UAConfig, show_all: bool = False) -> Dict[str, Any]:
     response.update(_get_config_status(cfg))
 
     if util.we_are_currently_root():
-        cfg.write_cache("status-cache", response)
+        state_files.status_cache_file.write(response)
 
     response = _handle_beta_resources(cfg, show_all, response)
 
@@ -443,9 +448,13 @@ def _get_entitlement_information(
         if entitlement.get("type") == entitlement_name:
             return {
                 "entitled": "yes" if entitlement.get("entitled") else "no",
-                "auto_enabled": "yes"
-                if entitlement.get("obligations", {}).get("enableByDefault")
-                else "no",
+                "auto_enabled": (
+                    "yes"
+                    if entitlement.get("obligations", {}).get(
+                        "enableByDefault"
+                    )
+                    else "no"
+                ),
                 "affordances": entitlement.get("affordances", {}),
             }
     return {"entitled": "no", "auto_enabled": "no", "affordances": {}}
@@ -546,9 +555,9 @@ def simulate_status(
                 "description": ent.description,
                 "entitled": entitlement_information["entitled"],
                 "auto_enabled": entitlement_information["auto_enabled"],
-                "available": "yes"
-                if ent.name not in inapplicable_resources
-                else "no",
+                "available": (
+                    "yes" if ent.name not in inapplicable_resources else "no"
+                ),
             }
         )
     response["services"].sort(key=lambda x: x.get("name", ""))

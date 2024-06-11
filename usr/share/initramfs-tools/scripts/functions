@@ -273,33 +273,6 @@ _usable_netdev_exists()
 	return 1
 }
 
-_set_available_devices_to_up()
-{
-	# Look for devices with (IFF_UP and IFF_LOOPBACK) clear and
-	# (IFF_BROADCAST or IFF_POINTTOPOINT) set.  Bring those devices up.
-	# Skip any enslaved device (has "master" link attribute on it)
-	# if NETWORK_SKIP_ENSLAVED is set to a value different than "0".
-	local device
-	local flags
-	for device in /sys/class/net/*; do
-		if [ ! -f "${device}/flags" ]; then
-			continue
-		fi
-		flags="$(cat "${device}/flags")"
-		if [ "$((flags & 9))" -ne 0 ] ||
-		   [ "$((flags & 0x12))" -eq 0 ]; then
-			continue
-		fi
-
-		if [ "${NETWORK_SKIP_ENSLAVED:-0}" != 0 ]; then
-			ip -o link show "${device##*/}" | grep -q -w master && continue
-		fi
-
-		echo "Setting ip link ${device##*/} up"
-		echo "$(( flags | 1 ))" > "${device}/flags"
-	done
-}
-
 _update_ip_param()
 {
 	# If the ip= parameter is present, and is a colon-separated list,
@@ -426,17 +399,13 @@ configure_networking()
 
 		iter_entry_time=$(time_elapsed)
 
-		if [ -z "${DEVICE}" ]; then
-			_set_available_devices_to_up
-		fi
-
 		case ${IP} in
 		none|done|off)
 			# Do nothing
 			IP="done"
 			;;
 		""|on|any|dhcp|bootp|both)
-			dhcpcd -1 -t $ROUNDTTT -4 ${DEVICE:+"${DEVICE}"}
+			dhcpcd -1KL -t $ROUNDTTT -4 ${DEVICE:+"${DEVICE}"}
 			;;
 		*)
 			ipconfig -t ${ROUNDTTT} -d "$IP"
@@ -459,7 +428,7 @@ configure_networking()
 				DEVICE6="$IP6" ;;
 			esac
 
-			dhcpcd -1 -t $ROUNDTTT -6 ${DEVICE6:+"${DEVICE6}"}
+			dhcpcd -1KL -t $ROUNDTTT -6 ${DEVICE6:+"${DEVICE6}"}
 			;;
 		esac
 

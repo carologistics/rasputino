@@ -1,5 +1,4 @@
 /.
-/bin
 /bin/lowntfs-3g
 /bin/ntfs-3g
 /bin/ntfs-3g.probe
@@ -16,7 +15,6 @@
 /bin/ntfstruncate
 /bin/ntfsusermap
 /bin/ntfswipe
-/sbin
 /sbin/mkntfs
 /sbin/ntfsclone
 /sbin/ntfscp

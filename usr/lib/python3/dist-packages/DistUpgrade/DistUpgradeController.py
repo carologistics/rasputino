@@ -1803,6 +1803,12 @@ class DistUpgradeController(object):
         backups["dir::bin::dpkg"] = [apt_pkg.config["dir::bin::dpkg"]]
         apt_pkg.config["dir::bin::dpkg"] = "/bin/true"
 
+        # If we remove automatically installed packages in the upgrade, we'd lose their auto bit
+        # here in the simulation as we'd write the simulated end result to the file, so let's
+        # not write the file for the simulation.
+        backups["Dir::State::extended_states"] = [apt_pkg.config["Dir::State::extended_states"]]
+        apt_pkg.config["Dir::State::extended_states"] = "/dev/null"
+
         for lst in "dpkg::pre-invoke", "dpkg::pre-install-pkgs", "dpkg::post-invoke", "dpkg::post-install-pkgs":
             backups[lst + "::"] = apt_pkg.config.value_list(lst)
             apt_pkg.config.clear(lst)

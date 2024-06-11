@@ -5,7 +5,6 @@
 /etc/init.d
 /etc/init.d/cryptdisks
 /etc/init.d/cryptdisks-early
-/lib
 /lib/cryptsetup
 /lib/cryptsetup/askpass
 /lib/cryptsetup/checks
@@ -24,7 +23,6 @@
 /lib/cryptsetup/scripts/decrypt_opensc
 /lib/cryptsetup/scripts/decrypt_ssl
 /lib/cryptsetup/scripts/passdev
-/sbin
 /sbin/cryptdisks_start
 /sbin/cryptdisks_stop
 /usr

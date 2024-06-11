@@ -2,7 +2,6 @@
 /etc
 /etc/default
 /etc/default/rpi-eeprom-update
-/lib
 /lib/firmware
 /lib/firmware/raspberrypi
 /lib/firmware/raspberrypi/bootloader-2711

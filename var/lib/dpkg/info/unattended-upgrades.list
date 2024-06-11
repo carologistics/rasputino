@@ -14,7 +14,6 @@
 /etc/pm/sleep.d/10_unattended-upgrades-hibernate
 /etc/update-motd.d
 /etc/update-motd.d/92-unattended-upgrades
-/lib
 /lib/systemd
 /lib/systemd/system-sleep
 /lib/systemd/system-sleep/unattended-upgrades

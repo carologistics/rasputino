@@ -1,7 +1,6 @@
 /.
 /etc
 /etc/multipath.conf
-/lib
 /lib/libmpathcmd.so.0
 /lib/libmpathpersist.so.0
 /lib/libmpathutil.so.0
@@ -34,7 +33,6 @@
 /lib/systemd/system
 /lib/systemd/system/multipathd.service
 /lib/systemd/system/multipathd.socket
-/sbin
 /sbin/mpathpersist
 /sbin/multipath
 /sbin/multipathc

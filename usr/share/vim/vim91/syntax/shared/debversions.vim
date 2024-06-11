@@ -11,7 +11,7 @@ let g:debSharedSupportedVersions = [
       \ 'oldstable', 'stable', 'testing', 'unstable', 'experimental', 'sid', 'rc-buggy',
       \ 'bullseye', 'bookworm', 'trixie', 'forky',
       \
-      \ 'trusty', 'xenial', 'bionic', 'focal', 'jammy', 'lunar', 'mantic', 'noble',
+      \ 'trusty', 'xenial', 'bionic', 'focal', 'jammy', 'mantic', 'noble', 'oracular',
       \ 'devel'
       \ ]
 let g:debSharedUnsupportedVersions = [
@@ -23,7 +23,7 @@ let g:debSharedUnsupportedVersions = [
       \ 'gutsy', 'hardy', 'intrepid', 'jaunty', 'karmic', 'lucid',
       \ 'maverick', 'natty', 'oneiric', 'precise', 'quantal', 'raring', 'saucy',
       \ 'utopic', 'vivid', 'wily', 'yakkety', 'zesty', 'artful', 'cosmic',
-      \ 'disco', 'eoan', 'hirsute', 'impish', 'kinetic', 'groovy'
+      \ 'disco', 'eoan', 'hirsute', 'impish', 'kinetic', 'lunar', 'groovy'
       \ ]
 
 let &cpo=s:cpo

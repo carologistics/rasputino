@@ -1,9 +1,7 @@
 /.
-/bin
 /bin/fusermount3
 /etc
 /etc/fuse.conf
-/sbin
 /sbin/mount.fuse3
 /usr
 /usr/share

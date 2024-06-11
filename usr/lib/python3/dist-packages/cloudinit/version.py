@@ -5,7 +5,7 @@
 # This file is part of cloud-init. See LICENSE file for license information.
 
 __VERSION__ = "24.1.3"
-_PACKAGED_VERSION = "24.1.3-0ubuntu3"
+_PACKAGED_VERSION = "24.1.3-0ubuntu3.2"
 
 FEATURES = [
     # supports network config version 1

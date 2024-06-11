@@ -8,7 +8,6 @@
 /etc/mdadm
 /etc/modprobe.d
 /etc/modprobe.d/mdadm.conf
-/lib
 /lib/systemd
 /lib/systemd/system
 /lib/systemd/system/mdadm-grow-continue@.service
@@ -30,7 +29,6 @@
 /lib/udev/rules.d/63-md-raid-arrays.rules
 /lib/udev/rules.d/64-md-raid-assembly.rules
 /lib/udev/rules.d/69-md-clustered-confirm-device.rules
-/sbin
 /sbin/mdadm
 /sbin/mdmon
 /usr

@@ -16,5 +16,4 @@
 /var
 /var/lib
 /var/lib/update-manager
-/var/lib/update-notifier
 /usr/share/doc/update-manager-core/changelog.gz

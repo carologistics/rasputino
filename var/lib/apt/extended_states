@@ -1754,3 +1754,355 @@ Package: libmodule-scandeps-perl
 Architecture: arm64
 Auto-Installed: 1
 
+Package: linux-modules-6.8.0-1005-raspi
+Architecture: arm64
+Auto-Installed: 1
+
+Package: linux-image-6.8.0-1005-raspi
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgcc-13-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libstdc++-13-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libalgorithm-merge-perl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgomp1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: manpages-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsharpyuv0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: g++-13
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gcc-13
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gcc-13-aarch64-linux-gnu
+Architecture: arm64
+Auto-Installed: 1
+
+Package: build-essential
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtsan2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: cpp
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpython3-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: g++
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gcc
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libaom3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjpeg-turbo8
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libheif1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libhwasan0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libalgorithm-diff-perl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libheif-plugin-libde265
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfakeroot
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdeflate0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjpeg8
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtiff6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfreetype6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: bzip2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcc1-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: zlib1g-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liblerc4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmpc3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxpm4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfontconfig1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-wheel
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libheif-plugin-aomdec
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libheif-plugin-aomenc
+Architecture: arm64
+Auto-Installed: 1
+
+Package: fontconfig-config
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gcc-aarch64-linux-gnu
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfile-fcntllock-perl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: dpkg-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libasan8
+Architecture: arm64
+Auto-Installed: 1
+
+Package: rpcsvc-proto
+Architecture: arm64
+Auto-Installed: 1
+
+Package: cpp-13-aarch64-linux-gnu
+Architecture: arm64
+Auto-Installed: 1
+
+Package: make
+Architecture: arm64
+Auto-Installed: 1
+
+Package: lto-disabled-list
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwebp7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: fonts-dejavu-mono
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcrypt-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: g++-13-aarch64-linux-gnu
+Architecture: arm64
+Auto-Installed: 1
+
+Package: cpp-13
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libitm1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdpkg-perl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjbig0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libc-dev-bin
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpython3.12-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libc-devtools
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3.12-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libisl23
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libc6-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjs-jquery
+Architecture: arm64
+Auto-Installed: 1
+
+Package: fonts-dejavu-core
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libexpat1-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: g++-aarch64-linux-gnu
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libubsan1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liblsan0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libalgorithm-diff-xs-perl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgd3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjs-sphinxdoc
+Architecture: arm64
+Auto-Installed: 1
+
+Package: javascript-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libde265-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjs-underscore
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gcc-13-base
+Architecture: arm64
+Auto-Installed: 1
+
+Package: fakeroot
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libatomic1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: cpp-aarch64-linux-gnu
+Architecture: arm64
+Auto-Installed: 1
+
+Package: linux-libc-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-setuptools-whl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-venv
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-pip-whl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3.12-venv
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-packaging
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-platformdirs
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-userpath
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-psutil
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-argcomplete
+Architecture: arm64
+Auto-Installed: 1
+

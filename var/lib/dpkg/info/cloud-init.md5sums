@@ -108,7 +108,7 @@ a3a41293ef8645b69ed04749a2571211  usr/lib/python3/dist-packages/cloudinit/config
 7fad5b18f583fe5b45f434096f66c823  usr/lib/python3/dist-packages/cloudinit/config/schemas/versions.schema.cloud-config.json
 04d1703d6f99266ac4ac92310f6875b0  usr/lib/python3/dist-packages/cloudinit/distros/OpenCloudOS.py
 04d1703d6f99266ac4ac92310f6875b0  usr/lib/python3/dist-packages/cloudinit/distros/TencentOS.py
-fbd3621ae744793ca5500157f3d747b6  usr/lib/python3/dist-packages/cloudinit/distros/__init__.py
+3a9ac0c698c3d43116b13d82cacb0da9  usr/lib/python3/dist-packages/cloudinit/distros/__init__.py
 45ac19d8400f00964fb681ec934894cb  usr/lib/python3/dist-packages/cloudinit/distros/almalinux.py
 e44698728a64af0ba2eb65d85e3fb110  usr/lib/python3/dist-packages/cloudinit/distros/alpine.py
 93e524a548c60481cb3971e160139548  usr/lib/python3/dist-packages/cloudinit/distros/amazon.py
@@ -155,7 +155,7 @@ daffc6392bd69d4c262bff54b2eb348d  usr/lib/python3/dist-packages/cloudinit/distro
 130939e99074a73d796b8642bd0dbea3  usr/lib/python3/dist-packages/cloudinit/distros/sle_hpc.py
 bae002333a514bdce4609e2eaf70e586  usr/lib/python3/dist-packages/cloudinit/distros/sles.py
 ae769e7d2576bd4fcfb16d6ec3140c85  usr/lib/python3/dist-packages/cloudinit/distros/suse.py
-8a6c8905e77e48ba0877f2688fdbd756  usr/lib/python3/dist-packages/cloudinit/distros/ubuntu.py
+3fba4f525ffdce8f44feb873c3131c6e  usr/lib/python3/dist-packages/cloudinit/distros/ubuntu.py
 756bea03b17254ac5cd09b9c3fd28642  usr/lib/python3/dist-packages/cloudinit/distros/ug_util.py
 45ac19d8400f00964fb681ec934894cb  usr/lib/python3/dist-packages/cloudinit/distros/virtuozzo.py
 0042e23ac3aaf10df09b8f8ee9651bd2  usr/lib/python3/dist-packages/cloudinit/dmi.py
@@ -279,12 +279,12 @@ a45747550977b49d71e0efa78396acf5  usr/lib/python3/dist-packages/cloudinit/type_u
 bfd633c7323190460fe10300c3c06349  usr/lib/python3/dist-packages/cloudinit/url_helper.py
 564ec116e0f39accfbdae23c93156a85  usr/lib/python3/dist-packages/cloudinit/user_data.py
 2c9489d88b318426bc5fe7c524d37d01  usr/lib/python3/dist-packages/cloudinit/util.py
-9ca03877fc2ffaeab712690c77291edb  usr/lib/python3/dist-packages/cloudinit/version.py
+cd168b8a69931ee198c74b5c1522d8e1  usr/lib/python3/dist-packages/cloudinit/version.py
 0389161def75024d8b6dbdf332c3f84f  usr/lib/python3/dist-packages/cloudinit/warnings.py
 6717f8adc52e7a36b98664d1e5b932da  usr/share/apport/general-hooks/cloud-init.py
 2748a943081058f37fdf5b4bdaabc387  usr/share/apport/package-hooks/cloud-init.py
 db2c0a74d9f44173ae49cf494dfaf40a  usr/share/bash-completion/completions/cloud-init
-4606d4afbf2ccc3affcf368378833e1d  usr/share/doc/cloud-init/changelog.Debian.gz
+1414999a9d473968e0014d0eafa4bfe1  usr/share/doc/cloud-init/changelog.Debian.gz
 e81cc25102eb02fab49d903827afbfa4  usr/share/doc/cloud-init/copyright
 f99d7380f3b159c37747adecbcc59e4c  usr/share/doc/cloud-init/examples/cloud-config-add-apt-repos.txt
 ea5579e9218118384dce477c706c0e75  usr/share/doc/cloud-init/examples/cloud-config-ansible-controller.txt

@@ -1,5 +1,4 @@
 /.
-/sbin
 /sbin/cgdisk
 /sbin/fixparts
 /sbin/gdisk

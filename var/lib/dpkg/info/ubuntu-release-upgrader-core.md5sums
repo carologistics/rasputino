@@ -10,6 +10,6 @@ ced8c21d0168f592b46b0a6b46df386b  usr/share/polkit-1/actions/com.ubuntu.release-
 092d8d89cb19ea50f1e6a434ebba13f7  usr/share/ubuntu-release-upgrader/DistUpgrade.cfg
 57de23a4d7a44ea38b69e11ad50e4977  usr/share/ubuntu-release-upgrader/additional_pkgs.cfg
 5165333d07eb6d4f914b7fe9f79c984b  usr/share/ubuntu-release-upgrader/deb2snap.json
-632a10ffc6aa522a6f67419fbaaba6de  usr/share/ubuntu-release-upgrader/demoted.cfg
-eb477beba305d7be5c0ba1a5442f472a  usr/share/ubuntu-release-upgrader/mirrors.cfg
+4c97119a6c48c9efbdc14491c883547d  usr/share/ubuntu-release-upgrader/demoted.cfg
+065a677bbc3175de4720a8561df5dd68  usr/share/ubuntu-release-upgrader/mirrors.cfg
 2ba639b23f21a7f0488a7021ccec6bb5  usr/share/ubuntu-release-upgrader/removal_denylist.cfg
