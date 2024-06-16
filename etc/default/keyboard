@@ -3,7 +3,7 @@
 # Consult the keyboard(5) manual page.
 
 XKBMODEL="pc105"
-XKBLAYOUT="gb"
+XKBLAYOUT="de"
 XKBVARIANT=""
 XKBOPTIONS="lv3:ralt_switch"
 
