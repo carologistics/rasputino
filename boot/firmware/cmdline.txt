@@ -1,1 +1,1 @@
-console=serial0,115200 console=tty1 root=PARTUUID=fb33757d-02 rootfstype=ext4 fsck.repair=yes rootwait quiet init=/usr/lib/raspberrypi-sys-mods/firstboot
+selinux=0 dwc_otg.lpm_enable=0 console=tty1 rootwait rw nfsroot=192.168.0.12:/rpi ip=dhcp root=/dev/nfs systemd.log_level=info systemd.log_target=console systemd.debug-shell=1
