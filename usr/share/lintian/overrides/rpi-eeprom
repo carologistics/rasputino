@@ -1,6 +1,0 @@
-# This script validates the installed package matches its checksums (basically
-# does a manual variant debsums) before flashing firmware, which is fair enough
-rpi-eeprom binary: uses-dpkg-database-directly [usr/bin/rpi-eeprom-update]
-
-# We don't support anything except systemd
-package-supports-alternative-init-but-no-init.d-script [lib/systemd/system/rpi-eeprom-update.service]

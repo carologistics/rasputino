@@ -1,9 +1,0 @@
-[Unit]
-Description=Helper to install lxd snap on demand
-
-[Service]
-ExecStart=/bin/sh -eux /usr/share/lxd-installer/lxd-installer-service
-StandardInput=socket
-StandardOutput=socket
-StandardError=journal
-Restart=no

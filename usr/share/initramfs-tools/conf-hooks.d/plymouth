@@ -1,3 +1,0 @@
-# We would like graphics drivers installed to start the Plymouth splash screen
-# as early as possible.
-FRAMEBUFFER=y

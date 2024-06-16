@@ -1,3 +1,0 @@
-VERSION=2.62+24.04build1
-SNAPD_APPARMOR_REEXEC=1
-SNAPD_ASSERTS_FORMATS='{"account-key":1,"snap-declaration":5,"system-user":2}'

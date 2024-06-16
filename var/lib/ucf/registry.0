@@ -1,5 +1,0 @@
-sysstat 	 /etc/default/sysstat
-rsyslog 	 /etc/rsyslog.d/50-default.conf
-flash-kernel 	 /etc/default/flash-kernel
-openssh-server 	 /etc/ssh/sshd_config
-unattended-upgrades 	 /etc/apt/apt.conf.d/20auto-upgrades

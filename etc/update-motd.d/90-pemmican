@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if [ -x /usr/bin/pemmican-cli ]; then
-    exec /usr/bin/pemmican-cli
-fi

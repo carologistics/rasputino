@@ -1,6 +1,0 @@
-libDeployPkg 0 open-vm-tools (>= 2:12.3.5)
-libguestStoreClient 0 open-vm-tools (>= 2:12.3.5)
-libguestlib 0 open-vm-tools (>= 2:12.3.5)
-libhgfs 0 open-vm-tools (>= 2:12.3.5)
-libvgauth 0 open-vm-tools (>= 2:12.3.5)
-libvmtools 0 open-vm-tools (>= 2:12.3.5)

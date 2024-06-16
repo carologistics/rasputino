@@ -1,9 +1,0 @@
-aefc80d8e162837b7a33958b1f5b8119  usr/lib/python3/dist-packages/ptyprocess-0.7.0.dist-info/METADATA
-c56dda37c94a13746967b17cb32649fc  usr/lib/python3/dist-packages/ptyprocess-0.7.0.dist-info/RECORD
-483089531baf1fd14512b1c855f5fb7e  usr/lib/python3/dist-packages/ptyprocess-0.7.0.dist-info/WHEEL
-4321861a79615c6447983d3353f6d084  usr/lib/python3/dist-packages/ptyprocess/__init__.py
-8fbffd90315ff4ee77286737367a1cec  usr/lib/python3/dist-packages/ptyprocess/_fork_pty.py
-85128008249bd93c9410fee100030444  usr/lib/python3/dist-packages/ptyprocess/ptyprocess.py
-ff98667d699be3a3345c702f1a9c8960  usr/lib/python3/dist-packages/ptyprocess/util.py
-0f9158c8b45ddf13cb084d717f60a05c  usr/share/doc/python3-ptyprocess/changelog.Debian.gz
-c471bf215b6851912a5344f554510ea6  usr/share/doc/python3-ptyprocess/copyright

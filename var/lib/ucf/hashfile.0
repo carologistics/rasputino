@@ -1,9 +1,0 @@
-6f015cbda1bb151c4bcd0ba1b84c2568  /etc/default/sysstat
-1b03acc84964cf70b8a584870bcdf9b3  /etc/rsyslog.d/50-default.conf
-20ab7d96fdcc82a521ac3159b8107d5d  /etc/default/flash-kernel
-6f264d7fac3dec49ed7f5f3bfbbff6b5  /etc/ssh/sshd_config
-554ea6948500e76ce5c1610b9c108bbf  /etc/ufw/before.rules
-601f530a9e5862345da525ec98f5a317  /etc/ufw/before6.rules
-53e906b055d9145d03b6a2fadeca20f1  /etc/ufw/after.rules
-c70580b5cabf73080989400422349ab2  /etc/ufw/after6.rules
-1c261d6541420797f8b824d65ac5c197  /etc/apt/apt.conf.d/20auto-upgrades

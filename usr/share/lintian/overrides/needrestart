@@ -1,5 +1,0 @@
-needrestart: maintainer-script-should-not-use-dpkg-maintscript-helper "dpkg-maintscript-helper" [postinst:5]
-needrestart: maintainer-script-should-not-use-dpkg-maintscript-helper "dpkg-maintscript-helper" [postrm:5]
-needrestart: maintainer-script-should-not-use-dpkg-maintscript-helper "dpkg-maintscript-helper" [preinst:5]
-needrestart: executable-in-usr-lib [usr/lib/needrestart/*
-needrestart: manual-page-for-system-command [usr/sbin/needrestart]

@@ -1,4 +1,0 @@
-This is a placeholder file to avoid an empty [/usr]/lib/netplan/ directory
-to be removed during a package upgrade involving the usrmerge transition.
-
-See https://bugs.debian.org/1060661 for more context.

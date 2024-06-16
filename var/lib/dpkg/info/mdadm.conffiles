@@ -1,3 +1,0 @@
-/etc/logcheck/ignore.d.server/mdadm
-/etc/logcheck/violations.d/mdadm
-/etc/modprobe.d/mdadm.conf

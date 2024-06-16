@@ -1,4 +1,0 @@
-libintl-perl: unusual-interpreter
-libintl-perl: example-unusual-interpreter
-libintl-perl: national-encoding
-libintl-perl: script-not-executable [usr/share/perl5/Locale/libintlFAQ.pod]

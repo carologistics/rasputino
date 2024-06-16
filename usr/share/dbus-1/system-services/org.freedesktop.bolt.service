@@ -1,5 +1,0 @@
-[D-BUS Service]
-Name=org.freedesktop.bolt
-Exec=/usr/libexec/boltd
-User=root
-SystemdService=bolt.service

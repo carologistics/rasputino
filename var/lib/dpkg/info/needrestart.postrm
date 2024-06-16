@@ -1,7 +1,0 @@
-#!/bin/sh
-
-set -e
-
-dpkg-maintscript-helper rm_conffile /etc/needrestart/hook.d/30-pacman 3.6-4 -- "$@"
-
-

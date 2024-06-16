@@ -1,6 +1,0 @@
-SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="dialout", MODE="0660"
-SUBSYSTEM=="gpio", KERNEL=="gpiochip*", DRIVERS=="pinctrl-bcm2835", GROUP="dialout", MODE="0660", TAG+="uaccess"
-SUBSYSTEM=="gpio", KERNEL=="gpiochip*", DRIVERS=="pinctrl-bcm2711", GROUP="dialout", MODE="0660", TAG+="uaccess"
-SUBSYSTEM=="gpio", KERNEL=="gpiochip*", DRIVERS=="pinctrl-rp1", GROUP="dialout", MODE="0660", TAG+="uaccess"
-SUBSYSTEM=="i2c-dev", KERNEL=="i2c-[0-6]", GROUP="dialout", MODE="0660", TAG+="uaccess"
-SUBSYSTEM=="spidev", KERNEL=="spidev[0-6].*", GROUP="dialout", MODE="0660", TAG+="uaccess"

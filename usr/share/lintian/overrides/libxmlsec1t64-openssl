@@ -1,2 +1,0 @@
-# upstream promised to change package name whenever bumping the soname
-package-name-doesnt-match-sonames libxmlsec1-openssl1

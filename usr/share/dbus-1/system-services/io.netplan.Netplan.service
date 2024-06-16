@@ -1,5 +1,0 @@
-[D-BUS Service]
-Name=io.netplan.Netplan
-Exec=/usr/libexec/netplan/netplan-dbus
-User=root
-AssumedAppArmorLabel=unconfined
