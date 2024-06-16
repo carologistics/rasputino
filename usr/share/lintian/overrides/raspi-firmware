@@ -1,0 +1,49 @@
+# The package distributes non-free binaries (for which the source is not
+# public) and contains bootloader code, so override a bunch of lintian warnings
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start.elf
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start4.elf
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start_cd.elf
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start4cd.elf
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start_db.elf
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start4db.elf
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start_x.elf
+raspi-firmware: arch-independent-package-contains-binary-or-object usr/lib/raspi-firmware/start4x.elf
+
+raspi-firmware: embedded-library usr/lib/raspi-firmware/start.elf: libpng
+raspi-firmware: embedded-library usr/lib/raspi-firmware/start4.elf: libpng
+raspi-firmware: embedded-library usr/lib/raspi-firmware/start4db.elf: libpng
+raspi-firmware: embedded-library usr/lib/raspi-firmware/start4x.elf: libpng
+raspi-firmware: embedded-library usr/lib/raspi-firmware/start_db.elf: libpng
+raspi-firmware: embedded-library usr/lib/raspi-firmware/start_x.elf: libpng
+
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start.elf
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start4.elf
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start_cd.elf
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start4cd.elf
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start_db.elf
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start4db.elf
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start_x.elf
+raspi-firmware: statically-linked-binary usr/lib/raspi-firmware/start4x.elf
+
+raspi-firmware: binary-has-unneeded-section usr/lib/raspi-firmware/start.elf .comment
+raspi-firmware: binary-has-unneeded-section usr/lib/raspi-firmware/start_cd.elf .comment
+raspi-firmware: binary-has-unneeded-section usr/lib/raspi-firmware/start_db.elf .comment
+raspi-firmware: binary-has-unneeded-section usr/lib/raspi-firmware/start_x.elf .comment
+
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start.elf Recyling Recycling
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start.elf rountine routine
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start.elf recieved received
+
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_db.elf postion position
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_db.elf trucate truncate
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_db.elf calulated calculated
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_db.elf Recyling Recycling
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_db.elf rountine routine
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_db.elf recieved received
+
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_x.elf postion position
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_x.elf trucate truncate
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_x.elf calulated calculated
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_x.elf Recyling Recycling
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_x.elf rountine routine
+raspi-firmware: spelling-error-in-binary usr/lib/raspi-firmware/start_x.elf recieved received

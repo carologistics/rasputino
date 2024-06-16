@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper dir_to_symlink /lib/firmware/raspberrypi/bootloader-2711/beta latest 17.0\+pi5\+1-1 -- "$@"
+dpkg-maintscript-helper dir_to_symlink /lib/firmware/raspberrypi/bootloader-2712/beta latest 17.0\+pi5\+1-1 -- "$@"
+# End automatically added section

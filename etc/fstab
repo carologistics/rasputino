@@ -1,0 +1,2 @@
+proc            /proc           proc    defaults          0       0
+192.168.0.12:/rpi / nfs defaults,noatime 0 1

@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/fbtest
+/usr/bin/kmsblank
+/usr/bin/kmsprint
+/usr/bin/kmstest
+/usr/share
+/usr/share/doc
+/usr/share/doc/kms++-utils
+/usr/share/doc/kms++-utils/changelog.Debian.gz
+/usr/share/doc/kms++-utils/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/kms++-utils

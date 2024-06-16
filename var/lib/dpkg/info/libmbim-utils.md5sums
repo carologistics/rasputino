@@ -1,0 +1,7 @@
+103dd1a3305740db5e368dbb5bc5ac04  usr/bin/mbim-network
+9b4bada2b28fe8fb5eb4aaff0239d0be  usr/bin/mbimcli
+6c643737c042039b829888d8d33550e6  usr/share/bash-completion/completions/mbimcli
+8c71bd0b2c439c44a2511aa696f1edbd  usr/share/doc/libmbim-utils/changelog.Debian.gz
+66741ac31975f586ef65141b996f1dfa  usr/share/doc/libmbim-utils/copyright
+8d4ee72c5b11897f26313e2e2671e997  usr/share/man/man1/mbim-network.1.gz
+0ad9fb298602b048da952c5a8872b182  usr/share/man/man1/mbimcli.1.gz

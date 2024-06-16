@@ -1,0 +1,1626 @@
+Package: ca-certificates-java
+Version: 20230620~deb12u1
+Installed-Size: 43
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ca-certificates (>= 20210120), default-jre-headless (>= 2:1.8) | java8-runtime-headless
+Description: Common CA certificates (JKS keystore)
+Multi-Arch: foreign
+Description-md5: 304cd3554728e5d076f8ecbb3b5057d8
+Tag: protocol::ssl, role::app-data, security::authentication,
+ security::cryptography
+Section: java
+Priority: optional
+Filename: pool/main/c/ca-certificates-java/ca-certificates-java_20230620~deb12u1_all.deb
+Size: 11584
+SHA256: 043264f5d16e0c1b1b9006cbd355e98ee8682a8e54a4140d448dc37c53ceb75a
+
+Package: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 18703
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: arm64
+Depends: clamav-freshclam (>= 1.0.3+dfsg) | clamav-data, libc6 (>= 2.34), libclamav11 (>= 1.0.3), libcurl4 (>= 7.16.2), libgcc-s1 (>= 4.2), libjson-c5 (>= 0.15), libssl3 (>= 3.0.0), zlib1g (>= 1:1.2.3.3)
+Recommends: clamav-base
+Suggests: libclamunrar, clamav-docs
+Description: anti-virus utility for Unix - command-line interface
+Multi-Arch: foreign
+Homepage: https://www.clamav.net/
+Description-md5: fb7be82d5591a0f3facf827f0a60c5d6
+Tag: implemented-in::c, interface::commandline, role::program,
+ scope::utility, security::antivirus, use::scanning, works-with::file,
+ works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav_1.0.3+dfsg-1~deb12u1_arm64.deb
+Size: 4018204
+SHA256: 5c973da2cc5391eb7ab43ca052d7408c9eae946eb1c88c99b36bb9924cac30bb
+
+Package: clamav-base
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 145
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: adduser, logrotate, ucf, debconf (>= 0.5) | debconf-2.0
+Recommends: clamav
+Description: anti-virus utility for Unix - base package
+Homepage: https://www.clamav.net/
+Description-md5: 701912f0a2cc626b57570094858a5b1d
+Tag: interface::commandline, role::app-data, role::program,
+ security::antivirus, use::scanning, works-with::file, works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-base_1.0.3+dfsg-1~deb12u1_all.deb
+Size: 90936
+SHA256: 331c3e980cbe73752960f1356e4845158da1aab3bbe173a14aef6efcf1e2c19d
+
+Package: clamav-daemon
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 1214
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: arm64
+Depends: adduser, clamav-base (= 1.0.3+dfsg-1~deb12u1), clamav-freshclam (>= 1.0.3+dfsg) | clamav-data, dpkg (>= 1.16.1), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34), libclamav11 (>= 1.0.3), libcurl4 (>= 7.18.2), libncurses6 (>= 6), libsystemd0, libtinfo6 (>= 6), zlib1g (>= 1:1.2.0.2)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: clamdscan
+Suggests: libclamunrar, apparmor, clamav-docs, daemon
+Description: anti-virus utility for Unix - scanner daemon
+Homepage: https://www.clamav.net/
+Description-md5: dc258511e9e1f62ef33172c190a0fad6
+Tag: implemented-in::c, interface::commandline, interface::daemon,
+ mail::filters, network::server, role::program, security::antivirus,
+ uitoolkit::ncurses, use::scanning, works-with::file, works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-daemon_1.0.3+dfsg-1~deb12u1_arm64.deb
+Size: 204040
+SHA256: cda2a88598b8139c9d5726b71b35f84da28e86597ed2296520ed5081ffc54292
+
+Package: clamav-docs
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 748
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Description: anti-virus utility for Unix - documentation
+Multi-Arch: foreign
+Homepage: https://www.clamav.net/
+Description-md5: af78818bbdf8851b6358c15693a31419
+Tag: made-of::html, made-of::pdf, mail::filters, role::documentation,
+ role::program, security::antivirus, works-with::file, works-with::mail
+Section: doc
+Priority: optional
+Filename: pool/main/c/clamav/clamav-docs_1.0.3+dfsg-1~deb12u1_all.deb
+Size: 188288
+SHA256: 3ddaad2a5b1f3eba1d1e3924d687c459a5260d76587f05a599a8a3eeccf50120
+
+Package: clamav-freshclam
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 361
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: arm64
+Provides: clamav-data
+Depends: clamav-base (>= 1.0.3+dfsg-1~deb12u1), dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34), libclamav11 (>= 1.0.3)
+Recommends: ca-certificates
+Suggests: apparmor, clamav-docs
+Conflicts: clamav-data, libclamav2, libclamav3
+Description: anti-virus utility for Unix - virus database update utility
+Homepage: https://www.clamav.net/
+Description-md5: 82c68e4f7c984e3d6bdc720ae842fca8
+Tag: implemented-in::c, interface::commandline, interface::daemon,
+ role::program, scope::utility, security::antivirus, use::downloading,
+ works-with::file, works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-freshclam_1.0.3+dfsg-1~deb12u1_arm64.deb
+Size: 148640
+SHA256: 99ef74b5d100321d1bb8079fa9d5b230053c9eeec7bd45cdc4283bf3c01cf0fb
+
+Package: clamav-milter
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 551
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: arm64
+Depends: adduser, clamav-base (>= 1.0.3+dfsg-1~deb12u1), clamav-freshclam (>= 1.0.3+dfsg) | clamav-data, dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34), libclamav11 (>= 1.0.3), libmilter1.0.1
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: clamav-daemon
+Suggests: clamav-docs, daemon
+Description: anti-virus utility for Unix - sendmail integration
+Homepage: https://www.clamav.net/
+Description-md5: e47a1194215b5fbde13fb9217c44d83f
+Tag: implemented-in::c, interface::daemon, mail::filters, network::server,
+ role::program, security::antivirus, use::scanning, works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-milter_1.0.3+dfsg-1~deb12u1_arm64.deb
+Size: 193420
+SHA256: 1d42264503dc3b8dd283de0a10bc53a58215b4aa87ea061450176bb83196e7f9
+
+Package: clamav-testfiles
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 6499
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Description: anti-virus utility for Unix - test files
+Multi-Arch: foreign
+Homepage: https://www.clamav.net/
+Description-md5: 29437a0b8c82cc8179b64405688f062e
+Tag: devel::testing-qa, interface::commandline, made-of::dictionary,
+ role::app-data, role::program, security::antivirus, use::checking
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-testfiles_1.0.3+dfsg-1~deb12u1_all.deb
+Size: 2836472
+SHA256: 300c0bffd4ee7ef701a9b704f23498f0acb3089b02565ee1f68f4f545b269226
+
+Package: clamdscan
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 253
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: arm64
+Depends: clamav-base (= 1.0.3+dfsg-1~deb12u1), libc6 (>= 2.34), libclamav11 (>= 1.0.3)
+Suggests: clamav-daemon, clamav-docs
+Description: anti-virus utility for Unix - scanner client
+Homepage: https://www.clamav.net/
+Description-md5: ad077e4c74b9870b6e7bb55aef11c547
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamdscan_1.0.3+dfsg-1~deb12u1_arm64.deb
+Size: 55228
+SHA256: 9e94db884637891bb279ab2a4f4cb4793bc7ab1b6456d79bafc0588e41196a0b
+
+Package: libclamav-dev
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 142
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libbz2-dev, libc6-dev | libc-dev, libclamav11 (= 1.0.3+dfsg-1~deb12u1), libssl-dev, libtommath-dev, zlib1g-dev
+Description: anti-virus utility for Unix - development files
+Homepage: https://www.clamav.net/
+Description-md5: 3dc197b6ebfb15522a4b7913ea796763
+Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib,
+ role::program, security::antivirus, use::scanning
+Section: libdevel
+Priority: optional
+Filename: pool/main/c/clamav/libclamav-dev_1.0.3+dfsg-1~deb12u1_arm64.deb
+Size: 28680
+SHA256: 0532323851903ddb022d0510f2d93bf730434051a6ded033452b708c234294f1
+
+Package: libclamav11
+Source: clamav
+Version: 1.0.3+dfsg-1~deb12u1
+Installed-Size: 20143
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: libclamav9
+Depends: libbz2-1.0, libc6 (>= 2.34), libcurl4 (>= 7.16.2), libgcc-s1 (>= 4.2), libjson-c5 (>= 0.15), libmspack0 (>= 0.4), libpcre2-8-0 (>= 10.22), libssl3 (>= 3.0.0), libxml2 (>= 2.7.4), zlib1g (>= 1:1.2.3.4)
+Suggests: libclamunrar, libclamunrar11
+Description: anti-virus utility for Unix - library
+Multi-Arch: same
+Homepage: https://www.clamav.net/
+Description-md5: bf2e797d0e7e410776d9200761e01bd6
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/c/clamav/libclamav11_1.0.3+dfsg-1~deb12u1_arm64.deb
+Size: 4650668
+SHA256: 1d2da2f0b12df83f7719258de7dc488ae83e6149a609b1fc309f9cb38d71dfc9
+
+Package: crun
+Version: 1.8.1-1+deb12u1
+Installed-Size: 1900
+Maintainer: Faidon Liambotis <paravoid@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libseccomp2 (>= 2.2.1), libsystemd0 (>= 246), libyajl2 (>= 2.0.4)
+Description: lightweight OCI runtime for running containers
+Homepage: https://github.com/containers/crun
+Built-Using: golang-github-opencontainers-image-spec (= 1.1.0~rc2-3), golang-github-opencontainers-specs (= 1.0.2.118.g5cfc4c3-1)
+Description-md5: 528a25a9c7b1136d9e41411bebc303fd
+Section: admin
+Priority: optional
+Filename: pool/main/c/crun/crun_1.8.1-1+deb12u1_arm64.deb
+Size: 291720
+SHA256: e4a27bf7e75746e9d9500985402e83eb9c9d7742135ff038f0bd729a3cde2c20
+
+Package: libdatetime-timezone-perl
+Version: 1:2.60-1+2023d
+Installed-Size: 6549
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: perl:any, libclass-singleton-perl, libmodule-runtime-perl, libnamespace-autoclean-perl, libparams-validationcompiler-perl, libscalar-list-utils-perl, libspecio-perl, libtry-tiny-perl
+Recommends: libdatetime-perl
+Description: framework exposing the Olson time zone database to Perl
+Homepage: http://datetime.perl.org/
+Description-md5: 49fff32146b7c0ac14d7bcca1f92bfe6
+Tag: devel::lang:perl, devel::library, implemented-in::perl, use::timekeeping
+Section: perl
+Priority: optional
+Filename: pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.60-1+2023d_all.deb
+Size: 263652
+SHA256: 50d2dfb01fc80815d6477f5652b00e2bca02d80330318cc1496e1542aceddcb9
+
+Package: bpftool
+Source: linux (6.1.67-1)
+Version: 7.1.0+6.1.67-1
+Installed-Size: 1426
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libelf1 (>= 0.144), zlib1g (>= 1:1.2.3.3)
+Description: Inspection and simple manipulation of BPF programs and maps
+Homepage: https://www.kernel.org/
+Description-md5: d7d2729d5d8a42208f787da6b434cef6
+Section: devel
+Priority: optional
+Filename: pool/main/l/linux/bpftool_7.1.0+6.1.67-1_arm64.deb
+Size: 997504
+SHA256: 8677dcc6d05517606e631b39f2df365a5501c1246c081b95a919277c75ba0408
+
+Package: hyperv-daemons
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 996
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Description: Support daemons for Linux running on Hyper-V
+Homepage: https://www.kernel.org/
+Description-md5: b516988e720642544cdf35b86b38e2df
+Section: admin
+Priority: optional
+Filename: pool/main/l/linux/hyperv-daemons_6.1.67-1_arm64.deb
+Size: 775796
+SHA256: 5662e60435c7463d0a43fa38546fddc9c0e80f6c489f2b439d1dbf18554081d1
+
+Package: libcpupower-dev
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 767
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: libcpufreq-dev
+Provides: libcpufreq-dev
+Depends: libcpupower1 (= 6.1.67-1)
+Conflicts: libcpufreq-dev
+Description: CPU frequency and voltage scaling tools for Linux (development files)
+Homepage: https://www.kernel.org/
+Description-md5: e30068375f2173bf13cff561da6a8b6a
+Tag: devel::library, role::devel-lib
+Section: libdevel
+Priority: optional
+Filename: pool/main/l/linux/libcpupower-dev_6.1.67-1_arm64.deb
+Size: 761072
+SHA256: e027d318c7c9d9784dfa1bda53d256eb4b2c1f3748856bc057288c8254c6b136
+
+Package: libcpupower1
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 833
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34)
+Description: CPU frequency and voltage scaling tools for Linux (libraries)
+Homepage: https://www.kernel.org/
+Description-md5: 651921d653a527bee29dc6a45156f066
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/l/linux/libcpupower1_6.1.67-1_arm64.deb
+Size: 767072
+SHA256: 4cb2b6cccbce757834d4b7d5205118e87d2a63e4e6d51329d92895fb55517e74
+
+Package: linux-config-6.1
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 899
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Recommends: linux-source-6.1
+Description: Debian kernel configurations for Linux 6.1
+Multi-Arch: same
+Homepage: https://www.kernel.org/
+Description-md5: 8321be04207907246b5c90c1ce6d57ac
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-config-6.1_6.1.67-1_arm64.deb
+Size: 902224
+SHA256: 8354e96b1ed3e80d94a42a9028517feaec5bd51e6b45d19660e93dfca695afe2
+
+Package: linux-cpupower
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 912
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libcpupower1 (>= 5.5.8-1~exp1)
+Description: CPU power management tools for Linux
+Homepage: https://www.kernel.org/
+Description-md5: c20dac2579ebf18804c1bb02e476697a
+Section: admin
+Priority: optional
+Filename: pool/main/l/linux/linux-cpupower_6.1.67-1_arm64.deb
+Size: 799124
+SHA256: 9b46be0754e6389215dd234ce1fc5373336e01354b408e8877fd2bef74310153
+
+Package: linux-doc
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 10
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Depends: linux-doc-6.1 (= 6.1.67-1)
+Description: Linux kernel specific documentation (meta-package)
+Homepage: https://www.kernel.org/
+Description-md5: 00ddef8fbf27444a48a36993f9c9d823
+Tag: admin::kernel, devel::doc, devel::lang:c, devel::library,
+ implemented-in::c, role::devel-lib, role::documentation,
+ role::metapackage
+Section: doc
+Priority: optional
+Filename: pool/main/l/linux/linux-doc_6.1.67-1_all.deb
+Size: 1108
+SHA256: efd577103563a0ef889515438a7382fecc0b1d4fb6ad814bd3c80de830bb16fd
+
+Package: linux-doc-6.1
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 193583
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Description: Linux kernel specific documentation for version 6.1
+Multi-Arch: foreign
+Homepage: https://www.kernel.org/
+Description-md5: 019bb4953d1559e394b34922b921b15c
+Tag: admin::kernel, devel::doc, devel::lang:c, devel::library,
+ implemented-in::c, made-of::html, role::devel-lib, role::documentation
+Section: doc
+Priority: optional
+Filename: pool/main/l/linux/linux-doc-6.1_6.1.67-1_all.deb
+Size: 36778520
+SHA256: bb103adc01c5e49677568f576be87665da9a1d985e9723530b92658a14785dfd
+
+Package: linux-headers-6.1.0-16-arm64
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 3609
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: linux-headers-6.1.0-16-common (= 6.1.67-1), linux-kbuild-6.1 (>= 6.1.67-1), gcc-12
+Description: Header files for Linux 6.1.0-16-arm64
+Homepage: https://www.kernel.org/
+Description-md5: 67f148f46bffde45ba08e5e39bc2463c
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-headers-6.1.0-16-arm64_6.1.67-1_arm64.deb
+Size: 1282676
+SHA256: 6eb46a1e3c93f94b723f60ece4cee8224b3bc60a2e972c04896e159d5ce221ab
+
+Package: linux-headers-6.1.0-16-cloud-arm64
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 2281
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: linux-headers-6.1.0-16-common (= 6.1.67-1), linux-kbuild-6.1 (>= 6.1.67-1), gcc-12
+Description: Header files for Linux 6.1.0-16-cloud-arm64
+Homepage: https://www.kernel.org/
+Description-md5: 58fb5beb244ec3829ac62ed4463ea4af
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-headers-6.1.0-16-cloud-arm64_6.1.67-1_arm64.deb
+Size: 1036696
+SHA256: 56e38eb4564ff1c2897ea43145b30df8d0ba092800991ede733233b17d618036
+
+Package: linux-headers-6.1.0-16-common
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 56355
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Description: Common header files for Linux 6.1.0-16
+Multi-Arch: foreign
+Homepage: https://www.kernel.org/
+Description-md5: fc448e85b27fd8f5467b844d5da45e89
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-headers-6.1.0-16-common_6.1.67-1_all.deb
+Size: 9928388
+SHA256: 93da7fbe322b336d43a94565bd8b8617ee238a522975b12d5e78b80f8f147f7a
+
+Package: linux-headers-6.1.0-16-common-rt
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 45326
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Description: Common header files for Linux 6.1.0-16-rt
+Multi-Arch: foreign
+Homepage: https://www.kernel.org/
+Description-md5: 99de729f75dd0dfac2de45bcb90bae76
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-headers-6.1.0-16-common-rt_6.1.67-1_all.deb
+Size: 8279412
+SHA256: 9730991b64109b3db8d27c0e25af76770d413706af78edb065e34ddb5c627af0
+
+Package: linux-headers-6.1.0-16-rt-arm64
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 3591
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: linux-headers-6.1.0-16-common-rt (= 6.1.67-1), linux-kbuild-6.1 (>= 6.1.67-1), gcc-12
+Description: Header files for Linux 6.1.0-16-rt-arm64
+Homepage: https://www.kernel.org/
+Description-md5: 47ea914bd019dc8ead2d42916b339ff2
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-headers-6.1.0-16-rt-arm64_6.1.67-1_arm64.deb
+Size: 1279596
+SHA256: 8116da9e0ec3594b24ac8cb5f820d1de4700d55940d74560195ed64772fc263b
+
+Package: linux-image-6.1.0-16-arm64-dbg
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 5032426
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Description: Debug symbols for linux-image-6.1.0-16-arm64
+Homepage: https://www.kernel.org/
+Description-md5: 77b34a9de0b25bc666ff91d9923ad289
+Section: debug
+Priority: optional
+Filename: pool/main/l/linux/linux-image-6.1.0-16-arm64-dbg_6.1.67-1_arm64.deb
+Size: 793486736
+SHA256: a14156ebd0430dfcdbcf1a69362b94f4ff63f5601c929b2624a45e05f313743c
+
+Package: linux-image-6.1.0-16-arm64-unsigned
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 345735
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: linux-image-6.1.0-16-arm64
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Recommends: firmware-linux-free, apparmor
+Suggests: linux-doc-6.1, debian-kernel-handbook
+Conflicts: linux-image-6.1.0-16-arm64
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.1 for 64-bit ARMv8 machines
+Homepage: https://www.kernel.org/
+Description-md5: e0a5901d34069de3732aeae370ec380f
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-image-6.1.0-16-arm64-unsigned_6.1.67-1_arm64.deb
+Size: 56811248
+SHA256: 3d94f2fc0ad1c4ad9f4a7ab82583dfa21b05796808c4a8fd7c95df4b3dadb8e0
+
+Package: linux-image-6.1.0-16-cloud-arm64-dbg
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 1429266
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Description: Debug symbols for linux-image-6.1.0-16-cloud-arm64
+Homepage: https://www.kernel.org/
+Description-md5: 876e68d281245b6107856283ab844f6b
+Section: debug
+Priority: optional
+Filename: pool/main/l/linux/linux-image-6.1.0-16-cloud-arm64-dbg_6.1.67-1_arm64.deb
+Size: 255918256
+SHA256: 7d6ac190ab866e1754126397aca55de49a8a9bccd8053cff40a9abe6db101811
+
+Package: linux-image-6.1.0-16-cloud-arm64-unsigned
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 104081
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: linux-image-6.1.0-16-cloud-arm64
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Recommends: firmware-linux-free, apparmor
+Suggests: linux-doc-6.1, debian-kernel-handbook
+Conflicts: linux-image-6.1.0-16-cloud-arm64
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.1 for arm64 cloud
+Homepage: https://www.kernel.org/
+Description-md5: e5d90db06b19352c219e9a1839e014f6
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-image-6.1.0-16-cloud-arm64-unsigned_6.1.67-1_arm64.deb
+Size: 20014368
+SHA256: 5562f99859824cd34f81ce29c745629767c4f5672c67c2d0ed88839a72deb325
+
+Package: linux-image-6.1.0-16-rt-arm64-dbg
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 4910792
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Description: Debug symbols for linux-image-6.1.0-16-rt-arm64
+Homepage: https://www.kernel.org/
+Description-md5: 2220424bb799e33783aaf4e9a561ec1f
+Section: debug
+Priority: optional
+Filename: pool/main/l/linux/linux-image-6.1.0-16-rt-arm64-dbg_6.1.67-1_arm64.deb
+Size: 772652072
+SHA256: 82e1bf4219cac158e7056a1fb7fbacf069c9a8644591a6cd5c035b02c0d1f0cd
+
+Package: linux-image-6.1.0-16-rt-arm64-unsigned
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 341644
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: linux-image-6.1.0-16-rt-arm64
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Recommends: firmware-linux-free, apparmor
+Suggests: linux-doc-6.1, debian-kernel-handbook
+Conflicts: linux-image-6.1.0-16-rt-arm64
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.1 for 64-bit ARMv8 machines, PREEMPT_RT
+Homepage: https://www.kernel.org/
+Description-md5: ae35c495e2b54d0cb36b9bd5d96f8086
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-image-6.1.0-16-rt-arm64-unsigned_6.1.67-1_arm64.deb
+Size: 56110300
+SHA256: d1780b1bdbaa9bb7fee3dc5debda898c291c3e33c79f8d9aa7f8d006bb66d360
+
+Package: linux-image-arm64-dbg
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: linux-latest-image-dbg
+Depends: linux-image-6.1.0-16-arm64-dbg (= 6.1.67-1)
+Description: Debugging symbols for Linux arm64 configuration (meta-package)
+Homepage: https://www.kernel.org/
+Description-md5: 5a3ee41272b328cb61d3370190fcff7b
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-image-arm64-dbg_6.1.67-1_arm64.deb
+Size: 1296
+SHA256: 4a0f2b2f18776b8d997369a7ebe847a9904314f1d75c722611610a56e66dcd3a
+
+Package: linux-image-arm64-signed-template
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 3833
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: dpkg-dev, python3:any
+Description: Template for signed linux-image packages for arm64
+Homepage: https://www.kernel.org/
+Description-md5: 6ebef62bad168e7cac2ccc27a304d32b
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-image-arm64-signed-template_6.1.67-1_arm64.deb
+Size: 1373776
+SHA256: 140d1e76ba3e7aed97505dd015e6d105527c1c6b7fc924cb73cc6115c6385072
+
+Package: linux-image-cloud-arm64-dbg
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: linux-latest-image-dbg
+Depends: linux-image-6.1.0-16-cloud-arm64-dbg (= 6.1.67-1)
+Description: Debugging symbols for Linux cloud-arm64 configuration (meta-package)
+Homepage: https://www.kernel.org/
+Description-md5: f4b5b71ce4028389a13b7e96f40f0b1c
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-image-cloud-arm64-dbg_6.1.67-1_arm64.deb
+Size: 1324
+SHA256: fd656a7f594ed11b3dfce71b2bc2b55e19e06cb8667ae8c45df7bca5b20090e7
+
+Package: linux-image-rt-arm64-dbg
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: linux-latest-image-dbg
+Depends: linux-image-6.1.0-16-rt-arm64-dbg (= 6.1.67-1)
+Description: Debugging symbols for Linux rt-arm64 configuration (meta-package)
+Homepage: https://www.kernel.org/
+Description-md5: b257e73f82f600acabac9e5bb675c7bf
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-image-rt-arm64-dbg_6.1.67-1_arm64.deb
+Size: 1320
+SHA256: 71e9d818cce2c9b2f44e85ce88c4799feef56ed9ba9e9a6e49f2ee32645c82c8
+
+Package: linux-kbuild-6.1
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 2468
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libelf1 (>= 0.142), libssl3 (>= 3.0.0)
+Description: Kbuild infrastructure for Linux 6.1
+Multi-Arch: foreign
+Homepage: https://www.kernel.org/
+Description-md5: cb2f9d9e7a9e9f15256e922653025d78
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-kbuild-6.1_6.1.67-1_arm64.deb
+Size: 1004656
+SHA256: c4e0d7d669c1509debe66d84b7bd3df717d4ca07fdeeeedeecf267bc9b9fe57d
+
+Package: linux-libc-dev
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 6516
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Description: Linux support headers for userspace development
+Multi-Arch: same
+Homepage: https://www.kernel.org/
+Description-md5: f310daf8fb891639ee6eeeb4020a7c13
+Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib
+Section: devel
+Priority: optional
+Filename: pool/main/l/linux/linux-libc-dev_6.1.67-1_arm64.deb
+Size: 1880620
+SHA256: a34fe78f3d4af833ee5080e32079a2bd2e7c5a7b34c9fcbe8b967f94053197cf
+
+Package: linux-perf
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 7683
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: linux-tools-6.1
+Provides: linux-tools-6.1
+Depends: libbabeltrace1 (>= 1.5.4), libc6 (>= 2.34), libcap2 (>= 1:2.10), libdw1 (>= 0.157), libelf1 (>= 0.144), liblzma5 (>= 5.1.1alpha+20120614), libnuma1 (>= 2.0.11), libopencsd1 (>= 1.3.3), libperl5.36 (>= 5.36.0), libpython3.11 (>= 3.11.0), libslang2 (>= 2.2.4), libunwind8, libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.3.3), perl:any, python3:any
+Suggests: linux-doc-6.1
+Conflicts: linux-tools-6.1
+Description: Performance analysis tools for Linux
+Homepage: https://www.kernel.org/
+Description-md5: 66624a7d9f3cd31d269d28992a5cfa64
+Tag: devel::profiler, interface::commandline, interface::text-mode,
+ role::metapackage, role::program, uitoolkit::ncurses, use::analysing,
+ use::measuring
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-perf_6.1.67-1_arm64.deb
+Size: 2420980
+SHA256: b7525de162dbc2a36503a6e9813fff393804c200fa3db795f312a2e3ee4275a3
+
+Package: linux-source
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 10
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Depends: linux-source-6.1 (= 6.1.67-1)
+Description: Linux kernel source (meta-package)
+Homepage: https://www.kernel.org/
+Description-md5: 295a0aae79622b42802dfa4bda819ae6
+Tag: admin::kernel, devel::lang:c, devel::library, implemented-in::c,
+ role::devel-lib, role::metapackage
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-source_6.1.67-1_all.deb
+Size: 1096
+SHA256: cedee9346f374efb3f9156f818cee4e324756f6b2a7124010d7c41101d04274f
+
+Package: linux-source-6.1
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 135033
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Depends: binutils, xz-utils
+Recommends: build-essential, bc, rsync, kmod, cpio, bison, flex, libelf-dev, libssl-dev, linux-config-6.1
+Suggests: libncurses-dev | ncurses-dev, qtbase5-dev, pkg-config
+Description: Linux kernel source for version 6.1 with Debian patches
+Multi-Arch: foreign
+Homepage: https://www.kernel.org/
+Description-md5: d43d23de60e09bde0da59cf504ca703d
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux/linux-source-6.1_6.1.67-1_all.deb
+Size: 138270332
+SHA256: 56642f89cdff0bdaa563c7652ae90952083e99359630ddd412ea90f3ac1bba83
+
+Package: linux-support-6.1.0-16
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 1726
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Depends: python3:any, python3-jinja2
+Description: Support files for Linux 6.1
+Multi-Arch: foreign
+Homepage: https://www.kernel.org/
+Description-md5: 3a314b171a470d9a3505a241dea6c19d
+Section: devel
+Priority: optional
+Filename: pool/main/l/linux/linux-support-6.1.0-16_6.1.67-1_all.deb
+Size: 807888
+SHA256: c2119c52f8fa42455008eed2f9f31b7fb0cbd0f55f247c438caef180d5d5eb57
+
+Package: rtla
+Source: linux
+Version: 6.1.67-1
+Installed-Size: 852
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libtraceevent1 (>= 5.4), libtracefs1 (>= 1.3.0)
+Description: Real-Time Linux Analysis tools
+Homepage: https://www.kernel.org/
+Description-md5: 0532a5d5da80c52d43a84152f54bd400
+Section: devel
+Priority: optional
+Filename: pool/main/l/linux/rtla_6.1.67-1_arm64.deb
+Size: 794876
+SHA256: 65d11e1579a9f1f91c068b493ceb2e3d9506c4a261faf8be7ad7999e37c039d6
+
+Package: usbip
+Source: linux (6.1.67-1)
+Version: 2.0+6.1.67-1
+Installed-Size: 896
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: usb.ids, libc6 (>= 2.34), libudev1 (>= 183), libwrap0 (>= 7.6-4~)
+Description: USB device sharing system over IP network
+Homepage: https://www.kernel.org/
+Description-md5: 84110e083527a27b37417dcab69e5ab7
+Tag: implemented-in::c, role::program
+Section: admin
+Priority: optional
+Filename: pool/main/l/linux/usbip_2.0+6.1.67-1_arm64.deb
+Size: 794676
+SHA256: c7518c1e98e3e21bc480c1290d65b8dd23c6441e7c8512125373fc4ec29cd471
+
+Package: linux-headers-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: linux-headers-generic
+Depends: linux-headers-6.1.0-16-arm64 (= 6.1.67-1)
+Description: Header files for Linux arm64 configuration (meta-package)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 4e17cbf21c014805036003e22aa96e1b
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-headers-arm64_6.1.67-1_arm64.deb
+Size: 1416
+SHA256: 5cb984165e686226091102140d329f533334fc4976a4d62e700633f5508c9b7f
+
+Package: linux-headers-cloud-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: linux-headers-6.1.0-16-cloud-arm64 (= 6.1.67-1)
+Description: Header files for Linux cloud-arm64 configuration (meta-package)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 8ff703f4149ad65d040e839e3d1b022a
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-headers-cloud-arm64_6.1.67-1_arm64.deb
+Size: 1416
+SHA256: 3b8fcfa9019f81e6c6429848eb68a7e41a4366f9b0e0297bf94f677ea3b15756
+
+Package: linux-headers-rt-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Depends: linux-headers-6.1.0-16-rt-arm64 (= 6.1.67-1)
+Description: Header files for Linux rt-arm64 configuration (meta-package)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: c8f8c51ca0f6740b878a94d5871e5db1
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-headers-rt-arm64_6.1.67-1_arm64.deb
+Size: 1412
+SHA256: 38e0b30cc066db4e87c56b04fdbd3d382cb163e093aabc87d22be75ab5e86dee
+
+Package: linux-image-6.1.0-16-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 347375
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: linux-image-6.1.0-16-arm64-unsigned
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Recommends: firmware-linux-free, apparmor
+Suggests: linux-doc-6.1, debian-kernel-handbook
+Conflicts: linux-image-6.1.0-16-arm64-unsigned
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.1 for 64-bit ARMv8 machines (signed)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 8984a74982020a0fd2ccf51053a84d0e
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-image-6.1.0-16-arm64_6.1.67-1_arm64.deb
+Size: 57893404
+SHA256: 39b7cff9aba6cf37e3d126ea83af0dc91823cef7a1f841a13b3143bed1aa4ed0
+
+Package: linux-image-6.1.0-16-cloud-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 104543
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: linux-image-6.1.0-16-cloud-arm64-unsigned
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Recommends: firmware-linux-free, apparmor
+Suggests: linux-doc-6.1, debian-kernel-handbook
+Conflicts: linux-image-6.1.0-16-cloud-arm64-unsigned
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.1 for arm64 cloud (signed)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 22db14b4e038eec4f42d28d1d8171061
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-image-6.1.0-16-cloud-arm64_6.1.67-1_arm64.deb
+Size: 20302624
+SHA256: 0cb276b19bc046c9b9ebed2c32684426503a81c4de905208803804bbc2f8e687
+
+Package: linux-image-6.1.0-16-rt-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 343258
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Replaces: linux-image-6.1.0-16-rt-arm64-unsigned
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Recommends: firmware-linux-free, apparmor
+Suggests: linux-doc-6.1, debian-kernel-handbook
+Conflicts: linux-image-6.1.0-16-rt-arm64-unsigned
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.1 for 64-bit ARMv8 machines, PREEMPT_RT (signed)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 04cbadd7c10c8c4c440bfeb58bb1ece4
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-image-6.1.0-16-rt-arm64_6.1.67-1_arm64.deb
+Size: 57175344
+SHA256: f9ba7bf350c113302a9b496f2cfdc5d3c14610e796ddd5c13cbb9b23bb86ba9b
+
+Package: linux-image-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: linux-image-generic, linux-latest-modules-6.1.0-16-arm64, wireguard-modules (= 1.0.0)
+Depends: linux-image-6.1.0-16-arm64 (= 6.1.67-1)
+Description: Linux for 64-bit ARMv8 machines (meta-package)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 698c38c9f1dc5ecfdddb55da9da05590
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-image-arm64_6.1.67-1_arm64.deb
+Size: 1444
+SHA256: a81118cf42d8c4286830b06d789f23c46f8ca0bcbc9d4e0ab76caff05df7f8c7
+
+Package: linux-image-cloud-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: linux-latest-modules-6.1.0-16-cloud-arm64, wireguard-modules (= 1.0.0)
+Depends: linux-image-6.1.0-16-cloud-arm64 (= 6.1.67-1)
+Description: Linux for arm64 cloud (meta-package)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 266939b2cc5604a948c15783fa8f3dda
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-image-cloud-arm64_6.1.67-1_arm64.deb
+Size: 1456
+SHA256: 67ff4d84f2b58d423165f1e9e8d1a9a68ffe6dc02d1c619d3ef555c5759137d0
+
+Package: linux-image-rt-arm64
+Source: linux-signed-arm64 (6.1.67+1)
+Version: 6.1.67-1
+Installed-Size: 13
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: arm64
+Provides: linux-latest-modules-6.1.0-16-rt-arm64, wireguard-modules (= 1.0.0)
+Depends: linux-image-6.1.0-16-rt-arm64 (= 6.1.67-1)
+Description: Linux for 64-bit ARMv8 machines (meta-package)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 6.1.67-1)
+Description-md5: 698c38c9f1dc5ecfdddb55da9da05590
+Section: kernel
+Priority: optional
+Filename: pool/main/l/linux-signed-arm64/linux-image-rt-arm64_6.1.67-1_arm64.deb
+Size: 1444
+SHA256: dd075b76c1738ad560b5a73dbe09c526d47647a68f85ed6d36e193a6b739813e
+
+Package: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 5884
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Replaces: mail-transport-agent
+Provides: mail-transport-agent
+Depends: libc6 (>= 2.34), libdb5.3, libicu72 (>= 72.1~rc-1~), libnsl2 (>= 1.0), libsasl2-2 (>= 2.1.28+dfsg), libssl3 (>= 3.0.0), debconf (>= 0.5) | debconf-2.0, netbase, adduser (>= 3.48), dpkg (>= 1.8.3), ssl-cert, cpio, e2fsprogs
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: python3, ca-certificates
+Suggests: procmail, postfix-mysql, postfix-pgsql, postfix-ldap, postfix-pcre, postfix-lmdb, postfix-sqlite, sasl2-bin | dovecot-common, libsasl2-modules | dovecot-common, resolvconf, postfix-cdb, mail-reader, postfix-mta-sts-resolver, ufw, postfix-doc
+Conflicts: mail-transport-agent, smail
+Description: High-performance mail transport agent
+Homepage: https://www.postfix.org
+Description-md5: 98656fbf1bb45b53edd367037a2e5a90
+Tag: implemented-in::c, interface::daemon, mail::smtp, mail::transport-agent,
+ network::server, protocol::smtp, role::program, works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix_3.7.9-0+deb12u1_arm64.deb
+Size: 1450324
+SHA256: fbb6987e0659e6a1c041c83eb1b23d4e6c0fb34b86ba670effa9815e66dfc259
+
+Package: postfix-cdb
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 423
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.17), libcdb1, postfix (= 3.7.9-0+deb12u1)
+Description: CDB map support for Postfix
+Homepage: https://www.postfix.org
+Description-md5: e2d7cf0a3c214f6a9735e5ad7671b55e
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-cdb_3.7.9-0+deb12u1_arm64.deb
+Size: 330840
+SHA256: c0f4fdc8e057760a2103a07c8677d17f4232e34463913521065f5977c6ef2573
+
+Package: postfix-doc
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 4613
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Suggests: postfix
+Description: Documentation for Postfix
+Homepage: https://www.postfix.org
+Description-md5: b22cfd4a338576617daa68c3d8c6c80a
+Tag: mail::smtp, mail::transport-agent, protocol::smtp, role::documentation,
+ role::program, works-with::mail
+Section: doc
+Priority: optional
+Filename: pool/main/p/postfix/postfix-doc_3.7.9-0+deb12u1_all.deb
+Size: 1213556
+SHA256: f5561eff7292d860a5754add53be3e0b7d393c3f6e31fe09b84f97f4abc3f1d4
+
+Package: postfix-ldap
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 434
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.17), libldap-2.5-0 (>= 2.5.4), postfix (= 3.7.9-0+deb12u1)
+Description: LDAP map support for Postfix
+Homepage: https://www.postfix.org
+Description-md5: 6275ddb745f2250c57cc85063f27fcc4
+Tag: interface::daemon, network::server, protocol::ldap, protocol::smtp,
+ role::program, security::authentication, works-with::db,
+ works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-ldap_3.7.9-0+deb12u1_arm64.deb
+Size: 347532
+SHA256: bef766618613935058f5178a1a6fa56acad21e3f6da16732fbba838ca6f701b9
+
+Package: postfix-lmdb
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 427
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.33), liblmdb0 (>= 0.9.14), postfix (= 3.7.9-0+deb12u1)
+Description: LMDB map support for Postfix
+Homepage: https://www.postfix.org
+Description-md5: dadedd4c3edba2567b172520ab66c14b
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-lmdb_3.7.9-0+deb12u1_arm64.deb
+Size: 336184
+SHA256: 81913e88784f884472c9964d817ed89589d06b0a91f7dfb7776ef7bad790f7df
+
+Package: postfix-mysql
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 431
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.17), libmariadb3 (>= 3.0.0), postfix (= 3.7.9-0+deb12u1)
+Description: MySQL map support for Postfix
+Homepage: https://www.postfix.org
+Description-md5: 28696ca88c5183ab5144174d86f2c973
+Tag: devel::lang:sql, interface::daemon, network::server, protocol::smtp,
+ role::program, security::authentication, use::storing, works-with::db,
+ works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-mysql_3.7.9-0+deb12u1_arm64.deb
+Size: 338404
+SHA256: eea97aa415290759714b3082eaabf29f7bc3f85ba24dd2917bbb7fe349eff7e0
+
+Package: postfix-pcre
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 429
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.17), libpcre2-8-0 (>= 10.22), postfix (= 3.7.9-0+deb12u1)
+Description: PCRE map support for Postfix
+Homepage: https://www.postfix.org
+Description-md5: 303555b1e86bf9cee974968dfd625a29
+Tag: interface::daemon, network::server, role::program,
+ security::authentication, works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-pcre_3.7.9-0+deb12u1_arm64.deb
+Size: 336876
+SHA256: d7a2a1ffd17025bc4a4bc134c57ac7a2c104a618cbaeaa7452d23ad1e2fc53f2
+
+Package: postfix-pgsql
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 430
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.17), libpq5, postfix (= 3.7.9-0+deb12u1)
+Description: PostgreSQL map support for Postfix
+Homepage: https://www.postfix.org
+Description-md5: 546205f4e5c0c34da8348a5a0f8dfa40
+Tag: devel::lang:sql, interface::daemon, network::server, protocol::smtp,
+ role::program, security::authentication, use::storing, works-with::db,
+ works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-pgsql_3.7.9-0+deb12u1_arm64.deb
+Size: 337184
+SHA256: ab4c7f8ae702fa0a4a720d9e3ac227d27b73f91047f89d87c6663afd3d1625d4
+
+Package: postfix-sqlite
+Source: postfix
+Version: 3.7.9-0+deb12u1
+Installed-Size: 429
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.17), libsqlite3-0 (>= 3.5.9), postfix (= 3.7.9-0+deb12u1)
+Description: SQLite map support for Postfix
+Homepage: https://www.postfix.org
+Description-md5: 78969de91802d7f52e4f5b456e3732f9
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-sqlite_3.7.9-0+deb12u1_arm64.deb
+Size: 334508
+SHA256: 9e2f9c82dc0591069d332e6ee5d65727a90eeac8536db5dacfc0a1173399c610
+
+Package: ctdb
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 4526
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: iproute2, psmisc, samba-libs (= 2:4.17.9+dfsg-0+deb12u3), sudo, tdb-tools, time, libbsd0 (>= 0.0), libc6 (>= 2.34), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), libtirpc3 (>= 1.0.2)
+Recommends: ethtool, python3:any, python3-etcd, librados2 (>= 16.2.11+ds)
+Suggests: logrotate, lsof
+Description: clustered database to store temporary data
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: 83dff66615250b53a0cd3df6fb3b9ea7
+Tag: admin::cluster, admin::file-distribution, implemented-in::c,
+ interface::commandline, interface::daemon, network::hiavailability,
+ network::load-balancing, protocol::ethernet, protocol::nfs,
+ protocol::smb, role::program, suite::samba, use::browsing,
+ use::synchronizing, works-with::software:running
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/ctdb_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 675940
+SHA256: 0f39429443c9eb064e30ed9b9cbf3f89cade5c05696f2e25080ef174e9ee6d57
+
+Package: ldb-tools
+Source: samba (2:4.17.9+dfsg-0+deb12u3)
+Version: 2:2.6.2+samba4.17.9+dfsg-0+deb12u3
+Installed-Size: 537
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libldb2 (>= 1.1.5), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~)
+Description: LDAP-like embedded database - tools
+Homepage: https://www.samba.org
+Description-md5: 27e8c15a8859e3368f9f6a0853f05226
+Tag: implemented-in::c, interface::commandline, network::client,
+ protocol::ldap, protocol::ssl, role::program, suite::samba,
+ use::storing, works-with-format::ldif, works-with::db
+Section: utils
+Priority: optional
+Filename: pool/main/s/samba/ldb-tools_2.6.2+samba4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 54388
+SHA256: 1b825ff7080c54cfe62f53c23e458ec4c67202afc1521999642dddd3f5cbce7f
+
+Package: libldb-dev
+Source: samba (2:4.17.9+dfsg-0+deb12u3)
+Version: 2:2.6.2+samba4.17.9+dfsg-0+deb12u3
+Installed-Size: 174
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libc6-dev, libldb2 (= 2:2.6.2+samba4.17.9+dfsg-0+deb12u3), libtalloc-dev, libtevent-dev, libtdb-dev, pkg-config
+Description: LDAP-like embedded database - development files
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 0f2998af1c1336788fd3d4e9eca9fd09
+Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib,
+ role::program, use::storing, works-with-format::ldif, works-with::db
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/libldb-dev_2.6.2+samba4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 53688
+SHA256: 6789d25fd1c3bb35a6937894d438d0e598345c9a991c8b3400a38f89d00ba907
+
+Package: libldb2
+Source: samba (2:4.17.9+dfsg-0+deb12u3)
+Version: 2:2.6.2+samba4.17.9+dfsg-0+deb12u3
+Installed-Size: 1334
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libc6 (>= 2.34), libldap-2.5-0 (>= 2.5.4), liblmdb0 (>= 0.9.9), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~)
+Breaks: ldb-tools (<< 1.1.30~), samba (<< 2:4.7.0~), samba-dsdb-modules (<< 2:4.7.0~), samba-libs (<< 2:4.7.0~), samba-testsuite (<< 2:4.7.0~)
+Description: LDAP-like embedded database - shared library
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: afbf2b86552adbf8b69bb702e5773247
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/libldb2_2.6.2+samba4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 152436
+SHA256: 56c8526556ad8c98132b7045a4f2f9aabf7d8f588955c4d886c1925e91672dc5
+
+Package: libnss-winbind
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 187
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: winbind:any (= 2:4.17.9+dfsg-0+deb12u3), libbsd0 (>= 0.0), libc6 (>= 2.34)
+Suggests: libpam-winbind
+Description: Samba nameservice integration plugins
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 223d38d764a9bb35ad3be4c8d048957d
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/libnss-winbind_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 55984
+SHA256: ee3b44c5420d03e731378e766b8925279fba46119b86879c4664560ece94b494
+
+Package: libpam-winbind
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 203
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libpam-runtime (>= 1.0.1-6), libpam0g (>= 1.1.3-2~), winbind:any (= 2:4.17.9+dfsg-0+deb12u3), libbsd0 (>= 0.0), libc6 (>= 2.34), libtalloc2 (>= 2.3.4~)
+Suggests: libnss-winbind
+Description: Windows domain authentication integration plugin
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: fba9076429d270720a91324cff071fed
+Tag: implemented-in::c, protocol::smb, role::plugin, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/libpam-winbind_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 70432
+SHA256: 9cad2602a45e7f4a31f18a077ed7634cac75f7a8861941dfecf3289766f03e9c
+
+Package: libsmbclient
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 266
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: samba-libs (= 2:4.17.9+dfsg-0+deb12u3), libbsd0 (>= 0.0), libc6 (>= 2.25), libtalloc2 (>= 2.3.4~), libtevent0 (>= 0.13.0~)
+Description: shared library for communication with SMB/CIFS servers
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 483547748179a567c24665e99ab5439e
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/libsmbclient_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 77184
+SHA256: 0fecca76c818c15dfa6024fa88923c357a7698a230151a51387edb9240880b84
+
+Package: libsmbclient-dev
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 270
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libsmbclient (= 2:4.17.9+dfsg-0+deb12u3)
+Description: development files for libsmbclient
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: d6338d0aed68408023b999dd547aaecf
+Tag: devel::lang:c, devel::library, implemented-in::c, protocol::smb,
+ role::devel-lib, suite::samba
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/libsmbclient-dev_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 61644
+SHA256: 111d9c0c9cb9e15d4b01db82257afbc41d0fa98e42863d13174c93e19e59615e
+
+Package: libwbclient-dev
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 112
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: samba-dev (<< 2:4.11)
+Depends: libwbclient0 (= 2:4.17.9+dfsg-0+deb12u3)
+Breaks: samba-dev (<< 2:4.11), samba-libs (<< 2:4.11.0+dfsg-1~)
+Description: Samba winbind client library - development files
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 2fd42f0ef62fe1cc8cfee6fb03d4b884
+Tag: devel::lang:c, devel::library, implemented-in::c, protocol::smb,
+ role::devel-lib, suite::samba
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/libwbclient-dev_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 37192
+SHA256: 0c0428068c68b2e71945d96ac436bfc40a74964f261bdaf05115794ca6fbb126
+
+Package: libwbclient0
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 126
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libbsd0 (>= 0.0), libc6 (>= 2.34)
+Breaks: samba-libs (<< 2:4.11.0+dfsg-1~)
+Description: Samba winbind client library
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 16c935b1d482f634b3879c2495e04db8
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/libwbclient0_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 51148
+SHA256: ec9fb07fb75e8441d96fba4c44f4be525636e9c1e192f2a9554af122bf5d26a2
+
+Package: python3-ldb
+Source: samba (2:4.17.9+dfsg-0+deb12u3)
+Version: 2:2.6.2+samba4.17.9+dfsg-0+deb12u3
+Installed-Size: 272
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libldb2 (= 2:2.6.2+samba4.17.9+dfsg-0+deb12u3), python3 (<< 3.12), python3 (>= 3.11~), python3:any, libc6 (>= 2.25), libpython3.11 (>= 3.11.0), libtalloc2 (>= 2.3.4~)
+Description: Python 3 bindings for LDB
+Homepage: https://www.samba.org
+Description-md5: c83bd92747d7e8000f766fba3a779170
+Section: python
+Priority: optional
+Filename: pool/main/s/samba/python3-ldb_2.6.2+samba4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 58508
+SHA256: a650c4093cad6ce7f7c7cb7d1d51f068eb677985cce445d40028ff9e0f39934e
+
+Package: python3-ldb-dev
+Source: samba (2:4.17.9+dfsg-0+deb12u3)
+Version: 2:2.6.2+samba4.17.9+dfsg-0+deb12u3
+Installed-Size: 62
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libc6-dev, libldb-dev, pkg-config, python3-ldb (= 2:2.6.2+samba4.17.9+dfsg-0+deb12u3)
+Description: LDB Python 3 bindings - development files
+Homepage: https://www.samba.org
+Description-md5: be4c40ca865d11fda345266b7a5d70fb
+Tag: devel::library, role::devel-lib
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/python3-ldb-dev_2.6.2+samba4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 29824
+SHA256: f62804368984b39418e76344d57315e8f762c0c98b8f5ecce99aa2a525dedc52
+
+Package: python3-samba
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 24823
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: samba (<< 2:4.16.0+dfsg-1~), samba-libs (<< 2:4.16.0+dfsg-1~)
+Depends: python3-ldb (>= 2:2.1.0), python3-tdb, samba-libs (= 2:4.17.9+dfsg-0+deb12u3), python3 (<< 3.12), python3 (>= 3.11~), python3:any, libbsd0 (>= 0.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libldb2 (>= 0.9.21), libpython3.11 (>= 3.11.0), libtalloc2 (>= 2.3.4~), libtevent0 (>= 0.13.0~), python3-talloc (>= 2.3.4~)
+Recommends: python3-gpg
+Description: Python 3 bindings for Samba
+Homepage: https://www.samba.org
+Description-md5: 7593355c9f194d3f84df6ce15717d93f
+Section: python
+Priority: optional
+Filename: pool/main/s/samba/python3-samba_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 2627768
+SHA256: bcc473823cd2b6b7337782940e21ef942ce14d5a51471dfe343fbabcce3561d9
+
+Package: registry-tools
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 327
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: samba-libs (= 2:4.17.9+dfsg-0+deb12u3), libc6 (>= 2.34), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libtalloc2 (>= 2.3.4~)
+Description: tools for viewing and manipulating the Windows registry
+Homepage: https://www.samba.org
+Description-md5: 31c581321b3c287173613845af74fcdb
+Tag: implemented-in::c, interface::commandline, network::client,
+ role::program, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/registry-tools_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 50212
+SHA256: d4e37d68a70407158a0016401dd410d2878e06821e03176aac5ea50e348a3961
+
+Package: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 4924
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: passwd, libpam-modules, libpam-runtime (>= 1.0.1-11), procps, python3, python3-dnspython, python3-samba (= 2:4.17.9+dfsg-0+deb12u3), samba-common (= 2:4.17.9+dfsg-0+deb12u3), samba-common-bin (= 2:4.17.9+dfsg-0+deb12u3), tdb-tools, python3:any, libbsd0 (>= 0.6.0), libc6 (>= 2.34), libcups2 (>= 1.7.0), libgnutls30 (>= 3.7.0), libldap-2.5-0 (>= 2.5.4), libldb2 (>= 2:2.6.1), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~), libtasn1-6 (>= 4.14), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), samba-libs (= 2:4.17.9+dfsg-0+deb12u3)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: attr, logrotate, python3-markdown, samba-dsdb-modules, samba-vfs-modules, samba-ad-provision
+Suggests: bind9 (>= 1:9.5.1), bind9utils, ctdb, ldb-tools, ntp | chrony (>= 3.0-1), ufw, winbind
+Enhances: bind9, ntp
+Breaks: samba-ad-provision (<< 2:4.17.9+dfsg)
+Description: SMB/CIFS file, print, and login server for Unix
+Homepage: https://www.samba.org
+Description-md5: c9d307ae5cf3b46be12b53a9f95862f0
+Tag: admin::filesystem, implemented-in::c, interface::daemon,
+ network::server, network::service, protocol::smb, role::program,
+ suite::samba, use::configuring
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 886200
+SHA256: 2f6f03fe8db7d68863c966f1041a84ea78cea6dae0f5d7bb1eac1477294e773f
+
+Package: samba-ad-dc
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 48
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: all
+Depends: samba (>= 2:4.17.9+dfsg-0+deb12u3), samba-dsdb-modules, samba-vfs-modules, winbind
+Recommends: libnss-winbind, libpam-winbind, samba-ad-provision
+Breaks: samba-ad-provision (<< 2:4.17.9+dfsg)
+Description: Samba control files to run AD Domain Controller
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: eba517f15cc7dff6d61d4bf8f68630b3
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-ad-dc_4.17.9+dfsg-0+deb12u3_all.deb
+Size: 28228
+SHA256: 85c42d899c36597fb45913a320670ca0530b2efec30fd0ecaf3d51f76a29f66f
+
+Package: samba-ad-provision
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 13715
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: all
+Replaces: samba (<< 2:4.17.3+dfsg-4~)
+Breaks: samba (<< 2:4.17.3+dfsg-4~)
+Description: Samba files needed for AD domain provision
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: 85c78259045a6d75c0722ff117cca50f
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-ad-provision_4.17.9+dfsg-0+deb12u3_all.deb
+Size: 413536
+SHA256: 9f52e158287cb1906984dbc2915667019f3b8857648c4ef8df528f63f42892f3
+
+Package: samba-common
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 214
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: all
+Depends: ucf, debconf (>= 0.5) | debconf-2.0
+Recommends: samba-common-bin
+Description: common files used by both the Samba server and client
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: a4083020b891e75d279ca48e7fd18d7b
+Tag: devel::doc, devel::examples, protocol::smb, role::app-data,
+ role::documentation, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-common_4.17.9+dfsg-0+deb12u3_all.deb
+Size: 84448
+SHA256: 8e7fa84fe73e5cbd2f8ea3989da2f511b3645fb2a960052c665959242b719308
+
+Package: samba-common-bin
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 4886
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: samba (<< 2:4.16.2+dfsg-1~)
+Depends: python3, python3-samba, samba-common (= 2:4.17.9+dfsg-0+deb12u3), samba-libs (= 2:4.17.9+dfsg-0+deb12u3), python3:any, libbsd0 (>= 0.3.0), libc6 (>= 2.34), libcups2 (>= 1.7.0), libgnutls30 (>= 3.7.0), libjansson4 (>= 2.14), libldap-2.5-0 (>= 2.5.4), libncurses6 (>= 6), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), libtinfo6 (>= 6), libwbclient0 (>= 2:4.0.3+dfsg1)
+Recommends: samba-dsdb-modules
+Suggests: heimdal-clients, python3-markdown, python3-dnspython
+Breaks: samba (<< 2:4.16.2+dfsg-1~)
+Description: Samba common files used by both the server and the client
+Homepage: https://www.samba.org
+Description-md5: a420b46650c8517bd92accf88243d2de
+Tag: implemented-in::c, role::program, suite::samba, uitoolkit::ncurses
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-common-bin_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 1096288
+SHA256: bcad3d4edff325c7c10cc97d1676e7247f7c0ad38304542e106490cb68dda0bd
+
+Package: samba-dev
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 1800
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: libwbclient-dev (<< 2:4.16.1+dfsg-7~)
+Depends: libc6-dev, libldb-dev (>= 2:2), libpopt-dev, libtalloc-dev, libtdb-dev, libtevent-dev, libwbclient-dev, samba-libs (= 2:4.17.9+dfsg-0+deb12u3)
+Breaks: libwbclient-dev (<< 2:4.16.1+dfsg-7~)
+Description: tools for extending Samba
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: c8352d732d47c05669c4910ec031f562
+Section: devel
+Priority: optional
+Filename: pool/main/s/samba/samba-dev_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 244688
+SHA256: c475aa577611661c39f94568a83851e1ac4643483c72162b468a0c139e9736a0
+
+Package: samba-dsdb-modules
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 3457
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: libgpgme11 (>= 1.2.0), samba-libs (= 2:4.17.9+dfsg-0+deb12u3), libldb2 (= 2:2.6.2+samba4.17.9+dfsg-0+deb12u3), libbsd0 (>= 0.0), libc6 (>= 2.33), libcrypt1 (>= 1:4.1.0), libgnutls30 (>= 3.7.0), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~)
+Enhances: libldb2
+Description: Samba Directory Services Database
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: ed8b020cf571b2c155dd3360d7f05bb3
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/samba-dsdb-modules_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 296256
+SHA256: 423a06ae0b35c23a370d9f1c7e6e3cd82ca807a7bbf433990f0a89d814978d23
+
+Package: samba-libs
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 29367
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: libwbclient0 (<< 2:4.16.1+dfsg-7~), samba (<< 2:4.17.0+dfsg-2~)
+Depends: libacl1 (>= 2.2.23), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libbsd0 (>= 0.5.0), libc6 (>= 2.34), libcap2 (>= 1:2.10), libgnutls30 (>= 3.7.5), libicu72 (>= 72.1~rc-1~), libjansson4 (>= 2.14), libkeyutils1 (>= 1.5.9), libldap-2.5-0 (>= 2.5.4), libldb2 (>= 2:2.6.2), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libsystemd0, libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0), libtirpc3 (>= 1.0.2), libwbclient0 (>= 2:4.5.0+dfsg), zlib1g (>= 1:1.1.4)
+Breaks: libwbclient0 (<< 2:4.16.1+dfsg-7~), samba (<< 2:4.17.0+dfsg-2~)
+Description: Samba core libraries
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 306caa16a8faeb0f0052382f8854cd17
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/samba-libs_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 5261856
+SHA256: 9bc2127275ec35a77acaa07b0e2eb9aa9a6bbe4c2646724f760597a6d49855b4
+
+Package: samba-testsuite
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 9990
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: samba-common-bin, samba-libs (= 2:4.17.9+dfsg-0+deb12u3), libbsd0 (>= 0.5.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libldb2 (>= 2:2.6.2), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libsmbclient (>= 2:4.12.0+dfsg), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0), libwbclient0 (>= 2:4.0.3+dfsg1), python3-samba (= 2:4.17.9+dfsg-0+deb12u3), winbind (= 2:4.17.9+dfsg-0+deb12u3)
+Suggests: subunit
+Description: test suite from Samba
+Homepage: https://www.samba.org
+Description-md5: b3a06da306c4ba5739938a7fa8d2fe31
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-testsuite_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 1988952
+SHA256: bee0f92619003f50e8f0ceafd2a33e1ceb33eafbd56e8f1c9b1347082c3fcb58
+
+Package: samba-vfs-modules
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 3629
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Depends: samba-libs (= 2:4.17.9+dfsg-0+deb12u3), libbsd0 (>= 0.0), libc6 (>= 2.33), libgnutls30 (>= 3.7.0), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), libtirpc3 (>= 1.0.2), liburing2 (>= 2.3)
+Recommends: libcephfs2 (>= 12.0.3), libdbus-1-3 (>= 1.9.14), libgfapi0 (>= 10.3)
+Enhances: samba
+Description: Samba Virtual FileSystem plugins
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: cd83b336ae9f6321d078811769d5a463
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-vfs-modules_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 403632
+SHA256: 563a319e3ba8a75aeda2ad825d81bdec0ee088cb3c8b37de55fce136e429667e
+
+Package: smbclient
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 2417
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Provides: samba-client
+Depends: samba-common (= 2:4.17.9+dfsg-0+deb12u3), samba-libs (= 2:4.17.9+dfsg-0+deb12u3), libarchive13 (>= 3.0.4), libbsd0 (>= 0.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libsmbclient (>= 2:4.10.0+dfsg), libtalloc2 (>= 2.3.4~), libtevent0 (>= 0.13.0~)
+Suggests: cifs-utils, heimdal-clients
+Description: command-line SMB/CIFS clients for Unix
+Homepage: https://www.samba.org
+Description-md5: 476018eed30b7f1e76b02afe22aaf008
+Tag: implemented-in::c, interface::commandline, interface::text-mode,
+ network::client, protocol::smb, role::program, suite::samba,
+ uitoolkit::ncurses, use::browsing
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/smbclient_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 429956
+SHA256: 0243598ca4721d269fbf3c3778da2c8f1f88c68d6c5fa6c388b2224d59f6365b
+
+Package: winbind
+Source: samba
+Version: 2:4.17.9+dfsg-0+deb12u3
+Installed-Size: 2234
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: arm64
+Replaces: samba (<< 2:4.16.6+dfsg-5~), samba-libs (<< 2:4.16.6+dfsg-5~)
+Depends: samba-common (= 2:4.17.9+dfsg-0+deb12u3), samba-common-bin (= 2:4.17.9+dfsg-0+deb12u3), libwbclient0 (= 2:4.17.9+dfsg-0+deb12u3), passwd, libbsd0 (>= 0.6.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libldap-2.5-0 (>= 2.5.4), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), samba-libs (= 2:4.17.9+dfsg-0+deb12u3)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Suggests: libnss-winbind, libpam-winbind
+Enhances: libkrb5-26-heimdal
+Breaks: samba (<< 2:4.16.6+dfsg-5~), samba-libs (<< 2:4.16.6+dfsg-5~)
+Description: service to resolve user and group information from Windows NT servers
+Multi-Arch: allowed
+Homepage: https://www.samba.org
+Description-md5: 760987c6cfd5ae0abd5c47c9758b31b0
+Tag: implemented-in::c, interface::daemon, network::server, network::service,
+ protocol::smb, role::program, security::authentication, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/winbind_4.17.9+dfsg-0+deb12u3_arm64.deb
+Size: 390696
+SHA256: be58a4cc9237ea4b145ed6c7caa4f102412b848f4ea19b180275f7b62555ca15
+

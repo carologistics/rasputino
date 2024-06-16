@@ -1,0 +1,24 @@
+Template: libdebuginfod/usedebiandebuginfod
+Type: boolean
+Default: false
+Description: Connect to Debian's debuginfod server to download debug symbols?
+ While debugging programs (with GDB, for example) or using
+ debuginfo-consumer applications, it is possible to connect to
+ Debian's debuginfod server and download the necessary debug
+ information for the program you are debugging on-the-fly, without the
+ need to configure the debian-debug apt repository nor installing
+ any dbgsym packages.  This service is maintained by Debian, and the
+ only information you will have to send to it is the Build-ID hash of
+ the program(s)/library(ies) being debugged.
+Description-de.UTF-8: Mit Debians debuginfod-Sever zum Herunterladen von Debug-Symbolen verbinden?
+ Bei der Fehlersuche in Programmen (mit beispielsweise GDB) oder dem Einsatz von debuginfo-consumer-Anwendungen ist es möglich, sich mit Debians debuginfod-Server zu verbinden und die notwendigen Fehlersuchinformationen für das Programm, dass sie untersuchen, direkt herunterzuladen, ohne das Apt-Depot debian-debug konfigurieren oder irgend ein dbgsym-Paket herunterzuladen zu müssen. Dieser Dienst wird von Debian bereitgestellt und die einzige Information, die sie dem Dienst senden müssen, ist der Hash der Build-ID der Programme/Bibliotheken, für die die Fehlersuche erfolgt.
+Description-es.UTF-8: ¿Desea conectarse al servidor debuginfod de Debian para descargar los símbolos de depuración?
+ Cuando se depuran programas (p. ej., con GDB) o utiliza aplicaciones que usan debuginfo, puede conectarse al servidor debuginfod de Debian y descargar la información de depuración necesaria para la aplicación que está depurando sobre la marcha, sin necesidad de configurar el repositorio APT de debian-debug ni instalar paquetes dbgsym. Este servicio está mantenido por Debian y la única información que tendrá que enviarle es la huella digital «Build-ID» de los programas o bibliotecas depuradas.
+Description-fr.UTF-8: Faut-il se connecter au serveur debuginfod de Debian pour télécharger les symboles de débogage ?
+ Lors du débogage de programmes (avec GDB par exemple) ou de l'utilisation d'applications se servant de debuginfo, il est possible de se connecter au serveur debuginfod de Debian et de télécharger les informations de débogage nécessaires pour le programme que vous déboguez à la volée, sans avoir besoin de configurer le dépôt APT debian-debug ou d'installer un paquet dbgsym. Ce service est entretenu par Debian et la seule information que vous aurez à lui envoyer est l'empreinte numérique du « Build-ID » des programmes ou bibliothèques débogués.
+Description-nl.UTF-8: Verbinding maken met de debuginfod-server van Debian om debug-symbolen te downloaden?
+ Tijdens het debuggen van programma's (bijvoorbeeld met GDB) of het gebruik van debuginfo-consumer-applicaties is het mogelijk om verbinding te maken met de debuginfod-server van Debian en de nodige debug-informatie te downloaden voor het programma dat u aan het debuggen bent, zonder dat het nodig is om de apt-bron debian-debug te configureren of dbgsym-pakketten te installeren. Deze service wordt onderhouden door Debian, en de enige informatie die u ernaar hoeft te sturen, is de Build-ID-hash van de programma('s)/bibliotheek(en) die u wilt debuggen.
+Description-pt.UTF-8: Ligar ao servidor debuginfod de Debian para descarregar símbolos de depuração?
+ Quando se depuram programas (com GDB, por exemplo) ou se usam aplicações debuginfo-consumer, é possível ligar ao servidor debuginfod de Debian e descarregar na hora a informação de depuração necessária para o programa que você está a depurar, sem a necessidade de configurar o repositório apt debian-debug nem instalar nenhuns pacotes dbgsym.  Este serviço é mantido por Debian, e a única informação que você tem de enviar para ele é a cinza do Build-ID dos programa(s)/biblioteca(s) que vão ser depuradas.
+Description-pt_BR.UTF-8: Conectar-se ao servidor debuginfod do Debian para baixar símbolos de depuração?
+ Enquanto você estiver depurando programas (com o GDB, por exemplo) ou utilizando algum outro aplicativo consumidor de informações de depuração, é possível conectar-se ao servidor debuginfod do Debian e baixar simultaneamente as informações de depuração necessárias para o programa sendo depurado, sem que seja necessário configurar o repositório debian-debug nem instalar quaisquer pacotes dbgsym. Este serviço é mantido pelo Debian, e a única informação que será enviada a ele é a assinatura Build-ID do(s) programa(s)/biblioteca(s) sendo depurado(s).

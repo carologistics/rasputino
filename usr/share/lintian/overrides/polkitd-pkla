@@ -1,0 +1,3 @@
+# Arguably this should be in section 7, but it's useful information
+# and section 8 doesn't seem inappropriate
+polkitd-pkla: spare-manual-page [usr/share/man/man8/pklocalauthority.8.gz]

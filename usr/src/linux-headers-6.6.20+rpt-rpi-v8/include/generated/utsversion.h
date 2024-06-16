@@ -1,0 +1,1 @@
+#define UTS_VERSION "#1 SMP PREEMPT Debian 1:6.6.20-1+rpt1 (2024-03-07)"

@@ -1,0 +1,10 @@
+f6c967cdc3def9f1e26ceffdb3a743a2  usr/bin/qmi-firmware-update
+175681fda67f8786ded49e1b5424a215  usr/bin/qmi-network
+e6951eac9ab24a0c845a528798577f0c  usr/bin/qmicli
+3e03eababb36a7a3e7f73557ff5fe72d  usr/share/bash-completion/completions/qmicli
+065799cd627df3b155aba2e3c3f73f0f  usr/share/doc/libqmi-utils/changelog.Debian.gz
+c32037403f480164c298df36959f7259  usr/share/doc/libqmi-utils/changelog.gz
+40983e97f8fa555d159b2fc5c7b5f1ff  usr/share/doc/libqmi-utils/copyright
+80f6d3e29c9fe2517b40de6b3af7dd79  usr/share/man/man1/qmi-firmware-update.1.gz
+1c9920cace91f57ceb70a5dbebec07e7  usr/share/man/man1/qmi-network.1.gz
+d8e153cdd51c6bdf51cba51c816ec9aa  usr/share/man/man1/qmicli.1.gz

@@ -1,0 +1,36 @@
+Package: firmware-nvidia-gsp
+Source: nvidia-graphics-drivers
+Version: 525.147.05-7~deb12u1
+Installed-Size: 63224
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: arm64
+Provides: firmware-nvidia-gsp (= 525.147.05), firmware-nvidia-gsp-525.147.05
+Conflicts: firmware-nvidia-gsp-525.147.05
+Description: NVIDIA GSP firmware
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Description-md5: 662e57a0e8a9d9abcd4ca747c6e5e11f
+Section: non-free-firmware/kernel
+Priority: optional
+Filename: pool/non-free-firmware/n/nvidia-graphics-drivers/firmware-nvidia-gsp_525.147.05-7~deb12u1_arm64.deb
+Size: 41258892
+SHA256: d5d2f9d0dd9cf6dcdc0ac6304c53c80f626025ca56cf69f74ecb388fc64bddbd
+
+Package: firmware-nvidia-tesla-gsp
+Source: nvidia-graphics-drivers-tesla
+Version: 525.147.05-7~deb12u1
+Installed-Size: 63228
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: arm64
+Provides: firmware-nvidia-gsp-525.147.05
+Conflicts: firmware-nvidia-gsp-525.147.05
+Description: NVIDIA GSP firmware (Tesla version)
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Description-md5: 3f151c5c845fe50a947f350b01607a27
+Section: non-free-firmware/kernel
+Priority: optional
+Filename: pool/non-free-firmware/n/nvidia-graphics-drivers-tesla/firmware-nvidia-tesla-gsp_525.147.05-7~deb12u1_arm64.deb
+Size: 41261828
+SHA256: 027f3f98a29805e70c2637502daa4bcea03032f9eb42c6c3638521fad1d631e6
+

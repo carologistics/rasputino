@@ -1,0 +1,13 @@
+override ARCH = arm64
+override KERNELRELEASE = 6.6.20+rpt-rpi-2712
+CCACHE = ccache
+CC = $(if $(DEBIAN_KERNEL_USE_CCACHE),$(CCACHE)) $(CROSS_COMPILE)gcc-12
+DEB_BUILD_ARCH ?= $(shell dpkg --print-architecture)
+ifneq ($(DEB_BUILD_ARCH),arm64)
+override CROSS_COMPILE = aarch64-linux-gnu-
+endif
+ifneq ($(DEB_BUILD_ARCH),armhf)
+override CROSS_COMPILE_COMPAT = arm-linux-gnueabihf-
+override CROSS32_COMPILE = arm-linux-gnueabihf-
+endif
+DEBIAN_KERNEL_NO_CC_VERSION_CHECK = y

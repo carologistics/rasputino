@@ -1,0 +1,8 @@
+no-manual-page usr/bin/fbtest
+no-manual-page usr/bin/kmsblank
+no-manual-page usr/bin/kmsprint
+no-manual-page usr/bin/kmstest
+hardening-no-pie usr/bin/fbtest
+hardening-no-pie usr/bin/kmsblank
+hardening-no-pie usr/bin/kmsprint
+hardening-no-pie usr/bin/kmstest

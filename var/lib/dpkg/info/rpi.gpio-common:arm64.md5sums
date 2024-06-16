@@ -1,0 +1,7 @@
+f9bbb85798060dfe95239e7f4674c12d  lib/udev/rules.d/60-rpi.gpio-common.rules
+2ee0dd488bd4499324f7d232c8869c20  usr/share/doc/rpi.gpio-common/README.Debian
+67bb57f2f208be845f0273df57486dfe  usr/share/doc/rpi.gpio-common/README.txt
+35e2ca0dfe0b1cb4cb8653e514fec5ef  usr/share/doc/rpi.gpio-common/changelog.Debian.arm64.gz
+fcbc2fc5c3bb5e564613d2051fc17fc7  usr/share/doc/rpi.gpio-common/changelog.Debian.gz
+bea271d8f48a2b1cd534423f867e9538  usr/share/doc/rpi.gpio-common/changelog.gz
+4bef81e00a915b6b9a478f89292334ac  usr/share/doc/rpi.gpio-common/copyright

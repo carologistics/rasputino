@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+
+# deb-systemd-helper doesn't properly update the link from multi-user.target to dev-serial1.device
+# We do so manually here:
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" lt-nl "0.1.19" ; then
+	if deb-systemd-helper --quiet was-enabled 'hciuart.service'; then
+		systemctl --quiet reenable 'hciuart.service'
+	fi
+fi
+
+# Automatically added by dh_installsystemd/13.3.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# This will only remove masks created by d-s-h on package removal.
+	deb-systemd-helper unmask 'hciuart.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'hciuart.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'hciuart.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'hciuart.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+

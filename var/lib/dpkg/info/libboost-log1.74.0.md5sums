@@ -1,0 +1,6 @@
+9c79d1dced344ba3bef8ac3e2fba3a6d  usr/lib/aarch64-linux-gnu/libboost_log.so.1.74.0
+c7664c727dfcf8e3911836444e52165a  usr/lib/aarch64-linux-gnu/libboost_log_setup.so.1.74.0
+856b261fb0878c108e4593aef61ca834  usr/share/doc/libboost-log1.74.0/NEWS.Debian.gz
+ca6e76f5791486f3beb44c1dbe9e7298  usr/share/doc/libboost-log1.74.0/changelog.Debian.gz
+1367fa301869257f32a12bc3ff81e6ff  usr/share/doc/libboost-log1.74.0/copyright
+cc5455ffbdbc901adcd3ccaa28d17bab  usr/share/lintian/overrides/libboost-log1.74.0

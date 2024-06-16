@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper dir_to_symlink /usr/share/doc/linux-headers-rpi-v8 linux-headers-6.6.20\+rpt-rpi-v8 5.7\~rc5-1\~exp1 linux-headers-rpi-v8 -- "$@"
+# End automatically added section

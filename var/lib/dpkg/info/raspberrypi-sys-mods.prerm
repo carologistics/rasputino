@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installsystemd/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'sshswitch.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/profile.d/sshpasswd.sh 20161220 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/profile.d/wifi-country.sh 20190429 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/modprobe.d/blacklist-rtl8192cu.conf 20190730 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apt/preferences.d/3rd_parties.pref 20210310 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/modules-load.d/aes-neon.conf 20220224 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/modprobe.d/blacklist-rtl8xxxu.conf 20230822 -- "$@"
+# End automatically added section

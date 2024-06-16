@@ -1,0 +1,6 @@
+cb02e46d912d6e4ab17dbc8289f4d14b  usr/share/dns/root.ds
+f5cade398ba66fad431cb3c2b97ad776  usr/share/dns/root.hints
+45406852ee39c760dc0096120f356787  usr/share/dns/root.hints.sig
+340c0e42421cf922d6ef48677f304bae  usr/share/dns/root.key
+1c6137caaded9ab95bbd442e5657b930  usr/share/doc/dns-root-data/changelog.gz
+df7109ef2f299c79e0a9d2e8a052cb30  usr/share/doc/dns-root-data/copyright

@@ -1,0 +1,5 @@
+76992d926cdc020e0c3e6602c10efc96  /etc/apt/listchanges.conf
+e6fd6e8e29210c5678181f33177d5433  /etc/ssh/sshd_config
+8fc74ebad4be976d01a08ddb86194221  /etc/idmapd.conf
+ddcb1fbb90a14ff9850f22eed0127a10  /etc/default/nfs-common
+a6cc3528c3aa4f604d13aa1e2804a4b0  /etc/nfs.conf

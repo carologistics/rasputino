@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_installsystemd/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'auth-rpcgss-module.service' 'nfs-client.target' 'nfs-idmapd.service' 'nfs-utils.service' 'proc-fs-nfsd.mount' 'rpc-gssd.service' 'rpc-statd-notify.service' 'rpc-statd.service' 'rpc-svcgssd.service' 'rpc_pipefs.target' 'var-lib-nfs-rpc_pipefs.mount' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -x "/etc/init.d/nfs-common" ] ; then
+	invoke-rc.d --skip-systemd-native nfs-common stop || exit 1
+fi
+# End automatically added section
+
+
+if [ "$1" = remove ]
+then
+    rm -f /var/lib/nfs/sm/*      \
+          /var/lib/nfs/sm.bak/*  \
+          /var/lib/nfs/state
+fi

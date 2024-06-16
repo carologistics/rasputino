@@ -1,0 +1,12 @@
+b33648118873ebfbc6ac2cd55682fdbd  usr/bin/lspci
+6dfdd72cdb312bd20e21b6ed23d2241f  usr/bin/setpci
+27d8f5c3127c35f4e22a2d422331a7df  usr/sbin/update-pciids
+b434222511d39e0b0a806318e0992c37  usr/share/doc/pciutils/README.gz
+19a9b8a4b758c65f88164286e8738611  usr/share/doc/pciutils/changelog.Debian.gz
+f3e10bc38352aaf437955565d176865d  usr/share/doc/pciutils/changelog.gz
+8a41985cbb243aaf2bd2be32c3a14fe0  usr/share/doc/pciutils/copyright
+531dd4af8af46985d14bbffc58aa8f13  usr/share/man/man5/pci.ids.5.gz
+420cd3289e86d21b350f525c4a9df9d1  usr/share/man/man7/pcilib.7.gz
+f20c413e9166131e681dea7b7370cc6b  usr/share/man/man8/lspci.8.gz
+7eacb29615a50b5bab197598f74c335c  usr/share/man/man8/setpci.8.gz
+c3692c53360250f81474de3d36d10de5  usr/share/man/man8/update-pciids.8.gz

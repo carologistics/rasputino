@@ -1,0 +1,11 @@
+10ffb8ff15e68d963a4711431517c95c  usr/sbin/pkla-admin-identities
+ad68cfc357210a8e19ee4783f3244ed2  usr/sbin/pkla-check-authorization
+340c4ef6269a0f1d94f3abfa4bc0def8  usr/share/bug/polkitd-pkla/control
+b039d75b4888caa56a95e8170d2c9e26  usr/share/doc/polkitd-pkla/NEWS.Debian.gz
+883ea9df4d360d5f3c33a2b1d748792b  usr/share/doc/polkitd-pkla/changelog.Debian.gz
+bbab86366c7735eeb867287f26851947  usr/share/doc/polkitd-pkla/copyright
+ebc0ec3b6f69a8b4a2257996176cbb8d  usr/share/lintian/overrides/polkitd-pkla
+a9f8cc614b414cbc8370d78503c96cb0  usr/share/man/man8/pkla-admin-identities.8.gz
+3698c2b06f80e1bf54e834fa0f47a0b3  usr/share/man/man8/pkla-check-authorization.8.gz
+df66a6aff2789e2b604b2b93525bcb51  usr/share/man/man8/pklocalauthority.8.gz
+2cf0514692274d943933e46953d01c5d  usr/share/polkit-1/rules.d/49-polkit-pkla-compat.rules

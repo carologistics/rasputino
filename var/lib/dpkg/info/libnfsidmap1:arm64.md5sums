@@ -1,0 +1,8 @@
+46402699272274ae159feac3f4e083cb  usr/lib/aarch64-linux-gnu/libnfsidmap.so.1.0.0
+47dc856518313df7c6f599874713fe0e  usr/lib/aarch64-linux-gnu/libnfsidmap/nsswitch.so
+7a20f524719e873cf0584c6c2f5a49cf  usr/lib/aarch64-linux-gnu/libnfsidmap/regex.so
+bbd3b1266ba44defa2158f017833ad26  usr/lib/aarch64-linux-gnu/libnfsidmap/static.so
+3211b862cbc9c59e980d9223b7e1488c  usr/lib/aarch64-linux-gnu/libnfsidmap/umich_ldap.so
+8c7801bac609c248c2690669b9d4cbe3  usr/share/doc/libnfsidmap1/changelog.Debian.gz
+7598d26588af74eac7c0bfc689fffa09  usr/share/doc/libnfsidmap1/copyright
+0299e07bdf1d3099d06bec070f34e84d  usr/share/man/man5/idmapd.conf.5.gz

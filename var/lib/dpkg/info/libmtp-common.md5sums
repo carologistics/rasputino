@@ -1,0 +1,7 @@
+c01d025dc0fcd3038b7897c53f0fe286  lib/udev/hwdb.d/69-libmtp.hwdb
+5f07834829c89f2665f2536117c83e50  lib/udev/rules.d/69-libmtp.rules
+c430ea7adee84a73851db7e6869ab936  usr/share/apport/package-hooks/source_libmtp.py
+dd3d9d42d7d50e803c7c877a7b957db8  usr/share/doc/libmtp-common/changelog.Debian.gz
+433ebc07ed08f4b706f67efc5a26cb16  usr/share/doc/libmtp-common/changelog.gz
+f98f0313d60217e992e4e55bec8d63cd  usr/share/doc/libmtp-common/copyright
+9933c352f34240116c61df9b9eab2635  usr/share/lintian/overrides/libmtp-common

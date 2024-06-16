@@ -1,0 +1,5 @@
+RELEASE='6.6.20+rpt-rpi-v8'
+DISTRIBUTOR='Debian'
+SOURCEVERSION='1:6.6.20-1+rpt1'
+PACKAGE_NAME='linux-image-6.6.20+rpt-rpi-v8'
+PACKAGE_VERSION='1:6.6.20-1+rpt1'

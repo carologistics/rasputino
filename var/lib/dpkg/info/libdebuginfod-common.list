@@ -1,0 +1,17 @@
+/.
+/etc
+/etc/debuginfod
+/etc/debuginfod/elfutils.urls
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libdebuginfod-common
+/usr/share/doc/libdebuginfod-common/changelog.Debian.gz
+/usr/share/doc/libdebuginfod-common/changelog.gz
+/usr/share/doc/libdebuginfod-common/copyright
+/usr/share/libdebuginfod-common
+/usr/share/libdebuginfod-common/debuginfod.csh
+/usr/share/libdebuginfod-common/debuginfod.sh
+/usr/share/man
+/usr/share/man/man7
+/usr/share/man/man7/debuginfod-client-config.7.gz

@@ -1,0 +1,6 @@
+b9a5edb712b717dbd0f2badaaf1422aa  usr/bin/raspi-config
+aca91e50b900545655aa5aa78731bb34  usr/lib/raspi-config/cmstart.sh
+5ddd8a9b0758f9aac2fb1d6190d8efd7  usr/lib/raspi-config/init_resize.sh
+0163740d68c17f7a17dd0eb576da84e9  usr/share/doc/raspi-config/changelog.gz
+831a9b3a402b8c5b41238ff1670cc2e3  usr/share/doc/raspi-config/copyright
+55e7484cc6da86e604fe0c25c42d64da  usr/share/raspi-config/10-blanking.conf

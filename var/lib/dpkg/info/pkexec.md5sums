@@ -1,0 +1,6 @@
+24eec81991bcf2f59318a90b50b48e6d  usr/bin/pkexec
+110f5dd8190c63ff2f0c88cec01b206d  usr/share/bug/pkexec/control
+b039d75b4888caa56a95e8170d2c9e26  usr/share/doc/pkexec/NEWS.Debian.gz
+8cec52cadc7f085317b7838da280f8fd  usr/share/doc/pkexec/changelog.Debian.gz
+bbab86366c7735eeb867287f26851947  usr/share/doc/pkexec/copyright
+fb6b033f0bbfe96c891c223b66712956  usr/share/man/man1/pkexec.1.gz

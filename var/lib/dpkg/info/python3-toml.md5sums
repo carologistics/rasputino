@@ -1,0 +1,10 @@
+e86a97ee98a74957a3642f69c2b82e7d  usr/lib/python3/dist-packages/toml-0.10.2.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/toml-0.10.2.egg-info/dependency_links.txt
+17822094397e012558a6652bcf505368  usr/lib/python3/dist-packages/toml-0.10.2.egg-info/top_level.txt
+a2ff8d2cc3a656286f5fb27b6fa64c8a  usr/lib/python3/dist-packages/toml/__init__.py
+d06b23008a05544a61f8c23f981f59c5  usr/lib/python3/dist-packages/toml/decoder.py
+6d84a3a067f0f652d8e64df14c75c948  usr/lib/python3/dist-packages/toml/encoder.py
+439537890cd2c191c6afaf08304bd035  usr/lib/python3/dist-packages/toml/ordered.py
+8b5d360eca638c8560d0b0d01efabb61  usr/lib/python3/dist-packages/toml/tz.py
+0761db6a3fcaa617742043c26d31b1a2  usr/share/doc/python3-toml/changelog.Debian.gz
+f57a6d71b645d864747e6eaf1cd37f32  usr/share/doc/python3-toml/copyright

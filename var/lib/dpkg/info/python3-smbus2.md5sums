@@ -1,0 +1,11 @@
+9bc8ceb9d5df84b6789a7f662f8fe5c8  usr/lib/python3/dist-packages/smbus2-0.4.2.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/smbus2-0.4.2.egg-info/dependency_links.txt
+d470cea586c89c87b48bd77e087ab4f4  usr/lib/python3/dist-packages/smbus2-0.4.2.egg-info/requires.txt
+63c4db97202506dba44b03a2e57054fc  usr/lib/python3/dist-packages/smbus2-0.4.2.egg-info/top_level.txt
+1fce5784949b987f8f3febb5b40cb37c  usr/lib/python3/dist-packages/smbus2/__init__.py
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/python3/dist-packages/smbus2/py.typed
+f0b6e33f7dd2ea2f1d168c11de76db39  usr/lib/python3/dist-packages/smbus2/smbus2.py
+0108b0e0ddd6760c4f187f7906341815  usr/lib/python3/dist-packages/smbus2/smbus2.pyi
+5b17be7df37da54fa6e25a48df22c208  usr/share/doc/python3-smbus2/changelog.Debian.gz
+5142f7d42ca3001db787fe5de3e1e1f1  usr/share/doc/python3-smbus2/changelog.gz
+d162d9b67b3be285e18b29891f61d13a  usr/share/doc/python3-smbus2/copyright

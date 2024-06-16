@@ -1,0 +1,17 @@
+Package: nvidia-egl-common
+Source: nvidia-graphics-drivers
+Version: 525.147.05-7~deb12u1
+Installed-Size: 163
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: armhf
+Description: NVIDIA binary EGL driver - common files
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Description-md5: fed2d098ae63a755a343fdf61c591389
+Tag: role::shared-lib
+Section: non-free/libs
+Priority: optional
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-egl-common_525.147.05-7~deb12u1_armhf.deb
+Size: 141108
+SHA256: 63dd8e1e17059282ceb646d55c4e84a96bbb27223ba66aa4271f692cd27dbdae
+

@@ -1,0 +1,9 @@
+/.
+/etc
+/etc/profile.d
+/etc/profile.d/wifi-check.sh
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/raspberrypi-net-mods
+/usr/share/doc/raspberrypi-net-mods/changelog.gz

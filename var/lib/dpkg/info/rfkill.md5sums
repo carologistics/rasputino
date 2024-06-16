@@ -1,0 +1,7 @@
+bf0c44b21391cee42b5cd877e95d661a  usr/sbin/rfkill
+4aeeb0e37969de4ff89c055db20e9632  usr/share/bash-completion/completions/rfkill
+ce57a73e0f767fb1a2cd8f9ed8c57034  usr/share/doc/rfkill/changelog.Debian.arm64.gz
+15626d2994d841220c53417e73f3a63d  usr/share/doc/rfkill/changelog.Debian.gz
+0bb7fd1ae3732779966184f543b8a91e  usr/share/doc/rfkill/changelog.gz
+353888f385cfb82eb97a693e78f3cc9b  usr/share/doc/rfkill/copyright
+10bbe58ea036100d35ed8fd879b7bc2e  usr/share/man/man8/rfkill.8.gz
