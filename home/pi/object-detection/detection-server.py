@@ -3,6 +3,7 @@ import select
 import cv2
 import numpy as np
 import io
+from ultralytics import YOLO
 import base64
 import struct
 import time
@@ -36,6 +37,7 @@ import os
 #       8 Switch-to Conveyor Detection Message
 #       9 Switch-to Slide Detection Message 
 #       10 Switch-off Detection Message
+#       11 Conf_threshold
 """
 
 IMSHOW = False
@@ -50,6 +52,11 @@ STREAM_RAW = True
 STREAM_MARKED = False
 DETECT = True
 OBJECT = "workpiece"
+CONFIDENCE_THRESHOLD = 0.2
+
+model = YOLO('best.pt',task='detect')
+# model.export(format="ncnn")
+# ncnn_model = YOLO('best_ncnn_model', task='detect')
 
 def send_to_all(clients, message):
     for client_socket in clients:
@@ -72,6 +79,8 @@ try:
 
         clients = []
         notifiers = [server]
+        CLASS_LABELS_TO_KEEP = []
+        
 
 
         while True:
@@ -113,6 +122,9 @@ try:
                             elif message_type == 10:
                                 DETECT = False
                                 OBJECT = "slide"
+                            elif message_type == 11:
+                                CONFIDENCE_THRESHOLD = struct.unpack('f', message[9:13])
+                
                 for client in exception_sockets:
                     print("removing socket with exception")
                     clients.remove(client)
@@ -144,32 +156,62 @@ try:
 
                 # the detection is supposed to run and the results will be sent to all connected clients
                 if DETECT:
-
-                    #!!!!! RUN THE DETECTION HERE !!!!!
-
+                    results=model.track(frame, persist=True)
                     if STREAM_MARKED:
-                        #!!!!! SEND THE PICTURE WITH THE BOUNDING BOXES THE SAME WAY IT IS DONE FOR STREAM_RAW HERE
-                        print("Streaming pictures with detection mark for debugging")
+                        frame = results[0].plot()
+                        _, frame_arr = cv2.imencode('.jpg', frame) 
+                        frame_bytes = frame_arr.tobytes()
+                        frame_b64 = base64.b64encode(frame_bytes)
 
-                    #!!!!! SEND THE DATA FOR EACH BOUNDING BOX HERE !!!!!
-                    #for detection in detected:
-                    # send a detection message
-                    #detection_message = struct.pack('!BIIIIIfI', 3, timestamp, x, y, h, w, acc, cls)
-                    #send_to_all(clients, detection_message)
+                        # create a message type 1 header
+                        header = struct.pack('!BIIII', 2, timestamp, frame.shape[0], frame.shape[1], len(frame_b64))
+
+                        # build the message
+                        message = header + frame_b64
+
+                        # broadcast the message
+                        send_to_all(clients, message)
+
+
+        
+                    boxes = results[0].boxes 
+                    confidences = results[0].boxes.conf
+                    class_ids = results[0].boxes.cls
+                    shapes = results[0].boxes.xywh.numpy()
+
+                    # Filter detections
+                    filtered_indices = [
+                        i for i, conf in enumerate(confidences)
+                        if conf >= CONFIDENCE_THRESHOLD and class_ids[i] in CLASS_LABELS_TO_KEEP
+                    ]
+
+                    # Create a copy of the frame to plot filtered results
+                    filtered_frame = frame.copy()
+                    for i in filtered_indices:
+                        box = boxes[i]
+                        class_id = class_ids[i]
+                        x=shapes[i][0]
+                        y=shapes[i][1]
+                        w=shapes[i][2]
+                        h=shapes[i][3]
+
+                        detection_message = struct.pack('!BIIIIIfI', 3, timestamp, x, y, w, h, confidences[i], class_id)
+                        send_to_all(clients,detection_message)
 
                 if IMSHOW:
                     cv2.imshow('video', frame)
                     key = cv2.waitKey(1)
                     if key == 27:
                         break
-
+            
             except KeyboardInterrupt:
                 break
-            except:
+            except Exception as e:
+                print(e)
                 print("Error during transmission")
                 time.sleep(0.1)
 
-
+        
     except Exception as e: 
         print("Exception occured, closing gracefully")
         print(e)
