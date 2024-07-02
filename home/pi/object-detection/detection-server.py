@@ -33,14 +33,16 @@ import os
 #       4 Activate Stream Message
 #       5 Activate Detection Stream Message
 #       6 Deactivate Stream Message
-#       7 Switch-to Workpiece Detection Message
-#       8 Switch-to Conveyor Detection Message
-#       9 Switch-to Slide Detection Message 
-#       10 Switch-off Detection Message
-#       11 Conf_threshold
+#       7 Deactivate Detection Stream Message
+#       8 Switch-to Workpiece Detection Message
+#       9 Switch-to Conveyor Detection Message
+#       10 Switch-to Slide Detection Message
+#       11 Switch-off Detection Message
+#   Extended Control Messages (payload 1 Float value (4 Bytes))
+#       12 Set the confidence threshold for detection
+#       13 Set the IO for detection
 """
 
-IMSHOW = False
 PICAM = False
 if "rpi" in os.uname()[2]:
     PICAM = True
@@ -48,19 +50,36 @@ if "rpi" in os.uname()[2]:
 if PICAM:
     import picamera2 as picamera
 
+IMSHOW = False
 STREAM_RAW = True
 STREAM_MARKED = False
 DETECT = True
-OBJECT = "workpiece"
+OBJECT = 2
 CONFIDENCE_THRESHOLD = 0.2
+IOU=0.3
 
-model = YOLO('best.pt',task='detect')
+# model = YOLO('model.pt',task='detect')
 # model.export(format="ncnn")
-# ncnn_model = YOLO('best_ncnn_model', task='detect')
+ncnn_model = YOLO('ncnn_model', task='detect')
 
 def send_to_all(clients, message):
     for client_socket in clients:
         client_socket.sendall(message)
+
+def send_frame_to_all(clients, frame, timestamp, msg_type):
+    # convert the frame to a JPEG image and encode it as base64
+    _, frame_arr = cv2.imencode('.jpg', frame)
+    frame_bytes = frame_arr.tobytes()
+    frame_b64 = base64.b64encode(frame_bytes)
+
+    # create a message type 1/2 header
+    header = struct.pack('!BIIII', msg_type, timestamp, frame.shape[0], frame.shape[1], len(frame_b64))
+
+    # build the message
+    message = header + frame_b64
+
+    # broadcast the message
+    send_to_all(clients, message)
 
 try:
     cam = None
@@ -79,10 +98,7 @@ try:
 
         clients = []
         notifiers = [server]
-        CLASS_LABELS_TO_KEEP = []
         
-
-
         while True:
             try:
                 notifying_sockets, _, exception_sockets = select.select(notifiers, [], [], 0)
@@ -104,26 +120,27 @@ try:
                             print("Received control message of type ", message_type)
                             if message_type == 4:
                                 STREAM_RAW = True
-                                STREAM_MARKED = False
                             if message_type == 5:
-                                STREAM_RAW = False
                                 STREAM_MARKED = True
                             elif message_type == 6:
                                 STREAM_RAW = False
-                                STREAM_MARKED = False
                             elif message_type == 7:
-                                DETECT = True
+                                STREAM_MARKED = False
                             elif message_type == 8:
                                 DETECT = True
-                                OBJECT = "workpiece"
+                                OBJECT = 2
                             elif message_type == 9:
                                 DETECT = True
-                                OBJECT = "conveyor"
+                                OBJECT = 0
                             elif message_type == 10:
-                                DETECT = False
-                                OBJECT = "slide"
+                                DETECT = True
+                                OBJECT = 1
                             elif message_type == 11:
+                                DETECT = False
+                            elif message_type == 12:
                                 CONFIDENCE_THRESHOLD = struct.unpack('f', message[9:13])
+                            elif message_type == 13:
+                                IOU = struct.unpack('f', message[9:13])
                 
                 for client in exception_sockets:
                     print("removing socket with exception")
@@ -140,49 +157,23 @@ try:
                 timestamp = int(time.time())
                 # the camera feed is streamed to all connected clients
                 if STREAM_RAW:
-                    # convert the video frame to a jpg encoded as b64
-                    _, frame_arr = cv2.imencode('.jpg', frame) 
-                    frame_bytes = frame_arr.tobytes()
-                    frame_b64 = base64.b64encode(frame_bytes)
-
-                    # create a message type 1 header
-                    header = struct.pack('!BIIII', 1, timestamp, frame.shape[0], frame.shape[1], len(frame_b64))
-
-                    # build the message
-                    message = header + frame_b64
-
-                    # broadcast the message
-                    send_to_all(clients, message)
+                    send_frame_to_all(clients, frame, timestamp, 1)
 
                 # the detection is supposed to run and the results will be sent to all connected clients
                 if DETECT:
-                    results=model.track(frame, persist=True)
+                    results=ncnn_model.track(frame, persist=True, iou=IOU)
                     if STREAM_MARKED:
-                        frame = results[0].plot()
-                        _, frame_arr = cv2.imencode('.jpg', frame) 
-                        frame_bytes = frame_arr.tobytes()
-                        frame_b64 = base64.b64encode(frame_bytes)
-
-                        # create a message type 1 header
-                        header = struct.pack('!BIIII', 2, timestamp, frame.shape[0], frame.shape[1], len(frame_b64))
-
-                        # build the message
-                        message = header + frame_b64
-
-                        # broadcast the message
-                        send_to_all(clients, message)
-
-
+                        send_frame_to_all(clients, results[0].plot(), timestamp, 2)
         
                     boxes = results[0].boxes 
                     confidences = results[0].boxes.conf
                     class_ids = results[0].boxes.cls
                     shapes = results[0].boxes.xywh.numpy()
-
+                    
                     # Filter detections
                     filtered_indices = [
                         i for i, conf in enumerate(confidences)
-                        if conf >= CONFIDENCE_THRESHOLD and class_ids[i] in CLASS_LABELS_TO_KEEP
+                        if conf >= CONFIDENCE_THRESHOLD and class_ids[i] == OBJECT
                     ]
 
                     # Create a copy of the frame to plot filtered results
@@ -195,7 +186,7 @@ try:
                         w=shapes[i][2]
                         h=shapes[i][3]
 
-                        detection_message = struct.pack('!BIIIIIfI', 3, timestamp, x, y, w, h, confidences[i], class_id)
+                        detection_message = struct.pack('!BIfffffI', 3, timestamp, x, y, w, h, float(confidences[i]), int(class_id))
                         send_to_all(clients,detection_message)
 
                 if IMSHOW:
