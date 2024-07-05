@@ -1,0 +1,4 @@
+79f5d6172c575961ac085b53536b9128  usr/lib/aarch64-linux-gnu/blas/libblas.so.3.11.0
+9cb1cdcf5c5f79b8298b4a3392655410  usr/share/doc/libblas3/changelog.Debian.gz
+7f261ca47f2dabe7c7fca7c028e65138  usr/share/doc/libblas3/copyright
+fdf0f0418f059a7a6268705df5c65e21  usr/share/lintian/overrides/libblas3

@@ -1,0 +1,16 @@
+dff9a32ff21485985443220869a5b7ae  usr/lib/python3/dist-packages/piexif-1.1.3.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/piexif-1.1.3.egg-info/dependency_links.txt
+8684d58e86fe6bd6c2ae62373ef9888e  usr/lib/python3/dist-packages/piexif-1.1.3.egg-info/top_level.txt
+67c2441106cca6fcbfb72c908f5c6a19  usr/lib/python3/dist-packages/piexif/__init__.py
+fc247ac9a777d60aced45b0418f423a0  usr/lib/python3/dist-packages/piexif/_common.py
+93114500b865abc50970edc84b77164a  usr/lib/python3/dist-packages/piexif/_dump.py
+ffbbf23e7c99a231487d86ba8bda5de4  usr/lib/python3/dist-packages/piexif/_exceptions.py
+bb94e9885ede10e296ed87051727909e  usr/lib/python3/dist-packages/piexif/_exif.py
+9133c55562f7c6ed31e7183a45c614ea  usr/lib/python3/dist-packages/piexif/_insert.py
+69d0c3a5d4cedae692f20b7112cd59d5  usr/lib/python3/dist-packages/piexif/_load.py
+0541f957774107686b3e05e5dd43b6ad  usr/lib/python3/dist-packages/piexif/_remove.py
+7de4705805788d9b2d9965192a077ce1  usr/lib/python3/dist-packages/piexif/_transplant.py
+af1327825d3191b8011ad085c686c059  usr/lib/python3/dist-packages/piexif/_webp.py
+6ae0c80ce866dc0eba67a5f5cd25ecc2  usr/lib/python3/dist-packages/piexif/helper.py
+5808c56c83616fd0508a6b845071b948  usr/share/doc/python3-piexif/changelog.Debian.gz
+a11b4e6bc3a75b3c636f166889c0935b  usr/share/doc/python3-piexif/copyright

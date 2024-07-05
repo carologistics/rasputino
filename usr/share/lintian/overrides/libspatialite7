@@ -1,0 +1,12 @@
+# Truncated changelog
+debian-news-entry-has-unknown-version *
+
+# Truncated string
+spelling-error-in-binary Syste System *
+
+# False positive, lat/lon
+spelling-error-in-binary Lon Long *
+
+# False positive, string not included in source
+spelling-error-in-binary colum column *
+

@@ -1,0 +1,6 @@
+# Cannot easily be fixed
+file-references-package-build-path *
+
+# Truncated changelog
+debian-news-entry-has-unknown-version *
+

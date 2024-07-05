@@ -1,0 +1,20 @@
+SuperLU for Debian
+==================
+
+SuperLU might be useful in conjunction with some other packages like:
+petsc or arpack. Otherwise it is widely used in the scientific
+computing community.
+
+
+Warning about removed functionality
+-----------------------------------
+
+Since version 4.3, SuperLU contains non-free code, which is used for implemented
+the so-called MC64 functionality. This code has been stripped from the Debian
+package.
+
+Concretely, this means that you cannot use 'options->RowPerm = LargeDiag' for the
+{S,D,C,Z}GSISX routines.
+
+ -- Sébastien Villemot <sebastien@debian.org>, Wed, 27 Nov 2013 22:21:06 +0100
+ -- Christophe Prud'homme <prudhomm@debian.org>, Fri,  7 Apr 2006 09:45:25 +0200

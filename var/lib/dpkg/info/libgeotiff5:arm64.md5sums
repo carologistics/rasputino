@@ -1,0 +1,8 @@
+1ee1a1395ca7b4cd7b2abc43e13e5ba5  usr/lib/aarch64-linux-gnu/libgeotiff.so.5.2.1
+9cc6c489bba0efe7426ea59c1f15d58a  usr/share/doc/libgeotiff5/README.gz
+9928e20aaeafd88d47f097ad62cbf599  usr/share/doc/libgeotiff5/README_BIN
+235c42b19533d9a6f38d3d4c1ca519fe  usr/share/doc/libgeotiff5/changelog.Debian.arm64.gz
+b5a5109a58a65d128c370b87af8ae126  usr/share/doc/libgeotiff5/changelog.Debian.gz
+c3882f8362fffca0fa8141a8e205e062  usr/share/doc/libgeotiff5/changelog.gz
+df239e06ffd8374f2b886ed2976b6883  usr/share/doc/libgeotiff5/copyright
+e25d5141f474c4ec8bc7dfd983237a34  usr/share/lintian/overrides/libgeotiff5

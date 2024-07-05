@@ -1,0 +1,5 @@
+edb12bb4e9897cfeefe6efdfee268469  usr/lib/aarch64-linux-gnu/libavfilter.so.8.44.100
+cc30df778d5ecfd76390fd85fa8d7ed6  usr/share/doc/libavfilter8/changelog.Debian.gz
+62edffea1b33177b75e3f71577c69c7c  usr/share/doc/libavfilter8/changelog.gz
+f256357dc30de7d3d96f1e60364f311e  usr/share/doc/libavfilter8/copyright
+2650ff3e7955ab31fdb9e518c2e13d43  usr/share/lintian/overrides/libavfilter8

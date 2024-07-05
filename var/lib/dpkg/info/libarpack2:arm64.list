@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/aarch64-linux-gnu
+/usr/lib/aarch64-linux-gnu/libarpack.so.2.1.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libarpack2
+/usr/share/doc/libarpack2/changelog.Debian.gz
+/usr/share/doc/libarpack2/changelog.gz
+/usr/share/doc/libarpack2/copyright
+/usr/lib/aarch64-linux-gnu/libarpack.so.2

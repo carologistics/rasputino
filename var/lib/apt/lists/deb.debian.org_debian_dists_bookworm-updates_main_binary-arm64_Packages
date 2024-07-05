@@ -1624,3 +1624,132 @@ Filename: pool/main/s/samba/winbind_4.17.9+dfsg-0+deb12u3_arm64.deb
 Size: 390696
 SHA256: be58a4cc9237ea4b145ed6c7caa4f102412b848f4ea19b180275f7b62555ca15
 
+Package: xscreensaver
+Version: 6.06+dfsg1-3+deb12u1
+Installed-Size: 1928
+Maintainer: Tormod Volden <debian.tormod@gmail.com>
+Architecture: arm64
+Depends: xscreensaver-data, init-system-helpers (>= 1.52), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.34), libcrypt1 (>= 1:4.1.0), libglib2.0-0 (>= 2.49.3), libgtk-3-0 (>= 3.16.2), libpam0g (>= 0.99.7.1), libsystemd0 (>= 243), libx11-6 (>= 2:1.2.99.901), libxext6, libxft2 (>> 2.1.1), libxi6 (>= 2:1.2.99.4), libxinerama1 (>= 2:1.1.4), libxml2 (>= 2.7.4), libxrandr2 (>= 2:1.2.99.2), libxt6, libxxf86vm1
+Recommends: libjpeg-turbo-progs, miscfiles | wordlist, perl, fonts-urw-base35 | xfonts-100dpi
+Suggests: fortune, gdm3 | kdm-gdmcompat, qcam | streamer, www-browser, xdaliclock, xfishtank, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra
+Description: Screensaver daemon and frontend for X11
+Homepage: https://www.jwz.org/xscreensaver/
+Description-md5: f28418049591dc7ea8833c590fe2406a
+Tag: interface::graphical, interface::x11, role::program, scope::application,
+ uitoolkit::gtk, x11::application, x11::screensaver
+Section: x11
+Priority: optional
+Filename: pool/main/x/xscreensaver/xscreensaver_6.06+dfsg1-3+deb12u1_arm64.deb
+Size: 425940
+SHA256: b509b205eb6c5105486a4767c502085293c679a75c9cf90eff7044cb584fe243
+
+Package: xscreensaver-data
+Source: xscreensaver
+Version: 6.06+dfsg1-3+deb12u1
+Installed-Size: 2724
+Maintainer: Tormod Volden <debian.tormod@gmail.com>
+Architecture: arm64
+Depends: libwww-perl, libc6 (>= 2.34), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.16.0), libx11-6, libxext6, libxft2 (>> 2.1.1), libxt6
+Suggests: xscreensaver
+Description: Screen saver modules for screensaver frontends
+Homepage: https://www.jwz.org/xscreensaver/
+Description-md5: 536b56342032dfd837382af49582b3ca
+Tag: role::app-data, uitoolkit::gtk, x11::screensaver
+Section: x11
+Priority: optional
+Filename: pool/main/x/xscreensaver/xscreensaver-data_6.06+dfsg1-3+deb12u1_arm64.deb
+Size: 347804
+SHA256: 0afb8f600c4bc7167592a6013ada314707ebd4ae5214eecaff67146bb7671b03
+
+Package: xscreensaver-data-extra
+Source: xscreensaver
+Version: 6.06+dfsg1-3+deb12u1
+Installed-Size: 9815
+Maintainer: Tormod Volden <debian.tormod@gmail.com>
+Architecture: arm64
+Depends: dictionaries-common, libjpeg-turbo-progs, netpbm, xscreensaver-data, libc6 (>= 2.34), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.16.0), libx11-6, libxext6, libxft2 (>> 2.1.1), libxt6
+Description: Extra screen saver modules for screensaver frontends
+Homepage: https://www.jwz.org/xscreensaver/
+Description-md5: e2e30af33c7cede942543fe590347d31
+Tag: interface::graphical, interface::x11, role::app-data, role::program,
+ uitoolkit::gtk, x11::application, x11::screensaver
+Section: x11
+Priority: optional
+Filename: pool/main/x/xscreensaver/xscreensaver-data-extra_6.06+dfsg1-3+deb12u1_arm64.deb
+Size: 1263644
+SHA256: 76dc1b879d898f0e5bcd799e5aabad17e3df837514a8d5044672807a5c4b27c6
+
+Package: xscreensaver-gl
+Source: xscreensaver
+Version: 6.06+dfsg1-3+deb12u1
+Installed-Size: 20677
+Maintainer: Tormod Volden <debian.tormod@gmail.com>
+Architecture: arm64
+Depends: libwww-perl, libcap2-bin, libc6 (>= 2.34), libegl1, libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libglib2.0-0 (>= 2.16.0), libglu1-mesa | libglu1, libx11-6, libxext6, libxft2 (>> 2.1.1), libxt6
+Suggests: xscreensaver
+Description: GL(Mesa) screen saver modules for screensaver frontends
+Homepage: https://www.jwz.org/xscreensaver/
+Description-md5: 66869878b1853aa8bc96303f75f6fddb
+Tag: interface::3d, interface::graphical, interface::x11, role::program,
+ scope::application, uitoolkit::gtk, x11::application, x11::screensaver
+Section: x11
+Priority: optional
+Filename: pool/main/x/xscreensaver/xscreensaver-gl_6.06+dfsg1-3+deb12u1_arm64.deb
+Size: 8238860
+SHA256: 7e18b0e9325da3ee3d3d2cbc4a5d5f8eb603362b4d428762d3537ebfb1880792
+
+Package: xscreensaver-gl-extra
+Source: xscreensaver
+Version: 6.06+dfsg1-3+deb12u1
+Installed-Size: 12054
+Maintainer: Tormod Volden <debian.tormod@gmail.com>
+Architecture: arm64
+Depends: xscreensaver-gl, libc6 (>= 2.34), libegl1, libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgle3 (>= 3.1.0), libglib2.0-0 (>= 2.16.0), libglu1-mesa | libglu1, libx11-6, libxext6, libxft2 (>> 2.1.1), libxt6
+Description: Extra GL(Mesa) screen saver modules for screensaver frontends
+Homepage: https://www.jwz.org/xscreensaver/
+Description-md5: 21a355da6381e7acb7c8bbf7405efa4d
+Tag: hardware::opengl, hardware::video, interface::graphical, interface::x11,
+ role::app-data, role::program, uitoolkit::gtk, x11::application,
+ x11::screensaver
+Section: x11
+Priority: optional
+Filename: pool/main/x/xscreensaver/xscreensaver-gl-extra_6.06+dfsg1-3+deb12u1_arm64.deb
+Size: 4674684
+SHA256: ea5cc657665916a95ab56670cd88adb2d8deaba220b2ed3df565b9bffb8c6013
+
+Package: xscreensaver-screensaver-bsod
+Source: xscreensaver
+Version: 6.06+dfsg1-3+deb12u1
+Installed-Size: 437
+Maintainer: Tormod Volden <debian.tormod@gmail.com>
+Architecture: arm64
+Depends: xscreensaver-data, libc6 (>= 2.34), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.16.0), libx11-6, libxext6, libxft2 (>> 2.1.1), libxt6
+Description: BSOD screen saver module from XScreenSaver
+Homepage: https://www.jwz.org/xscreensaver/
+Description-md5: 5121b9ed12328a3984b2b9690b68a805
+Tag: implemented-in::c, interface::graphical, interface::x11, role::program,
+ uitoolkit::gtk, x11::screensaver
+Section: x11
+Priority: optional
+Filename: pool/main/x/xscreensaver/xscreensaver-screensaver-bsod_6.06+dfsg1-3+deb12u1_arm64.deb
+Size: 228776
+SHA256: 267b59887af2fa94f58ee8bc7b494add69d1e3aa930c4c630dc18c0088c5792b
+
+Package: xscreensaver-screensaver-webcollage
+Source: xscreensaver
+Version: 6.06+dfsg1-3+deb12u1
+Installed-Size: 225
+Maintainer: Tormod Volden <debian.tormod@gmail.com>
+Architecture: arm64
+Depends: libwww-perl, xscreensaver-data, libc6 (>= 2.34), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libjpeg62-turbo (>= 1.3.1)
+Description: Webcollage screen saver module from XScreenSaver
+Homepage: https://www.jwz.org/xscreensaver/
+Description-md5: 98b8867f7f079391ec91896cc6ea46c5
+Tag: game::toys, interface::graphical, interface::x11, role::program,
+ uitoolkit::gtk, x11::screensaver
+Section: x11
+Priority: optional
+Filename: pool/main/x/xscreensaver/xscreensaver-screensaver-webcollage_6.06+dfsg1-3+deb12u1_arm64.deb
+Size: 48472
+SHA256: bf54572c3c71c0c81eb3d7310746ac838f5576dc2290a449221c513381fc1d09
+

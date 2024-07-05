@@ -1,0 +1,4 @@
+f98427ba52b553490e34647c2850ebdb  usr/lib/aarch64-linux-gnu/lapack/liblapack.so.3.11.0
+36df36bafd1eb90390dfbbc0098ef47f  usr/share/doc/liblapack3/changelog.Debian.gz
+7f261ca47f2dabe7c7fca7c028e65138  usr/share/doc/liblapack3/copyright
+fdf0f0418f059a7a6268705df5c65e21  usr/share/lintian/overrides/liblapack3

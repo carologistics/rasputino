@@ -1,0 +1,7 @@
+a0234080bfac7b657799c45e6e7d81cb  usr/lib/aarch64-linux-gnu/libgdal.so.32.3.6.2
+7afb88ae08a0f0a63202f469ca90745c  usr/share/doc/libgdal32/NOTICE
+0b57efa62914ca6dab587918c68aad34  usr/share/doc/libgdal32/changelog.Debian.arm64.gz
+de6c181f672c0806f0fe9e449d6ec485  usr/share/doc/libgdal32/changelog.Debian.gz
+49576726e4d0a0109551ceb80cdd9be2  usr/share/doc/libgdal32/changelog.gz
+516bafde42ca6a90e8a46695fc9e6001  usr/share/doc/libgdal32/copyright
+5ea024e5b4204e59deb4ec255b6d2f35  usr/share/lintian/overrides/libgdal32

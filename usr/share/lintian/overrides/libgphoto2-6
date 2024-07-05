@@ -1,0 +1,7 @@
+# "Optio" is a camera model
+libgphoto2-6: spelling-error-in-binary Optio Option [usr/lib/*/libgphoto2/*/sierra.so]
+
+# "Lumix WiH" appears in the .text section as a specialization of
+# strcpy(id->text, "Lumix Wifi") using immediate values.  The letter
+# "H" is part of the next machine instruction, "ifi\0" follows shortly.
+libgphoto2-6: spelling-error-in-binary WiH With [usr/lib/*/libgphoto2/*/lumix.so]

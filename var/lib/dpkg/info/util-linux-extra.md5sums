@@ -7,8 +7,7 @@ c4115bc9a1f6de22a2016fbbf512c50f  usr/lib/udev/hwclock-set
 5269e9f83e1b0c99e3c4faba0f48e4fd  usr/share/bash-completion/completions/fincore
 385cfec0ee511fcc664e822defbb839a  usr/share/bash-completion/completions/hwclock
 d4cbdf7320c4bfe84a36934babb92cdb  usr/share/bash-completion/completions/lsirq
-ce57a73e0f767fb1a2cd8f9ed8c57034  usr/share/doc/util-linux-extra/changelog.Debian.arm64.gz
-ee05efd2403797074fd5b7c7345e3ce7  usr/share/doc/util-linux-extra/changelog.Debian.gz
+5417199b91b393e1b0670042440fe93e  usr/share/doc/util-linux-extra/changelog.Debian.gz
 0bb7fd1ae3732779966184f543b8a91e  usr/share/doc/util-linux-extra/changelog.gz
 353888f385cfb82eb97a693e78f3cc9b  usr/share/doc/util-linux-extra/copyright
 4b25519dd4ecae02049659d1c762e76d  usr/share/man/man1/fincore.1.gz

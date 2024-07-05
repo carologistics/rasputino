@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/lib
+/usr/lib/aarch64-linux-gnu
+/usr/lib/aarch64-linux-gnu/libopencv_core.so.4.6.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libopencv-core406
+/usr/share/doc/libopencv-core406/changelog.Debian.gz
+/usr/share/doc/libopencv-core406/copyright
+/usr/lib/aarch64-linux-gnu/libopencv_core.so.406

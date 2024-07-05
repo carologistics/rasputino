@@ -1,0 +1,14 @@
+/.
+/etc
+/etc/ODBCDataSources
+/etc/odbc.ini
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/unixodbc-common
+/usr/share/doc/unixodbc-common/changelog.Debian.gz
+/usr/share/doc/unixodbc-common/copyright
+/usr/share/man
+/usr/share/man/man5
+/usr/share/man/man5/odbc.ini.5.gz
+/usr/share/man/man5/odbcinst.ini.5.gz

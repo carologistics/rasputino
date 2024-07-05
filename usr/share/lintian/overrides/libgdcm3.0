@@ -1,0 +1,7 @@
+# this is a multi-lib library package
+#
+libgdcm3.0: package-name-doesnt-match-sonames
+
+# This is a C++ library, using symbols files here is quite a challange
+libgdcm3.0: no-symbols-control-file
+

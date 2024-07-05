@@ -1,0 +1,11 @@
+ba591e071335519dc308c2557982ada3  usr/lib/aarch64-linux-gnu/libspatialite.so.7.1.2
+b7a369cea4cdf8c081994b7b0d5fb14a  usr/share/doc/libspatialite7/NEWS.Debian.gz
+aee4bb85805e94fe107a4343e82128ff  usr/share/doc/libspatialite7/README.Debian
+8d2bb3c0ae7941d1a80e0e811bc8dcb7  usr/share/doc/libspatialite7/changelog.Debian.gz
+17d46cd8130fc75fcb980208dec9dcbf  usr/share/doc/libspatialite7/copyright
+d2b4343bde158641504d4f9d41d352d4  usr/share/doc/libspatialite7/examples/demo1.c
+4d1491e0a49f554d9c0585d810adba04  usr/share/doc/libspatialite7/examples/demo2.c
+88d50795bc6e9e95257a1c3c9e0a23ff  usr/share/doc/libspatialite7/examples/demo3.c
+09681f541f82a11b7e5abc51f7f2c518  usr/share/doc/libspatialite7/examples/demo4.c
+b4e2eb32ebbf9d13bf8282bf30e19265  usr/share/doc/libspatialite7/examples/demo5.c
+c864e9805e901c34e421d687786ad82b  usr/share/lintian/overrides/libspatialite7

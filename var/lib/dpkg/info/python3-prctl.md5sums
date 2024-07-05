@@ -1,0 +1,11 @@
+be9d79ba2d2d6cd937389929da5bdfd9  usr/lib/python3/dist-packages/_prctl.cpython-311-aarch64-linux-gnu.so
+3d5979f1016e0a865255256e62e4671e  usr/lib/python3/dist-packages/prctl.py
+fdec512a2bd1ea5d1b58e65a347e3752  usr/lib/python3/dist-packages/python_prctl-1.8.1.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/python_prctl-1.8.1.egg-info/dependency_links.txt
+73218191fde43cb3bcd9591a7d63ea6a  usr/lib/python3/dist-packages/python_prctl-1.8.1.egg-info/top_level.txt
+0b0732971623e0a4f3edf8b02b9d9cb9  usr/share/doc/python3-prctl/README
+a623c31187e49a13ce7dba147e8f202f  usr/share/doc/python3-prctl/changelog.Debian.arm64.gz
+8fe3d2375d13780c842e72661f81e434  usr/share/doc/python3-prctl/changelog.Debian.gz
+e359f4017dad937c78ea0c4843ba1b1a  usr/share/doc/python3-prctl/copyright
+30b89952c5eeb4eb00b529ea76e9388b  usr/share/doc/python3-prctl/index.html
+817edd7773d602825d5238bb1a3ed86a  usr/share/doc/python3-prctl/index.rst.gz

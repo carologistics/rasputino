@@ -1,0 +1,8 @@
+libucm 0 libucx0 (>= 1.13.1)
+libucp 0 libucx0 (>= 1.13.1)
+libucs 0 libucx0 (>= 1.13.1)
+libucs_signal 0 libucx0 (>= 1.13.1)
+libuct 0 libucx0 (>= 1.13.1)
+libuct_cma 0 libucx0 (>= 1.13.1)
+libuct_ib 0 libucx0 (>= 1.13.1)
+libuct_rdmacm 0 libucx0 (>= 1.13.1)

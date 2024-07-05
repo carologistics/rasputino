@@ -1,0 +1,5 @@
+a0484205fd763574aaa3955f24f911d0  usr/lib/aarch64-linux-gnu/libssh-gcrypt.so.4.9.6
+816a363a874e70f686b9936b81a6c6f4  usr/share/doc/libssh-gcrypt-4/changelog.Debian.gz
+8a5506915ee0c182bafc75cff5ceb98e  usr/share/doc/libssh-gcrypt-4/changelog.gz
+6b800f9ac1f1b1a9a84851daa6c392f5  usr/share/doc/libssh-gcrypt-4/copyright
+342bc04d6f2331038bef7f427bbd40a8  usr/share/lintian/overrides/libssh-gcrypt-4

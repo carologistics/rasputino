@@ -1,0 +1,2 @@
+# False positive - symbols file missing build-depends-package field
+libzvbi0: symbols-file-missing-build-depends-package-field libzvbi.so.0 [symbols]

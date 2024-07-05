@@ -1,0 +1,6 @@
+715486c1a828be61438ffaca512bfb48  usr/lib/aarch64-linux-gnu/hwloc/hwloc_gl.so
+e6f2b3fc2b4bdf102cdf043968e84a27  usr/lib/aarch64-linux-gnu/hwloc/hwloc_opencl.so
+3e74bac13c5e6e5e4a46d75af9e8fed2  usr/lib/aarch64-linux-gnu/hwloc/hwloc_pci.so
+dbf772fb0eaf16bb46946378ad275e27  usr/lib/aarch64-linux-gnu/hwloc/hwloc_xml_libxml.so
+1f2dff2309179293d8fa6378edd3bcea  usr/share/doc/libhwloc-plugins/changelog.Debian.gz
+bbb35002f4e30b594e012447caf4d64f  usr/share/doc/libhwloc-plugins/copyright

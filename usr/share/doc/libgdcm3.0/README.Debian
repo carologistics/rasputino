@@ -1,0 +1,23 @@
+Debian packages of gdcm
+---------------------------
+
+There are 3 primary packages at this point:
+libgdcm2, libgdcm2-dev and libgdcm2-dbg, which respectively
+provide the library, static and headers for the library, and debug symbols for
+the shared library.
+
+C#:
+In order to use GDCM C#, you can use:
+$ gmcs ReformatFile.cs /r:/usr/lib/libgdcm-cil/gdcm-sharp.dll
+$ MONO_PATH=/usr/lib/libgdcm-cil/ LD_LIBRARY_PATH=/usr/lib/libgdcm-cil/  mono ReformatFile.exe  input.dcm output.dcm
+
+where ReformatFile.cs is an example taken from the src tarball of gdcm (Examples subdir)
+
+Java side:
+gdcm.jar will automatically load the jni glue lib (currently called gdcmjni.so), but programmer are 
+still required to change the value of LD_LIBRARY_PATH and CLASSPATH:
+
+$ javac HelloSimple.java -classpath /usr/share/java/gdcm.jar
+$ LD_LIBRARY_PATH=/usr/lib/jni/ java HelloSimple -classpath /usr/share/java/gdcm.jar:.
+
+- Mathieu Malaterre.

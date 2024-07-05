@@ -8,8 +8,7 @@ f723e3dec8b50f553cda9e1f26b5696c  usr/share/bash-completion/completions/losetup
 30690e8195997100bdbd13f85837ecde  usr/share/bash-completion/completions/swapoff
 ba248c7b614e27bde0cfaa0d4366a000  usr/share/bash-completion/completions/swapon
 e143728b1d2129ac4c7e4f8d19ef9cfc  usr/share/bash-completion/completions/umount
-ce57a73e0f767fb1a2cd8f9ed8c57034  usr/share/doc/mount/changelog.Debian.arm64.gz
-2ba66a001a956c7d8aadbcc918c67979  usr/share/doc/mount/changelog.Debian.gz
+7dd27602c3779fee145d311b124e32dd  usr/share/doc/mount/changelog.Debian.gz
 0bb7fd1ae3732779966184f543b8a91e  usr/share/doc/mount/changelog.gz
 353888f385cfb82eb97a693e78f3cc9b  usr/share/doc/mount/copyright
 13be744623247f4f2d5fd1ecc7be3d84  usr/share/doc/mount/examples/filesystems

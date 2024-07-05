@@ -1382,3 +1382,1467 @@ Package: dns-root-data
 Architecture: arm64
 Auto-Installed: 1
 
+Package: fontconfig
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgdal32
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libevent-pthreads-2.1-7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcups2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-present0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwebpmux3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxnvctrl0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libimath-3-1-29
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgl2ps1.4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-photo406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcharls2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvpx7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxxf86vm1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcodec2-1.0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libltdl7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libhwloc-plugins
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-util1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgeotiff5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwacom9
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcfitsio10
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgdk-pixbuf2.0-bin
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglx-mesa0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtwolame0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libzvbi-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libnetcdf19
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liburiparser1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: va-driver-all
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-dnn406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-ml406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgphoto2-l10n
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdatrie1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libthai0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwacom-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtesseract5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxrender1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglvnd0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gdal-plugins
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsensors-config
+Architecture: arm64
+Auto-Installed: 1
+
+Package: hicolor-icon-theme
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-videoio406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-image0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libx11-xcb1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxshmfence1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libaec0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libarmadillo11
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpango-1.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsrt1.5-gnutls
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmpg123-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-icccm4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwayland-cursor0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libx264-164
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libshine3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpgm-5.3-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmunge2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: qt5-gtk-platformtheme
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libarchive13
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgeos3.11.1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libodbc2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcolord2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-dri2-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-dri3-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcairo2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgbm1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libaacs0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpciaccess0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcursor1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libibverbs1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libbluray2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvorbisfile3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmbedcrypto7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libminizip1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: mysql-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5qml5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libblas3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: at-spi2-core
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libatk-bridge2.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgif7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: x11-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libnorm1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwayland-server0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglx0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-imgproc406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgme0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfribidi0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libraw1394-11
+Architecture: arm64
+Auto-Installed: 1
+
+Package: adwaita-icon-theme
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfreexl1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdrm-nouveau2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgfortran5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libinput10
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsuperlu5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-objdetect406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpixman-1-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5network5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libkmlbase1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libva-x11-2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: librist4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtcl8.6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgsm1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcjson1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmtdev1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libssh-gcrypt-4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libllvm15
+Architecture: arm64
+Auto-Installed: 1
+
+Package: librsvg2-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcomposite1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjsoncpp25
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxft2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxdamage1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgdk-pixbuf-2.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5dbus5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-shape406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liblept5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcairo-gobject2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-core406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: poppler-data
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libkmldom1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-contrib406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgraphite2-3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5quick5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5test5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtk8.6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdconf1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: qtwayland5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvdpau1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5waylandcompositor5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5widgets5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopenexr-3-1-30
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtbbbind-2-5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libz3-4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxss1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libproj25
+Architecture: arm64
+Auto-Installed: 1
+
+Package: mesa-va-drivers
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxerces-c3.2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgdcm3.0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgl1-mesa-dri
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsocket++1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxrandr2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjxl0.7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmp3lame0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsoxr0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5gui5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsodium23
+Architecture: arm64
+Auto-Installed: 1
+
+Package: librttopo1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libudfread0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-imgcodecs406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsnappy1v5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopus0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpangocairo-1.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxkbcommon0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxtst6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: vdpau-driver-all
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libhwy1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgphoto2-port12
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libatk1.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-calib3d406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libavcodec59
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-render0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-video406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvisual-0.4-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5opengl5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gsettings-desktop-schemas
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-flann406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-stitching406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libatspi2.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-numpy
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gstreamer1.0-plugins-base
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libice6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpoppler126
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvorbisenc2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvdpau-va-gl1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libodbcinst2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpangoft2-1.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtheora0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxvidcore4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-keysyms1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqhull-r8.0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libblosc1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopengl0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libavutil57
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libswscale6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libspeex1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: mariadb-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5svg5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libthai-data
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgstreamer1.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfabric1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libarpack2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: librsvg2-2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: ocl-icd-libopencl1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-glx0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglew2.2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libbdplus0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: ibverbs-providers
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxinerama1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopenjp2-7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libspatialite7
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwayland-egl1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcdparanoia0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-shape0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglapi-mesa
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgtk-3-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtbbmalloc2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libzmq5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdrm-amdgpu1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libfyba0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: dconf-gsettings-backend
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdrm-radeon1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libchromaprint1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: unixodbc-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmariadb3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsensors5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-randr0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgeos-c1v5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvtk9.1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: proj-bin
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopenmpi3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopenmpt0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libswresample4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: librabbitmq4
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libucx0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gtk-update-icon-cache
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-xkb1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgtk-3-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libhdf5-103-1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdc1394-25
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgphoto2-6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5qmlmodels5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libharfbuzz0b
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libprotobuf32
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgtk-3-bin
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libhwloc15
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libavformat59
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libzvbi0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libegl-mesa0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-render-util0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libva-drm2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: librdmacm1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-shm0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: dconf-service
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-highgui406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgl1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libegl1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmd4c0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgstreamer-plugins-base1.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libkmlengine1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwayland-client0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: gdal-data
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liblapack3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxkbcommon-x11-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liblcms2-2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: mesa-vdpau-drivers
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libhdf4-0-alt
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-xinerama0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libepoxy0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-xinput0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpmix2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-sync1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpq5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: at-spi2-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libavahi-client3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsm6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libhdf5-hl-100
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsz2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libogdi4.1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5waylandclient5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libva2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxfixes3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxi6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-features2d406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liborc-0.4-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopencv-viz406
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libinput-bin
+Architecture: arm64
+Auto-Installed: 1
+
+Package: proj-data
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libtbb12
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb-xfixes0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libevdev2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgdk-pixbuf2.0-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvulkan1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsphinxbase3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpulse0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopenal-data
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-prctl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-kms++
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libserd-0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-av
+Architecture: arm64
+Auto-Installed: 1
+
+Package: librubberband2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglu1-mesa-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglx-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libegl-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgles-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjack-jackd2-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglut-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: xtrans-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdecor-0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxcb1-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libice-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libass9
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcdio-cdda2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libiec61883-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libbs2b0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcaca0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcdio19
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libwebpdemux2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libvidstab1.1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libavdevice59
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-piexif
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsm-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-pyqt5.sip
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-pyqt5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-pidng
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxau-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglvnd-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpostproc56
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgl1-mesa-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libdecor-0-plugin-1-cairo
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgles1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgles2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-opengl
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libavc1394-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: xorg-sgml-doctools
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsndio7.0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5printsupport5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libmysofa1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libzimg2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5xml5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: mailcap
+Architecture: arm64
+Auto-Installed: 1
+
+Package: pocketsphinx-en-us
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopenal1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: mesa-vulkan-drivers
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libasyncns0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpocketsphinx3
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsndfile1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5sql5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglu1-mesa
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libturbojpeg0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libimagequant0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-pil
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglvnd-core-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libx11-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgl-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpthread-stubs0-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsord-0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libflite1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libplacebo208
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libcdio-paranoia2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsdl2-2.0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxext-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: mime-support
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxt-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5sql5-sqlite
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxdmcp-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-olefile
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libraqm0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: liblilv-0-0
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libopengl-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5designer5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: x11proto-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libglut3.12
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-libcamera
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-v4l2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-simplejpeg
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxt6
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libxv1
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libqt5help5
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libavfilter8
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libsratom-0-0
+Architecture: arm64
+Auto-Installed: 1
+

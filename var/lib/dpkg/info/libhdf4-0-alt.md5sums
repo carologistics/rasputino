@@ -1,0 +1,6 @@
+fb9ced24436c32f6ed78d243ac6226d1  usr/lib/libdfalt.so.0.0.0
+deb2360420731ea617a3e0bc68f39cc7  usr/lib/libmfhdfalt.so.0.0.0
+3cd7b8453a860eafd3d0e9fe1bf25464  usr/share/doc/libhdf4-0-alt/NEWS.Debian.gz
+692601f90168098b0d7049ace1d0982e  usr/share/doc/libhdf4-0-alt/changelog.Debian.gz
+a11d199f208cf1ed8bfd362760b37ba4  usr/share/doc/libhdf4-0-alt/copyright
+f3e8f29f217522e205a7b3d20c23d2b3  usr/share/lintian/overrides/libhdf4-0-alt

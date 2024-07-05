@@ -1,0 +1,10 @@
+5bd749eaa1f64fd65be19a0c781827b0  usr/lib/aarch64-linux-gnu/libproj.so.25.9.1.1
+860950ba723b8fe4fe25dbc2293087c2  usr/share/doc/libproj25/AUTHORS
+25079b6227d776dfbd26cfcb93a28573  usr/share/doc/libproj25/NEWS.Debian.gz
+3a47620449c4a279a78b67ef8bd88a9a  usr/share/doc/libproj25/NEWS.gz
+ce47c4f165734ed3856b6d3f2e4533ac  usr/share/doc/libproj25/README
+d67b245be760f80c19773aa90fd51983  usr/share/doc/libproj25/changelog.Debian.arm64.gz
+92ae958b009cb1dc12292c02ea318255  usr/share/doc/libproj25/changelog.Debian.gz
+8219e1eaf9e8b32d4e122a012a755fa4  usr/share/doc/libproj25/changelog.gz
+74f2a6d2261f17eeb8d26c80aa328565  usr/share/doc/libproj25/copyright
+13d438bc4dd50442bb0b72808e9bfe1c  usr/share/lintian/overrides/libproj25
