@@ -17,6 +17,7 @@ irc:*:19797:0:99999:7:::
 _apt:*:19797:0:99999:7:::
 nobody:*:19797:0:99999:7:::
 systemd-network:!*:19797::::::
+pi:!:19797:0:99999:7:::
 systemd-timesync:!*:19797::::::
 messagebus:!:19797::::::
 _rpc:!:19797::::::
@@ -25,4 +26,3 @@ statd:!:19797::::::
 avahi:!:19797::::::
 polkitd:!*:19797::::::
 dnsmasq:!:19797::::::
-robotino:$y$j9T$VhtdhrsgSx1aGcWpyJ4Xj0$48csPEELphUtcRlpI7jF92qken3NhsS.TZtFk3M0szA:19909:0:99999:7:::
