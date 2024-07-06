@@ -1,0 +1,11 @@
+[Unit]
+Description=Starts the server for camera
+After=network.target
+
+[Service]
+ExecStart=/bin/python3 /home/robotino/detection-server.py
+User=robotino
+Group=robotino
+
+[Install]
+WantedBy=multi-user.target
