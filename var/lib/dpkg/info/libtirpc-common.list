@@ -3,7 +3,6 @@
 /etc/netconfig
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libtirpc-common
 /usr/share/doc/libtirpc-common/NEWS.Debian.gz
 /usr/share/doc/libtirpc-common/changelog.Debian.gz

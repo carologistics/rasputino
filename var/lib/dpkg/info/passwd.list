@@ -41,7 +41,6 @@
 /usr/sbin/usermod
 /usr/sbin/vipw
 /usr/share
-/usr/share/doc
 /usr/share/doc/passwd
 /usr/share/doc/passwd/NEWS.Debian.gz
 /usr/share/doc/passwd/README.Debian

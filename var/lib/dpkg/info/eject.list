@@ -6,7 +6,6 @@
 /usr/share/bash-completion
 /usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/eject
-/usr/share/doc
 /usr/share/doc/eject
 /usr/share/doc/eject/changelog.Debian.gz
 /usr/share/doc/eject/changelog.gz

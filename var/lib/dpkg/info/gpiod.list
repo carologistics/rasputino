@@ -8,7 +8,6 @@
 /usr/bin/gpiomon
 /usr/bin/gpioset
 /usr/share
-/usr/share/doc
 /usr/share/doc/gpiod
 /usr/share/doc/gpiod/changelog.Debian.arm64.gz
 /usr/share/doc/gpiod/changelog.Debian.gz

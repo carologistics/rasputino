@@ -49,7 +49,6 @@
 /usr/share/alsa/init/info
 /usr/share/alsa/init/test
 /usr/share/alsa/utils.sh
-/usr/share/doc
 /usr/share/doc/alsa-utils
 /usr/share/doc/alsa-utils/NEWS.Debian.gz
 /usr/share/doc/alsa-utils/README.Debian

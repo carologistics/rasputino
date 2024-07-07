@@ -6,7 +6,6 @@
 /usr/lib/aarch64-linux-gnu/systemd/libsystemd-core-252.so
 /usr/lib/aarch64-linux-gnu/systemd/libsystemd-shared-252.so
 /usr/share
-/usr/share/doc
 /usr/share/doc/libsystemd-shared
 /usr/share/doc/libsystemd-shared/NEWS.Debian.gz
 /usr/share/doc/libsystemd-shared/changelog.Debian.gz

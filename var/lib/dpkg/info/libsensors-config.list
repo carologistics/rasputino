@@ -5,7 +5,6 @@
 /etc/sensors3.conf
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libsensors-config
 /usr/share/doc/libsensors-config/changelog.Debian.gz
 /usr/share/doc/libsensors-config/changelog.gz

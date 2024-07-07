@@ -56,7 +56,6 @@
 /usr/share/bug/nfs-utils
 /usr/share/bug/nfs-utils/control
 /usr/share/bug/nfs-utils/presubj
-/usr/share/doc
 /usr/share/doc/nfs-common
 /usr/share/doc/nfs-common/NEWS.Debian.gz
 /usr/share/doc/nfs-common/changelog.Debian.gz

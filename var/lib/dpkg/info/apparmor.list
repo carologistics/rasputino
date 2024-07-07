@@ -188,7 +188,6 @@
 /usr/share/apport
 /usr/share/apport/package-hooks
 /usr/share/apport/package-hooks/source_apparmor.py
-/usr/share/doc
 /usr/share/doc/apparmor
 /usr/share/doc/apparmor/README.Debian
 /usr/share/doc/apparmor/changelog.Debian.gz

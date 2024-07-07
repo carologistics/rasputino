@@ -11,7 +11,6 @@
 /usr/lib/apt/solvers
 /usr/lib/apt/solvers/apt
 /usr/share
-/usr/share/doc
 /usr/share/doc/apt-utils
 /usr/share/doc/apt-utils/NEWS.Debian.gz
 /usr/share/doc/apt-utils/changelog.gz

@@ -1043,7 +1043,6 @@
 /usr/lib/linux/uapi/arm64/asm/ucontext.h
 /usr/lib/linux/uapi/arm64/asm/unistd.h
 /usr/share
-/usr/share/doc
 /usr/share/doc/linux-libc-dev
 /usr/share/doc/linux-libc-dev/changelog.Debian.gz
 /usr/share/doc/linux-libc-dev/copyright

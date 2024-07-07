@@ -1,7 +1,6 @@
 /.
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/gdal-data
 /usr/share/doc/gdal-data/NOTICE
 /usr/share/doc/gdal-data/changelog.Debian.gz

@@ -4,7 +4,6 @@
 /usr/sbin/install-sgmlcatalog
 /usr/sbin/update-catalog
 /usr/share
-/usr/share/doc
 /usr/share/doc/sgml-base
 /usr/share/doc/sgml-base/NEWS.Debian.gz
 /usr/share/doc/sgml-base/README.Debian

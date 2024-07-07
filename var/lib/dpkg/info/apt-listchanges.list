@@ -20,7 +20,6 @@
 /usr/share/apt-listchanges/apt_listchanges.py
 /usr/share/bug
 /usr/share/bug/apt-listchanges
-/usr/share/doc
 /usr/share/doc/apt-listchanges
 /usr/share/doc/apt-listchanges/NEWS.Debian.gz
 /usr/share/doc/apt-listchanges/README.Debian.gz

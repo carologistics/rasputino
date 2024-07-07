@@ -13,7 +13,6 @@
 /usr/sbin
 /usr/sbin/nologin
 /usr/share
-/usr/share/doc
 /usr/share/doc/login
 /usr/share/doc/login/NEWS.Debian.gz
 /usr/share/doc/login/changelog.Debian.arm64.gz

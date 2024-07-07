@@ -6,7 +6,6 @@
 /sbin/setcap
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libcap2-bin
 /usr/share/doc/libcap2-bin/README.Debian
 /usr/share/doc/libcap2-bin/changelog.Debian.gz

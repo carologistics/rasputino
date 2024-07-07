@@ -4,7 +4,6 @@
 /usr/lib/aarch64-linux-gnu
 /usr/lib/aarch64-linux-gnu/libgdal.so.32.3.6.2
 /usr/share
-/usr/share/doc
 /usr/share/doc/libgdal32
 /usr/share/doc/libgdal32/NOTICE
 /usr/share/doc/libgdal32/changelog.Debian.arm64.gz

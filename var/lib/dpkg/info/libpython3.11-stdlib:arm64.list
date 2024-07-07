@@ -356,7 +356,6 @@
 /usr/lib/python3.11/zoneinfo/_tzpath.py
 /usr/lib/python3.11/zoneinfo/_zoneinfo.py
 /usr/share
-/usr/share/doc
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/libpython3.11-stdlib

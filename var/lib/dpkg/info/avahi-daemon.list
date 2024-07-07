@@ -32,7 +32,6 @@
 /usr/share/dbus-1/system-services/org.freedesktop.Avahi.service
 /usr/share/dbus-1/system.d
 /usr/share/dbus-1/system.d/avahi-dbus.conf
-/usr/share/doc
 /usr/share/doc/avahi-daemon
 /usr/share/doc/avahi-daemon/NEWS.gz
 /usr/share/doc/avahi-daemon/README

@@ -5,7 +5,6 @@
 /usr/lib/aarch64-linux-gnu/pkgconfig
 /usr/lib/aarch64-linux-gnu/pkgconfig/pthread-stubs.pc
 /usr/share
-/usr/share/doc
 /usr/share/doc/libpthread-stubs0-dev
 /usr/share/doc/libpthread-stubs0-dev/README
 /usr/share/doc/libpthread-stubs0-dev/changelog.Debian.gz

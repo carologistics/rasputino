@@ -6,7 +6,6 @@
 /usr/sbin
 /usr/sbin/update-pciids
 /usr/share
-/usr/share/doc
 /usr/share/doc/pciutils
 /usr/share/doc/pciutils/README.gz
 /usr/share/doc/pciutils/changelog.Debian.gz

@@ -25,7 +25,6 @@
 /usr/share/bug
 /usr/share/bug/libgles-dev
 /usr/share/bug/libgles-dev/control
-/usr/share/doc
 /usr/share/doc/libgles-dev
 /usr/share/doc/libgles-dev/changelog.Debian.gz
 /usr/share/doc/libgles-dev/copyright

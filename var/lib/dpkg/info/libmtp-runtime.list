@@ -4,7 +4,6 @@
 /lib/udev/mtp-probe
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libmtp-runtime
 /usr/share/doc/libmtp-runtime/changelog.Debian.gz
 /usr/share/doc/libmtp-runtime/changelog.gz

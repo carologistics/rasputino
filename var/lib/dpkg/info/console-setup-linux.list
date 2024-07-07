@@ -533,7 +533,6 @@
 /usr/share/consoletrans/KOI8-U.acm.gz
 /usr/share/consoletrans/TIS-620.acm.gz
 /usr/share/consoletrans/VISCII.acm.gz
-/usr/share/doc
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/console-setup-linux

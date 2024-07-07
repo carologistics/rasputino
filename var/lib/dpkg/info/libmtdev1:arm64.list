@@ -7,7 +7,6 @@
 /usr/share/apport
 /usr/share/apport/package-hooks
 /usr/share/apport/package-hooks/source_mtdev.py
-/usr/share/doc
 /usr/share/doc/libmtdev1
 /usr/share/doc/libmtdev1/README
 /usr/share/doc/libmtdev1/changelog.Debian.gz

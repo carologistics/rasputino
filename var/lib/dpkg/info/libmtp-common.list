@@ -10,7 +10,6 @@
 /usr/share/apport
 /usr/share/apport/package-hooks
 /usr/share/apport/package-hooks/source_libmtp.py
-/usr/share/doc
 /usr/share/doc/libmtp-common
 /usr/share/doc/libmtp-common/changelog.Debian.gz
 /usr/share/doc/libmtp-common/changelog.gz

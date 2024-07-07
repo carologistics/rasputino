@@ -61,7 +61,6 @@
 /lib/aarch64-linux-gnu/security/pam_xauth.so
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libpam-modules
 /usr/share/doc/libpam-modules/NEWS.Debian.gz
 /usr/share/doc/libpam-modules/changelog.Debian.gz

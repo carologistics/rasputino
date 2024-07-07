@@ -3,7 +3,6 @@
 /usr/bin
 /usr/bin/gpgsm
 /usr/share
-/usr/share/doc
 /usr/share/doc/gpgsm
 /usr/share/doc/gpgsm/NEWS.Debian.gz
 /usr/share/doc/gpgsm/changelog.Debian.gz

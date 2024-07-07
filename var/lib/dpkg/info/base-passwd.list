@@ -6,7 +6,6 @@
 /usr/share/base-passwd
 /usr/share/base-passwd/group.master
 /usr/share/base-passwd/passwd.master
-/usr/share/doc
 /usr/share/doc/base-passwd
 /usr/share/doc/base-passwd/README
 /usr/share/doc/base-passwd/changelog.gz

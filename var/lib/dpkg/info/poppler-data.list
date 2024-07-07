@@ -9,7 +9,6 @@
 /etc/ghostscript/cidfmap.d/90gs-cjk-resource-korea1.conf
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/poppler-data
 /usr/share/doc/poppler-data/NEWS.Debian.gz
 /usr/share/doc/poppler-data/README

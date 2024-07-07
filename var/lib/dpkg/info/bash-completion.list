@@ -488,7 +488,6 @@
 /usr/share/cmake/bash-completion
 /usr/share/cmake/bash-completion/bash-completion-config-version.cmake
 /usr/share/cmake/bash-completion/bash-completion-config.cmake
-/usr/share/doc
 /usr/share/doc/bash
 /usr/share/doc/bash-completion
 /usr/share/doc/bash-completion/AUTHORS

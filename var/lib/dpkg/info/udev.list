@@ -108,7 +108,6 @@
 /usr/share/bug/udev
 /usr/share/bug/udev/control
 /usr/share/bug/udev/script
-/usr/share/doc
 /usr/share/doc/udev
 /usr/share/doc/udev/NEWS.Debian.gz
 /usr/share/doc/udev/README.Debian.gz

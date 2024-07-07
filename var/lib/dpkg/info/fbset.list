@@ -7,7 +7,6 @@
 /etc/fb.modes
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/fbset
 /usr/share/doc/fbset/FAQ.gz
 /usr/share/doc/fbset/GetVideoMode.c.gz

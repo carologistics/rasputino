@@ -19,7 +19,6 @@
 /usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/pinctrl
 /usr/share/bash-completion/completions/vcgencmd
-/usr/share/doc
 /usr/share/doc/raspi-utils
 /usr/share/doc/raspi-utils/changelog.Debian.gz
 /usr/share/doc/raspi-utils/copyright

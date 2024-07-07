@@ -13,7 +13,6 @@
 /usr/share/bug/mesa-va-drivers
 /usr/share/bug/mesa-va-drivers/control
 /usr/share/bug/mesa-va-drivers/script
-/usr/share/doc
 /usr/share/doc/mesa-va-drivers
 /usr/share/doc/mesa-va-drivers/changelog.Debian.gz
 /usr/share/doc/mesa-va-drivers/changelog.gz

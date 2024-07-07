@@ -6,7 +6,6 @@
 /usr/share
 /usr/share/bug
 /usr/share/bug/libcryptsetup12
-/usr/share/doc
 /usr/share/doc/libcryptsetup12
 /usr/share/doc/libcryptsetup12/NEWS.Debian.gz
 /usr/share/doc/libcryptsetup12/changelog.Debian.gz

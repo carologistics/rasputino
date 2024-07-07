@@ -3,7 +3,6 @@
 /etc/pip.conf
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/python3-pip-whl
 /usr/share/doc/python3-pip-whl/NEWS.Debian.gz
 /usr/share/doc/python3-pip-whl/changelog.Debian.gz

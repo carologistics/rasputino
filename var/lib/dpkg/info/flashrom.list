@@ -7,7 +7,6 @@
 /usr/sbin
 /usr/sbin/flashrom
 /usr/share
-/usr/share/doc
 /usr/share/doc/flashrom
 /usr/share/doc/flashrom/README.Debian
 /usr/share/doc/flashrom/changelog.Debian.gz

@@ -691,7 +691,6 @@
 /usr/share/bug
 /usr/share/bug/firmware-misc-nonfree
 /usr/share/bug/firmware-misc-nonfree/presubj
-/usr/share/doc
 /usr/share/doc/firmware-misc-nonfree
 /usr/share/doc/firmware-misc-nonfree/changelog.Debian.gz
 /usr/share/doc/firmware-misc-nonfree/copyright

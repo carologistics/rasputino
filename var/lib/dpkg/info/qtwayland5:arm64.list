@@ -34,7 +34,6 @@
 /usr/lib/aarch64-linux-gnu/qt5/plugins/wayland-shell-integration/libxdg-shell-v6.so
 /usr/lib/aarch64-linux-gnu/qt5/plugins/wayland-shell-integration/libxdg-shell.so
 /usr/share
-/usr/share/doc
 /usr/share/doc/qtwayland5
 /usr/share/doc/qtwayland5/changelog.Debian.gz
 /usr/share/doc/qtwayland5/copyright

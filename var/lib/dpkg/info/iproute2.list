@@ -52,7 +52,6 @@
 /usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/devlink
 /usr/share/bash-completion/completions/tc
-/usr/share/doc
 /usr/share/doc/iproute2
 /usr/share/doc/iproute2/README.Debian
 /usr/share/doc/iproute2/changelog.Debian.gz

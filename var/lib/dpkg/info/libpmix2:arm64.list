@@ -38,7 +38,6 @@
 /usr/lib/aarch64-linux-gnu/pmix2/share/pmix/pmixcc-wrapper-data.txt
 /usr/lib/aarch64-linux-gnu/pmix2/share/pmix-mca-params.conf
 /usr/share
-/usr/share/doc
 /usr/share/doc/libpmix2
 /usr/share/doc/libpmix2/changelog.Debian.gz
 /usr/share/doc/libpmix2/copyright

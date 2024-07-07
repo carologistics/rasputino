@@ -41,7 +41,6 @@
 /usr/share/apport
 /usr/share/apport/package-hooks
 /usr/share/apport/package-hooks/source_sudo.py
-/usr/share/doc
 /usr/share/doc/sudo
 /usr/share/doc/sudo/CONTRIBUTING.md
 /usr/share/doc/sudo/CONTRIBUTORS.md.gz

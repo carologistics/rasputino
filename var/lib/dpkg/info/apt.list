@@ -65,7 +65,6 @@
 /usr/share/bug
 /usr/share/bug/apt
 /usr/share/bug/apt/script
-/usr/share/doc
 /usr/share/doc/apt
 /usr/share/doc/apt/NEWS.Debian.gz
 /usr/share/doc/apt/README.md.gz

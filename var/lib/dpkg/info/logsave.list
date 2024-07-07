@@ -3,7 +3,6 @@
 /sbin/logsave
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/logsave
 /usr/share/doc/logsave/changelog.Debian.gz
 /usr/share/doc/logsave/copyright

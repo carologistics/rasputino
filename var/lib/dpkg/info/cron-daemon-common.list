@@ -15,7 +15,6 @@
 /etc/crontab
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/cron-daemon-common
 /usr/share/doc/cron-daemon-common/changelog.Debian.gz
 /usr/share/doc/cron-daemon-common/changelog.gz

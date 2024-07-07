@@ -23,7 +23,6 @@
 /usr/share/bug
 /usr/share/bug/init-system-helpers
 /usr/share/bug/init-system-helpers/control
-/usr/share/doc
 /usr/share/doc/init-system-helpers
 /usr/share/doc/init-system-helpers/README.invoke-rc.d.gz
 /usr/share/doc/init-system-helpers/README.policy-rc.d.gz

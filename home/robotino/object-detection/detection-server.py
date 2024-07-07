@@ -52,15 +52,15 @@ if PICAM:
 
 IMSHOW = False
 STREAM_RAW = True
-STREAM_MARKED = False
+STREAM_MARKED = True
 DETECT = True
 OBJECT = 2
 CONFIDENCE_THRESHOLD = 0.2
 IOU=0.3
 
-# model = YOLO('model.pt',task='detect')
-# model.export(format="ncnn")
-ncnn_model = YOLO('ncnn_model', task='detect')
+ # model = YOLO('model.pt',task='detect')
+ # model.export(format="ncnn")
+ncnn_model = YOLO('model_ncnn_model', task='detect')
 
 def send_to_all(clients, message):
     for client_socket in clients:

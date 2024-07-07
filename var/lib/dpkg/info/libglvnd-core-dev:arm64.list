@@ -13,7 +13,6 @@
 /usr/share/bug
 /usr/share/bug/libglvnd-core-dev
 /usr/share/bug/libglvnd-core-dev/control
-/usr/share/doc
 /usr/share/doc/libglvnd-core-dev
 /usr/share/doc/libglvnd-core-dev/changelog.Debian.gz
 /usr/share/doc/libglvnd-core-dev/copyright

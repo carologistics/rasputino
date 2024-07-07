@@ -7,7 +7,6 @@
 /etc/mysql/my.cnf.fallback
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/mysql-common
 /usr/share/doc/mysql-common/changelog.gz
 /usr/share/doc/mysql-common/copyright

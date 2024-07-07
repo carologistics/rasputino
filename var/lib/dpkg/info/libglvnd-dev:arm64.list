@@ -6,7 +6,6 @@
 /usr/share/bug
 /usr/share/bug/libglvnd-dev
 /usr/share/bug/libglvnd-dev/control
-/usr/share/doc
 /usr/share/doc/libglvnd-dev
 /usr/share/doc/libglvnd-dev/changelog.Debian.gz
 /usr/share/doc/libglvnd-dev/copyright

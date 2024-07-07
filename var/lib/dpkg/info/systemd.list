@@ -458,7 +458,6 @@
 /usr/share/dbus-1/system.d/org.freedesktop.network1.conf
 /usr/share/dbus-1/system.d/org.freedesktop.systemd1.conf
 /usr/share/dbus-1/system.d/org.freedesktop.timedate1.conf
-/usr/share/doc
 /usr/share/doc/systemd
 /usr/share/doc/systemd/CODING_STYLE.md.gz
 /usr/share/doc/systemd/DISTRO_PORTING.md

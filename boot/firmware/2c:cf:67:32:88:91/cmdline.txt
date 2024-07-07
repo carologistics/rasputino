@@ -1,1 +1,1 @@
-selinux=0 dwc_otg.lpm_enable=0 console=tty1 rootwait rw nfsroot=192.168.0.13:/rpi ip=dhcp root=/dev/nfs systemd.log_level=info systemd.log_target=console systemd.debug-shell=1
+selinux=0 dwc_otg.lpm_enable=0 console=tty1 rootwait rw nfsroot=192.168.0.14:/rpi ip=dhcp root=/dev/nfs systemd.log_level=info systemd.log_target=console systemd.debug-shell=1

@@ -4,7 +4,6 @@
 /etc/selinux/semanage.conf
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libsemanage-common
 /usr/share/doc/libsemanage-common/changelog.Debian.gz
 /usr/share/doc/libsemanage-common/copyright

@@ -4,7 +4,6 @@
 /etc/openal/alsoft.conf
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libopenal-data
 /usr/share/doc/libopenal-data/changelog.Debian.gz
 /usr/share/doc/libopenal-data/changelog.gz

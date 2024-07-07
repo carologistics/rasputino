@@ -9,7 +9,6 @@
 /usr/sbin
 /usr/sbin/nft
 /usr/share
-/usr/share/doc
 /usr/share/doc/nftables
 /usr/share/doc/nftables/README.Debian
 /usr/share/doc/nftables/changelog.Debian.gz

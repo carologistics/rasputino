@@ -11,8 +11,6 @@
 /usr/share
 /usr/share/applications
 /usr/share/applications/python3.11.desktop
-/usr/share/doc
-/usr/share/doc/python3.11
 /usr/share/doc/python3.11/ACKS.gz
 /usr/share/doc/python3.11/NEWS.gz
 /usr/share/doc/python3.11/README.Debian

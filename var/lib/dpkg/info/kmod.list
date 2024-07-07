@@ -14,7 +14,6 @@
 /usr/share/bash-completion
 /usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/kmod
-/usr/share/doc
 /usr/share/doc/libkmod2
 /usr/share/doc/libkmod2/README.md
 /usr/share/doc/libkmod2/TODO

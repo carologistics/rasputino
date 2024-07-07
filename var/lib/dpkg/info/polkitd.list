@@ -33,7 +33,6 @@
 /usr/share/dbus-1/system-services/org.freedesktop.PolicyKit1.service
 /usr/share/dbus-1/system.d
 /usr/share/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
-/usr/share/doc
 /usr/share/doc/polkitd
 /usr/share/doc/polkitd/NEWS.Debian.gz
 /usr/share/doc/polkitd/NEWS.md.gz

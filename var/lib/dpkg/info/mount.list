@@ -15,7 +15,6 @@
 /usr/share/bash-completion/completions/swapoff
 /usr/share/bash-completion/completions/swapon
 /usr/share/bash-completion/completions/umount
-/usr/share/doc
 /usr/share/doc/mount
 /usr/share/doc/mount/changelog.Debian.gz
 /usr/share/doc/mount/changelog.gz

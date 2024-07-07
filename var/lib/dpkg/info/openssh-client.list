@@ -28,7 +28,6 @@
 /usr/share/apport
 /usr/share/apport/package-hooks
 /usr/share/apport/package-hooks/openssh-client.py
-/usr/share/doc
 /usr/share/doc/openssh-client
 /usr/share/doc/openssh-client/NEWS.Debian.gz
 /usr/share/doc/openssh-client/OVERVIEW.gz

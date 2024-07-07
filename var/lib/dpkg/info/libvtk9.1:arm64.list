@@ -258,7 +258,6 @@
 /usr/lib/aarch64-linux-gnu/vtk/hierarchy/VTK/vtkViewsCore-hierarchy.txt
 /usr/lib/aarch64-linux-gnu/vtk/hierarchy/VTK/vtkViewsInfovis-hierarchy.txt
 /usr/share
-/usr/share/doc
 /usr/share/doc/libvtk9.1
 /usr/share/doc/libvtk9.1/changelog.Debian.gz
 /usr/share/doc/libvtk9.1/copyright

@@ -9,7 +9,6 @@
 /usr/sbin/update-locale
 /usr/sbin/validlocale
 /usr/share
-/usr/share/doc
 /usr/share/doc/locales
 /usr/share/doc/locales/NEWS.Debian.gz
 /usr/share/doc/locales/README.Debian

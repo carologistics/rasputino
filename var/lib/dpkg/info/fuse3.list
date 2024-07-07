@@ -7,7 +7,6 @@
 /sbin/mount.fuse3
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/fuse3
 /usr/share/doc/fuse3/changelog.Debian.gz
 /usr/share/doc/fuse3/changelog.gz

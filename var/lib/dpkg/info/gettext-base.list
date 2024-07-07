@@ -6,7 +6,6 @@
 /usr/bin/gettext.sh
 /usr/bin/ngettext
 /usr/share
-/usr/share/doc
 /usr/share/doc/gettext-base
 /usr/share/doc/gettext-base/ABOUT-NLS
 /usr/share/doc/gettext-base/changelog.Debian.gz

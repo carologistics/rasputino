@@ -294,7 +294,6 @@
 /usr/lib/aarch64-linux-gnu/ldscripts/armelfb_linux_eabi.xw
 /usr/lib/aarch64-linux-gnu/ldscripts/armelfb_linux_eabi.xwe
 /usr/share
-/usr/share/doc
 /usr/share/doc/binutils
 /usr/share/doc/binutils/test-summary-arm64.gz
 /usr/share/lintian

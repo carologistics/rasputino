@@ -30,7 +30,6 @@
 /usr/share/bash-completion
 /usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/smbinfo
-/usr/share/doc
 /usr/share/doc/cifs-utils
 /usr/share/doc/cifs-utils/changelog.Debian.gz
 /usr/share/doc/cifs-utils/changelog.gz

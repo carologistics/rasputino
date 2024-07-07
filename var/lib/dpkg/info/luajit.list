@@ -3,7 +3,6 @@
 /usr/bin
 /usr/bin/luajit
 /usr/share
-/usr/share/doc
 /usr/share/doc/luajit
 /usr/share/doc/luajit/changelog.Debian.gz
 /usr/share/doc/luajit/copyright

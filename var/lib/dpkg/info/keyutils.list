@@ -10,7 +10,6 @@
 /sbin/request-key
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/keyutils
 /usr/share/doc/keyutils/changelog.Debian.gz
 /usr/share/doc/keyutils/copyright

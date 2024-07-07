@@ -5,7 +5,6 @@
 /usr/share/GConf/gsettings
 /usr/share/GConf/gsettings/gsettings-desktop-schemas.convert
 /usr/share/GConf/gsettings/wm-schemas.convert
-/usr/share/doc
 /usr/share/doc/gsettings-desktop-schemas
 /usr/share/doc/gsettings-desktop-schemas/AUTHORS
 /usr/share/doc/gsettings-desktop-schemas/NEWS.gz

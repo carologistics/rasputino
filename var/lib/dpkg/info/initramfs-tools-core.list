@@ -22,7 +22,6 @@
 /usr/sbin
 /usr/sbin/mkinitramfs
 /usr/share
-/usr/share/doc
 /usr/share/doc/initramfs-tools-core
 /usr/share/doc/initramfs-tools-core/NEWS.Debian.gz
 /usr/share/doc/initramfs-tools-core/changelog.gz

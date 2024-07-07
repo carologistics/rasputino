@@ -1,7 +1,6 @@
 /.
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libalgorithm-diff-perl
 /usr/share/doc/libalgorithm-diff-perl/README
 /usr/share/doc/libalgorithm-diff-perl/changelog.Debian.gz

@@ -5,7 +5,6 @@
 /etc/apt/trusted.gpg.d/raspberrypi-archive-stable.gpg
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/raspberrypi-archive-keyring
 /usr/share/doc/raspberrypi-archive-keyring/README
 /usr/share/doc/raspberrypi-archive-keyring/changelog.gz

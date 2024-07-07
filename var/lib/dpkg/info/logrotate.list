@@ -18,7 +18,6 @@
 /usr/share/bug
 /usr/share/bug/logrotate
 /usr/share/bug/logrotate/script
-/usr/share/doc
 /usr/share/doc/logrotate
 /usr/share/doc/logrotate/NEWS.Debian.gz
 /usr/share/doc/logrotate/changelog.Debian.gz

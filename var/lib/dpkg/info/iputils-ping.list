@@ -3,7 +3,6 @@
 /bin/ping
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/iputils-ping
 /usr/share/doc/iputils-ping/NEWS.Debian.gz
 /usr/share/doc/iputils-ping/changelog.Debian.gz

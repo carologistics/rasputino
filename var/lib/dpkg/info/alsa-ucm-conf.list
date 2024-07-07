@@ -463,7 +463,6 @@
 /usr/share/alsa/ucm2/sof-soundwire/rt715.conf
 /usr/share/alsa/ucm2/sof-soundwire/sof-soundwire.conf
 /usr/share/alsa/ucm2/ucm.conf
-/usr/share/doc
 /usr/share/doc/alsa-ucm-conf
 /usr/share/doc/alsa-ucm-conf/changelog.Debian.gz
 /usr/share/doc/alsa-ucm-conf/copyright

@@ -18,7 +18,6 @@
 /lib/firmware/synaptics/SYN43430B0.hcd
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/bluez-firmware
 /usr/share/doc/bluez-firmware/BCM-LEGAL.txt
 /usr/share/doc/bluez-firmware/changelog.Debian.gz

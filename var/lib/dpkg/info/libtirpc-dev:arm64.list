@@ -44,7 +44,6 @@
 /usr/lib/aarch64-linux-gnu/pkgconfig
 /usr/lib/aarch64-linux-gnu/pkgconfig/libtirpc.pc
 /usr/share
-/usr/share/doc
 /usr/share/doc/libtirpc-dev
 /usr/share/doc/libtirpc-dev/NEWS.Debian.gz
 /usr/share/doc/libtirpc-dev/THANKS

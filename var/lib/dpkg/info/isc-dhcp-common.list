@@ -1,7 +1,6 @@
 /.
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/isc-dhcp-common
 /usr/share/doc/isc-dhcp-common/README.gz
 /usr/share/doc/isc-dhcp-common/changelog.Debian.gz

@@ -17,7 +17,6 @@
 /usr/share/debianutils
 /usr/share/debianutils/shells
 /usr/share/debianutils/shells.d
-/usr/share/doc
 /usr/share/doc/debianutils
 /usr/share/doc/debianutils/README.shells.gz
 /usr/share/doc/debianutils/changelog.Debian.gz

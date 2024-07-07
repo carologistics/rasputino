@@ -40,7 +40,6 @@
 /usr/sbin/iconvconfig
 /usr/sbin/zic
 /usr/share
-/usr/share/doc
 /usr/share/doc/libc-bin
 /usr/share/doc/libc-bin/changelog.Debian.gz
 /usr/share/doc/libc-bin/changelog.gz

@@ -25,7 +25,6 @@
 /usr/lib/systemd/user-environment-generators
 /usr/lib/systemd/user-environment-generators/90gpg-agent
 /usr/share
-/usr/share/doc
 /usr/share/doc/gpg-agent
 /usr/share/doc/gpg-agent/NEWS.Debian.gz
 /usr/share/doc/gpg-agent/README.Debian

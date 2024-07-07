@@ -7,7 +7,6 @@
 /usr/lib/tmpfiles.d
 /usr/lib/tmpfiles.d/dbus.conf
 /usr/share
-/usr/share/doc
 /usr/share/doc/dbus-daemon
 /usr/share/doc/dbus-daemon/AUTHORS.gz
 /usr/share/doc/dbus-daemon/NEWS.gz

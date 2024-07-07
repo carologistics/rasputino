@@ -15,7 +15,6 @@
 /usr/share/bug
 /usr/share/bug/libgl-dev
 /usr/share/bug/libgl-dev/control
-/usr/share/doc
 /usr/share/doc/libgl-dev
 /usr/share/doc/libgl-dev/changelog.Debian.gz
 /usr/share/doc/libgl-dev/copyright

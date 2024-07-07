@@ -46,4 +46,5 @@ arm_boost=1
 otg_mode=1
 
 [all]
+usb_max_current_enable=1
 

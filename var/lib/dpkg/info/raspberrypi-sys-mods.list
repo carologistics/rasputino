@@ -46,7 +46,6 @@
 /usr/lib/raspberrypi-sys-mods/regenerate_ssh_host_keys
 /usr/lib/raspberrypi-sys-mods/sshswitch
 /usr/share
-/usr/share/doc
 /usr/share/doc/raspberrypi-sys-mods
 /usr/share/doc/raspberrypi-sys-mods/NEWS.Debian.gz
 /usr/share/doc/raspberrypi-sys-mods/changelog.gz

@@ -6,7 +6,6 @@
 /usr/share/bug
 /usr/share/bug/pkexec
 /usr/share/bug/pkexec/control
-/usr/share/doc
 /usr/share/doc/pkexec
 /usr/share/doc/pkexec/NEWS.Debian.gz
 /usr/share/doc/pkexec/changelog.Debian.gz

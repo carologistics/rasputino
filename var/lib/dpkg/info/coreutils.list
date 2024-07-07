@@ -112,7 +112,6 @@
 /usr/sbin
 /usr/sbin/chroot
 /usr/share
-/usr/share/doc
 /usr/share/doc/coreutils
 /usr/share/doc/coreutils/AUTHORS
 /usr/share/doc/coreutils/NEWS.Debian.gz

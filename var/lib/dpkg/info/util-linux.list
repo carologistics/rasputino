@@ -164,7 +164,6 @@
 /usr/share/bash-completion/completions/whereis
 /usr/share/bash-completion/completions/wipefs
 /usr/share/bash-completion/completions/zramctl
-/usr/share/doc
 /usr/share/doc/util-linux
 /usr/share/doc/util-linux/00-about-docs.txt
 /usr/share/doc/util-linux/AUTHORS.gz

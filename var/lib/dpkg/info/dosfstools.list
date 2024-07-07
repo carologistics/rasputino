@@ -5,7 +5,6 @@
 /sbin/mkfs.fat
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/dosfstools
 /usr/share/doc/dosfstools/ANNOUNCE.mkdosfs
 /usr/share/doc/dosfstools/ChangeLog.dosfsck

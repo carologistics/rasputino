@@ -10,7 +10,6 @@
 /usr/share/dbus-1
 /usr/share/dbus-1/services
 /usr/share/dbus-1/services/ca.desrt.dconf.service
-/usr/share/doc
 /usr/share/doc/dconf-service
 /usr/share/doc/dconf-service/changelog.Debian.gz
 /usr/share/doc/dconf-service/copyright

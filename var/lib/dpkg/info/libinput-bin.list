@@ -9,7 +9,6 @@
 /lib/udev/rules.d/90-libinput-fuzz-override.rules
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libinput-bin
 /usr/share/doc/libinput-bin/changelog.Debian.gz
 /usr/share/doc/libinput-bin/copyright

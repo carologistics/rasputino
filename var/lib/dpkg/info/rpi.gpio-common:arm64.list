@@ -5,7 +5,6 @@
 /lib/udev/rules.d/60-rpi.gpio-common.rules
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/rpi.gpio-common
 /usr/share/doc/rpi.gpio-common/README.Debian
 /usr/share/doc/rpi.gpio-common/README.txt

@@ -14,7 +14,6 @@
 /usr/bin/rsync
 /usr/bin/rsync-ssl
 /usr/share
-/usr/share/doc
 /usr/share/doc/rsync
 /usr/share/doc/rsync/NEWS.Debian.gz
 /usr/share/doc/rsync/NEWS.md.gz

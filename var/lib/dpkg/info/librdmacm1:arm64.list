@@ -6,7 +6,6 @@
 /usr/lib/aarch64-linux-gnu/rsocket
 /usr/lib/aarch64-linux-gnu/rsocket/librspreload.so
 /usr/share
-/usr/share/doc
 /usr/share/doc/librdmacm1
 /usr/share/doc/librdmacm1/changelog.Debian.gz
 /usr/share/doc/librdmacm1/copyright

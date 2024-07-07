@@ -39,7 +39,6 @@
 /usr/lib/aarch64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-egl-integration.so
 /usr/lib/aarch64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so
 /usr/share
-/usr/share/doc
 /usr/share/doc/libqt5gui5
 /usr/share/doc/libqt5gui5/changelog.Debian.gz
 /usr/share/doc/libqt5gui5/copyright

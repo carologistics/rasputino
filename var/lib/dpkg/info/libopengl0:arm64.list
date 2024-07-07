@@ -7,7 +7,6 @@
 /usr/share/bug
 /usr/share/bug/libopengl0
 /usr/share/bug/libopengl0/control
-/usr/share/doc
 /usr/share/doc/libopengl0
 /usr/share/doc/libopengl0/changelog.Debian.gz
 /usr/share/doc/libopengl0/copyright

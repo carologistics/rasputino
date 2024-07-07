@@ -25,7 +25,6 @@
 /usr/share
 /usr/share/bug
 /usr/share/bug/dpkg-dev
-/usr/share/doc
 /usr/share/doc/dpkg
 /usr/share/doc/dpkg/spec
 /usr/share/doc/dpkg/spec/frontend-api.txt

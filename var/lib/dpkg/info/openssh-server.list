@@ -39,7 +39,6 @@
 /usr/share/apport
 /usr/share/apport/package-hooks
 /usr/share/apport/package-hooks/openssh-server.py
-/usr/share/doc
 /usr/share/doc/openssh-client
 /usr/share/doc/openssh-client/examples
 /usr/share/doc/openssh-client/examples/ssh-session-cleanup.service

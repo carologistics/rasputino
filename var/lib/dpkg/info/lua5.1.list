@@ -4,7 +4,6 @@
 /usr/bin/lua5.1
 /usr/bin/luac5.1
 /usr/share
-/usr/share/doc
 /usr/share/doc/lua5.1
 /usr/share/doc/lua5.1/README.Debian.gz
 /usr/share/doc/lua5.1/changelog.Debian.gz

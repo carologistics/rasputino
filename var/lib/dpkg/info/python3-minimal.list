@@ -4,7 +4,6 @@
 /usr/bin/py3clean
 /usr/bin/py3compile
 /usr/share
-/usr/share/doc
 /usr/share/doc/python3-minimal
 /usr/share/doc/python3-minimal/README.Debian
 /usr/share/doc/python3-minimal/changelog.Debian.arm64.gz

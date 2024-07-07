@@ -4,7 +4,6 @@
 /usr/lib/openssh
 /usr/lib/openssh/sftp-server
 /usr/share
-/usr/share/doc
 /usr/share/man
 /usr/share/man/man8
 /usr/share/man/man8/sftp-server.8.gz

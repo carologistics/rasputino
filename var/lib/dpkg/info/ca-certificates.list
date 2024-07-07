@@ -150,7 +150,6 @@
 /usr/share/ca-certificates/mozilla/emSign_Root_CA_-_G1.crt
 /usr/share/ca-certificates/mozilla/vTrus_ECC_Root_CA.crt
 /usr/share/ca-certificates/mozilla/vTrus_Root_CA.crt
-/usr/share/doc
 /usr/share/doc/ca-certificates
 /usr/share/doc/ca-certificates/README.Debian
 /usr/share/doc/ca-certificates/changelog.gz

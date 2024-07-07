@@ -31,7 +31,6 @@
 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstvolume.so
 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstvorbis.so
 /usr/share
-/usr/share/doc
 /usr/share/doc/gstreamer1.0-plugins-base
 /usr/share/doc/gstreamer1.0-plugins-base/changelog.Debian.gz
 /usr/share/doc/gstreamer1.0-plugins-base/changelog.gz

@@ -14,7 +14,6 @@
 /usr/lib/raspi-config/cmstart.sh
 /usr/lib/raspi-config/init_resize.sh
 /usr/share
-/usr/share/doc
 /usr/share/doc/raspi-config
 /usr/share/doc/raspi-config/changelog.gz
 /usr/share/doc/raspi-config/copyright

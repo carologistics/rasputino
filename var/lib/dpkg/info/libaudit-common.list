@@ -3,7 +3,6 @@
 /etc/libaudit.conf
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libaudit-common
 /usr/share/doc/libaudit-common/changelog.Debian.gz
 /usr/share/doc/libaudit-common/changelog.gz

@@ -4,7 +4,6 @@
 /usr/bin/find
 /usr/bin/xargs
 /usr/share
-/usr/share/doc
 /usr/share/doc/findutils
 /usr/share/doc/findutils/NEWS.Debian.gz
 /usr/share/doc/findutils/NEWS.gz

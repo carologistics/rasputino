@@ -7,7 +7,6 @@
 /usr/share/bash-completion
 /usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/mbimcli
-/usr/share/doc
 /usr/share/doc/libmbim-utils
 /usr/share/doc/libmbim-utils/changelog.Debian.gz
 /usr/share/doc/libmbim-utils/copyright

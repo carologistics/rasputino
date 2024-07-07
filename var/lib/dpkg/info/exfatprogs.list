@@ -8,7 +8,6 @@
 /usr/sbin/mkfs.exfat
 /usr/sbin/tune.exfat
 /usr/share
-/usr/share/doc
 /usr/share/doc/exfatprogs
 /usr/share/doc/exfatprogs/changelog.Debian.gz
 /usr/share/doc/exfatprogs/changelog.gz

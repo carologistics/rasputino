@@ -15,7 +15,6 @@
 /usr/lib/aarch64-linux-gnu/libcamera/rkisp1_ipa_proxy
 /usr/lib/aarch64-linux-gnu/libcamera/vimc_ipa_proxy
 /usr/share
-/usr/share/doc
 /usr/share/doc/libcamera-ipa
 /usr/share/doc/libcamera-ipa/changelog.Debian.gz
 /usr/share/doc/libcamera-ipa/copyright

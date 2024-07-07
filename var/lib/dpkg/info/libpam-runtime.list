@@ -8,7 +8,6 @@
 /usr/sbin/pam-auth-update
 /usr/sbin/pam_getenv
 /usr/share
-/usr/share/doc
 /usr/share/doc/libpam-runtime
 /usr/share/doc/libpam-runtime/NEWS.Debian.gz
 /usr/share/doc/libpam-runtime/changelog.Debian.gz

@@ -10,7 +10,6 @@
 /usr/bin
 /usr/bin/pigpiod
 /usr/share
-/usr/share/doc
 /usr/share/doc/pigpiod
 /usr/share/doc/pigpiod/changelog.Debian.gz
 /usr/share/doc/pigpiod/copyright

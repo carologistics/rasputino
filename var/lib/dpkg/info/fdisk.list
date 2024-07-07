@@ -10,7 +10,6 @@
 /usr/share/bash-completion/completions/cfdisk
 /usr/share/bash-completion/completions/fdisk
 /usr/share/bash-completion/completions/sfdisk
-/usr/share/doc
 /usr/share/doc/fdisk
 /usr/share/doc/fdisk/changelog.Debian.gz
 /usr/share/doc/fdisk/changelog.gz

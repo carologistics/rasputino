@@ -10,7 +10,6 @@
 /sbin/dmsetup
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/dmsetup
 /usr/share/doc/dmsetup/changelog.Debian.devmapper.gz
 /usr/share/doc/dmsetup/changelog.Debian.gz

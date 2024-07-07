@@ -9,7 +9,6 @@
 /usr/lib/aarch64-linux-gnu/libbabeltrace-lttng-live.so.1.0.0
 /usr/lib/aarch64-linux-gnu/libbabeltrace.so.1.0.0
 /usr/share
-/usr/share/doc
 /usr/share/doc/libbabeltrace1
 /usr/share/doc/libbabeltrace1/changelog.Debian.arm64.gz
 /usr/share/doc/libbabeltrace1/changelog.Debian.gz

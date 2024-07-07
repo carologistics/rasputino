@@ -4,7 +4,6 @@
 /usr/bin/gpg-connect-agent
 /usr/bin/gpgconf
 /usr/share
-/usr/share/doc
 /usr/share/doc/gpgconf
 /usr/share/doc/gpgconf/NEWS.Debian.gz
 /usr/share/doc/gpgconf/changelog.Debian.gz

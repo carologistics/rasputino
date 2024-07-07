@@ -20,7 +20,6 @@
 /usr/share/bug/cron
 /usr/share/bug/cron/control
 /usr/share/bug/cron/script
-/usr/share/doc
 /usr/share/doc/cron
 /usr/share/doc/cron/FEATURES
 /usr/share/doc/cron/NEWS.Debian.gz

@@ -14,7 +14,6 @@
 /usr/sbin/addgnupghome
 /usr/sbin/applygnupgdefaults
 /usr/share
-/usr/share/doc
 /usr/share/doc/gnupg-utils
 /usr/share/doc/gnupg-utils/NEWS.Debian.gz
 /usr/share/doc/gnupg-utils/changelog.Debian.gz

@@ -75,7 +75,6 @@
 /usr/lib/linux-kbuild-6.6.20+rpt/tools/objtool/objtool.real-powerpc
 /usr/lib/linux-kbuild-6.6.20+rpt/tools/objtool/objtool.real-x86
 /usr/share
-/usr/share/doc
 /usr/share/doc/linux-kbuild-6.6.20+rpt
 /usr/share/doc/linux-kbuild-6.6.20+rpt/changelog.Debian.gz
 /usr/share/doc/linux-kbuild-6.6.20+rpt/copyright

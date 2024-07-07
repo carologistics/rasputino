@@ -7,7 +7,6 @@
 /usr/bin/dbus-update-activation-environment
 /usr/bin/dbus-uuidgen
 /usr/share
-/usr/share/doc
 /usr/share/doc/dbus-bin
 /usr/share/doc/dbus-bin/AUTHORS.gz
 /usr/share/doc/dbus-bin/NEWS.gz

@@ -4,7 +4,6 @@
 /usr/share
 /usr/share/aclocal
 /usr/share/aclocal/pkg.m4
-/usr/share/doc
 /usr/share/doc/pkgconf
 /usr/share/doc/pkgconf/changelog.Debian.gz
 /usr/share/doc/pkgconf/changelog.gz

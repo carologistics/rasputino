@@ -2,7 +2,6 @@
 /sbin
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/systemd-sysv
 /usr/share/doc/systemd-sysv/NEWS.Debian.gz
 /usr/share/doc/systemd-sysv/changelog.Debian.gz

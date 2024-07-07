@@ -61,7 +61,6 @@
 /usr/lib/gcc/aarch64-linux-gnu/12/libtsan_preinit.o
 /usr/lib/gcc/aarch64-linux-gnu/12/libubsan.a
 /usr/share
-/usr/share/doc
 /usr/lib/gcc/aarch64-linux-gnu/12/libasan.so
 /usr/lib/gcc/aarch64-linux-gnu/12/libatomic.so
 /usr/lib/gcc/aarch64-linux-gnu/12/libgomp.so

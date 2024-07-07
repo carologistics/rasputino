@@ -10,7 +10,6 @@
 /usr/share/bug
 /usr/share/bug/libegl1
 /usr/share/bug/libegl1/control
-/usr/share/doc
 /usr/share/doc/libegl1
 /usr/share/doc/libegl1/changelog.Debian.gz
 /usr/share/doc/libegl1/copyright

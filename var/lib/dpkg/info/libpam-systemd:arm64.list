@@ -5,7 +5,6 @@
 /lib/aarch64-linux-gnu/security/pam_systemd.so
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libpam-systemd
 /usr/share/doc/libpam-systemd/NEWS.Debian.gz
 /usr/share/doc/libpam-systemd/changelog.Debian.gz

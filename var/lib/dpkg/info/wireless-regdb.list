@@ -7,7 +7,6 @@
 /lib/firmware/regulatory.db.p7s-upstream
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/wireless-regdb
 /usr/share/doc/wireless-regdb/README.Debian
 /usr/share/doc/wireless-regdb/changelog.Debian.gz

@@ -21,7 +21,6 @@
 /usr/lib/tmpfiles.d/rpcbind.conf
 /usr/sbin
 /usr/share
-/usr/share/doc
 /usr/share/doc/rpcbind
 /usr/share/doc/rpcbind/NEWS.Debian.gz
 /usr/share/doc/rpcbind/README.Debian

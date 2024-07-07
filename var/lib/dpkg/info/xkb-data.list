@@ -317,7 +317,6 @@
 /usr/share/X11/xkb/types/nokia
 /usr/share/X11/xkb/types/numpad
 /usr/share/X11/xkb/types/pc
-/usr/share/doc
 /usr/share/doc/xkb-data
 /usr/share/doc/xkb-data/NEWS.Debian.gz
 /usr/share/doc/xkb-data/README.Debian

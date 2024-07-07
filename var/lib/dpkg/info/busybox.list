@@ -3,7 +3,6 @@
 /bin/busybox
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/busybox
 /usr/share/doc/busybox/changelog.Debian.arm64.gz
 /usr/share/doc/busybox/changelog.Debian.gz

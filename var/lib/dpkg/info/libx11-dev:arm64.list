@@ -21,7 +21,6 @@
 /usr/lib/aarch64-linux-gnu/pkgconfig
 /usr/lib/aarch64-linux-gnu/pkgconfig/x11.pc
 /usr/share
-/usr/share/doc
 /usr/share/doc/libx11-dev
 /usr/share/doc/libx11-dev/changelog.Debian.gz
 /usr/share/doc/libx11-dev/changelog.gz

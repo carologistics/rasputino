@@ -98,7 +98,6 @@
 /usr/bin/rpi-eeprom-digest
 /usr/bin/rpi-eeprom-update
 /usr/share
-/usr/share/doc
 /usr/share/doc/rpi-eeprom
 /usr/share/doc/rpi-eeprom/LICENCE.bootloader
 /usr/share/doc/rpi-eeprom/changelog.Debian.gz

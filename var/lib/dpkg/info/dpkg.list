@@ -37,7 +37,6 @@
 /usr/share
 /usr/share/bug
 /usr/share/bug/dpkg
-/usr/share/doc
 /usr/share/doc/dpkg
 /usr/share/doc/dpkg/AUTHORS
 /usr/share/doc/dpkg/README.api

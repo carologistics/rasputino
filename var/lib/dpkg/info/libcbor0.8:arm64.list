@@ -4,7 +4,6 @@
 /usr/lib/aarch64-linux-gnu
 /usr/lib/aarch64-linux-gnu/libcbor.so.0.8.0
 /usr/share
-/usr/share/doc
 /usr/share/doc/libcbor0.8
 /usr/share/doc/libcbor0.8/README.md
 /usr/share/doc/libcbor0.8/changelog.Debian.arm64.gz

@@ -48,7 +48,6 @@
 /usr/share/dbus-1
 /usr/share/dbus-1/system-services
 /usr/share/dbus-1/system-services/org.bluez.service
-/usr/share/doc
 /usr/share/doc/bluez
 /usr/share/doc/bluez/NEWS.Debian.gz
 /usr/share/doc/bluez/README.Debian.gz

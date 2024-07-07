@@ -16,7 +16,6 @@
 /usr/share/bug/mesa-vulkan-drivers
 /usr/share/bug/mesa-vulkan-drivers/control
 /usr/share/bug/mesa-vulkan-drivers/script
-/usr/share/doc
 /usr/share/doc/mesa-vulkan-drivers
 /usr/share/doc/mesa-vulkan-drivers/changelog.Debian.gz
 /usr/share/doc/mesa-vulkan-drivers/changelog.gz

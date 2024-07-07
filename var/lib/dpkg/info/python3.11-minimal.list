@@ -8,7 +8,6 @@
 /usr/share
 /usr/share/binfmts
 /usr/share/binfmts/python3.11
-/usr/share/doc
 /usr/share/doc/python3.11-minimal
 /usr/share/doc/python3.11-minimal/README.Debian.gz
 /usr/share/doc/python3.11-minimal/changelog.Debian.gz

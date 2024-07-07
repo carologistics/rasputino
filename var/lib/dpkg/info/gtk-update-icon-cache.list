@@ -5,7 +5,6 @@
 /usr/sbin
 /usr/sbin/update-icon-caches
 /usr/share
-/usr/share/doc
 /usr/share/doc/gtk-update-icon-cache
 /usr/share/doc/gtk-update-icon-cache/changelog.Debian.gz
 /usr/share/doc/gtk-update-icon-cache/copyright

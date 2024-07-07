@@ -4,7 +4,6 @@
 /sbin/partprobe
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/parted

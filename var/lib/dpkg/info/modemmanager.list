@@ -110,7 +110,6 @@
 /usr/share/dbus-1
 /usr/share/dbus-1/system-services
 /usr/share/dbus-1/system-services/org.freedesktop.ModemManager1.service
-/usr/share/doc
 /usr/share/doc/modemmanager
 /usr/share/doc/modemmanager/AUTHORS
 /usr/share/doc/modemmanager/NEWS.Debian.gz

@@ -32,7 +32,6 @@
 /usr/lib/raspi-firmware/start_db.elf
 /usr/lib/raspi-firmware/start_x.elf
 /usr/share
-/usr/share/doc
 /usr/share/doc/raspi-firmware
 /usr/share/doc/raspi-firmware/changelog.Debian.gz
 /usr/share/doc/raspi-firmware/copyright

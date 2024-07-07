@@ -9,7 +9,6 @@
 /usr/bin/fdtoverlay
 /usr/bin/fdtput
 /usr/share
-/usr/share/doc
 /usr/share/doc/device-tree-compiler
 /usr/share/doc/device-tree-compiler/README.Debian
 /usr/share/doc/device-tree-compiler/changelog.Debian.arm64.gz

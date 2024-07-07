@@ -5,14 +5,11 @@
 /usr/lib/valgrind
 /usr/lib/valgrind/python3.supp
 /usr/share
-/usr/share/doc
-/usr/share/doc/python3
 /usr/share/doc/python3/README.Debian
 /usr/share/doc/python3/changelog.Debian.arm64.gz
 /usr/share/doc/python3/changelog.Debian.gz
 /usr/share/doc/python3/copyright
 /usr/share/doc/python3/python-policy.txt.gz
-/usr/share/doc/python3.11
 /usr/share/doc-base
 /usr/share/doc-base/python3.python-policy
 /usr/share/lintian

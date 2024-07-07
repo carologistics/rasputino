@@ -2846,3 +2846,59 @@ Package: libsratom-0-0
 Architecture: arm64
 Auto-Installed: 1
 
+Package: libpython3-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: zlib1g-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-wheel
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libpython3.11-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3.11-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjs-jquery
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libexpat1-dev
+Architecture: arm64
+Auto-Installed: 1
+
+Package: python3-setuptools
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjs-sphinxdoc
+Architecture: arm64
+Auto-Installed: 1
+
+Package: javascript-common
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libjs-underscore
+Architecture: arm64
+Auto-Installed: 1
+
+Package: libgpm2
+Architecture: arm64
+Auto-Installed: 1
+
+Package: vim-runtime
+Architecture: arm64
+Auto-Installed: 1
+

@@ -6,7 +6,6 @@
 /usr/lib/aarch64-linux-gnu/gio/modules
 /usr/lib/aarch64-linux-gnu/gio/modules/libdconfsettings.so
 /usr/share
-/usr/share/doc
 /usr/share/doc/dconf-gsettings-backend
 /usr/share/doc/dconf-gsettings-backend/changelog.Debian.gz
 /usr/share/doc/dconf-gsettings-backend/copyright

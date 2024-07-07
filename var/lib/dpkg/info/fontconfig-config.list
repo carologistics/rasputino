@@ -6,7 +6,6 @@
 /etc/fonts/fonts.conf
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/fontconfig-config
 /usr/share/doc/fontconfig-config/NEWS.Debian.gz
 /usr/share/doc/fontconfig-config/changelog.Debian.gz

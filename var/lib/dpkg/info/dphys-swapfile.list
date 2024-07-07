@@ -14,7 +14,6 @@
 /usr/share/bash-completion
 /usr/share/bash-completion/completions
 /usr/share/bash-completion/completions/dphys-swapfile
-/usr/share/doc
 /usr/share/doc/dphys-swapfile
 /usr/share/doc/dphys-swapfile/FAQ
 /usr/share/doc/dphys-swapfile/NEWS.Debian.gz

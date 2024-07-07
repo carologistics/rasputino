@@ -46,7 +46,6 @@
 /usr/lib/aarch64-linux-gnu/pkgconfig/libcamera-base.pc
 /usr/lib/aarch64-linux-gnu/pkgconfig/libcamera.pc
 /usr/share
-/usr/share/doc
 /usr/share/doc/libcamera-dev
 /usr/share/doc/libcamera-dev/changelog.Debian.gz
 /usr/share/doc/libcamera-dev/copyright

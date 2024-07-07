@@ -7,7 +7,6 @@
 /lib/udev/rules.d/65-libwacom.rules
 /usr
 /usr/share
-/usr/share/doc
 /usr/share/doc/libwacom-common
 /usr/share/doc/libwacom-common/changelog.Debian.gz
 /usr/share/doc/libwacom-common/copyright
