@@ -56,7 +56,21 @@ STREAM_MARKED = True
 DETECT = True
 OBJECT = 2
 CONFIDENCE_THRESHOLD = 0.2
-IOU=0.3
+IOU = 0.3
+ROTATION = 270
+OLD_PPX = 247.16991942710536
+OLD_PPY = 311.0215589376087
+OLD_F_Y = 761.4091782824479
+OLD_F_X = 762.6983388147113
+NEW_PPX = 251.00801023972
+NEW_PPY = 301.32794812152997
+NEW_F_Y = 634.6348457656962
+NEW_F_X = 642.6147379302428
+K1 = -0.50304233
+K2 = 0.5782515
+K3 = -0.00701836
+K4 = 0.00308524
+K5 = -0.71367181
 
  # model = YOLO('model.pt',task='detect')
  # model.export(format="ncnn")
@@ -152,6 +166,21 @@ try:
                 if PICAM:
                     frame = cam.capture_array()
                     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+                    # preprocessing
+                    # rotation
+                    if(ROTATION == 270):
+                        frame = cv.rotate(frame, cv.ROTATE_90_COUNTERCLOCKWISE)
+                    elif(ROTATION == 90):
+                        frame = cv.rotate(frame, cv.ROTATE_90_CLOCKWISE)
+                    elif(ROTATION == 180):
+                        frame = cv2.rotate(frame, cv2.ROTATE_180)
+
+                    # undistort
+                    old_camera_matrix = cv.UMat(np.array([[old_f_x, 0., old_ppx], [0., old_f_y, old_ppy], [0., 0., 1.]]))
+                    new_camera_matrix = cv.UMat(np.array([[new_f_x, 0., new_ppx], [0., new_f_y, new_ppy], [0., 0., 1.]]))
+                    distortion = cv.UMat(np.array([[k1, k2, k3, k4, k5]]))
+                    frame = cv.undistort(frame, old_camera_matrix, distortion, None, new_camera_matrix)
                 else:
                     check, frame = cam.read()
                 timestamp = int(time.time())
