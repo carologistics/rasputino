@@ -53,7 +53,7 @@ if PICAM:
 IMSHOW = False
 STREAM_RAW = True
 STREAM_MARKED = True
-DETECT = True
+DETECT = False
 OBJECT = 2
 CONFIDENCE_THRESHOLD = 0.2
 IOU = 0.3
@@ -170,17 +170,17 @@ try:
                     # preprocessing
                     # rotation
                     if(ROTATION == 270):
-                        frame = cv.rotate(frame, cv.ROTATE_90_COUNTERCLOCKWISE)
+                        frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
                     elif(ROTATION == 90):
-                        frame = cv.rotate(frame, cv.ROTATE_90_CLOCKWISE)
+                        frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
                     elif(ROTATION == 180):
                         frame = cv2.rotate(frame, cv2.ROTATE_180)
 
                     # undistort
-                    old_camera_matrix = cv.UMat(np.array([[old_f_x, 0., old_ppx], [0., old_f_y, old_ppy], [0., 0., 1.]]))
-                    new_camera_matrix = cv.UMat(np.array([[new_f_x, 0., new_ppx], [0., new_f_y, new_ppy], [0., 0., 1.]]))
-                    distortion = cv.UMat(np.array([[k1, k2, k3, k4, k5]]))
-                    frame = cv.undistort(frame, old_camera_matrix, distortion, None, new_camera_matrix)
+                    old_camera_matrix = cv2.UMat(np.array([[OLD_F_X, 0., OLD_PPX], [0., OLD_F_Y, OLD_PPY], [0., 0., 1.]]))
+                    new_camera_matrix = cv2.UMat(np.array([[NEW_F_X, 0., NEW_PPX], [0., NEW_F_Y, NEW_PPY], [0., 0., 1.]]))
+                    distortion = cv2.UMat(np.array([[K1, K2, K3, K4, K5]]))
+                    frame =  cv2.UMat.get(cv2.undistort(frame, old_camera_matrix, distortion, None, new_camera_matrix))
                 else:
                     check, frame = cam.read()
                 timestamp = int(time.time())
@@ -237,11 +237,12 @@ try:
         print(e)
         
         # close camera
-        cam.release()
+        # cam.release()
         cv2.destroyAllWindows()
         print("Camera closed")
 
         # close server socket
+        server.shutdown()
         server.close()
         print("Server closed")
 
