@@ -41,6 +41,8 @@ import os
 #   Extended Control Messages (payload 1 Float value (4 Bytes))
 #       12 Set the confidence threshold for detection
 #       13 Set the IOU for detection
+#   Extended Control Messages (payload 56 Bytes, 1 Integer value, 13 Float values)
+#       14 Set the camera calibration parameters
 """
 
 PICAM = False
@@ -53,7 +55,7 @@ if PICAM:
 IMSHOW = False
 STREAM_RAW = True
 STREAM_MARKED = True
-DETECT = False
+DETECT = True
 OBJECT = 2
 CONFIDENCE_THRESHOLD = 0.2
 IOU = 0.3
@@ -75,6 +77,10 @@ K5 = -0.71367181
  # model = YOLO('model.pt',task='detect')
  # model.export(format="ncnn")
 ncnn_model = YOLO('model_ncnn_model', task='detect')
+
+def ntohf(message):
+    net_float, = struct.unpack('!I', message)
+    return struct.unpack('!f', struct.pack('!I', net_float))[0]
 
 def send_to_all(clients, message):
     for client_socket in clients:
@@ -103,7 +109,7 @@ try:
     else:
         cam = cv2.VideoCapture(0)
 
-    print("set up camera")
+    print("Set up camera")
     try:
         # create a socket object
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -130,53 +136,77 @@ try:
                             clients.remove(client)
                             notifiers.remove(client)
                         else:
-                            message_type, timestamp = struct.unpack('Bq', message[:9])
+                            message_type, timestamp = struct.unpack('!BQ', message[:9])
                             print("Received control message of type ", message_type)
                             if message_type == 4:
                                 STREAM_RAW = True
+                                print("Stream activated")
                             if message_type == 5:
                                 STREAM_MARKED = True
+                                print("Detection stream activated")
                             elif message_type == 6:
                                 STREAM_RAW = False
+                                print("Stream deactivated")
                             elif message_type == 7:
                                 STREAM_MARKED = False
+                                print("Detection stream deactivated")
                             elif message_type == 8:
                                 DETECT = True
                                 OBJECT = 2
+                                print("Switched to workpiece detection")
                             elif message_type == 9:
                                 DETECT = True
                                 OBJECT = 0
+                                print("Switched to conveyor detection")
                             elif message_type == 10:
                                 DETECT = True
                                 OBJECT = 1
+                                print("Switched to slide detection")
                             elif message_type == 11:
                                 DETECT = False
+                                print("Detection switched off")
                             elif message_type == 12:
                                 message = client.recv(4)
-                                CONFIDENCE_THRESHOLD = struct.unpack('f', message[0:4])
+                                CONFIDENCE_THRESHOLD = ntohf(message[0:4])
+                                print("New value for CONF", CONF)
                             elif message_type == 13:
                                 message = client.recv(4)
-                                IOU = struct.unpack('f', message[0:4])
+                                IOU = ntohf(message[0:4])
+                                print("New value for IOU", IOU)
                             elif message_type == 14:
                                 message = client.recv(56)
-                                ROTATION = struct.unpack('I', message[0:4])
-                                OLD_PPX = struct.unpack('f', message[4:8])
-                                OLD_PPY = struct.unpack('f', message[8:12])
-                                OLD_F_Y = struct.unpack('f', message[12:16])
-                                OLD_F_X = struct.unpack('f', message[16:20])
-                                NEW_PPX = struct.unpack('f', message[20:24])
-                                NEW_PPY = struct.unpack('f', message[24:28])
-                                NEW_F_Y = struct.unpack('f', message[28:32])
-                                NEW_F_X = struct.unpack('f', message[32:36])
-                                K1 = struct.unpack('f', message[36:40])
-                                K2 = struct.unpack('f', message[40:44])
-                                K3 = struct.unpack('f', message[44:48])
-                                K4 = struct.unpack('f', message[48:52])
-                                K5 = struct.unpack('f', message[52:56])
+                                ROTATION = struct.unpack('!I', message[0:4])[0]
+                                print("New value for ROTATION", ROTATION)
+                                OLD_PPX = ntohf(message[4:8])
+                                print("New value for OLD_PPX", OLD_PPX)
+                                OLD_PPY = ntohf(message[8:12])
+                                print("New value for OLD_PPY", OLD_PPY)
+                                OLD_F_Y = ntohf(message[12:16])
+                                print("New value for OLD_F_Y", OLD_F_Y)
+                                OLD_F_X = ntohf(message[16:20])
+                                print("New value for OLD_F_X", OLD_F_X)
+                                NEW_PPX = ntohf(message[20:24])
+                                print("New value for NEW_PPX", NEW_PPX)
+                                NEW_PPY = ntohf(message[24:28])
+                                print("New value for NEW_PPY", NEW_PPY)
+                                NEW_F_Y = ntohf(message[28:32])
+                                print("New value for NEW_F_Y", NEW_F_Y)
+                                NEW_F_X = ntohf(message[32:36])
+                                print("New value for NEW_F_X", NEW_F_X)
+                                K1 = ntohf(message[36:40])
+                                print("New value for K1", K1)
+                                K2 = ntohf(message[40:44])
+                                print("New value for K2", K2)
+                                K3 = ntohf(message[44:48])
+                                print("New value for K3", K3)
+                                K4 = ntohf(message[48:52])
+                                print("New value for K4", K4)
+                                K5 = ntohf(message[52:56])
+                                print("New value for K5", K5)
 
                 
                 for client in exception_sockets:
-                    print("removing socket with exception")
+                    print("Removing socket with exception")
                     clients.remove(client)
                     notifiers.remove(client)
 
@@ -202,7 +232,7 @@ try:
                     frame =  cv2.UMat.get(cv2.undistort(frame, old_camera_matrix, distortion, None, new_camera_matrix))
                 else:
                     check, frame = cam.read()
-                timestamp = int(time.time_ns())
+                timestamp = time.time_ns()
                 # the camera feed is streamed to all connected clients
                 if STREAM_RAW:
                     send_frame_to_all(clients, frame, timestamp, 1)
@@ -261,7 +291,7 @@ try:
         print("Camera closed")
 
         # close server socket
-        server.shutdown()
+        server.shutdown(1)
         server.close()
         print("Server closed")
 
