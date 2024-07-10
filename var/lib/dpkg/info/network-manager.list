@@ -32,7 +32,6 @@
 /usr/lib/NetworkManager
 /usr/lib/NetworkManager/VPN
 /usr/lib/NetworkManager/conf.d
-/usr/lib/NetworkManager/dispatcher.d
 /usr/lib/NetworkManager/dispatcher.d/no-wait.d
 /usr/lib/NetworkManager/dispatcher.d/pre-down.d
 /usr/lib/NetworkManager/dispatcher.d/pre-up.d

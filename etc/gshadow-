@@ -44,7 +44,6 @@ sgx:!::
 kvm:!::
 render:!::robotino
 netdev:!::robotino
-pi:!::
 systemd-timesync:!*::
 messagebus:!::
 _ssh:!::
@@ -54,3 +53,4 @@ polkitd:!*::
 spi:!::robotino
 i2c:!::robotino
 gpio:!::robotino
+robotino:!::

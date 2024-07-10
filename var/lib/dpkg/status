@@ -782,6 +782,50 @@ Description: Common CA certificates
  Full responsibility to assess them belongs to the local system
  administrator.
 
+Package: chrony
+Status: install ok installed
+Priority: optional
+Section: net
+Installed-Size: 686
+Maintainer: Vincent Blut <vincent.debian@free.fr>
+Architecture: arm64
+Version: 4.3-2+deb12u1
+Replaces: time-daemon
+Provides: time-daemon
+Depends: adduser, iproute2, tzdata, ucf, libc6 (>= 2.34), libcap2 (>= 1:2.10), libedit2 (>= 2.11-20080614-0), libgnutls30 (>= 3.7.5), libnettle8, libseccomp2 (>= 2.4.3-1~)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Suggests: dnsutils, networkd-dispatcher
+Breaks: network-manager (<< 1.20.0-1~)
+Conflicts: time-daemon
+Conffiles:
+ /etc/apparmor.d/usr.sbin.chronyd 3b159fe0dc931ab55d93e7a0f310a2d3
+ /etc/chrony/conf.d/README 3c8199dc2b9ac86e131f83bbaebdd698
+ /etc/chrony/sources.d/README 8f69d2e0dca0a28c66b2759b09b282b0
+ /etc/default/chrony 3559037f25fd7f0eb15737c133f15ab6
+ /etc/dhcp/dhclient-exit-hooks.d/chrony d112a665f6d89e92a9bf7bdf1b958326
+ /etc/init.d/chrony f11b9c1b677cd3243d8ff346a0bd1593
+ /etc/logrotate.d/chrony 6a3178c4670de7de393d9365e2793740
+ /etc/network/if-post-down.d/chrony 977c4c750450531a288711e6000afcee
+ /etc/network/if-up.d/chrony 977c4c750450531a288711e6000afcee
+ /etc/ppp/ip-down.d/chrony 83c004d5104eaff2300527031dbf1957
+ /etc/ppp/ip-up.d/chrony c929c3d3bebc71b1e249c3d0152b6706
+Description: Versatile implementation of the Network Time Protocol
+ It consists of a pair of programs:
+ .
+ chronyd:  This is a daemon which runs in background on the system.
+ It obtains measurements (e.g. via the network) of the system's offset
+ relative to other systems and adjusts the system time accordingly. For
+ isolated systems, the user can periodically enter the correct time by
+ hand (using 'chronyc'). In either case 'chronyd' determines the rate
+ at which the computer gains or loses time, and compensates for this.
+ Chronyd implements the NTP protocol and can act as either a client or
+ a server.
+ .
+ chronyc: This is a command-line driven control and monitoring program.
+ An administrator can use this to fine-tune various parameters within
+ the daemon, add or delete servers etc whilst the daemon is running.
+Homepage: https://chrony.tuxfamily.org
+
 Package: cifs-utils
 Status: install ok installed
 Priority: optional
@@ -6759,7 +6803,7 @@ Homepage: https://sites.google.com/site/fullycapable/
 
 Package: libcap2-bin
 Status: install ok installed
-Priority: important
+Priority: optional
 Section: utils
 Installed-Size: 303
 Maintainer: Christian Kastner <ckk@debian.org>
@@ -11017,7 +11061,7 @@ Homepage: https://www.llvm.org/
 
 Package: liblocale-gettext-perl
 Status: install ok installed
-Priority: required
+Priority: optional
 Section: perl
 Installed-Size: 99
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
@@ -16204,7 +16248,7 @@ Homepage: https://github.com/tesseract-ocr/
 
 Package: libtext-charwidth-perl
 Status: install ok installed
-Priority: required
+Priority: optional
 Section: perl
 Installed-Size: 93
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
@@ -16221,7 +16265,7 @@ Homepage: https://metacpan.org/release/Text-CharWidth
 
 Package: libtext-iconv-perl
 Status: install ok installed
-Priority: required
+Priority: optional
 Section: perl
 Installed-Size: 97
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
@@ -16240,7 +16284,7 @@ Homepage: https://metacpan.org/release/Text-Iconv
 
 Package: libtext-wrapi18n-perl
 Status: install ok installed
-Priority: required
+Priority: optional
 Section: perl
 Installed-Size: 26
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
@@ -22287,7 +22331,7 @@ Homepage: https://github.com/raspberrypi/utils
 
 Package: readline-common
 Status: install ok installed
-Priority: optional
+Priority: important
 Section: utils
 Installed-Size: 89
 Maintainer: Matthias Klose <doko@debian.org>
@@ -22509,7 +22553,7 @@ Homepage: https://www.gnu.org/software/sed/
 
 Package: sensible-utils
 Status: install ok installed
-Priority: required
+Priority: important
 Section: utils
 Installed-Size: 56
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
@@ -22730,7 +22774,7 @@ Description: system and service manager - SysV compatibility symlinks
 Homepage: https://www.freedesktop.org/wiki/Software/systemd
 
 Package: systemd-timesyncd
-Status: install ok installed
+Status: deinstall ok config-files
 Priority: standard
 Section: admin
 Installed-Size: 159
@@ -22739,6 +22783,7 @@ Architecture: arm64
 Multi-Arch: foreign
 Source: systemd
 Version: 252.22-1~deb12u1
+Config-Version: 252.22-1~deb12u1
 Replaces: systemd (<< 245.4-2~), time-daemon
 Provides: time-daemon
 Depends: libc6 (>= 2.34), libsystemd-shared (= 252.22-1~deb12u1), systemd
@@ -22817,7 +22862,7 @@ Description: tool for selecting tasks for installation on Debian systems
 
 Package: tasksel-data
 Status: install ok installed
-Priority: optional
+Priority: important
 Section: admin
 Installed-Size: 211
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
@@ -23410,7 +23455,7 @@ Homepage: https://www.gnu.org/software/wget/
 
 Package: whiptail
 Status: install ok installed
-Priority: optional
+Priority: important
 Section: utils
 Installed-Size: 97
 Maintainer: Alastair McKinstry <mckinstry@debian.org>

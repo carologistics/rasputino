@@ -44,7 +44,6 @@ sgx:x:103:
 kvm:x:104:
 render:x:105:robotino
 netdev:x:106:robotino
-pi:x:1000:
 systemd-timesync:x:997:
 messagebus:x:107:
 _ssh:x:108:
@@ -54,3 +53,4 @@ polkitd:x:996:
 spi:x:995:robotino
 i2c:x:994:robotino
 gpio:x:993:robotino
+robotino:x:1000:
