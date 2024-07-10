@@ -40,7 +40,7 @@ import os
 #       11 Switch-off Detection Message
 #   Extended Control Messages (payload 1 Float value (4 Bytes))
 #       12 Set the confidence threshold for detection
-#       13 Set the IO for detection
+#       13 Set the IOU for detection
 """
 
 PICAM = False
@@ -87,7 +87,7 @@ def send_frame_to_all(clients, frame, timestamp, msg_type):
     frame_b64 = base64.b64encode(frame_bytes)
 
     # create a message type 1/2 header
-    header = struct.pack('!BIIII', msg_type, timestamp, frame.shape[0], frame.shape[1], len(frame_b64))
+    header = struct.pack('!BQIII', msg_type, timestamp, frame.shape[0], frame.shape[1], len(frame_b64))
 
     # build the message
     message = header + frame_b64
@@ -125,7 +125,7 @@ try:
                         clients.append(client_socket)
                         print("Connection established")
                     else:
-                        message = client.recv(2048)
+                        message = client.recv(9)
                         if not message:
                             clients.remove(client)
                             notifiers.remove(client)
@@ -152,9 +152,28 @@ try:
                             elif message_type == 11:
                                 DETECT = False
                             elif message_type == 12:
-                                CONFIDENCE_THRESHOLD = struct.unpack('f', message[9:13])
+                                message = client.recv(4)
+                                CONFIDENCE_THRESHOLD = struct.unpack('f', message[0:4])
                             elif message_type == 13:
-                                IOU = struct.unpack('f', message[9:13])
+                                message = client.recv(4)
+                                IOU = struct.unpack('f', message[0:4])
+                            elif message_type == 14:
+                                message = client.recv(56)
+                                ROTATION = struct.unpack('I', message[0:4])
+                                OLD_PPX = struct.unpack('f', message[4:8])
+                                OLD_PPY = struct.unpack('f', message[8:12])
+                                OLD_F_Y = struct.unpack('f', message[12:16])
+                                OLD_F_X = struct.unpack('f', message[16:20])
+                                NEW_PPX = struct.unpack('f', message[20:24])
+                                NEW_PPY = struct.unpack('f', message[24:28])
+                                NEW_F_Y = struct.unpack('f', message[28:32])
+                                NEW_F_X = struct.unpack('f', message[32:36])
+                                K1 = struct.unpack('f', message[36:40])
+                                K2 = struct.unpack('f', message[40:44])
+                                K3 = struct.unpack('f', message[44:48])
+                                K4 = struct.unpack('f', message[48:52])
+                                K5 = struct.unpack('f', message[52:56])
+
                 
                 for client in exception_sockets:
                     print("removing socket with exception")
@@ -183,7 +202,7 @@ try:
                     frame =  cv2.UMat.get(cv2.undistort(frame, old_camera_matrix, distortion, None, new_camera_matrix))
                 else:
                     check, frame = cam.read()
-                timestamp = int(time.time())
+                timestamp = int(time.time_ns())
                 # the camera feed is streamed to all connected clients
                 if STREAM_RAW:
                     send_frame_to_all(clients, frame, timestamp, 1)
@@ -215,7 +234,7 @@ try:
                         w=shapes[i][2]
                         h=shapes[i][3]
 
-                        detection_message = struct.pack('!BIfffffI', 3, timestamp, x, y, w, h, float(confidences[i]), int(class_id))
+                        detection_message = struct.pack('!BQfffffI', 3, timestamp, x, y, w, h, float(confidences[i]), int(class_id))
                         send_to_all(clients,detection_message)
 
                 if IMSHOW:
