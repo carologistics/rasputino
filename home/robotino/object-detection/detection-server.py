@@ -259,12 +259,12 @@ try:
                     for i in filtered_indices:
                         box = boxes[i]
                         class_id = class_ids[i]
-                        x=shapes[i][0]
-                        y=shapes[i][1]
-                        w=shapes[i][2]
-                        h=shapes[i][3]
+                        x=shapes[i][0]/frame.shape[1];
+                        y=shapes[i][1]/frame.shape[0];
+                        w=shapes[i][2]/frame.shape[1];
+                        h=shapes[i][3]/frame.shape[0];
 
-                        detection_message = struct.pack('!BQfffffI', 3, timestamp, x, y, w, h, float(confidences[i]), int(class_id))
+                        detection_message = struct.pack('!BQfffffI', 3, timestamp, x, y, h, w, float(confidences[i]), int(class_id))
                         send_to_all(clients,detection_message)
 
                 if IMSHOW:
