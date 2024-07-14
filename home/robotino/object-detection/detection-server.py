@@ -120,10 +120,10 @@ try:
         notifiers = [server]
 
         # initialize undistort
-        old_camera_matrix = cv.UMat(np.array([[OLD_F_X, 0., OLD_PPX], [0., OLD_F_Y, OLD_PPY], [0., 0., 1.]]))
-        new_camera_matrix = cv.UMat(np.array([[NEW_F_X, 0., NEW_PPX], [0., NEW_F_Y, NEW_PPY], [0., 0., 1.]]))
-        distortion = cv.UMat(np.array([[K1, K2, K3, K4, K5]]))
-        mapx, mapy = cv.initUndistortRectifyMap(old_camera_matrix, distortion, None, new_camera_matrix, (480,640), 5)
+        old_camera_matrix = cv2.UMat(np.array([[OLD_F_X, 0., OLD_PPX], [0., OLD_F_Y, OLD_PPY], [0., 0., 1.]]))
+        new_camera_matrix = cv2.UMat(np.array([[NEW_F_X, 0., NEW_PPX], [0., NEW_F_Y, NEW_PPY], [0., 0., 1.]]))
+        distortion = cv2.UMat(np.array([[K1, K2, K3, K4, K5]]))
+        mapx, mapy = cv2.initUndistortRectifyMap(old_camera_matrix, distortion, None, new_camera_matrix, (480,640), 5)
         
         while True:
             try:
@@ -232,7 +232,7 @@ try:
                         frame = cv2.rotate(frame, cv2.ROTATE_180)
 
                     # undistort
-                    frame = cv2.UMat.get(cv.remap(frame, mapx, mapy, cv.INTER_LINEAR))
+                    frame = cv2.UMat.get(cv2.remap(frame, mapx, mapy, cv2.INTER_LINEAR))
                 else:
                     check, frame = cam.read()
                 timestamp = time.time_ns()
