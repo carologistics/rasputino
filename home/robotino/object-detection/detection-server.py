@@ -55,6 +55,7 @@ if PICAM:
 IMSHOW = False
 STREAM_RAW = True
 STREAM_MARKED = True
+SAVE_IMG_ONCE = False
 DETECT = True
 OBJECT = 2
 CONFIDENCE_THRESHOLD = 0.2
@@ -74,6 +75,9 @@ K3 = -0.00701836
 K4 = 0.00308524
 K5 = -0.71367181
 
+OUTPUT_DIR = 'images'
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)
  # model = YOLO('model.pt',task='detect')
  # model.export(format="ncnn")
 ncnn_model = YOLO('model_ncnn_model', task='detect')
@@ -209,6 +213,9 @@ try:
                                 print("New value for K4", K4)
                                 K5 = ntohf(message[52:56])
                                 print("New value for K5", K5)
+                            elif message_type == 15:
+                                SAVE_IMG_ONCE = True
+                                print("Taking one image")
 
                 
                 for client in exception_sockets:
@@ -236,6 +243,18 @@ try:
                 else:
                     check, frame = cam.read()
                 timestamp = time.time_ns()
+                if SAVE_IMG_ONCE:
+                    SAVE_IMG_ONCE = False
+                    cv2.imwrite(f'{OUTPUT_DIR}/{timestamp}.jpg', frame)
+                    results = ncnn_model.track(frame, persist=True, iou=IOU)
+                    boxes = results[0].boxes
+                    class_ids = boxes.cls
+                    shapes = boxes.xywh.numpy()
+
+                    # Write detection results to a file
+                    with open(f'{OUTPUT_DIR}/{timestamp}.txt', 'w') as f:
+                        for class_id, (x, y, w, h) in zip(class_ids, shapes):
+                            f.write(f"{int(class_id)} {x/frame.shape[1]:.5f} {y/frame.shape[0]:.5f} {w/frame.shape[1]:.5f} {h/frame.shape[0]:.5f}\n")
                 # the camera feed is streamed to all connected clients
                 if STREAM_RAW:
                     send_frame_to_all(clients, frame, timestamp, 1)
