@@ -1,5 +1,6 @@
 import socket
 import select
+import datetime
 import cv2
 import numpy as np
 import io
@@ -243,16 +244,17 @@ try:
                 else:
                     check, frame = cam.read()
                 timestamp = time.time_ns()
+                current_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
                 if SAVE_IMG_ONCE:
                     SAVE_IMG_ONCE = False
-                    cv2.imwrite(f'{OUTPUT_DIR}/{timestamp}.jpg', frame)
+                    cv2.imwrite(f'{OUTPUT_DIR}/{current_time}.jpg', frame)
                     results = ncnn_model.track(frame, persist=True, iou=IOU)
                     boxes = results[0].boxes
                     class_ids = boxes.cls
                     shapes = boxes.xywh.numpy()
 
                     # Write detection results to a file
-                    with open(f'{OUTPUT_DIR}/{timestamp}.txt', 'w') as f:
+                    with open(f'{OUTPUT_DIR}/{current_time}.txt', 'w') as f:
                         for class_id, (x, y, w, h) in zip(class_ids, shapes):
                             f.write(f"{int(class_id)} {x/frame.shape[1]:.5f} {y/frame.shape[0]:.5f} {w/frame.shape[1]:.5f} {h/frame.shape[0]:.5f}\n")
                 # the camera feed is streamed to all connected clients
