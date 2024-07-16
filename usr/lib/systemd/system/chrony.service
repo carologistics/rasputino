@@ -14,6 +14,7 @@ EnvironmentFile=-/etc/default/chrony
 User=_chrony
 # Daemon is started as root, but still sandboxed
 ExecStart=!/usr/sbin/chronyd $DAEMON_OPTS
+ExecPostStart=/usr/bin/chronyc burst 4/4 && /usr/bin/chronyc makestep
 
 CapabilityBoundingSet=~CAP_AUDIT_CONTROL CAP_AUDIT_READ CAP_AUDIT_WRITE
 CapabilityBoundingSet=~CAP_BLOCK_SUSPEND CAP_KILL CAP_LEASE CAP_LINUX_IMMUTABLE
