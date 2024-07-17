@@ -85,7 +85,8 @@ ncnn_model = YOLO('new_ncnn_model', task='detect')
 
 def ntohf(message):
     net_float, = struct.unpack('!I', message)
-    return struct.unpack('!f', struct.pack('!I', net_float))[0]
+    return_val = struct.unpack('!f', struct.pack('!I', net_float))[0]
+    return return_val
 
 def send_to_all(clients, message):
     for client_socket in clients:
@@ -143,13 +144,12 @@ try:
                         print("Connection established")
                     else:
                         print("Receiving ...")
-                        message = client.recv(9)
-                        print("Received", message)
+                        message = client.recv(1)
                         if not message:
                             clients.remove(client)
                             notifiers.remove(client)
                         else:
-                            message_type, timestamp = struct.unpack('!BQ', message[:9])
+                            message_type = struct.unpack('B', message[:1])[0]
                             print("Received control message of type ", message_type)
                             if message_type == 4:
                                 STREAM_RAW = True
@@ -181,7 +181,7 @@ try:
                             elif message_type == 12:
                                 message = client.recv(4)
                                 CONFIDENCE_THRESHOLD = ntohf(message[0:4])
-                                print("New value for CONF", CONF)
+                                print("New value for CONF", CONFIDENCE_THRESHOLD)
                             elif message_type == 13:
                                 message = client.recv(4)
                                 IOU = ntohf(message[0:4])
