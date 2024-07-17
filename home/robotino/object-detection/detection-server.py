@@ -79,9 +79,9 @@ K5 = -0.71367181
 OUTPUT_DIR = 'images'
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
- # model = YOLO('model.pt',task='detect')
- # model.export(format="ncnn")
-ncnn_model = YOLO('model_ncnn_model', task='detect')
+# model = YOLO('new.pt',task='detect')
+# model.export(format="ncnn")
+ncnn_model = YOLO('new_ncnn_model', task='detect')
 
 def ntohf(message):
     net_float, = struct.unpack('!I', message)
@@ -142,7 +142,9 @@ try:
                         clients.append(client_socket)
                         print("Connection established")
                     else:
+                        print("Receiving ...")
                         message = client.recv(9)
+                        print("Received", message)
                         if not message:
                             clients.remove(client)
                             notifiers.remove(client)
@@ -289,6 +291,10 @@ try:
                         h=shapes[i][3]/frame.shape[0];
 
                         detection_message = struct.pack('!BQfffffI', 3, timestamp, x, y, h, w, float(confidences[i]), int(class_id))
+                        send_to_all(clients,detection_message)
+                    if not filtered_indices:
+                        # send an empty box at least to trigger an update
+                        detection_message = struct.pack('!BQfffffI', 3, timestamp, 0, 0, 0, 0, 0, 0)
                         send_to_all(clients,detection_message)
 
                 if IMSHOW:
