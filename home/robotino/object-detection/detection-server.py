@@ -81,7 +81,7 @@ OUTPUT_DIR = 'images'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 # model = YOLO('new.pt',task='detect')
 # model.export(format="ncnn")
-ncnn_model = YOLO('new_ncnn_model', task='detect')
+ncnn_model = YOLO('model_ncnn_model', task='detect')
 
 def ntohf(message):
     net_float, = struct.unpack('!I', message)
