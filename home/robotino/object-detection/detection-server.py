@@ -233,6 +233,10 @@ try:
                     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
                     # preprocessing
+
+                    # undistort
+                    frame = cv2.UMat.get(cv2.remap(frame, mapx, mapy, cv2.INTER_LINEAR))
+
                     # rotation
                     if(ROTATION == 270):
                         frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
@@ -240,9 +244,6 @@ try:
                         frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
                     elif(ROTATION == 180):
                         frame = cv2.rotate(frame, cv2.ROTATE_180)
-
-                    # undistort
-                    frame = cv2.UMat.get(cv2.remap(frame, mapx, mapy, cv2.INTER_LINEAR))
                 else:
                     check, frame = cam.read()
                 timestamp = time.time_ns()
