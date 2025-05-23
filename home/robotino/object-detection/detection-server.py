@@ -61,20 +61,20 @@ DETECT = True
 OBJECT = 2
 CONFIDENCE_THRESHOLD = 0.2
 IOU = 0.3
-ROTATION = 270
-OLD_PPX = 247.16991942710536
-OLD_PPY = 311.0215589376087
-OLD_F_Y = 761.4091782824479
-OLD_F_X = 762.6983388147113
-NEW_PPX = 251.00801023972
-NEW_PPY = 301.32794812152997
-NEW_F_Y = 634.6348457656962
-NEW_F_X = 642.6147379302428
-K1 = -0.50304233
-K2 = 0.5782515
-K3 = -0.00701836
-K4 = 0.00308524
-K5 = -0.71367181
+ROTATION = 0
+OLD_PPX = 318.11536462152407
+OLD_PPY = 228.6351132325681
+OLD_F_Y = 792.1682407848058
+OLD_F_X = 792.6059140248458
+NEW_PPX = 318.11381299426
+NEW_PPY = 228.25186138442461
+NEW_F_Y = 681.2231206201194
+NEW_F_X = 683.7395089886643
+K1 = -0.494594102
+K2 = 0.327411724
+K3 = 0.00172258759
+K4 = 0.000379424168
+K5 = -0.163266317
 
 OUTPUT_DIR = 'images'
 
@@ -129,7 +129,7 @@ try:
         old_camera_matrix = cv2.UMat(np.array([[OLD_F_X, 0., OLD_PPX], [0., OLD_F_Y, OLD_PPY], [0., 0., 1.]]))
         new_camera_matrix = cv2.UMat(np.array([[NEW_F_X, 0., NEW_PPX], [0., NEW_F_Y, NEW_PPY], [0., 0., 1.]]))
         distortion = cv2.UMat(np.array([[K1, K2, K3, K4, K5]]))
-        mapx, mapy = cv2.initUndistortRectifyMap(old_camera_matrix, distortion, None, new_camera_matrix, (480,640), 5)
+        mapx, mapy = cv2.initUndistortRectifyMap(old_camera_matrix, distortion, None, new_camera_matrix, (640,480), 5)
         
         while True:
             try:
@@ -216,6 +216,12 @@ try:
                                 print("New value for K4", K4)
                                 K5 = ntohf(message[52:56])
                                 print("New value for K5", K5)
+
+                                # initialize undistort
+                                old_camera_matrix = cv2.UMat(np.array([[OLD_F_X, 0., OLD_PPX], [0., OLD_F_Y, OLD_PPY], [0., 0., 1.]]))
+                                new_camera_matrix = cv2.UMat(np.array([[NEW_F_X, 0., NEW_PPX], [0., NEW_F_Y, NEW_PPY], [0., 0., 1.]]))
+                                distortion = cv2.UMat(np.array([[K1, K2, K3, K4, K5]]))
+                                mapx, mapy = cv2.initUndistortRectifyMap(old_camera_matrix, distortion, None, new_camera_matrix, (640,480), 5)
                             elif message_type == 15:
                                 SAVE_IMG_ONCE = True
                                 print("Taking one image")
