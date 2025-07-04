@@ -1,0 +1,17 @@
+[Unit]
+Description=Starts the server for camera
+After=network.target
+
+[Service]
+WorkingDirectory=/home/robotino/object-detection
+ExecStart=/home/robotino/venv/bin/python3 /home/robotino/object-detection/detection-server.py
+User=robotino
+Group=robotino
+#MemoryLimit=2048M
+#CPUQuota=70%
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

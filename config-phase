@@ -1,0 +1,29 @@
+#!/bin/bash
+# SDM custom phase script to modify cmdline.txt and fstab
+
+# Skip Phase 0
+if [ "$SDMNSPAWN" = "Phase0" ]; then
+    echo "Skipping in Phase 0 — running only in Phase 1."
+    exit 0
+fi
+
+IP=$(grep '^custom1:' /etc/sdm/cparams | cut -d: -f2- | sed 's/"//g')
+
+cat <<EOF > "/boot/firmware/cmdline.txt"
+selinux=0 dwc_otg.lpm_enable=0 console=tty1 rootwait rw nfsroot=$IP:/rpi/root ip=dhcp dns=8.8.8.8 root=/dev/nfs systemd.log_level=info systemd.log_target=console systemd.debug-shell=1
+EOF
+
+echo "Writing custom fstab..."
+
+cat <<EOF > "${SDM_ROOTFS}/etc/fstab"
+proc            /proc           proc    defaults          0       0
+$IP:/rpi/root / nfs defaults,noatime 0 1
+$IP:/home/robotino/rasputino/object-detection /home/robotino/object-detection nfs defaults,noatime 0 1
+EOF
+
+groupmod -g 1001 pi
+usermod -u 1001 pi
+
+# usermod -l robotino pi
+# groupmod -n robotino pi
+# usermod -d /home/robotino -m robotino
