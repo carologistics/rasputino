@@ -22,6 +22,8 @@ fi
 
 sudo rm -rf /rpi
 
+ssh-keygen -R 192.168.0.100
+
 sudo mkdir -p /rpi/internals
 sudo mkdir -p /rpi/firmware
 sudo mkdir -p /rpi/root
@@ -48,15 +50,17 @@ export SDM_LOG_LEVEL=debug
 sudo ../sdm/sdm \
   --customize \
   --batch \
-  --extend --xmb 2048 \
+  --extend --xmb 4096 \
   --plugin user:"deluser=pi" \
   --plugin user:"adduser=robotino|password=dynabot|uid=1000" \
   --plugin disables:piwiz \
   --plugin L10n:host \
   --plugin copyfile:"from=camera-server.service|to=/etc/systemd/system/" \
   --plugin system:"service-enable=camera-server.service" \
-  --plugin apps:"apps=vim libcamera-dev python3-libcamera libcap-dev python3-dev build-essential libgl1-mesa-glx python3-kms++" \
+  --plugin apps:"apps=vim libcamera-dev python3-libcamera libcap-dev python3-dev build-essential libgl1-mesa-glx python3-kms++ git cmake libprotobuf-dev protobuf-compiler libomp-dev libopencv-dev" \
   --plugin venv:"path=/home/robotino/venv|create=true|requirements=object-detection/requirements.txt|createoptions=--system-site-packages" \
+  --plugin copyfile:"from=/home/robotino/.ssh/*.pub|to=/home/robotino/.ssh/authorized_keys|mkdirif|chown=robotino:robotino|chmod=600" \
+  --plugin copyfile:"from=settings.yaml|to=/home/robotino/.config/Ultralytics|mkdirif|chown=robotino:robotino|chmod=644" \
   --cscript ./config-phase \
   --custom1 $IP \
   --plugin chrony:"sources=chrony.sources|nodistsources" \

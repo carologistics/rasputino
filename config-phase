@@ -20,3 +20,9 @@ proc            /proc           proc    defaults          0       0
 $IP:/rpi/root / nfs defaults,noatime 0 1
 $IP:/home/robotino/rasputino/object-detection /home/robotino/object-detection nfs defaults,noatime 0 1
 EOF
+
+cat << EOF >> "/home/robotino/.bashrc"
+if [ -f ~/venv/bin/activate ]; then
+    source ~/venv/bin/activate
+fi
+EOF
