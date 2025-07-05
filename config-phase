@@ -20,10 +20,3 @@ proc            /proc           proc    defaults          0       0
 $IP:/rpi/root / nfs defaults,noatime 0 1
 $IP:/home/robotino/rasputino/object-detection /home/robotino/object-detection nfs defaults,noatime 0 1
 EOF
-
-groupmod -g 1001 pi
-usermod -u 1001 pi
-
-# usermod -l robotino pi
-# groupmod -n robotino pi
-# usermod -d /home/robotino -m robotino

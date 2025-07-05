@@ -32,9 +32,7 @@ sudo mkdir -p /rpi/internals/base
 sudo wget -O /rpi/pi.img.xz https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2025-05-13/2025-05-13-raspios-bookworm-arm64-lite.img.xz
 
 sudo unxz /rpi/pi.img.xz
-#
-# TODO TOOGLE
-# cp pi.img /rpi/pi.img
+
 IMG=/rpi/pi.img
 
 ETH_IF=$(nmcli -t -f DEVICE,TYPE device status | grep ':ethernet$' | cut -d: -f1)
@@ -47,13 +45,11 @@ echo "server $IP iburst" > chrony.sources
   # --batch \
 export SDM_LOG_LEVEL=debug
 
-sudo ../sdm \
-  --extend --xmb 2048 \
-  $IMG
-
-# TODO libcamera-apps
-sudo ../sdm \
+sudo ../sdm/sdm \
   --customize \
+  --batch \
+  --extend --xmb 2048 \
+  --plugin user:"deluser=pi" \
   --plugin user:"adduser=robotino|password=dynabot|uid=1000" \
   --plugin disables:piwiz \
   --plugin L10n:host \
