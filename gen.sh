@@ -46,7 +46,7 @@ echo "server $IP iburst" > chrony.sources
 
   # --batch \
 export SDM_LOG_LEVEL=debug
-
+#  libprotobuf-dev protobuf-compiler libomp-dev libopencv-dev
 sudo ../sdm/sdm \
   --customize \
   --batch \
@@ -57,7 +57,7 @@ sudo ../sdm/sdm \
   --plugin L10n:host \
   --plugin copyfile:"from=camera-server.service|to=/etc/systemd/system/" \
   --plugin system:"service-enable=camera-server.service" \
-  --plugin apps:"apps=vim libcamera-dev python3-libcamera libcap-dev python3-dev build-essential libgl1-mesa-glx python3-kms++ git cmake libprotobuf-dev protobuf-compiler libomp-dev libopencv-dev" \
+  --plugin apps:"apps=vim libcamera-dev python3-libcamera libcap-dev python3-dev build-essential libgl1-mesa-glx python3-kms++ git cmake" \
   --plugin venv:"path=/home/robotino/venv|create=true|requirements=object-detection/requirements.txt|createoptions=--system-site-packages" \
   --plugin copyfile:"from=/home/robotino/.ssh/*.pub|to=/home/robotino/.ssh/authorized_keys|mkdirif|chown=robotino:robotino|chmod=600" \
   --plugin copyfile:"from=settings.yaml|to=/home/robotino/.config/Ultralytics|mkdirif|chown=robotino:robotino|chmod=644" \
