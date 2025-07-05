@@ -3,4 +3,4 @@ numpy>=1.19.0
 ultralytics>=8.0.0
 lap>=0.5.12
 picamera2
-# git+https://github.com/Tencent/ncnn.git
+ncnn
