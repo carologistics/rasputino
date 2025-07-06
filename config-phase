@@ -1,9 +1,11 @@
 #!/bin/bash
-# SDM custom phase script to modify cmdline.txt and fstab
 
-# Skip Phase 0
 if [ "$SDMNSPAWN" = "Phase0" ]; then
-    echo "Skipping in Phase 0 — running only in Phase 1."
+    echo "Added ssh keys to authorized_keys"
+    SSH_DIR=$(grep '^custom2:' $SDMPT/etc/sdm/cparams | cut -d: -f2- | sed 's/"//g')
+    mkdir -p $SDMPT/home/robotino/.ssh
+    cat $SSH_DIR/*.pub >> $SDMPT/home/robotino/.ssh/authorized_keys
+    chmod 700 $SDMPT/home/robotino/.ssh
     exit 0
 fi
 

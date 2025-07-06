@@ -23,6 +23,7 @@ fi
 sudo rm -rf /rpi
 
 ssh-keygen -R 192.168.0.100
+ssh-keygen -R pi
 
 sudo mkdir -p /rpi/internals
 sudo mkdir -p /rpi/firmware
@@ -44,12 +45,10 @@ echo $IP
 
 echo "server $IP iburst" > chrony.sources
 
-SSH_KEYFILE=$(find "$HOME/.ssh" -maxdepth 1 -type f -name '*.pub' | head -n1)
-echo $SSH_KEYFILE
+user=${SUDO_USER:-$USER}
+SSH_DIR=$(eval echo "~$user")/.ssh
+echo $SSH_DIR
 
-  # --batch \
-export SDM_LOG_LEVEL=debug
-#  libprotobuf-dev protobuf-compiler libomp-dev libopencv-dev
 sudo ../sdm/sdm \
   --customize \
   --batch \
@@ -62,10 +61,10 @@ sudo ../sdm/sdm \
   --plugin system:"service-enable=camera-server.service" \
   --plugin apps:"apps=vim libcamera-dev python3-libcamera libcap-dev python3-dev build-essential libgl1-mesa-glx python3-kms++ git cmake" \
   --plugin venv:"path=/home/robotino/venv|create=true|requirements=object-detection/requirements.txt|createoptions=--system-site-packages" \
-  --plugin sshkey:"sshuser=robotino|import-key=$SSH_KEYFILE|authkey" \
   --plugin copyfile:"from=settings.yaml|to=/home/robotino/.config/Ultralytics|mkdirif|chown=robotino:robotino|chmod=644" \
   --cscript ./config-phase \
   --custom1 $IP \
+  --custom2 $SSH_DIR \
   --plugin chrony:"sources=chrony.sources|nodistsources" \
   --apt-options noupgrade \
   --regen-ssh-host-keys \
