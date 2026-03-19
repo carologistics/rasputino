@@ -1,9 +1,23 @@
 #!/bin/bash
 
-sudo systemctl stop dhcpd.service
-sudo systemctl stop nfs-server.service
-sudo systemctl stop tftp.socket
-sudo systemctl stop tftp.service
+# Detect OS
+. /etc/os-release
+
+if [[ "$ID" == "ubuntu" || "$ID_LIKE" == *"debian"* ]]; then
+    DHCP_SERVICE="isc-dhcp-server"
+    NFS_SERVICE="nfs-kernel-server"
+    TFTP_SERVICE="tftpd-hpa"
+else
+    # Fedora / RHEL
+    DHCP_SERVICE="dhcpd"
+    NFS_SERVICE="nfs-server"
+    TFTP_SERVICE="tftp"
+    sudo systemctl stop tftp.socket
+fi
+
+sudo systemctl stop "${DHCP_SERVICE}.service"
+sudo systemctl stop "${NFS_SERVICE}.service"
+sudo systemctl stop "${TFTP_SERVICE}.service"
 
 if mountpoint -q /rpi/firmware; then
 	echo "UNMOUNTING /rpi/firmware"
@@ -87,6 +101,8 @@ sudo mount -t overlay overlay /rpi/root \
   -o lowerdir=/rpi/internals/base,upperdir=/rpi/internals/changes-base,workdir=/rpi/internals/workdir,\
 index=on,nfs_export=on,redirect_dir=nofollow
 
-sudo systemctl restart dhcpd.service
-sudo systemctl restart nfs-server.service
-sudo systemctl restart tftp.service
+# Restart services
+sudo systemctl daemon-reload
+sudo systemctl restart "${DHCP_SERVICE}.service"
+sudo systemctl restart "${NFS_SERVICE}.service"
+sudo systemctl restart "${TFTP_SERVICE}.service"
